@@ -1,0 +1,122 @@
+{
+  "action_dim": 16,
+  "byte_size": 40398661,
+  "camera_names": [
+    "head_camera",
+    "left_camera",
+    "right_camera",
+    "robotview"
+  ],
+  "content_digest": "5493a5b2e3893330c7dea46cd35507a1956343278f3fcdfcdade5885661e3002",
+  "content_digest_provenance": {
+    "key": "sha256[empty-string]",
+    "path": "/local_nvme/zhangrong/robotwin-h5-v6/move_playingcard_away/arx-x5/episode042.v6.h5.receipt.json"
+  },
+  "data_contract": "simulator-replay-v6",
+  "data_quality": "production",
+  "dataset_family": "RoboTwin",
+  "dataset_id": "robotwin-randomized-quarc-v6",
+  "dynamic_point_count": 6400,
+  "embodiment": "arx-x5",
+  "episode_id": "42",
+  "episode_json_uri": "episodes/arx-x5/b81627bdcbdaf45b0b9d/episode.json",
+  "episode_key": "b81627bdcbdaf45b0b9d",
+  "fps": 25.0,
+  "has_actions": true,
+  "has_replay_bundle": false,
+  "has_robot_state": true,
+  "image_shapes": [
+    [
+      480,
+      640
+    ],
+    [
+      480,
+      640
+    ],
+    [
+      480,
+      640
+    ],
+    [
+      480,
+      640
+    ]
+  ],
+  "joint_dim": 16,
+  "language": "move playingcard away",
+  "manifest_schema_version": 2,
+  "num_frames": 109,
+  "phase1a_eligible": true,
+  "phase1b_eligible": false,
+  "point_count": 8000,
+  "robot_model": "arx-x5",
+  "sample_id": "b81627bdcbdaf45b0b9d",
+  "scene_id": "move_playingcard_away",
+  "schema_version": 6,
+  "sidecar_uris": {
+    ".bindings.npz": "episodes/arx-x5/b81627bdcbdaf45b0b9d/episode.v6.h5.bindings.npz",
+    ".geometry.npz": "episodes/arx-x5/b81627bdcbdaf45b0b9d/episode.v6.h5.geometry.npz",
+    ".receipt.json": "episodes/arx-x5/b81627bdcbdaf45b0b9d/episode.v6.h5.receipt.json",
+    ".report.json": "episodes/arx-x5/b81627bdcbdaf45b0b9d/episode.v6.h5.report.json",
+    ".robot.urdf": "episodes/arx-x5/b81627bdcbdaf45b0b9d/episode.v6.h5.robot.urdf"
+  },
+  "source_node": "node42",
+  "source_partition": "production",
+  "source_relative_uri": "move_playingcard_away/arx-x5/episode042.v6.h5",
+  "source_uri": "/local_nvme/zhangrong/robotwin-h5-v6/move_playingcard_away/arx-x5/episode042.v6.h5",
+  "split": "train",
+  "task_success": true,
+  "uri": "episodes/arx-x5/b81627bdcbdaf45b0b9d/episode.v6.h5",
+  "node": "node42",
+  "dataset_key": "robotwin_v6",
+  "group_id": "robotwin-arx-x5",
+  "source_h5": "/local_nvme/zhangrong/wm3d/datasets_node42/robotwin_v6/episodes/arx-x5/b81627bdcbdaf45b0b9d/episode.v6.h5",
+  "manifest_path": "/local_nvme/zhangrong/wm3d/datasets_node42/robotwin_v6/manifest.jsonl",
+  "manifest_sha256": "5396a9aedf0024821811a1bdbee918d16c8367c50360aef00abfdb7263ce4d77",
+  "rank": 3,
+  "slug": "robotwin-arx-x5-03-b81627bd",
+  "source_sha256": "5493a5b2e3893330c7dea46cd35507a1956343278f3fcdfcdade5885661e3002",
+  "frames": 109,
+  "duration_s": 4.36,
+  "width": 1920,
+  "height": 656,
+  "render_elapsed_s": 8.4,
+  "camera_metrics": {
+    "head_camera": {
+      "invalid_camera_frames": 0,
+      "min_rgb_mean": 86.82082248263889,
+      "min_valid_depth_fraction": 1.0,
+      "mean_rgb": 90.56912024759494
+    },
+    "left_camera": {
+      "invalid_camera_frames": 0,
+      "min_rgb_mean": 78.56749782986111,
+      "min_valid_depth_fraction": 1.0,
+      "mean_rgb": 92.28570121368504
+    },
+    "right_camera": {
+      "invalid_camera_frames": 0,
+      "min_rgb_mean": 107.07068793402777,
+      "min_valid_depth_fraction": 1.0,
+      "mean_rgb": 107.07199418840801
+    },
+    "robotview": {
+      "invalid_camera_frames": 0,
+      "min_rgb_mean": 88.36672417534722,
+      "min_valid_depth_fraction": 1.0,
+      "mean_rgb": 93.26996876194575
+    }
+  },
+  "source_unchanged": true,
+  "display": {
+    "rgb": "decoded source JPEG; resized with aspect ratio preserved; 96 point-ID annotations; no brightness/color enhancement",
+    "depth": "decoded stored integer * scale_m_per_unit + offset_m; invalid_stored_value masked; fixed display range 0.1..3.0 m; invalid black",
+    "points": "all native persistent points decoded with scale_m_per_unit and offset_m_xyz; native validity and visibility; visible-point colors sampled from current calibrated RGB; other points neutral/static or amber/dynamic",
+    "trajectories": "up to 96 stable point IDs, previous 12 frames, current camera pose for historical world positions; no camera-motion trails for static points",
+    "three_d": "fixed orthographic view fitted to exact episode-wide valid XYZ bounds; axes in episode frame"
+  },
+  "mp4_sha256": "741c4e2700fc8b6de1522579101f37c9c9f02e5778bc2d878a35ad9595ab3038",
+  "mp4_bytes": 674977,
+  "poster_sha256": "952faac82d501a5c25857c854aff3f2b3e1f6080b62a8c2b3991f61ce44ec345"
+}

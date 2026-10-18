@@ -1,0 +1,142 @@
+{
+  "action_dim": 8,
+  "byte_size": 237774477,
+  "camera_names": [
+    "franka_hand",
+    "franka_head",
+    "agent_view",
+    "agent_view_left",
+    "agent_view_right"
+  ],
+  "catalog_sample_id": "InternData:node42:57df5d01aba5caaf503a",
+  "content_digest": "3282b4c70dd81861ceddc20bf63f2bf3ed13e3302f900ffea0ec5e3f00c0b8b8",
+  "content_digest_provenance": {
+    "key": "manifest.content_digest",
+    "path": "/local_nvme/zhangrong/quarc-datasets/quarc_v6_node42_plan20_render5_nocompare_r4_20260920/task_batches/0051_art__franka__close_the_microwave__close_the_micr/round_004/episodes/57df5d01aba5caaf503a/episode.json"
+  },
+  "data_contract": "simulator-replay-v6",
+  "data_quality": "production",
+  "dataset_family": "InternData",
+  "dataset_id": "round_004",
+  "dynamic_point_count": 6400,
+  "embodiment": "franka",
+  "episode_id": "000060_r004",
+  "episode_json_uri": "episodes/franka/57df5d01aba5caaf503a/episode.json",
+  "episode_key": "57df5d01aba5caaf503a",
+  "fps": 30.0,
+  "has_actions": true,
+  "has_replay_bundle": true,
+  "has_robot_state": true,
+  "image_shapes": [
+    [
+      480,
+      640
+    ],
+    [
+      480,
+      640
+    ],
+    [
+      480,
+      640
+    ],
+    [
+      480,
+      640
+    ],
+    [
+      480,
+      640
+    ]
+  ],
+  "joint_dim": 9,
+  "language": "['Close the microwave.']",
+  "manifest_schema_version": 2,
+  "num_frames": 422,
+  "phase1a_eligible": true,
+  "phase1b_eligible": false,
+  "plan_id": "round_004/art__franka__close_the_microwave__close_the_microwave_part0__0/000060",
+  "plan_key": "5900daba31aa18451e31",
+  "plan_seed": 1107297185,
+  "planning_success": true,
+  "point_count": 8000,
+  "render_index": 4,
+  "render_seed": 1068851435,
+  "replay_bundle_byte_size": 2028589,
+  "replay_bundle_content_digest": "466990032675e38267faeedc3c665c407300e69ca4d57a737d2f14262f6cfb66",
+  "replay_bundle_uri": "episodes/franka/57df5d01aba5caaf503a/replay.bundle.h5",
+  "robot_model": "franka",
+  "sample_id": "round_004/art__franka__close_the_microwave__close_the_microwave_part0__0/000060/render_004",
+  "scene_id": "art__franka__close_the_microwave__close_the_microwave_part0__0",
+  "schema_version": 6,
+  "sidecar_uris": {
+    "replay_bundle": "episodes/franka/57df5d01aba5caaf503a/replay.bundle.h5",
+    "source_metadata": "episodes/franka/57df5d01aba5caaf503a/episode.source.json"
+  },
+  "source_batch": "quarc_v6_node42_plan20_render5_nocompare_r4_20260920",
+  "source_episode_json_uri": "episodes/franka/57df5d01aba5caaf503a/episode.source.json",
+  "source_node": "node42",
+  "source_plan_sha256": "20a57d3b16e6f5c4c8c724c514d2bfc6a5b0717c300cb6893b1363b39bcbca87",
+  "source_relative_uri": "task_batches/0051_art__franka__close_the_microwave__close_the_micr/round_004/episodes/57df5d01aba5caaf503a/episode.v6.h5",
+  "source_uri": "/local_nvme/zhangrong/quarc-datasets/quarc_v6_node42_plan20_render5_nocompare_r4_20260920/task_batches/0051_art__franka__close_the_microwave__close_the_micr/round_004/episodes/57df5d01aba5caaf503a/episode.v6.h5",
+  "split": "train",
+  "uri": "episodes/franka/57df5d01aba5caaf503a/episode.v6.h5",
+  "validation_mode": "structure_only",
+  "node": "node42",
+  "dataset_key": "interndata_v6",
+  "group_id": "intern-franka",
+  "source_h5": "/local_nvme/zhangrong/wm3d/datasets_node42/interndata_v6/episodes/franka/57df5d01aba5caaf503a/episode.v6.h5",
+  "manifest_path": "/local_nvme/zhangrong/wm3d/datasets_node42/interndata_v6/manifest.jsonl",
+  "manifest_sha256": "e5b443a70211999a5f257d6a1e7dd2e30583eeb8f62a3017a75e4337b22a0e6b",
+  "rank": 1,
+  "slug": "intern-franka-01-57df5d01",
+  "source_sha256": "3282b4c70dd81861ceddc20bf63f2bf3ed13e3302f900ffea0ec5e3f00c0b8b8",
+  "frames": 422,
+  "duration_s": 14.066666666666666,
+  "width": 1920,
+  "height": 928,
+  "render_elapsed_s": 41.2,
+  "camera_metrics": {
+    "franka_hand": {
+      "invalid_camera_frames": 0,
+      "min_rgb_mean": 155.84061414930557,
+      "min_valid_depth_fraction": 1.0,
+      "mean_rgb": 176.81144146076062
+    },
+    "franka_head": {
+      "invalid_camera_frames": 0,
+      "min_rgb_mean": 127.44888020833334,
+      "min_valid_depth_fraction": 1.0,
+      "mean_rgb": 128.31479620235984
+    },
+    "agent_view": {
+      "invalid_camera_frames": 0,
+      "min_rgb_mean": 159.2178493923611,
+      "min_valid_depth_fraction": 1.0,
+      "mean_rgb": 160.77814884581517
+    },
+    "agent_view_left": {
+      "invalid_camera_frames": 0,
+      "min_rgb_mean": 157.65337239583334,
+      "min_valid_depth_fraction": 1.0,
+      "mean_rgb": 159.35722599425284
+    },
+    "agent_view_right": {
+      "invalid_camera_frames": 0,
+      "min_rgb_mean": 163.88716905381943,
+      "min_valid_depth_fraction": 1.0,
+      "mean_rgb": 165.20100399007288
+    }
+  },
+  "source_unchanged": true,
+  "display": {
+    "rgb": "decoded source JPEG; resized with aspect ratio preserved; 96 point-ID annotations; no brightness/color enhancement",
+    "depth": "decoded stored integer * scale_m_per_unit + offset_m; invalid_stored_value masked; fixed display range 0.1..3.0 m; invalid black",
+    "points": "all native persistent points decoded with scale_m_per_unit and offset_m_xyz; native validity and visibility; visible-point colors sampled from current calibrated RGB; other points neutral/static or amber/dynamic",
+    "trajectories": "up to 96 stable point IDs, previous 12 frames, current camera pose for historical world positions; no camera-motion trails for static points",
+    "three_d": "fixed orthographic view fitted to exact episode-wide valid XYZ bounds; axes in episode frame"
+  },
+  "mp4_sha256": "ad71bf5a645872ef228f2a9b0dabb6461e1f43ccc51d80a4be32b3b04b263a67",
+  "mp4_bytes": 3076983,
+  "poster_sha256": "6363052cf4cdf0e1c0c256fd91cafed19582407694c91245afaa6554e827e36e"
+}

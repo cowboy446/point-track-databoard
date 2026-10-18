@@ -1,0 +1,142 @@
+{
+  "action_dim": 8,
+  "byte_size": 97686191,
+  "camera_names": [
+    "franka_hand",
+    "franka_head",
+    "agent_view",
+    "agent_view_left",
+    "agent_view_right"
+  ],
+  "catalog_sample_id": "InternData:node42:aec632f594b3d5be53a7",
+  "content_digest": "287a787d0015282b11746b3092ed4c95eefb9a90129c9c59d74d9d7557b581f5",
+  "content_digest_provenance": {
+    "key": "manifest.content_digest",
+    "path": "/local_nvme/zhangrong/quarc-datasets/quarc_v6_node42_plan20_render5_nocompare_r4_20260920/task_batches/0072_pick_and_place__franka__single_pick__omniobject3/round_001/episodes/aec632f594b3d5be53a7/episode.json"
+  },
+  "data_contract": "simulator-replay-v6",
+  "data_quality": "production",
+  "dataset_family": "InternData",
+  "dataset_id": "round_001",
+  "dynamic_point_count": 5597,
+  "embodiment": "franka",
+  "episode_id": "000023_r004",
+  "episode_json_uri": "episodes/franka/aec632f594b3d5be53a7/episode.json",
+  "episode_key": "aec632f594b3d5be53a7",
+  "fps": 30.0,
+  "has_actions": true,
+  "has_replay_bundle": true,
+  "has_robot_state": true,
+  "image_shapes": [
+    [
+      480,
+      640
+    ],
+    [
+      480,
+      640
+    ],
+    [
+      480,
+      640
+    ],
+    [
+      480,
+      640
+    ],
+    [
+      480,
+      640
+    ]
+  ],
+  "joint_dim": 9,
+  "language": "['Pick up the hand cream.']",
+  "manifest_schema_version": 2,
+  "num_frames": 163,
+  "phase1a_eligible": true,
+  "phase1b_eligible": false,
+  "plan_id": "round_001/pick_and_place__franka__single_pick__omniobject3d-hand_cream__0/000023",
+  "plan_key": "f6a387a76ccdaa00625c",
+  "plan_seed": 940782594,
+  "planning_success": true,
+  "point_count": 8000,
+  "render_index": 4,
+  "render_seed": 1833441762,
+  "replay_bundle_byte_size": 1181619,
+  "replay_bundle_content_digest": "3f30640cd0a5704f075a03c0852f415cd2aea1c013c1c2a85a5066db5b28b0a9",
+  "replay_bundle_uri": "episodes/franka/aec632f594b3d5be53a7/replay.bundle.h5",
+  "robot_model": "franka",
+  "sample_id": "round_001/pick_and_place__franka__single_pick__omniobject3d-hand_cream__0/000023/render_004",
+  "scene_id": "pick_and_place__franka__single_pick__omniobject3d-hand_cream__0",
+  "schema_version": 6,
+  "sidecar_uris": {
+    "replay_bundle": "episodes/franka/aec632f594b3d5be53a7/replay.bundle.h5",
+    "source_metadata": "episodes/franka/aec632f594b3d5be53a7/episode.source.json"
+  },
+  "source_batch": "quarc_v6_node42_plan20_render5_nocompare_r4_20260920",
+  "source_episode_json_uri": "episodes/franka/aec632f594b3d5be53a7/episode.source.json",
+  "source_node": "node42",
+  "source_plan_sha256": "8298feae74433e7ebc90d6271011f0aa22dc4a2420d80a7e8285e9e75f86d9a5",
+  "source_relative_uri": "task_batches/0072_pick_and_place__franka__single_pick__omniobject3/round_001/episodes/aec632f594b3d5be53a7/episode.v6.h5",
+  "source_uri": "/local_nvme/zhangrong/quarc-datasets/quarc_v6_node42_plan20_render5_nocompare_r4_20260920/task_batches/0072_pick_and_place__franka__single_pick__omniobject3/round_001/episodes/aec632f594b3d5be53a7/episode.v6.h5",
+  "split": "train",
+  "uri": "episodes/franka/aec632f594b3d5be53a7/episode.v6.h5",
+  "validation_mode": "structure_only",
+  "node": "node42",
+  "dataset_key": "interndata_v6",
+  "group_id": "intern-franka",
+  "source_h5": "/local_nvme/zhangrong/wm3d/datasets_node42/interndata_v6/episodes/franka/aec632f594b3d5be53a7/episode.v6.h5",
+  "manifest_path": "/local_nvme/zhangrong/wm3d/datasets_node42/interndata_v6/manifest.jsonl",
+  "manifest_sha256": "e5b443a70211999a5f257d6a1e7dd2e30583eeb8f62a3017a75e4337b22a0e6b",
+  "rank": 2,
+  "slug": "intern-franka-02-aec632f5",
+  "source_sha256": "287a787d0015282b11746b3092ed4c95eefb9a90129c9c59d74d9d7557b581f5",
+  "frames": 163,
+  "duration_s": 5.433333333333334,
+  "width": 1920,
+  "height": 928,
+  "render_elapsed_s": 16.5,
+  "camera_metrics": {
+    "franka_hand": {
+      "invalid_camera_frames": 0,
+      "min_rgb_mean": 73.27086371527778,
+      "min_valid_depth_fraction": 1.0,
+      "mean_rgb": 126.53068358043625
+    },
+    "franka_head": {
+      "invalid_camera_frames": 0,
+      "min_rgb_mean": 110.279189453125,
+      "min_valid_depth_fraction": 1.0,
+      "mean_rgb": 113.48150799356674
+    },
+    "agent_view": {
+      "invalid_camera_frames": 0,
+      "min_rgb_mean": 105.65229926215278,
+      "min_valid_depth_fraction": 1.0,
+      "mean_rgb": 107.39815467631652
+    },
+    "agent_view_left": {
+      "invalid_camera_frames": 0,
+      "min_rgb_mean": 104.77163411458334,
+      "min_valid_depth_fraction": 1.0,
+      "mean_rgb": 106.81674711491347
+    },
+    "agent_view_right": {
+      "invalid_camera_frames": 0,
+      "min_rgb_mean": 103.88708116319444,
+      "min_valid_depth_fraction": 1.0,
+      "mean_rgb": 106.19470396243399
+    }
+  },
+  "source_unchanged": true,
+  "display": {
+    "rgb": "decoded source JPEG; resized with aspect ratio preserved; 96 point-ID annotations; no brightness/color enhancement",
+    "depth": "decoded stored integer * scale_m_per_unit + offset_m; invalid_stored_value masked; fixed display range 0.1..3.0 m; invalid black",
+    "points": "all native persistent points decoded with scale_m_per_unit and offset_m_xyz; native validity and visibility; visible-point colors sampled from current calibrated RGB; other points neutral/static or amber/dynamic",
+    "trajectories": "up to 96 stable point IDs, previous 12 frames, current camera pose for historical world positions; no camera-motion trails for static points",
+    "three_d": "fixed orthographic view fitted to exact episode-wide valid XYZ bounds; axes in episode frame"
+  },
+  "mp4_sha256": "db294f27c9abb9a5e2ec16fe18c91692a7b0ea1f075a5b7973deb1e049e0fd98",
+  "mp4_bytes": 1482386,
+  "poster_sha256": "6609a10f51153f6528c971bbb1e14b121a02d1c94d48f5a13bea94af7a81d3f2"
+}

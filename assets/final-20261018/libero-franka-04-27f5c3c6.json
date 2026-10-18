@@ -1,0 +1,119 @@
+{
+  "action_dim": 7,
+  "byte_size": 57077436,
+  "camera_names": [
+    "agentview",
+    "sideview",
+    "birdview",
+    "robot0_eye_in_hand"
+  ],
+  "content_digest": "aa07a885c0b729098947a85ec5f338010ada61114e5bb69d3dcdd5dce69906e2",
+  "content_digest_provenance": {
+    "key": "sha256[empty-string]",
+    "path": "/local_nvme/zhangrong/libero-h5-v6-depthfixed-20261007/libero_10/STUDY_SCENE1_pick_up_the_book_and_place_it_in_the_back_compartment_of_the_caddy_demo/demo_44.v6.h5.receipt.json"
+  },
+  "data_contract": "simulator-replay-v6",
+  "data_quality": "production",
+  "dataset_family": "LIBERO",
+  "dataset_id": "libero-d4rt-v6",
+  "dynamic_point_count": 6400,
+  "embodiment": "franka",
+  "episode_id": "demo_44",
+  "episode_json_uri": "episodes/27f5c3c67d98c5cff2bd/episode.json",
+  "episode_key": "27f5c3c67d98c5cff2bd",
+  "fps": 20.0,
+  "has_actions": true,
+  "has_replay_bundle": false,
+  "has_robot_state": true,
+  "image_shapes": [
+    [
+      512,
+      512
+    ],
+    [
+      512,
+      512
+    ],
+    [
+      512,
+      512
+    ],
+    [
+      512,
+      512
+    ]
+  ],
+  "joint_dim": 9,
+  "language": "pick up the book and place it in the back compartment of the caddy",
+  "manifest_schema_version": 2,
+  "num_frames": 174,
+  "phase1a_eligible": true,
+  "phase1b_eligible": false,
+  "point_count": 8000,
+  "robot_model": "robosuite-panda",
+  "sample_id": "27f5c3c67d98c5cff2bd",
+  "scene_id": "STUDY_SCENE1_pick_up_the_book_and_place_it_in_the_back_compartment_of_the_caddy",
+  "schema_version": 6,
+  "sidecar_uris": {
+    ".bindings.npz": "episodes/27f5c3c67d98c5cff2bd/episode.v6.h5.bindings.npz",
+    ".json": "episodes/27f5c3c67d98c5cff2bd/episode.v6.h5.json",
+    ".receipt.json": "episodes/27f5c3c67d98c5cff2bd/episode.v6.h5.receipt.json"
+  },
+  "source_node": "node42",
+  "source_partition": "libero_10",
+  "source_relative_uri": "libero_10/STUDY_SCENE1_pick_up_the_book_and_place_it_in_the_back_compartment_of_the_caddy_demo/demo_44.v6.h5",
+  "source_uri": "/local_nvme/zhangrong/libero-h5-v6-depthfixed-20261007/libero_10/STUDY_SCENE1_pick_up_the_book_and_place_it_in_the_back_compartment_of_the_caddy_demo/demo_44.v6.h5",
+  "split": "train",
+  "uri": "episodes/27f5c3c67d98c5cff2bd/episode.v6.h5",
+  "node": "node42",
+  "dataset_key": "libero_v6",
+  "group_id": "libero-franka",
+  "source_h5": "/local_nvme/zhangrong/wm3d/datasets_node42/libero_v6/episodes/27f5c3c67d98c5cff2bd/episode.v6.h5",
+  "manifest_path": "/local_nvme/zhangrong/wm3d/datasets_node42/libero_v6/manifest.jsonl",
+  "manifest_sha256": "7c7cb9dd3b1ad510bbb8a7fd1f49c5ddb731c5bf086dde91ea1110d0c7cab55d",
+  "rank": 4,
+  "slug": "libero-franka-04-27f5c3c6",
+  "source_sha256": "aa07a885c0b729098947a85ec5f338010ada61114e5bb69d3dcdd5dce69906e2",
+  "frames": 174,
+  "duration_s": 8.7,
+  "width": 1920,
+  "height": 816,
+  "render_elapsed_s": 13.2,
+  "camera_metrics": {
+    "agentview": {
+      "invalid_camera_frames": 0,
+      "min_rgb_mean": 73.13924026489258,
+      "min_valid_depth_fraction": 1.0,
+      "mean_rgb": 75.01999728615714
+    },
+    "sideview": {
+      "invalid_camera_frames": 0,
+      "min_rgb_mean": 91.82046381632487,
+      "min_valid_depth_fraction": 1.0,
+      "mean_rgb": 93.31877848745758
+    },
+    "birdview": {
+      "invalid_camera_frames": 0,
+      "min_rgb_mean": 97.16817728678386,
+      "min_valid_depth_fraction": 1.0,
+      "mean_rgb": 97.83687492165991
+    },
+    "robot0_eye_in_hand": {
+      "invalid_camera_frames": 0,
+      "min_rgb_mean": 47.037645975748696,
+      "min_valid_depth_fraction": 1.0,
+      "mean_rgb": 64.46850563283168
+    }
+  },
+  "source_unchanged": true,
+  "display": {
+    "rgb": "decoded source JPEG; resized with aspect ratio preserved; 96 point-ID annotations; no brightness/color enhancement",
+    "depth": "decoded stored integer * scale_m_per_unit + offset_m; invalid_stored_value masked; fixed display range 0.1..3.0 m; invalid black",
+    "points": "all native persistent points decoded with scale_m_per_unit and offset_m_xyz; native validity and visibility; visible-point colors sampled from current calibrated RGB; other points neutral/static or amber/dynamic",
+    "trajectories": "up to 96 stable point IDs, previous 12 frames, current camera pose for historical world positions; no camera-motion trails for static points",
+    "three_d": "fixed orthographic view fitted to exact episode-wide valid XYZ bounds; axes in episode frame"
+  },
+  "mp4_sha256": "432ae3243bbeccabeb42179cea8edfdbc782132f5cd611984c64ab73d27f9f54",
+  "mp4_bytes": 1815712,
+  "poster_sha256": "2757a1c156a54d9c578d81c88a26ed2ad8d2f25e1eda2bd23ac686bda0e9e221"
+}

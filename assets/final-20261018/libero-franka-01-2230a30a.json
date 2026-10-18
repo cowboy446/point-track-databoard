@@ -1,0 +1,119 @@
+{
+  "action_dim": 7,
+  "byte_size": 56198210,
+  "camera_names": [
+    "agentview",
+    "sideview",
+    "birdview",
+    "robot0_eye_in_hand"
+  ],
+  "content_digest": "780c50067d279eb27a87cfb3069da8781c0fa378f84001d963f8f0f41ce040fe",
+  "content_digest_provenance": {
+    "key": "sha256[empty-string]",
+    "path": "/local_nvme/zhangrong/libero-h5-v6-depthfixed-20261007/libero_spatial/pick_up_the_black_bowl_on_the_stove_and_place_it_on_the_plate_demo/demo_34.v6.h5.receipt.json"
+  },
+  "data_contract": "simulator-replay-v6",
+  "data_quality": "production",
+  "dataset_family": "LIBERO",
+  "dataset_id": "libero-d4rt-v6",
+  "dynamic_point_count": 6400,
+  "embodiment": "franka",
+  "episode_id": "demo_34",
+  "episode_json_uri": "episodes/2230a30ae54c8a0d716c/episode.json",
+  "episode_key": "2230a30ae54c8a0d716c",
+  "fps": 20.0,
+  "has_actions": true,
+  "has_replay_bundle": false,
+  "has_robot_state": true,
+  "image_shapes": [
+    [
+      512,
+      512
+    ],
+    [
+      512,
+      512
+    ],
+    [
+      512,
+      512
+    ],
+    [
+      512,
+      512
+    ]
+  ],
+  "joint_dim": 9,
+  "language": "pick up the black bowl on the stove and place it on the plate",
+  "manifest_schema_version": 2,
+  "num_frames": 157,
+  "phase1a_eligible": true,
+  "phase1b_eligible": false,
+  "point_count": 8000,
+  "robot_model": "robosuite-panda",
+  "sample_id": "2230a30ae54c8a0d716c",
+  "scene_id": "pick_up_the_black_bowl_on_the_stove_and_place_it_on_the_plate",
+  "schema_version": 6,
+  "sidecar_uris": {
+    ".bindings.npz": "episodes/2230a30ae54c8a0d716c/episode.v6.h5.bindings.npz",
+    ".json": "episodes/2230a30ae54c8a0d716c/episode.v6.h5.json",
+    ".receipt.json": "episodes/2230a30ae54c8a0d716c/episode.v6.h5.receipt.json"
+  },
+  "source_node": "node42",
+  "source_partition": "libero_spatial",
+  "source_relative_uri": "libero_spatial/pick_up_the_black_bowl_on_the_stove_and_place_it_on_the_plate_demo/demo_34.v6.h5",
+  "source_uri": "/local_nvme/zhangrong/libero-h5-v6-depthfixed-20261007/libero_spatial/pick_up_the_black_bowl_on_the_stove_and_place_it_on_the_plate_demo/demo_34.v6.h5",
+  "split": "train",
+  "uri": "episodes/2230a30ae54c8a0d716c/episode.v6.h5",
+  "node": "node42",
+  "dataset_key": "libero_v6",
+  "group_id": "libero-franka",
+  "source_h5": "/local_nvme/zhangrong/wm3d/datasets_node42/libero_v6/episodes/2230a30ae54c8a0d716c/episode.v6.h5",
+  "manifest_path": "/local_nvme/zhangrong/wm3d/datasets_node42/libero_v6/manifest.jsonl",
+  "manifest_sha256": "7c7cb9dd3b1ad510bbb8a7fd1f49c5ddb731c5bf086dde91ea1110d0c7cab55d",
+  "rank": 1,
+  "slug": "libero-franka-01-2230a30a",
+  "source_sha256": "780c50067d279eb27a87cfb3069da8781c0fa378f84001d963f8f0f41ce040fe",
+  "frames": 157,
+  "duration_s": 7.85,
+  "width": 1920,
+  "height": 816,
+  "render_elapsed_s": 12.3,
+  "camera_metrics": {
+    "agentview": {
+      "invalid_camera_frames": 0,
+      "min_rgb_mean": 116.70432408650716,
+      "min_valid_depth_fraction": 1.0,
+      "mean_rgb": 119.95561144559505
+    },
+    "sideview": {
+      "invalid_camera_frames": 0,
+      "min_rgb_mean": 125.95187886555989,
+      "min_valid_depth_fraction": 1.0,
+      "mean_rgb": 127.91224339965041
+    },
+    "birdview": {
+      "invalid_camera_frames": 0,
+      "min_rgb_mean": 148.91208140055338,
+      "min_valid_depth_fraction": 1.0,
+      "mean_rgb": 149.99143220613962
+    },
+    "robot0_eye_in_hand": {
+      "invalid_camera_frames": 0,
+      "min_rgb_mean": 91.77954610188802,
+      "min_valid_depth_fraction": 1.0,
+      "mean_rgb": 128.8370294834145
+    }
+  },
+  "source_unchanged": true,
+  "display": {
+    "rgb": "decoded source JPEG; resized with aspect ratio preserved; 96 point-ID annotations; no brightness/color enhancement",
+    "depth": "decoded stored integer * scale_m_per_unit + offset_m; invalid_stored_value masked; fixed display range 0.1..3.0 m; invalid black",
+    "points": "all native persistent points decoded with scale_m_per_unit and offset_m_xyz; native validity and visibility; visible-point colors sampled from current calibrated RGB; other points neutral/static or amber/dynamic",
+    "trajectories": "up to 96 stable point IDs, previous 12 frames, current camera pose for historical world positions; no camera-motion trails for static points",
+    "three_d": "fixed orthographic view fitted to exact episode-wide valid XYZ bounds; axes in episode frame"
+  },
+  "mp4_sha256": "69d43e54380828890f90d44658f0794add18f4943db374caa3534df69ae87f80",
+  "mp4_bytes": 2333084,
+  "poster_sha256": "9655c528abc28ef72d71ef801f95bb77111f3f36e0c0d4771fc6454736b17e99"
+}

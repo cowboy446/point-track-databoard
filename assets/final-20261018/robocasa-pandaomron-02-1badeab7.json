@@ -1,0 +1,122 @@
+{
+  "action_dim": 12,
+  "byte_size": 79948503,
+  "camera_names": [
+    "left",
+    "right",
+    "agentview_center",
+    "eye_in_hand"
+  ],
+  "content_digest": "be219adf616541086500d4ffde35fd91c7193ed6504665b3673ebf9a47ff5468",
+  "content_digest_provenance": {
+    "column": "hashes_json[.h5]",
+    "key": "pretrain/atomic/OpenDrawer/20250819/episode_000007.h5",
+    "path": "/local_nvme/zhangrong/robocasa-quarc-v6/runs/production_20261008_r7/production.sqlite",
+    "table": "episodes"
+  },
+  "data_contract": "simulator-replay-v6",
+  "data_quality": "production",
+  "dataset_family": "RoboCasa365",
+  "dataset_id": "robocasa365-v6",
+  "dynamic_point_count": 6400,
+  "embodiment": "PandaOmron",
+  "episode_id": "episode_000007",
+  "episode_json_uri": "episodes/1badeab7313b6853aaf3/episode.json",
+  "episode_key": "1badeab7313b6853aaf3",
+  "fps": 20.0,
+  "has_actions": true,
+  "has_replay_bundle": false,
+  "has_robot_state": true,
+  "image_shapes": [
+    [
+      512,
+      512
+    ],
+    [
+      512,
+      512
+    ],
+    [
+      512,
+      512
+    ],
+    [
+      512,
+      512
+    ]
+  ],
+  "joint_dim": 13,
+  "language": "Open the left drawer.",
+  "manifest_schema_version": 2,
+  "num_frames": 211,
+  "phase1a_eligible": true,
+  "phase1b_eligible": false,
+  "point_count": 8000,
+  "robot_model": "PandaOmron",
+  "sample_id": "1badeab7313b6853aaf3",
+  "scene_id": "OpenDrawer",
+  "schema_version": 6,
+  "sidecar_uris": {
+    ".bindings.npz": "episodes/1badeab7313b6853aaf3/episode.v6.h5.bindings.npz",
+    ".report.json": "episodes/1badeab7313b6853aaf3/episode.v6.h5.report.json",
+    ".robot.xml": "episodes/1badeab7313b6853aaf3/episode.v6.h5.robot.xml",
+    ".source.json": "episodes/1badeab7313b6853aaf3/episode.v6.h5.source.json"
+  },
+  "source_node": "node45",
+  "source_partition": "pretrain",
+  "source_relative_uri": "pretrain/atomic/OpenDrawer/20250819/episode_000007.h5",
+  "source_uri": "/local_nvme/zhangrong/robocasa-quarc-v6/outputs/production_20261008_r6/pretrain/atomic/OpenDrawer/20250819/episode_000007.h5",
+  "split": "train",
+  "uri": "episodes/1badeab7313b6853aaf3/episode.v6.h5",
+  "node": "node45",
+  "dataset_key": "robocasa365_v6",
+  "group_id": "robocasa-pandaomron",
+  "source_h5": "/local_nvme/zhangrong/wm3d/datasets_node45/robocasa365_v6/episodes/1badeab7313b6853aaf3/episode.v6.h5",
+  "manifest_path": "/local_nvme/zhangrong/wm3d/datasets_node45/robocasa365_v6/manifest.jsonl",
+  "manifest_sha256": "a92cffda88920e20731829c81ddb3aa4e336a4823589961a52bec4e516b37083",
+  "rank": 2,
+  "slug": "robocasa-pandaomron-02-1badeab7",
+  "source_sha256": "be219adf616541086500d4ffde35fd91c7193ed6504665b3673ebf9a47ff5468",
+  "frames": 211,
+  "duration_s": 10.55,
+  "width": 1920,
+  "height": 816,
+  "render_elapsed_s": 16.0,
+  "camera_metrics": {
+    "left": {
+      "invalid_camera_frames": 0,
+      "min_rgb_mean": 94.42211659749348,
+      "min_valid_depth_fraction": 1.0,
+      "mean_rgb": 98.09755518764118
+    },
+    "right": {
+      "invalid_camera_frames": 0,
+      "min_rgb_mean": 82.34822463989258,
+      "min_valid_depth_fraction": 1.0,
+      "mean_rgb": 84.29103736817174
+    },
+    "agentview_center": {
+      "invalid_camera_frames": 0,
+      "min_rgb_mean": 89.05778376261394,
+      "min_valid_depth_fraction": 1.0,
+      "mean_rgb": 92.26018895997443
+    },
+    "eye_in_hand": {
+      "invalid_camera_frames": 0,
+      "min_rgb_mean": 57.06373723347982,
+      "min_valid_depth_fraction": 1.0,
+      "mean_rgb": 92.71192959247605
+    }
+  },
+  "source_unchanged": true,
+  "display": {
+    "rgb": "decoded source JPEG; resized with aspect ratio preserved; 96 point-ID annotations; no brightness/color enhancement",
+    "depth": "decoded stored integer * scale_m_per_unit + offset_m; invalid_stored_value masked; fixed display range 0.1..3.0 m; invalid black",
+    "points": "all native persistent points decoded with scale_m_per_unit and offset_m_xyz; native validity and visibility; visible-point colors sampled from current calibrated RGB; other points neutral/static or amber/dynamic",
+    "trajectories": "up to 96 stable point IDs, previous 12 frames, current camera pose for historical world positions; no camera-motion trails for static points",
+    "three_d": "fixed orthographic view fitted to exact episode-wide valid XYZ bounds; axes in episode frame"
+  },
+  "mp4_sha256": "9f59061c34fa88b0a320d8d06fd0ddeb2fe9a85edc83ac8011c75a11a53edf08",
+  "mp4_bytes": 2200273,
+  "poster_sha256": "9ce05d6783fb4e62440fc502cfc1b1433bf22d97d9254943514b105e0077b6ea"
+}

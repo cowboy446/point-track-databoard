@@ -1,0 +1,3711 @@
+{
+  "sampling_seed": "quarc-final-20261018",
+  "policy": "Five distinct scene_id tasks per dataset/embodiment; fresh versus previous main gallery; no length/appearance filtering; InternData 2 node42 + 3 node43 per embodiment with distinct plans; LIBERO suite and RoboCasa source-partition stratification",
+  "samples": [
+    {
+      "action_dim": 8,
+      "byte_size": 237774477,
+      "camera_names": [
+        "franka_hand",
+        "franka_head",
+        "agent_view",
+        "agent_view_left",
+        "agent_view_right"
+      ],
+      "catalog_sample_id": "InternData:node42:57df5d01aba5caaf503a",
+      "content_digest": "3282b4c70dd81861ceddc20bf63f2bf3ed13e3302f900ffea0ec5e3f00c0b8b8",
+      "content_digest_provenance": {
+        "key": "manifest.content_digest",
+        "path": "/local_nvme/zhangrong/quarc-datasets/quarc_v6_node42_plan20_render5_nocompare_r4_20260920/task_batches/0051_art__franka__close_the_microwave__close_the_micr/round_004/episodes/57df5d01aba5caaf503a/episode.json"
+      },
+      "data_contract": "simulator-replay-v6",
+      "data_quality": "production",
+      "dataset_family": "InternData",
+      "dataset_id": "round_004",
+      "dynamic_point_count": 6400,
+      "embodiment": "franka",
+      "episode_id": "000060_r004",
+      "episode_json_uri": "episodes/franka/57df5d01aba5caaf503a/episode.json",
+      "episode_key": "57df5d01aba5caaf503a",
+      "fps": 30.0,
+      "has_actions": true,
+      "has_replay_bundle": true,
+      "has_robot_state": true,
+      "image_shapes": [
+        [
+          480,
+          640
+        ],
+        [
+          480,
+          640
+        ],
+        [
+          480,
+          640
+        ],
+        [
+          480,
+          640
+        ],
+        [
+          480,
+          640
+        ]
+      ],
+      "joint_dim": 9,
+      "language": "['Close the microwave.']",
+      "manifest_schema_version": 2,
+      "num_frames": 422,
+      "phase1a_eligible": true,
+      "phase1b_eligible": false,
+      "plan_id": "round_004/art__franka__close_the_microwave__close_the_microwave_part0__0/000060",
+      "plan_key": "5900daba31aa18451e31",
+      "plan_seed": 1107297185,
+      "planning_success": true,
+      "point_count": 8000,
+      "render_index": 4,
+      "render_seed": 1068851435,
+      "replay_bundle_byte_size": 2028589,
+      "replay_bundle_content_digest": "466990032675e38267faeedc3c665c407300e69ca4d57a737d2f14262f6cfb66",
+      "replay_bundle_uri": "episodes/franka/57df5d01aba5caaf503a/replay.bundle.h5",
+      "robot_model": "franka",
+      "sample_id": "round_004/art__franka__close_the_microwave__close_the_microwave_part0__0/000060/render_004",
+      "scene_id": "art__franka__close_the_microwave__close_the_microwave_part0__0",
+      "schema_version": 6,
+      "sidecar_uris": {
+        "replay_bundle": "episodes/franka/57df5d01aba5caaf503a/replay.bundle.h5",
+        "source_metadata": "episodes/franka/57df5d01aba5caaf503a/episode.source.json"
+      },
+      "source_batch": "quarc_v6_node42_plan20_render5_nocompare_r4_20260920",
+      "source_episode_json_uri": "episodes/franka/57df5d01aba5caaf503a/episode.source.json",
+      "source_node": "node42",
+      "source_plan_sha256": "20a57d3b16e6f5c4c8c724c514d2bfc6a5b0717c300cb6893b1363b39bcbca87",
+      "source_relative_uri": "task_batches/0051_art__franka__close_the_microwave__close_the_micr/round_004/episodes/57df5d01aba5caaf503a/episode.v6.h5",
+      "source_uri": "/local_nvme/zhangrong/quarc-datasets/quarc_v6_node42_plan20_render5_nocompare_r4_20260920/task_batches/0051_art__franka__close_the_microwave__close_the_micr/round_004/episodes/57df5d01aba5caaf503a/episode.v6.h5",
+      "split": "train",
+      "uri": "episodes/franka/57df5d01aba5caaf503a/episode.v6.h5",
+      "validation_mode": "structure_only",
+      "node": "node42",
+      "dataset_key": "interndata_v6",
+      "group_id": "intern-franka",
+      "source_h5": "/local_nvme/zhangrong/wm3d/datasets_node42/interndata_v6/episodes/franka/57df5d01aba5caaf503a/episode.v6.h5",
+      "manifest_path": "/local_nvme/zhangrong/wm3d/datasets_node42/interndata_v6/manifest.jsonl",
+      "manifest_sha256": "e5b443a70211999a5f257d6a1e7dd2e30583eeb8f62a3017a75e4337b22a0e6b",
+      "rank": 1,
+      "slug": "intern-franka-01-57df5d01"
+    },
+    {
+      "action_dim": 8,
+      "byte_size": 97686191,
+      "camera_names": [
+        "franka_hand",
+        "franka_head",
+        "agent_view",
+        "agent_view_left",
+        "agent_view_right"
+      ],
+      "catalog_sample_id": "InternData:node42:aec632f594b3d5be53a7",
+      "content_digest": "287a787d0015282b11746b3092ed4c95eefb9a90129c9c59d74d9d7557b581f5",
+      "content_digest_provenance": {
+        "key": "manifest.content_digest",
+        "path": "/local_nvme/zhangrong/quarc-datasets/quarc_v6_node42_plan20_render5_nocompare_r4_20260920/task_batches/0072_pick_and_place__franka__single_pick__omniobject3/round_001/episodes/aec632f594b3d5be53a7/episode.json"
+      },
+      "data_contract": "simulator-replay-v6",
+      "data_quality": "production",
+      "dataset_family": "InternData",
+      "dataset_id": "round_001",
+      "dynamic_point_count": 5597,
+      "embodiment": "franka",
+      "episode_id": "000023_r004",
+      "episode_json_uri": "episodes/franka/aec632f594b3d5be53a7/episode.json",
+      "episode_key": "aec632f594b3d5be53a7",
+      "fps": 30.0,
+      "has_actions": true,
+      "has_replay_bundle": true,
+      "has_robot_state": true,
+      "image_shapes": [
+        [
+          480,
+          640
+        ],
+        [
+          480,
+          640
+        ],
+        [
+          480,
+          640
+        ],
+        [
+          480,
+          640
+        ],
+        [
+          480,
+          640
+        ]
+      ],
+      "joint_dim": 9,
+      "language": "['Pick up the hand cream.']",
+      "manifest_schema_version": 2,
+      "num_frames": 163,
+      "phase1a_eligible": true,
+      "phase1b_eligible": false,
+      "plan_id": "round_001/pick_and_place__franka__single_pick__omniobject3d-hand_cream__0/000023",
+      "plan_key": "f6a387a76ccdaa00625c",
+      "plan_seed": 940782594,
+      "planning_success": true,
+      "point_count": 8000,
+      "render_index": 4,
+      "render_seed": 1833441762,
+      "replay_bundle_byte_size": 1181619,
+      "replay_bundle_content_digest": "3f30640cd0a5704f075a03c0852f415cd2aea1c013c1c2a85a5066db5b28b0a9",
+      "replay_bundle_uri": "episodes/franka/aec632f594b3d5be53a7/replay.bundle.h5",
+      "robot_model": "franka",
+      "sample_id": "round_001/pick_and_place__franka__single_pick__omniobject3d-hand_cream__0/000023/render_004",
+      "scene_id": "pick_and_place__franka__single_pick__omniobject3d-hand_cream__0",
+      "schema_version": 6,
+      "sidecar_uris": {
+        "replay_bundle": "episodes/franka/aec632f594b3d5be53a7/replay.bundle.h5",
+        "source_metadata": "episodes/franka/aec632f594b3d5be53a7/episode.source.json"
+      },
+      "source_batch": "quarc_v6_node42_plan20_render5_nocompare_r4_20260920",
+      "source_episode_json_uri": "episodes/franka/aec632f594b3d5be53a7/episode.source.json",
+      "source_node": "node42",
+      "source_plan_sha256": "8298feae74433e7ebc90d6271011f0aa22dc4a2420d80a7e8285e9e75f86d9a5",
+      "source_relative_uri": "task_batches/0072_pick_and_place__franka__single_pick__omniobject3/round_001/episodes/aec632f594b3d5be53a7/episode.v6.h5",
+      "source_uri": "/local_nvme/zhangrong/quarc-datasets/quarc_v6_node42_plan20_render5_nocompare_r4_20260920/task_batches/0072_pick_and_place__franka__single_pick__omniobject3/round_001/episodes/aec632f594b3d5be53a7/episode.v6.h5",
+      "split": "train",
+      "uri": "episodes/franka/aec632f594b3d5be53a7/episode.v6.h5",
+      "validation_mode": "structure_only",
+      "node": "node42",
+      "dataset_key": "interndata_v6",
+      "group_id": "intern-franka",
+      "source_h5": "/local_nvme/zhangrong/wm3d/datasets_node42/interndata_v6/episodes/franka/aec632f594b3d5be53a7/episode.v6.h5",
+      "manifest_path": "/local_nvme/zhangrong/wm3d/datasets_node42/interndata_v6/manifest.jsonl",
+      "manifest_sha256": "e5b443a70211999a5f257d6a1e7dd2e30583eeb8f62a3017a75e4337b22a0e6b",
+      "rank": 2,
+      "slug": "intern-franka-02-aec632f5"
+    },
+    {
+      "action_dim": 14,
+      "byte_size": 157538479,
+      "camera_names": [
+        "split_aloha_hand_left",
+        "split_aloha_hand_right",
+        "split_aloha_head",
+        "agent_view",
+        "agent_view_left",
+        "agent_view_right"
+      ],
+      "catalog_sample_id": "InternData:node42:d23cfa22f4e9588b2add",
+      "content_digest": "fed46680181882b8496774644fd5e7cc49816b6a34d063fd987a783688f5799a",
+      "content_digest_provenance": {
+        "key": "manifest.content_digest",
+        "path": "/local_nvme/zhangrong/quarc-datasets/quarc_v6_node42_plan20_render5_nocompare_r4_20260920/task_batches/0016_art__split_aloha__pull_the_storagefurniture__lef/round_000/episodes/d23cfa22f4e9588b2add/episode.json"
+      },
+      "data_contract": "simulator-replay-v6",
+      "data_quality": "production",
+      "dataset_family": "InternData",
+      "dataset_id": "round_000",
+      "dynamic_point_count": 6400,
+      "embodiment": "split_aloha",
+      "episode_id": "000008_r003",
+      "episode_json_uri": "episodes/split_aloha/d23cfa22f4e9588b2add/episode.json",
+      "episode_key": "d23cfa22f4e9588b2add",
+      "fps": 30.0,
+      "has_actions": true,
+      "has_replay_bundle": true,
+      "has_robot_state": true,
+      "image_shapes": [
+        [
+          480,
+          640
+        ],
+        [
+          480,
+          640
+        ],
+        [
+          480,
+          640
+        ],
+        [
+          480,
+          640
+        ],
+        [
+          480,
+          640
+        ],
+        [
+          480,
+          640
+        ]
+      ],
+      "joint_dim": 28,
+      "language": "['Pull the storagefurniture with left arm.']",
+      "manifest_schema_version": 2,
+      "num_frames": 219,
+      "phase1a_eligible": true,
+      "phase1b_eligible": false,
+      "plan_id": "round_000/art__split_aloha__pull_the_storagefurniture__left__pull_the_storagefurniture_left_arm_bottom__0/000008",
+      "plan_key": "d0d7576cc4245c11d00e",
+      "plan_seed": 1195521238,
+      "planning_success": true,
+      "point_count": 8000,
+      "render_index": 3,
+      "render_seed": 457892046,
+      "replay_bundle_byte_size": 1794386,
+      "replay_bundle_content_digest": "b42433284866ff1955f8e4a158fc2442ab882e28150a3259e760dc34b15227be",
+      "replay_bundle_uri": "episodes/split_aloha/d23cfa22f4e9588b2add/replay.bundle.h5",
+      "robot_model": "split_aloha",
+      "sample_id": "round_000/art__split_aloha__pull_the_storagefurniture__left__pull_the_storagefurniture_left_arm_bottom__0/000008/render_003",
+      "scene_id": "art__split_aloha__pull_the_storagefurniture__left__pull_the_storagefurniture_left_arm_bottom__0",
+      "schema_version": 6,
+      "sidecar_uris": {
+        "replay_bundle": "episodes/split_aloha/d23cfa22f4e9588b2add/replay.bundle.h5",
+        "source_metadata": "episodes/split_aloha/d23cfa22f4e9588b2add/episode.source.json"
+      },
+      "source_batch": "quarc_v6_node42_plan20_render5_nocompare_r4_20260920",
+      "source_episode_json_uri": "episodes/split_aloha/d23cfa22f4e9588b2add/episode.source.json",
+      "source_node": "node42",
+      "source_plan_sha256": "736d193b5bf2dc6897c4770a4fb13e1d1df65ed25164effe5a4d1173161e5021",
+      "source_relative_uri": "task_batches/0016_art__split_aloha__pull_the_storagefurniture__lef/round_000/episodes/d23cfa22f4e9588b2add/episode.v6.h5",
+      "source_uri": "/local_nvme/zhangrong/quarc-datasets/quarc_v6_node42_plan20_render5_nocompare_r4_20260920/task_batches/0016_art__split_aloha__pull_the_storagefurniture__lef/round_000/episodes/d23cfa22f4e9588b2add/episode.v6.h5",
+      "split": "train",
+      "uri": "episodes/split_aloha/d23cfa22f4e9588b2add/episode.v6.h5",
+      "validation_mode": "structure_only",
+      "node": "node42",
+      "dataset_key": "interndata_v6",
+      "group_id": "intern-split-aloha",
+      "source_h5": "/local_nvme/zhangrong/wm3d/datasets_node42/interndata_v6/episodes/split_aloha/d23cfa22f4e9588b2add/episode.v6.h5",
+      "manifest_path": "/local_nvme/zhangrong/wm3d/datasets_node42/interndata_v6/manifest.jsonl",
+      "manifest_sha256": "e5b443a70211999a5f257d6a1e7dd2e30583eeb8f62a3017a75e4337b22a0e6b",
+      "rank": 1,
+      "slug": "intern-split-aloha-01-d23cfa22"
+    },
+    {
+      "action_dim": 14,
+      "byte_size": 757993884,
+      "camera_names": [
+        "split_aloha_hand_left",
+        "split_aloha_hand_right",
+        "split_aloha_head",
+        "agent_view",
+        "agent_view_left",
+        "agent_view_right"
+      ],
+      "catalog_sample_id": "InternData:node42:5662d955077776286635",
+      "content_digest": "e70c016566edd28e7fd20e1fd0dbb64a8353bea9b3828decc848a577576a9b09",
+      "content_digest_provenance": {
+        "key": "manifest.content_digest",
+        "path": "/local_nvme/zhangrong/quarc-datasets/quarc_v6_node42_plan20_render5_nocompare_r4_20260920/task_batches/0029_long_horizon__split_aloha__sort_the_rubbish__sor/round_005/episodes/5662d955077776286635/episode.json"
+      },
+      "data_contract": "simulator-replay-v6",
+      "data_quality": "production",
+      "dataset_family": "InternData",
+      "dataset_id": "round_005",
+      "dynamic_point_count": 6400,
+      "embodiment": "split_aloha",
+      "episode_id": "000105_r001",
+      "episode_json_uri": "episodes/split_aloha/5662d955077776286635/episode.json",
+      "episode_key": "5662d955077776286635",
+      "fps": 30.0,
+      "has_actions": true,
+      "has_replay_bundle": true,
+      "has_robot_state": true,
+      "image_shapes": [
+        [
+          480,
+          640
+        ],
+        [
+          480,
+          640
+        ],
+        [
+          480,
+          640
+        ],
+        [
+          480,
+          640
+        ],
+        [
+          480,
+          640
+        ],
+        [
+          480,
+          640
+        ]
+      ],
+      "joint_dim": 28,
+      "language": "['Sort the garbage on the desktop into recyclable and non-recyclable']",
+      "manifest_schema_version": 2,
+      "num_frames": 935,
+      "phase1a_eligible": true,
+      "phase1b_eligible": false,
+      "plan_id": "round_005/long_horizon__split_aloha__sort_the_rubbish__sort_the_rubbish_part2__0/000105",
+      "plan_key": "d57190696ef98259d201",
+      "plan_seed": 224148,
+      "planning_success": true,
+      "point_count": 8000,
+      "render_index": 1,
+      "render_seed": 977995570,
+      "replay_bundle_byte_size": 6464794,
+      "replay_bundle_content_digest": "b9236b0280d0002ffb07d09f4fa26b445d6705b7a1f4ec17b54f50e451998e17",
+      "replay_bundle_uri": "episodes/split_aloha/5662d955077776286635/replay.bundle.h5",
+      "robot_model": "split_aloha",
+      "sample_id": "round_005/long_horizon__split_aloha__sort_the_rubbish__sort_the_rubbish_part2__0/000105/render_001",
+      "scene_id": "long_horizon__split_aloha__sort_the_rubbish__sort_the_rubbish_part2__0",
+      "schema_version": 6,
+      "sidecar_uris": {
+        "replay_bundle": "episodes/split_aloha/5662d955077776286635/replay.bundle.h5",
+        "source_metadata": "episodes/split_aloha/5662d955077776286635/episode.source.json"
+      },
+      "source_batch": "quarc_v6_node42_plan20_render5_nocompare_r4_20260920",
+      "source_episode_json_uri": "episodes/split_aloha/5662d955077776286635/episode.source.json",
+      "source_node": "node42",
+      "source_plan_sha256": "26315483dd2140222e25948d3d157e89c445ee39503cbaa335f596a4f4e35f74",
+      "source_relative_uri": "task_batches/0029_long_horizon__split_aloha__sort_the_rubbish__sor/round_005/episodes/5662d955077776286635/episode.v6.h5",
+      "source_uri": "/local_nvme/zhangrong/quarc-datasets/quarc_v6_node42_plan20_render5_nocompare_r4_20260920/task_batches/0029_long_horizon__split_aloha__sort_the_rubbish__sor/round_005/episodes/5662d955077776286635/episode.v6.h5",
+      "split": "train",
+      "uri": "episodes/split_aloha/5662d955077776286635/episode.v6.h5",
+      "validation_mode": "structure_only",
+      "node": "node42",
+      "dataset_key": "interndata_v6",
+      "group_id": "intern-split-aloha",
+      "source_h5": "/local_nvme/zhangrong/wm3d/datasets_node42/interndata_v6/episodes/split_aloha/5662d955077776286635/episode.v6.h5",
+      "manifest_path": "/local_nvme/zhangrong/wm3d/datasets_node42/interndata_v6/manifest.jsonl",
+      "manifest_sha256": "e5b443a70211999a5f257d6a1e7dd2e30583eeb8f62a3017a75e4337b22a0e6b",
+      "rank": 2,
+      "slug": "intern-split-aloha-02-5662d955"
+    },
+    {
+      "action_dim": 7,
+      "byte_size": 56198210,
+      "camera_names": [
+        "agentview",
+        "sideview",
+        "birdview",
+        "robot0_eye_in_hand"
+      ],
+      "content_digest": "780c50067d279eb27a87cfb3069da8781c0fa378f84001d963f8f0f41ce040fe",
+      "content_digest_provenance": {
+        "key": "sha256[empty-string]",
+        "path": "/local_nvme/zhangrong/libero-h5-v6-depthfixed-20261007/libero_spatial/pick_up_the_black_bowl_on_the_stove_and_place_it_on_the_plate_demo/demo_34.v6.h5.receipt.json"
+      },
+      "data_contract": "simulator-replay-v6",
+      "data_quality": "production",
+      "dataset_family": "LIBERO",
+      "dataset_id": "libero-d4rt-v6",
+      "dynamic_point_count": 6400,
+      "embodiment": "franka",
+      "episode_id": "demo_34",
+      "episode_json_uri": "episodes/2230a30ae54c8a0d716c/episode.json",
+      "episode_key": "2230a30ae54c8a0d716c",
+      "fps": 20.0,
+      "has_actions": true,
+      "has_replay_bundle": false,
+      "has_robot_state": true,
+      "image_shapes": [
+        [
+          512,
+          512
+        ],
+        [
+          512,
+          512
+        ],
+        [
+          512,
+          512
+        ],
+        [
+          512,
+          512
+        ]
+      ],
+      "joint_dim": 9,
+      "language": "pick up the black bowl on the stove and place it on the plate",
+      "manifest_schema_version": 2,
+      "num_frames": 157,
+      "phase1a_eligible": true,
+      "phase1b_eligible": false,
+      "point_count": 8000,
+      "robot_model": "robosuite-panda",
+      "sample_id": "2230a30ae54c8a0d716c",
+      "scene_id": "pick_up_the_black_bowl_on_the_stove_and_place_it_on_the_plate",
+      "schema_version": 6,
+      "sidecar_uris": {
+        ".bindings.npz": "episodes/2230a30ae54c8a0d716c/episode.v6.h5.bindings.npz",
+        ".json": "episodes/2230a30ae54c8a0d716c/episode.v6.h5.json",
+        ".receipt.json": "episodes/2230a30ae54c8a0d716c/episode.v6.h5.receipt.json"
+      },
+      "source_node": "node42",
+      "source_partition": "libero_spatial",
+      "source_relative_uri": "libero_spatial/pick_up_the_black_bowl_on_the_stove_and_place_it_on_the_plate_demo/demo_34.v6.h5",
+      "source_uri": "/local_nvme/zhangrong/libero-h5-v6-depthfixed-20261007/libero_spatial/pick_up_the_black_bowl_on_the_stove_and_place_it_on_the_plate_demo/demo_34.v6.h5",
+      "split": "train",
+      "uri": "episodes/2230a30ae54c8a0d716c/episode.v6.h5",
+      "node": "node42",
+      "dataset_key": "libero_v6",
+      "group_id": "libero-franka",
+      "source_h5": "/local_nvme/zhangrong/wm3d/datasets_node42/libero_v6/episodes/2230a30ae54c8a0d716c/episode.v6.h5",
+      "manifest_path": "/local_nvme/zhangrong/wm3d/datasets_node42/libero_v6/manifest.jsonl",
+      "manifest_sha256": "7c7cb9dd3b1ad510bbb8a7fd1f49c5ddb731c5bf086dde91ea1110d0c7cab55d",
+      "rank": 1,
+      "slug": "libero-franka-01-2230a30a"
+    },
+    {
+      "action_dim": 7,
+      "byte_size": 45399381,
+      "camera_names": [
+        "agentview",
+        "sideview",
+        "birdview",
+        "robot0_eye_in_hand"
+      ],
+      "content_digest": "7a19f7a26b96b3e7c53a2c6a716ab079b8087a0c077b6b16279ea4e9433bc8b4",
+      "content_digest_provenance": {
+        "key": "sha256[empty-string]",
+        "path": "/local_nvme/zhangrong/libero-h5-v6-depthfixed-20261007/libero_object/pick_up_the_cream_cheese_and_place_it_in_the_basket_demo/demo_37.v6.h5.receipt.json"
+      },
+      "data_contract": "simulator-replay-v6",
+      "data_quality": "production",
+      "dataset_family": "LIBERO",
+      "dataset_id": "libero-d4rt-v6",
+      "dynamic_point_count": 6400,
+      "embodiment": "franka",
+      "episode_id": "demo_37",
+      "episode_json_uri": "episodes/158c73f154cfccfb5fe2/episode.json",
+      "episode_key": "158c73f154cfccfb5fe2",
+      "fps": 20.0,
+      "has_actions": true,
+      "has_replay_bundle": false,
+      "has_robot_state": true,
+      "image_shapes": [
+        [
+          512,
+          512
+        ],
+        [
+          512,
+          512
+        ],
+        [
+          512,
+          512
+        ],
+        [
+          512,
+          512
+        ]
+      ],
+      "joint_dim": 9,
+      "language": "pick up the cream cheese and place it in the basket",
+      "manifest_schema_version": 2,
+      "num_frames": 135,
+      "phase1a_eligible": true,
+      "phase1b_eligible": false,
+      "point_count": 8000,
+      "robot_model": "robosuite-panda",
+      "sample_id": "158c73f154cfccfb5fe2",
+      "scene_id": "pick_up_the_cream_cheese_and_place_it_in_the_basket",
+      "schema_version": 6,
+      "sidecar_uris": {
+        ".bindings.npz": "episodes/158c73f154cfccfb5fe2/episode.v6.h5.bindings.npz",
+        ".json": "episodes/158c73f154cfccfb5fe2/episode.v6.h5.json",
+        ".receipt.json": "episodes/158c73f154cfccfb5fe2/episode.v6.h5.receipt.json"
+      },
+      "source_node": "node42",
+      "source_partition": "libero_object",
+      "source_relative_uri": "libero_object/pick_up_the_cream_cheese_and_place_it_in_the_basket_demo/demo_37.v6.h5",
+      "source_uri": "/local_nvme/zhangrong/libero-h5-v6-depthfixed-20261007/libero_object/pick_up_the_cream_cheese_and_place_it_in_the_basket_demo/demo_37.v6.h5",
+      "split": "train",
+      "uri": "episodes/158c73f154cfccfb5fe2/episode.v6.h5",
+      "node": "node42",
+      "dataset_key": "libero_v6",
+      "group_id": "libero-franka",
+      "source_h5": "/local_nvme/zhangrong/wm3d/datasets_node42/libero_v6/episodes/158c73f154cfccfb5fe2/episode.v6.h5",
+      "manifest_path": "/local_nvme/zhangrong/wm3d/datasets_node42/libero_v6/manifest.jsonl",
+      "manifest_sha256": "7c7cb9dd3b1ad510bbb8a7fd1f49c5ddb731c5bf086dde91ea1110d0c7cab55d",
+      "rank": 2,
+      "slug": "libero-franka-02-158c73f1"
+    },
+    {
+      "action_dim": 7,
+      "byte_size": 34179802,
+      "camera_names": [
+        "agentview",
+        "sideview",
+        "birdview",
+        "robot0_eye_in_hand"
+      ],
+      "content_digest": "4139c1716f935fc25a960eb0ad94d10b86a21d979ce50d095b9f1dfc5d420934",
+      "content_digest_provenance": {
+        "key": "sha256[empty-string]",
+        "path": "/local_nvme/zhangrong/libero-h5-v6-depthfixed-20261007/libero_goal/put_the_wine_bottle_on_top_of_the_cabinet_demo/demo_43.v6.h5.receipt.json"
+      },
+      "data_contract": "simulator-replay-v6",
+      "data_quality": "production",
+      "dataset_family": "LIBERO",
+      "dataset_id": "libero-d4rt-v6",
+      "dynamic_point_count": 6400,
+      "embodiment": "franka",
+      "episode_id": "demo_43",
+      "episode_json_uri": "episodes/589d97b72dbc244fe672/episode.json",
+      "episode_key": "589d97b72dbc244fe672",
+      "fps": 20.0,
+      "has_actions": true,
+      "has_replay_bundle": false,
+      "has_robot_state": true,
+      "image_shapes": [
+        [
+          512,
+          512
+        ],
+        [
+          512,
+          512
+        ],
+        [
+          512,
+          512
+        ],
+        [
+          512,
+          512
+        ]
+      ],
+      "joint_dim": 9,
+      "language": "put the wine bottle on top of the cabinet",
+      "manifest_schema_version": 2,
+      "num_frames": 92,
+      "phase1a_eligible": true,
+      "phase1b_eligible": false,
+      "point_count": 8000,
+      "robot_model": "robosuite-panda",
+      "sample_id": "589d97b72dbc244fe672",
+      "scene_id": "put_the_wine_bottle_on_top_of_the_cabinet",
+      "schema_version": 6,
+      "sidecar_uris": {
+        ".bindings.npz": "episodes/589d97b72dbc244fe672/episode.v6.h5.bindings.npz",
+        ".json": "episodes/589d97b72dbc244fe672/episode.v6.h5.json",
+        ".receipt.json": "episodes/589d97b72dbc244fe672/episode.v6.h5.receipt.json"
+      },
+      "source_node": "node42",
+      "source_partition": "libero_goal",
+      "source_relative_uri": "libero_goal/put_the_wine_bottle_on_top_of_the_cabinet_demo/demo_43.v6.h5",
+      "source_uri": "/local_nvme/zhangrong/libero-h5-v6-depthfixed-20261007/libero_goal/put_the_wine_bottle_on_top_of_the_cabinet_demo/demo_43.v6.h5",
+      "split": "train",
+      "uri": "episodes/589d97b72dbc244fe672/episode.v6.h5",
+      "node": "node42",
+      "dataset_key": "libero_v6",
+      "group_id": "libero-franka",
+      "source_h5": "/local_nvme/zhangrong/wm3d/datasets_node42/libero_v6/episodes/589d97b72dbc244fe672/episode.v6.h5",
+      "manifest_path": "/local_nvme/zhangrong/wm3d/datasets_node42/libero_v6/manifest.jsonl",
+      "manifest_sha256": "7c7cb9dd3b1ad510bbb8a7fd1f49c5ddb731c5bf086dde91ea1110d0c7cab55d",
+      "rank": 3,
+      "slug": "libero-franka-03-589d97b7"
+    },
+    {
+      "action_dim": 7,
+      "byte_size": 57077436,
+      "camera_names": [
+        "agentview",
+        "sideview",
+        "birdview",
+        "robot0_eye_in_hand"
+      ],
+      "content_digest": "aa07a885c0b729098947a85ec5f338010ada61114e5bb69d3dcdd5dce69906e2",
+      "content_digest_provenance": {
+        "key": "sha256[empty-string]",
+        "path": "/local_nvme/zhangrong/libero-h5-v6-depthfixed-20261007/libero_10/STUDY_SCENE1_pick_up_the_book_and_place_it_in_the_back_compartment_of_the_caddy_demo/demo_44.v6.h5.receipt.json"
+      },
+      "data_contract": "simulator-replay-v6",
+      "data_quality": "production",
+      "dataset_family": "LIBERO",
+      "dataset_id": "libero-d4rt-v6",
+      "dynamic_point_count": 6400,
+      "embodiment": "franka",
+      "episode_id": "demo_44",
+      "episode_json_uri": "episodes/27f5c3c67d98c5cff2bd/episode.json",
+      "episode_key": "27f5c3c67d98c5cff2bd",
+      "fps": 20.0,
+      "has_actions": true,
+      "has_replay_bundle": false,
+      "has_robot_state": true,
+      "image_shapes": [
+        [
+          512,
+          512
+        ],
+        [
+          512,
+          512
+        ],
+        [
+          512,
+          512
+        ],
+        [
+          512,
+          512
+        ]
+      ],
+      "joint_dim": 9,
+      "language": "pick up the book and place it in the back compartment of the caddy",
+      "manifest_schema_version": 2,
+      "num_frames": 174,
+      "phase1a_eligible": true,
+      "phase1b_eligible": false,
+      "point_count": 8000,
+      "robot_model": "robosuite-panda",
+      "sample_id": "27f5c3c67d98c5cff2bd",
+      "scene_id": "STUDY_SCENE1_pick_up_the_book_and_place_it_in_the_back_compartment_of_the_caddy",
+      "schema_version": 6,
+      "sidecar_uris": {
+        ".bindings.npz": "episodes/27f5c3c67d98c5cff2bd/episode.v6.h5.bindings.npz",
+        ".json": "episodes/27f5c3c67d98c5cff2bd/episode.v6.h5.json",
+        ".receipt.json": "episodes/27f5c3c67d98c5cff2bd/episode.v6.h5.receipt.json"
+      },
+      "source_node": "node42",
+      "source_partition": "libero_10",
+      "source_relative_uri": "libero_10/STUDY_SCENE1_pick_up_the_book_and_place_it_in_the_back_compartment_of_the_caddy_demo/demo_44.v6.h5",
+      "source_uri": "/local_nvme/zhangrong/libero-h5-v6-depthfixed-20261007/libero_10/STUDY_SCENE1_pick_up_the_book_and_place_it_in_the_back_compartment_of_the_caddy_demo/demo_44.v6.h5",
+      "split": "train",
+      "uri": "episodes/27f5c3c67d98c5cff2bd/episode.v6.h5",
+      "node": "node42",
+      "dataset_key": "libero_v6",
+      "group_id": "libero-franka",
+      "source_h5": "/local_nvme/zhangrong/wm3d/datasets_node42/libero_v6/episodes/27f5c3c67d98c5cff2bd/episode.v6.h5",
+      "manifest_path": "/local_nvme/zhangrong/wm3d/datasets_node42/libero_v6/manifest.jsonl",
+      "manifest_sha256": "7c7cb9dd3b1ad510bbb8a7fd1f49c5ddb731c5bf086dde91ea1110d0c7cab55d",
+      "rank": 4,
+      "slug": "libero-franka-04-27f5c3c6"
+    },
+    {
+      "action_dim": 7,
+      "byte_size": 38987448,
+      "camera_names": [
+        "agentview",
+        "sideview",
+        "birdview",
+        "robot0_eye_in_hand"
+      ],
+      "content_digest": "92c6b8df0f0f71d8f7ecd34ca15f13dd5e9dbe92fbe3bd789703d2b88cf927e3",
+      "content_digest_provenance": {
+        "key": "sha256[empty-string]",
+        "path": "/local_nvme/zhangrong/libero-h5-v6-depthfixed-20261007/libero_90/LIVING_ROOM_SCENE2_pick_up_the_milk_and_put_it_in_the_basket_demo/demo_1.v6.h5.receipt.json"
+      },
+      "data_contract": "simulator-replay-v6",
+      "data_quality": "production",
+      "dataset_family": "LIBERO",
+      "dataset_id": "libero-d4rt-v6",
+      "dynamic_point_count": 6400,
+      "embodiment": "franka",
+      "episode_id": "demo_1",
+      "episode_json_uri": "episodes/87f2e4043f3c8f5292de/episode.json",
+      "episode_key": "87f2e4043f3c8f5292de",
+      "fps": 20.0,
+      "has_actions": true,
+      "has_replay_bundle": false,
+      "has_robot_state": true,
+      "image_shapes": [
+        [
+          512,
+          512
+        ],
+        [
+          512,
+          512
+        ],
+        [
+          512,
+          512
+        ],
+        [
+          512,
+          512
+        ]
+      ],
+      "joint_dim": 9,
+      "language": "pick up the milk and put it in the basket",
+      "manifest_schema_version": 2,
+      "num_frames": 105,
+      "phase1a_eligible": true,
+      "phase1b_eligible": false,
+      "point_count": 8000,
+      "robot_model": "robosuite-panda",
+      "sample_id": "87f2e4043f3c8f5292de",
+      "scene_id": "LIVING_ROOM_SCENE2_pick_up_the_milk_and_put_it_in_the_basket",
+      "schema_version": 6,
+      "sidecar_uris": {
+        ".bindings.npz": "episodes/87f2e4043f3c8f5292de/episode.v6.h5.bindings.npz",
+        ".json": "episodes/87f2e4043f3c8f5292de/episode.v6.h5.json",
+        ".receipt.json": "episodes/87f2e4043f3c8f5292de/episode.v6.h5.receipt.json"
+      },
+      "source_node": "node42",
+      "source_partition": "libero_90",
+      "source_relative_uri": "libero_90/LIVING_ROOM_SCENE2_pick_up_the_milk_and_put_it_in_the_basket_demo/demo_1.v6.h5",
+      "source_uri": "/local_nvme/zhangrong/libero-h5-v6-depthfixed-20261007/libero_90/LIVING_ROOM_SCENE2_pick_up_the_milk_and_put_it_in_the_basket_demo/demo_1.v6.h5",
+      "split": "train",
+      "uri": "episodes/87f2e4043f3c8f5292de/episode.v6.h5",
+      "node": "node42",
+      "dataset_key": "libero_v6",
+      "group_id": "libero-franka",
+      "source_h5": "/local_nvme/zhangrong/wm3d/datasets_node42/libero_v6/episodes/87f2e4043f3c8f5292de/episode.v6.h5",
+      "manifest_path": "/local_nvme/zhangrong/wm3d/datasets_node42/libero_v6/manifest.jsonl",
+      "manifest_sha256": "7c7cb9dd3b1ad510bbb8a7fd1f49c5ddb731c5bf086dde91ea1110d0c7cab55d",
+      "rank": 5,
+      "slug": "libero-franka-05-87f2e404"
+    },
+    {
+      "action_dim": 38,
+      "byte_size": 55069806,
+      "camera_names": [
+        "head_camera",
+        "left_camera",
+        "right_camera",
+        "robotview"
+      ],
+      "content_digest": "e5362060f1f87e1dde7d4e2b749efc9a40739db21ac9cb0f9dbaa0a416a9a6de",
+      "content_digest_provenance": {
+        "key": "sha256[empty-string]",
+        "path": "/local_nvme/zhangrong/robotwin-h5-v6/move_stapler_pad/aloha-agilex/episode011.v6.h5.receipt.json"
+      },
+      "data_contract": "simulator-replay-v6",
+      "data_quality": "production",
+      "dataset_family": "RoboTwin",
+      "dataset_id": "robotwin-randomized-quarc-v6",
+      "dynamic_point_count": 6400,
+      "embodiment": "aloha-agilex",
+      "episode_id": "11",
+      "episode_json_uri": "episodes/aloha-agilex/c7b333bc7ad1554d312e/episode.json",
+      "episode_key": "c7b333bc7ad1554d312e",
+      "fps": 25.0,
+      "has_actions": true,
+      "has_replay_bundle": false,
+      "has_robot_state": true,
+      "image_shapes": [
+        [
+          480,
+          640
+        ],
+        [
+          480,
+          640
+        ],
+        [
+          480,
+          640
+        ],
+        [
+          480,
+          640
+        ]
+      ],
+      "joint_dim": 38,
+      "language": "move stapler pad",
+      "manifest_schema_version": 2,
+      "num_frames": 199,
+      "phase1a_eligible": true,
+      "phase1b_eligible": false,
+      "point_count": 8000,
+      "robot_model": "aloha-agilex",
+      "sample_id": "c7b333bc7ad1554d312e",
+      "scene_id": "move_stapler_pad",
+      "schema_version": 6,
+      "sidecar_uris": {
+        ".bindings.npz": "episodes/aloha-agilex/c7b333bc7ad1554d312e/episode.v6.h5.bindings.npz",
+        ".geometry.npz": "episodes/aloha-agilex/c7b333bc7ad1554d312e/episode.v6.h5.geometry.npz",
+        ".receipt.json": "episodes/aloha-agilex/c7b333bc7ad1554d312e/episode.v6.h5.receipt.json",
+        ".report.json": "episodes/aloha-agilex/c7b333bc7ad1554d312e/episode.v6.h5.report.json",
+        ".robot.urdf": "episodes/aloha-agilex/c7b333bc7ad1554d312e/episode.v6.h5.robot.urdf"
+      },
+      "source_node": "node42",
+      "source_partition": "production",
+      "source_relative_uri": "move_stapler_pad/aloha-agilex/episode011.v6.h5",
+      "source_uri": "/local_nvme/zhangrong/robotwin-h5-v6/move_stapler_pad/aloha-agilex/episode011.v6.h5",
+      "split": "train",
+      "task_success": true,
+      "uri": "episodes/aloha-agilex/c7b333bc7ad1554d312e/episode.v6.h5",
+      "node": "node42",
+      "dataset_key": "robotwin_v6",
+      "group_id": "robotwin-aloha-agilex",
+      "source_h5": "/local_nvme/zhangrong/wm3d/datasets_node42/robotwin_v6/episodes/aloha-agilex/c7b333bc7ad1554d312e/episode.v6.h5",
+      "manifest_path": "/local_nvme/zhangrong/wm3d/datasets_node42/robotwin_v6/manifest.jsonl",
+      "manifest_sha256": "5396a9aedf0024821811a1bdbee918d16c8367c50360aef00abfdb7263ce4d77",
+      "rank": 1,
+      "slug": "robotwin-aloha-agilex-01-c7b333bc"
+    },
+    {
+      "action_dim": 38,
+      "byte_size": 69380202,
+      "camera_names": [
+        "head_camera",
+        "left_camera",
+        "right_camera",
+        "robotview"
+      ],
+      "content_digest": "f9da8b7cf8c799e8d3899abc76dbd9c44f60217dbf524a7f7b4222087fdc1543",
+      "content_digest_provenance": {
+        "key": "sha256[empty-string]",
+        "path": "/local_nvme/zhangrong/robotwin-h5-v6/pick_dual_bottles/aloha-agilex/episode022.v6.h5.receipt.json"
+      },
+      "data_contract": "simulator-replay-v6",
+      "data_quality": "production",
+      "dataset_family": "RoboTwin",
+      "dataset_id": "robotwin-randomized-quarc-v6",
+      "dynamic_point_count": 6400,
+      "embodiment": "aloha-agilex",
+      "episode_id": "22",
+      "episode_json_uri": "episodes/aloha-agilex/a6cb37baaf5849005c0e/episode.json",
+      "episode_key": "a6cb37baaf5849005c0e",
+      "fps": 25.0,
+      "has_actions": true,
+      "has_replay_bundle": false,
+      "has_robot_state": true,
+      "image_shapes": [
+        [
+          480,
+          640
+        ],
+        [
+          480,
+          640
+        ],
+        [
+          480,
+          640
+        ],
+        [
+          480,
+          640
+        ]
+      ],
+      "joint_dim": 38,
+      "language": "pick dual bottles",
+      "manifest_schema_version": 2,
+      "num_frames": 172,
+      "phase1a_eligible": true,
+      "phase1b_eligible": false,
+      "point_count": 8000,
+      "robot_model": "aloha-agilex",
+      "sample_id": "a6cb37baaf5849005c0e",
+      "scene_id": "pick_dual_bottles",
+      "schema_version": 6,
+      "sidecar_uris": {
+        ".bindings.npz": "episodes/aloha-agilex/a6cb37baaf5849005c0e/episode.v6.h5.bindings.npz",
+        ".geometry.npz": "episodes/aloha-agilex/a6cb37baaf5849005c0e/episode.v6.h5.geometry.npz",
+        ".receipt.json": "episodes/aloha-agilex/a6cb37baaf5849005c0e/episode.v6.h5.receipt.json",
+        ".report.json": "episodes/aloha-agilex/a6cb37baaf5849005c0e/episode.v6.h5.report.json",
+        ".robot.urdf": "episodes/aloha-agilex/a6cb37baaf5849005c0e/episode.v6.h5.robot.urdf"
+      },
+      "source_node": "node42",
+      "source_partition": "production",
+      "source_relative_uri": "pick_dual_bottles/aloha-agilex/episode022.v6.h5",
+      "source_uri": "/local_nvme/zhangrong/robotwin-h5-v6/pick_dual_bottles/aloha-agilex/episode022.v6.h5",
+      "split": "train",
+      "task_success": true,
+      "uri": "episodes/aloha-agilex/a6cb37baaf5849005c0e/episode.v6.h5",
+      "node": "node42",
+      "dataset_key": "robotwin_v6",
+      "group_id": "robotwin-aloha-agilex",
+      "source_h5": "/local_nvme/zhangrong/wm3d/datasets_node42/robotwin_v6/episodes/aloha-agilex/a6cb37baaf5849005c0e/episode.v6.h5",
+      "manifest_path": "/local_nvme/zhangrong/wm3d/datasets_node42/robotwin_v6/manifest.jsonl",
+      "manifest_sha256": "5396a9aedf0024821811a1bdbee918d16c8367c50360aef00abfdb7263ce4d77",
+      "rank": 2,
+      "slug": "robotwin-aloha-agilex-02-a6cb37ba"
+    },
+    {
+      "action_dim": 38,
+      "byte_size": 96903467,
+      "camera_names": [
+        "head_camera",
+        "left_camera",
+        "right_camera",
+        "robotview"
+      ],
+      "content_digest": "ea3c0d408c9d47b29b2c6a306ca2e912ac9aeb2525093e3e54d4ef59b6866339",
+      "content_digest_provenance": {
+        "key": "sha256[empty-string]",
+        "path": "/local_nvme/zhangrong/robotwin-h5-v6/shake_bottle/aloha-agilex/episode021.v6.h5.receipt.json"
+      },
+      "data_contract": "simulator-replay-v6",
+      "data_quality": "production",
+      "dataset_family": "RoboTwin",
+      "dataset_id": "robotwin-randomized-quarc-v6",
+      "dynamic_point_count": 6400,
+      "embodiment": "aloha-agilex",
+      "episode_id": "21",
+      "episode_json_uri": "episodes/aloha-agilex/7734e64d8d1c77655c33/episode.json",
+      "episode_key": "7734e64d8d1c77655c33",
+      "fps": 25.0,
+      "has_actions": true,
+      "has_replay_bundle": false,
+      "has_robot_state": true,
+      "image_shapes": [
+        [
+          480,
+          640
+        ],
+        [
+          480,
+          640
+        ],
+        [
+          480,
+          640
+        ],
+        [
+          480,
+          640
+        ]
+      ],
+      "joint_dim": 38,
+      "language": "shake bottle",
+      "manifest_schema_version": 2,
+      "num_frames": 322,
+      "phase1a_eligible": true,
+      "phase1b_eligible": false,
+      "point_count": 8000,
+      "robot_model": "aloha-agilex",
+      "sample_id": "7734e64d8d1c77655c33",
+      "scene_id": "shake_bottle",
+      "schema_version": 6,
+      "sidecar_uris": {
+        ".bindings.npz": "episodes/aloha-agilex/7734e64d8d1c77655c33/episode.v6.h5.bindings.npz",
+        ".geometry.npz": "episodes/aloha-agilex/7734e64d8d1c77655c33/episode.v6.h5.geometry.npz",
+        ".receipt.json": "episodes/aloha-agilex/7734e64d8d1c77655c33/episode.v6.h5.receipt.json",
+        ".report.json": "episodes/aloha-agilex/7734e64d8d1c77655c33/episode.v6.h5.report.json",
+        ".robot.urdf": "episodes/aloha-agilex/7734e64d8d1c77655c33/episode.v6.h5.robot.urdf"
+      },
+      "source_node": "node42",
+      "source_partition": "production",
+      "source_relative_uri": "shake_bottle/aloha-agilex/episode021.v6.h5",
+      "source_uri": "/local_nvme/zhangrong/robotwin-h5-v6/shake_bottle/aloha-agilex/episode021.v6.h5",
+      "split": "train",
+      "task_success": true,
+      "uri": "episodes/aloha-agilex/7734e64d8d1c77655c33/episode.v6.h5",
+      "node": "node42",
+      "dataset_key": "robotwin_v6",
+      "group_id": "robotwin-aloha-agilex",
+      "source_h5": "/local_nvme/zhangrong/wm3d/datasets_node42/robotwin_v6/episodes/aloha-agilex/7734e64d8d1c77655c33/episode.v6.h5",
+      "manifest_path": "/local_nvme/zhangrong/wm3d/datasets_node42/robotwin_v6/manifest.jsonl",
+      "manifest_sha256": "5396a9aedf0024821811a1bdbee918d16c8367c50360aef00abfdb7263ce4d77",
+      "rank": 3,
+      "slug": "robotwin-aloha-agilex-03-7734e64d"
+    },
+    {
+      "action_dim": 38,
+      "byte_size": 91944061,
+      "camera_names": [
+        "head_camera",
+        "left_camera",
+        "right_camera",
+        "robotview"
+      ],
+      "content_digest": "b150600837f127ea9321fc332b8ed6284827a1c3c5433941e95dd196f7626e8e",
+      "content_digest_provenance": {
+        "key": "sha256[empty-string]",
+        "path": "/local_nvme/zhangrong/robotwin-h5-v6/place_container_plate/aloha-agilex/episode022.v6.h5.receipt.json"
+      },
+      "data_contract": "simulator-replay-v6",
+      "data_quality": "production",
+      "dataset_family": "RoboTwin",
+      "dataset_id": "robotwin-randomized-quarc-v6",
+      "dynamic_point_count": 6400,
+      "embodiment": "aloha-agilex",
+      "episode_id": "22",
+      "episode_json_uri": "episodes/aloha-agilex/ead2b3e6a9f52bc288c2/episode.json",
+      "episode_key": "ead2b3e6a9f52bc288c2",
+      "fps": 25.0,
+      "has_actions": true,
+      "has_replay_bundle": false,
+      "has_robot_state": true,
+      "image_shapes": [
+        [
+          480,
+          640
+        ],
+        [
+          480,
+          640
+        ],
+        [
+          480,
+          640
+        ],
+        [
+          480,
+          640
+        ]
+      ],
+      "joint_dim": 38,
+      "language": "place container plate",
+      "manifest_schema_version": 2,
+      "num_frames": 212,
+      "phase1a_eligible": true,
+      "phase1b_eligible": false,
+      "point_count": 8000,
+      "robot_model": "aloha-agilex",
+      "sample_id": "ead2b3e6a9f52bc288c2",
+      "scene_id": "place_container_plate",
+      "schema_version": 6,
+      "sidecar_uris": {
+        ".bindings.npz": "episodes/aloha-agilex/ead2b3e6a9f52bc288c2/episode.v6.h5.bindings.npz",
+        ".geometry.npz": "episodes/aloha-agilex/ead2b3e6a9f52bc288c2/episode.v6.h5.geometry.npz",
+        ".receipt.json": "episodes/aloha-agilex/ead2b3e6a9f52bc288c2/episode.v6.h5.receipt.json",
+        ".report.json": "episodes/aloha-agilex/ead2b3e6a9f52bc288c2/episode.v6.h5.report.json",
+        ".robot.urdf": "episodes/aloha-agilex/ead2b3e6a9f52bc288c2/episode.v6.h5.robot.urdf"
+      },
+      "source_node": "node42",
+      "source_partition": "production",
+      "source_relative_uri": "place_container_plate/aloha-agilex/episode022.v6.h5",
+      "source_uri": "/local_nvme/zhangrong/robotwin-h5-v6/place_container_plate/aloha-agilex/episode022.v6.h5",
+      "split": "train",
+      "task_success": true,
+      "uri": "episodes/aloha-agilex/ead2b3e6a9f52bc288c2/episode.v6.h5",
+      "node": "node42",
+      "dataset_key": "robotwin_v6",
+      "group_id": "robotwin-aloha-agilex",
+      "source_h5": "/local_nvme/zhangrong/wm3d/datasets_node42/robotwin_v6/episodes/aloha-agilex/ead2b3e6a9f52bc288c2/episode.v6.h5",
+      "manifest_path": "/local_nvme/zhangrong/wm3d/datasets_node42/robotwin_v6/manifest.jsonl",
+      "manifest_sha256": "5396a9aedf0024821811a1bdbee918d16c8367c50360aef00abfdb7263ce4d77",
+      "rank": 4,
+      "slug": "robotwin-aloha-agilex-04-ead2b3e6"
+    },
+    {
+      "action_dim": 38,
+      "byte_size": 49093767,
+      "camera_names": [
+        "head_camera",
+        "left_camera",
+        "right_camera",
+        "robotview"
+      ],
+      "content_digest": "da53f9c32c18731d485194186c42d8c8042bd3f30adc86bfa9a87322c57484d0",
+      "content_digest_provenance": {
+        "key": "sha256[empty-string]",
+        "path": "/local_nvme/zhangrong/robotwin-h5-v6/turn_switch/aloha-agilex/episode015.v6.h5.receipt.json"
+      },
+      "data_contract": "simulator-replay-v6",
+      "data_quality": "production",
+      "dataset_family": "RoboTwin",
+      "dataset_id": "robotwin-randomized-quarc-v6",
+      "dynamic_point_count": 6400,
+      "embodiment": "aloha-agilex",
+      "episode_id": "15",
+      "episode_json_uri": "episodes/aloha-agilex/d0fdce15f45457a807aa/episode.json",
+      "episode_key": "d0fdce15f45457a807aa",
+      "fps": 25.0,
+      "has_actions": true,
+      "has_replay_bundle": false,
+      "has_robot_state": true,
+      "image_shapes": [
+        [
+          480,
+          640
+        ],
+        [
+          480,
+          640
+        ],
+        [
+          480,
+          640
+        ],
+        [
+          480,
+          640
+        ]
+      ],
+      "joint_dim": 38,
+      "language": "turn switch",
+      "manifest_schema_version": 2,
+      "num_frames": 132,
+      "phase1a_eligible": true,
+      "phase1b_eligible": false,
+      "point_count": 8000,
+      "robot_model": "aloha-agilex",
+      "sample_id": "d0fdce15f45457a807aa",
+      "scene_id": "turn_switch",
+      "schema_version": 6,
+      "sidecar_uris": {
+        ".bindings.npz": "episodes/aloha-agilex/d0fdce15f45457a807aa/episode.v6.h5.bindings.npz",
+        ".geometry.npz": "episodes/aloha-agilex/d0fdce15f45457a807aa/episode.v6.h5.geometry.npz",
+        ".receipt.json": "episodes/aloha-agilex/d0fdce15f45457a807aa/episode.v6.h5.receipt.json",
+        ".report.json": "episodes/aloha-agilex/d0fdce15f45457a807aa/episode.v6.h5.report.json",
+        ".robot.urdf": "episodes/aloha-agilex/d0fdce15f45457a807aa/episode.v6.h5.robot.urdf"
+      },
+      "source_node": "node42",
+      "source_partition": "production",
+      "source_relative_uri": "turn_switch/aloha-agilex/episode015.v6.h5",
+      "source_uri": "/local_nvme/zhangrong/robotwin-h5-v6/turn_switch/aloha-agilex/episode015.v6.h5",
+      "split": "train",
+      "task_success": true,
+      "uri": "episodes/aloha-agilex/d0fdce15f45457a807aa/episode.v6.h5",
+      "node": "node42",
+      "dataset_key": "robotwin_v6",
+      "group_id": "robotwin-aloha-agilex",
+      "source_h5": "/local_nvme/zhangrong/wm3d/datasets_node42/robotwin_v6/episodes/aloha-agilex/d0fdce15f45457a807aa/episode.v6.h5",
+      "manifest_path": "/local_nvme/zhangrong/wm3d/datasets_node42/robotwin_v6/manifest.jsonl",
+      "manifest_sha256": "5396a9aedf0024821811a1bdbee918d16c8367c50360aef00abfdb7263ce4d77",
+      "rank": 5,
+      "slug": "robotwin-aloha-agilex-05-d0fdce15"
+    },
+    {
+      "action_dim": 16,
+      "byte_size": 27288227,
+      "camera_names": [
+        "head_camera",
+        "left_camera",
+        "right_camera",
+        "robotview"
+      ],
+      "content_digest": "db7f6629069c1c0aabd76e8f153943aac8d14e17b7f3e2634d9b30b9d2fa2673",
+      "content_digest_provenance": {
+        "key": "sha256[empty-string]",
+        "path": "/local_nvme/zhangrong/robotwin-h5-v6/beat_block_hammer/arx-x5/episode004.v6.h5.receipt.json"
+      },
+      "data_contract": "simulator-replay-v6",
+      "data_quality": "production",
+      "dataset_family": "RoboTwin",
+      "dataset_id": "robotwin-randomized-quarc-v6",
+      "dynamic_point_count": 6400,
+      "embodiment": "arx-x5",
+      "episode_id": "4",
+      "episode_json_uri": "episodes/arx-x5/74df0f45086b494284b9/episode.json",
+      "episode_key": "74df0f45086b494284b9",
+      "fps": 25.0,
+      "has_actions": true,
+      "has_replay_bundle": false,
+      "has_robot_state": true,
+      "image_shapes": [
+        [
+          480,
+          640
+        ],
+        [
+          480,
+          640
+        ],
+        [
+          480,
+          640
+        ],
+        [
+          480,
+          640
+        ]
+      ],
+      "joint_dim": 16,
+      "language": "beat block hammer",
+      "manifest_schema_version": 2,
+      "num_frames": 92,
+      "phase1a_eligible": true,
+      "phase1b_eligible": false,
+      "point_count": 8000,
+      "robot_model": "arx-x5",
+      "sample_id": "74df0f45086b494284b9",
+      "scene_id": "beat_block_hammer",
+      "schema_version": 6,
+      "sidecar_uris": {
+        ".bindings.npz": "episodes/arx-x5/74df0f45086b494284b9/episode.v6.h5.bindings.npz",
+        ".geometry.npz": "episodes/arx-x5/74df0f45086b494284b9/episode.v6.h5.geometry.npz",
+        ".receipt.json": "episodes/arx-x5/74df0f45086b494284b9/episode.v6.h5.receipt.json",
+        ".report.json": "episodes/arx-x5/74df0f45086b494284b9/episode.v6.h5.report.json",
+        ".robot.urdf": "episodes/arx-x5/74df0f45086b494284b9/episode.v6.h5.robot.urdf"
+      },
+      "source_node": "node42",
+      "source_partition": "production",
+      "source_relative_uri": "beat_block_hammer/arx-x5/episode004.v6.h5",
+      "source_uri": "/local_nvme/zhangrong/robotwin-h5-v6/beat_block_hammer/arx-x5/episode004.v6.h5",
+      "split": "train",
+      "task_success": true,
+      "uri": "episodes/arx-x5/74df0f45086b494284b9/episode.v6.h5",
+      "node": "node42",
+      "dataset_key": "robotwin_v6",
+      "group_id": "robotwin-arx-x5",
+      "source_h5": "/local_nvme/zhangrong/wm3d/datasets_node42/robotwin_v6/episodes/arx-x5/74df0f45086b494284b9/episode.v6.h5",
+      "manifest_path": "/local_nvme/zhangrong/wm3d/datasets_node42/robotwin_v6/manifest.jsonl",
+      "manifest_sha256": "5396a9aedf0024821811a1bdbee918d16c8367c50360aef00abfdb7263ce4d77",
+      "rank": 1,
+      "slug": "robotwin-arx-x5-01-74df0f45"
+    },
+    {
+      "action_dim": 16,
+      "byte_size": 34885538,
+      "camera_names": [
+        "head_camera",
+        "left_camera",
+        "right_camera",
+        "robotview"
+      ],
+      "content_digest": "026e90ece9af00e0f2e495fe4aaa3d60ca037a0a6d194b48f40cc9cabfc4257f",
+      "content_digest_provenance": {
+        "key": "sha256[empty-string]",
+        "path": "/local_nvme/zhangrong/robotwin-h5-v6/pick_diverse_bottles/arx-x5/episode036.v6.h5.receipt.json"
+      },
+      "data_contract": "simulator-replay-v6",
+      "data_quality": "production",
+      "dataset_family": "RoboTwin",
+      "dataset_id": "robotwin-randomized-quarc-v6",
+      "dynamic_point_count": 6400,
+      "embodiment": "arx-x5",
+      "episode_id": "36",
+      "episode_json_uri": "episodes/arx-x5/87ec00df21bcc0cbd327/episode.json",
+      "episode_key": "87ec00df21bcc0cbd327",
+      "fps": 25.0,
+      "has_actions": true,
+      "has_replay_bundle": false,
+      "has_robot_state": true,
+      "image_shapes": [
+        [
+          480,
+          640
+        ],
+        [
+          480,
+          640
+        ],
+        [
+          480,
+          640
+        ],
+        [
+          480,
+          640
+        ]
+      ],
+      "joint_dim": 16,
+      "language": "pick diverse bottles",
+      "manifest_schema_version": 2,
+      "num_frames": 98,
+      "phase1a_eligible": true,
+      "phase1b_eligible": false,
+      "point_count": 8000,
+      "robot_model": "arx-x5",
+      "sample_id": "87ec00df21bcc0cbd327",
+      "scene_id": "pick_diverse_bottles",
+      "schema_version": 6,
+      "sidecar_uris": {
+        ".bindings.npz": "episodes/arx-x5/87ec00df21bcc0cbd327/episode.v6.h5.bindings.npz",
+        ".geometry.npz": "episodes/arx-x5/87ec00df21bcc0cbd327/episode.v6.h5.geometry.npz",
+        ".receipt.json": "episodes/arx-x5/87ec00df21bcc0cbd327/episode.v6.h5.receipt.json",
+        ".report.json": "episodes/arx-x5/87ec00df21bcc0cbd327/episode.v6.h5.report.json",
+        ".robot.urdf": "episodes/arx-x5/87ec00df21bcc0cbd327/episode.v6.h5.robot.urdf"
+      },
+      "source_node": "node42",
+      "source_partition": "production",
+      "source_relative_uri": "pick_diverse_bottles/arx-x5/episode036.v6.h5",
+      "source_uri": "/local_nvme/zhangrong/robotwin-h5-v6/pick_diverse_bottles/arx-x5/episode036.v6.h5",
+      "split": "train",
+      "task_success": true,
+      "uri": "episodes/arx-x5/87ec00df21bcc0cbd327/episode.v6.h5",
+      "node": "node42",
+      "dataset_key": "robotwin_v6",
+      "group_id": "robotwin-arx-x5",
+      "source_h5": "/local_nvme/zhangrong/wm3d/datasets_node42/robotwin_v6/episodes/arx-x5/87ec00df21bcc0cbd327/episode.v6.h5",
+      "manifest_path": "/local_nvme/zhangrong/wm3d/datasets_node42/robotwin_v6/manifest.jsonl",
+      "manifest_sha256": "5396a9aedf0024821811a1bdbee918d16c8367c50360aef00abfdb7263ce4d77",
+      "rank": 2,
+      "slug": "robotwin-arx-x5-02-87ec00df"
+    },
+    {
+      "action_dim": 16,
+      "byte_size": 40398661,
+      "camera_names": [
+        "head_camera",
+        "left_camera",
+        "right_camera",
+        "robotview"
+      ],
+      "content_digest": "5493a5b2e3893330c7dea46cd35507a1956343278f3fcdfcdade5885661e3002",
+      "content_digest_provenance": {
+        "key": "sha256[empty-string]",
+        "path": "/local_nvme/zhangrong/robotwin-h5-v6/move_playingcard_away/arx-x5/episode042.v6.h5.receipt.json"
+      },
+      "data_contract": "simulator-replay-v6",
+      "data_quality": "production",
+      "dataset_family": "RoboTwin",
+      "dataset_id": "robotwin-randomized-quarc-v6",
+      "dynamic_point_count": 6400,
+      "embodiment": "arx-x5",
+      "episode_id": "42",
+      "episode_json_uri": "episodes/arx-x5/b81627bdcbdaf45b0b9d/episode.json",
+      "episode_key": "b81627bdcbdaf45b0b9d",
+      "fps": 25.0,
+      "has_actions": true,
+      "has_replay_bundle": false,
+      "has_robot_state": true,
+      "image_shapes": [
+        [
+          480,
+          640
+        ],
+        [
+          480,
+          640
+        ],
+        [
+          480,
+          640
+        ],
+        [
+          480,
+          640
+        ]
+      ],
+      "joint_dim": 16,
+      "language": "move playingcard away",
+      "manifest_schema_version": 2,
+      "num_frames": 109,
+      "phase1a_eligible": true,
+      "phase1b_eligible": false,
+      "point_count": 8000,
+      "robot_model": "arx-x5",
+      "sample_id": "b81627bdcbdaf45b0b9d",
+      "scene_id": "move_playingcard_away",
+      "schema_version": 6,
+      "sidecar_uris": {
+        ".bindings.npz": "episodes/arx-x5/b81627bdcbdaf45b0b9d/episode.v6.h5.bindings.npz",
+        ".geometry.npz": "episodes/arx-x5/b81627bdcbdaf45b0b9d/episode.v6.h5.geometry.npz",
+        ".receipt.json": "episodes/arx-x5/b81627bdcbdaf45b0b9d/episode.v6.h5.receipt.json",
+        ".report.json": "episodes/arx-x5/b81627bdcbdaf45b0b9d/episode.v6.h5.report.json",
+        ".robot.urdf": "episodes/arx-x5/b81627bdcbdaf45b0b9d/episode.v6.h5.robot.urdf"
+      },
+      "source_node": "node42",
+      "source_partition": "production",
+      "source_relative_uri": "move_playingcard_away/arx-x5/episode042.v6.h5",
+      "source_uri": "/local_nvme/zhangrong/robotwin-h5-v6/move_playingcard_away/arx-x5/episode042.v6.h5",
+      "split": "train",
+      "task_success": true,
+      "uri": "episodes/arx-x5/b81627bdcbdaf45b0b9d/episode.v6.h5",
+      "node": "node42",
+      "dataset_key": "robotwin_v6",
+      "group_id": "robotwin-arx-x5",
+      "source_h5": "/local_nvme/zhangrong/wm3d/datasets_node42/robotwin_v6/episodes/arx-x5/b81627bdcbdaf45b0b9d/episode.v6.h5",
+      "manifest_path": "/local_nvme/zhangrong/wm3d/datasets_node42/robotwin_v6/manifest.jsonl",
+      "manifest_sha256": "5396a9aedf0024821811a1bdbee918d16c8367c50360aef00abfdb7263ce4d77",
+      "rank": 3,
+      "slug": "robotwin-arx-x5-03-b81627bd"
+    },
+    {
+      "action_dim": 16,
+      "byte_size": 64406437,
+      "camera_names": [
+        "head_camera",
+        "left_camera",
+        "right_camera",
+        "robotview"
+      ],
+      "content_digest": "d7ebf3425bd58741d6e9285cd0fa5c22daff087fc72ff5c73e1bc313e55c110b",
+      "content_digest_provenance": {
+        "key": "sha256[empty-string]",
+        "path": "/local_nvme/zhangrong/robotwin-h5-v6/place_object_basket/arx-x5/episode018.v6.h5.receipt.json"
+      },
+      "data_contract": "simulator-replay-v6",
+      "data_quality": "production",
+      "dataset_family": "RoboTwin",
+      "dataset_id": "robotwin-randomized-quarc-v6",
+      "dynamic_point_count": 6400,
+      "embodiment": "arx-x5",
+      "episode_id": "18",
+      "episode_json_uri": "episodes/arx-x5/1850d211b777214a087e/episode.json",
+      "episode_key": "1850d211b777214a087e",
+      "fps": 25.0,
+      "has_actions": true,
+      "has_replay_bundle": false,
+      "has_robot_state": true,
+      "image_shapes": [
+        [
+          480,
+          640
+        ],
+        [
+          480,
+          640
+        ],
+        [
+          480,
+          640
+        ],
+        [
+          480,
+          640
+        ]
+      ],
+      "joint_dim": 16,
+      "language": "place object basket",
+      "manifest_schema_version": 2,
+      "num_frames": 202,
+      "phase1a_eligible": true,
+      "phase1b_eligible": false,
+      "point_count": 8000,
+      "robot_model": "arx-x5",
+      "sample_id": "1850d211b777214a087e",
+      "scene_id": "place_object_basket",
+      "schema_version": 6,
+      "sidecar_uris": {
+        ".bindings.npz": "episodes/arx-x5/1850d211b777214a087e/episode.v6.h5.bindings.npz",
+        ".geometry.npz": "episodes/arx-x5/1850d211b777214a087e/episode.v6.h5.geometry.npz",
+        ".receipt.json": "episodes/arx-x5/1850d211b777214a087e/episode.v6.h5.receipt.json",
+        ".report.json": "episodes/arx-x5/1850d211b777214a087e/episode.v6.h5.report.json",
+        ".robot.urdf": "episodes/arx-x5/1850d211b777214a087e/episode.v6.h5.robot.urdf"
+      },
+      "source_node": "node42",
+      "source_partition": "production",
+      "source_relative_uri": "place_object_basket/arx-x5/episode018.v6.h5",
+      "source_uri": "/local_nvme/zhangrong/robotwin-h5-v6/place_object_basket/arx-x5/episode018.v6.h5",
+      "split": "train",
+      "task_success": true,
+      "uri": "episodes/arx-x5/1850d211b777214a087e/episode.v6.h5",
+      "node": "node42",
+      "dataset_key": "robotwin_v6",
+      "group_id": "robotwin-arx-x5",
+      "source_h5": "/local_nvme/zhangrong/wm3d/datasets_node42/robotwin_v6/episodes/arx-x5/1850d211b777214a087e/episode.v6.h5",
+      "manifest_path": "/local_nvme/zhangrong/wm3d/datasets_node42/robotwin_v6/manifest.jsonl",
+      "manifest_sha256": "5396a9aedf0024821811a1bdbee918d16c8367c50360aef00abfdb7263ce4d77",
+      "rank": 4,
+      "slug": "robotwin-arx-x5-04-1850d211"
+    },
+    {
+      "action_dim": 16,
+      "byte_size": 61504350,
+      "camera_names": [
+        "head_camera",
+        "left_camera",
+        "right_camera",
+        "robotview"
+      ],
+      "content_digest": "bb7de7497a69f6ca048c0a1795fb54f9567dfdd543bb436d11bed7925287a193",
+      "content_digest_provenance": {
+        "key": "sha256[empty-string]",
+        "path": "/local_nvme/zhangrong/robotwin-h5-v6/shake_bottle/arx-x5/episode030.v6.h5.receipt.json"
+      },
+      "data_contract": "simulator-replay-v6",
+      "data_quality": "production",
+      "dataset_family": "RoboTwin",
+      "dataset_id": "robotwin-randomized-quarc-v6",
+      "dynamic_point_count": 6400,
+      "embodiment": "arx-x5",
+      "episode_id": "30",
+      "episode_json_uri": "episodes/arx-x5/5543c646c32ea60cde77/episode.json",
+      "episode_key": "5543c646c32ea60cde77",
+      "fps": 25.0,
+      "has_actions": true,
+      "has_replay_bundle": false,
+      "has_robot_state": true,
+      "image_shapes": [
+        [
+          480,
+          640
+        ],
+        [
+          480,
+          640
+        ],
+        [
+          480,
+          640
+        ],
+        [
+          480,
+          640
+        ]
+      ],
+      "joint_dim": 16,
+      "language": "shake bottle",
+      "manifest_schema_version": 2,
+      "num_frames": 162,
+      "phase1a_eligible": true,
+      "phase1b_eligible": false,
+      "point_count": 8000,
+      "robot_model": "arx-x5",
+      "sample_id": "5543c646c32ea60cde77",
+      "scene_id": "shake_bottle",
+      "schema_version": 6,
+      "sidecar_uris": {
+        ".bindings.npz": "episodes/arx-x5/5543c646c32ea60cde77/episode.v6.h5.bindings.npz",
+        ".geometry.npz": "episodes/arx-x5/5543c646c32ea60cde77/episode.v6.h5.geometry.npz",
+        ".receipt.json": "episodes/arx-x5/5543c646c32ea60cde77/episode.v6.h5.receipt.json",
+        ".report.json": "episodes/arx-x5/5543c646c32ea60cde77/episode.v6.h5.report.json",
+        ".robot.urdf": "episodes/arx-x5/5543c646c32ea60cde77/episode.v6.h5.robot.urdf"
+      },
+      "source_node": "node42",
+      "source_partition": "production",
+      "source_relative_uri": "shake_bottle/arx-x5/episode030.v6.h5",
+      "source_uri": "/local_nvme/zhangrong/robotwin-h5-v6/shake_bottle/arx-x5/episode030.v6.h5",
+      "split": "train",
+      "task_success": true,
+      "uri": "episodes/arx-x5/5543c646c32ea60cde77/episode.v6.h5",
+      "node": "node42",
+      "dataset_key": "robotwin_v6",
+      "group_id": "robotwin-arx-x5",
+      "source_h5": "/local_nvme/zhangrong/wm3d/datasets_node42/robotwin_v6/episodes/arx-x5/5543c646c32ea60cde77/episode.v6.h5",
+      "manifest_path": "/local_nvme/zhangrong/wm3d/datasets_node42/robotwin_v6/manifest.jsonl",
+      "manifest_sha256": "5396a9aedf0024821811a1bdbee918d16c8367c50360aef00abfdb7263ce4d77",
+      "rank": 5,
+      "slug": "robotwin-arx-x5-05-5543c646"
+    },
+    {
+      "action_dim": 18,
+      "byte_size": 61442209,
+      "camera_names": [
+        "head_camera",
+        "left_camera",
+        "right_camera",
+        "robotview"
+      ],
+      "content_digest": "97ba76278e2b62d44b550ca50b5bafd589dad80b6c9eaf0e37fb3d7ac9c76872",
+      "content_digest_provenance": {
+        "key": "sha256[empty-string]",
+        "path": "/local_nvme/zhangrong/robotwin-h5-v6/place_can_basket/franka/episode023.v6.h5.receipt.json"
+      },
+      "data_contract": "simulator-replay-v6",
+      "data_quality": "production",
+      "dataset_family": "RoboTwin",
+      "dataset_id": "robotwin-randomized-quarc-v6",
+      "dynamic_point_count": 6400,
+      "embodiment": "franka",
+      "episode_id": "23",
+      "episode_json_uri": "episodes/franka/05d4b7f566bf4e78940c/episode.json",
+      "episode_key": "05d4b7f566bf4e78940c",
+      "fps": 25.0,
+      "has_actions": true,
+      "has_replay_bundle": false,
+      "has_robot_state": true,
+      "image_shapes": [
+        [
+          480,
+          640
+        ],
+        [
+          480,
+          640
+        ],
+        [
+          480,
+          640
+        ],
+        [
+          480,
+          640
+        ]
+      ],
+      "joint_dim": 18,
+      "language": "place can basket",
+      "manifest_schema_version": 2,
+      "num_frames": 213,
+      "phase1a_eligible": true,
+      "phase1b_eligible": false,
+      "point_count": 8000,
+      "robot_model": "franka",
+      "sample_id": "05d4b7f566bf4e78940c",
+      "scene_id": "place_can_basket",
+      "schema_version": 6,
+      "sidecar_uris": {
+        ".bindings.npz": "episodes/franka/05d4b7f566bf4e78940c/episode.v6.h5.bindings.npz",
+        ".geometry.npz": "episodes/franka/05d4b7f566bf4e78940c/episode.v6.h5.geometry.npz",
+        ".receipt.json": "episodes/franka/05d4b7f566bf4e78940c/episode.v6.h5.receipt.json",
+        ".report.json": "episodes/franka/05d4b7f566bf4e78940c/episode.v6.h5.report.json",
+        ".robot.urdf": "episodes/franka/05d4b7f566bf4e78940c/episode.v6.h5.robot.urdf"
+      },
+      "source_node": "node42",
+      "source_partition": "production",
+      "source_relative_uri": "place_can_basket/franka/episode023.v6.h5",
+      "source_uri": "/local_nvme/zhangrong/robotwin-h5-v6/place_can_basket/franka/episode023.v6.h5",
+      "split": "train",
+      "task_success": true,
+      "uri": "episodes/franka/05d4b7f566bf4e78940c/episode.v6.h5",
+      "node": "node42",
+      "dataset_key": "robotwin_v6",
+      "group_id": "robotwin-franka",
+      "source_h5": "/local_nvme/zhangrong/wm3d/datasets_node42/robotwin_v6/episodes/franka/05d4b7f566bf4e78940c/episode.v6.h5",
+      "manifest_path": "/local_nvme/zhangrong/wm3d/datasets_node42/robotwin_v6/manifest.jsonl",
+      "manifest_sha256": "5396a9aedf0024821811a1bdbee918d16c8367c50360aef00abfdb7263ce4d77",
+      "rank": 1,
+      "slug": "robotwin-franka-01-05d4b7f5"
+    },
+    {
+      "action_dim": 18,
+      "byte_size": 32349368,
+      "camera_names": [
+        "head_camera",
+        "left_camera",
+        "right_camera",
+        "robotview"
+      ],
+      "content_digest": "b775b56c29022e5094bb1a14d2b31f100fc4d8794b7934559fa91e62572a8ec3",
+      "content_digest_provenance": {
+        "key": "sha256[empty-string]",
+        "path": "/local_nvme/zhangrong/robotwin-h5-v6/place_phone_stand/franka/episode009.v6.h5.receipt.json"
+      },
+      "data_contract": "simulator-replay-v6",
+      "data_quality": "production",
+      "dataset_family": "RoboTwin",
+      "dataset_id": "robotwin-randomized-quarc-v6",
+      "dynamic_point_count": 6400,
+      "embodiment": "franka",
+      "episode_id": "9",
+      "episode_json_uri": "episodes/franka/d533ad1cdef5d8b7607f/episode.json",
+      "episode_key": "d533ad1cdef5d8b7607f",
+      "fps": 25.0,
+      "has_actions": true,
+      "has_replay_bundle": false,
+      "has_robot_state": true,
+      "image_shapes": [
+        [
+          480,
+          640
+        ],
+        [
+          480,
+          640
+        ],
+        [
+          480,
+          640
+        ],
+        [
+          480,
+          640
+        ]
+      ],
+      "joint_dim": 18,
+      "language": "place phone stand",
+      "manifest_schema_version": 2,
+      "num_frames": 113,
+      "phase1a_eligible": true,
+      "phase1b_eligible": false,
+      "point_count": 8000,
+      "robot_model": "franka",
+      "sample_id": "d533ad1cdef5d8b7607f",
+      "scene_id": "place_phone_stand",
+      "schema_version": 6,
+      "sidecar_uris": {
+        ".bindings.npz": "episodes/franka/d533ad1cdef5d8b7607f/episode.v6.h5.bindings.npz",
+        ".geometry.npz": "episodes/franka/d533ad1cdef5d8b7607f/episode.v6.h5.geometry.npz",
+        ".receipt.json": "episodes/franka/d533ad1cdef5d8b7607f/episode.v6.h5.receipt.json",
+        ".report.json": "episodes/franka/d533ad1cdef5d8b7607f/episode.v6.h5.report.json",
+        ".robot.urdf": "episodes/franka/d533ad1cdef5d8b7607f/episode.v6.h5.robot.urdf"
+      },
+      "source_node": "node42",
+      "source_partition": "production",
+      "source_relative_uri": "place_phone_stand/franka/episode009.v6.h5",
+      "source_uri": "/local_nvme/zhangrong/robotwin-h5-v6/place_phone_stand/franka/episode009.v6.h5",
+      "split": "train",
+      "task_success": true,
+      "uri": "episodes/franka/d533ad1cdef5d8b7607f/episode.v6.h5",
+      "node": "node42",
+      "dataset_key": "robotwin_v6",
+      "group_id": "robotwin-franka",
+      "source_h5": "/local_nvme/zhangrong/wm3d/datasets_node42/robotwin_v6/episodes/franka/d533ad1cdef5d8b7607f/episode.v6.h5",
+      "manifest_path": "/local_nvme/zhangrong/wm3d/datasets_node42/robotwin_v6/manifest.jsonl",
+      "manifest_sha256": "5396a9aedf0024821811a1bdbee918d16c8367c50360aef00abfdb7263ce4d77",
+      "rank": 2,
+      "slug": "robotwin-franka-02-d533ad1c"
+    },
+    {
+      "action_dim": 18,
+      "byte_size": 37513041,
+      "camera_names": [
+        "head_camera",
+        "left_camera",
+        "right_camera",
+        "robotview"
+      ],
+      "content_digest": "701bfe63db076169391aaceccd9cf3f6bd8f16c7c7ae91a2069f0f492357e7d8",
+      "content_digest_provenance": {
+        "key": "sha256[empty-string]",
+        "path": "/local_nvme/zhangrong/robotwin-h5-v6/place_object_scale/franka/episode003.v6.h5.receipt.json"
+      },
+      "data_contract": "simulator-replay-v6",
+      "data_quality": "production",
+      "dataset_family": "RoboTwin",
+      "dataset_id": "robotwin-randomized-quarc-v6",
+      "dynamic_point_count": 6400,
+      "embodiment": "franka",
+      "episode_id": "3",
+      "episode_json_uri": "episodes/franka/093363b1fb63d90dbaad/episode.json",
+      "episode_key": "093363b1fb63d90dbaad",
+      "fps": 25.0,
+      "has_actions": true,
+      "has_replay_bundle": false,
+      "has_robot_state": true,
+      "image_shapes": [
+        [
+          480,
+          640
+        ],
+        [
+          480,
+          640
+        ],
+        [
+          480,
+          640
+        ],
+        [
+          480,
+          640
+        ]
+      ],
+      "joint_dim": 18,
+      "language": "place object scale",
+      "manifest_schema_version": 2,
+      "num_frames": 117,
+      "phase1a_eligible": true,
+      "phase1b_eligible": false,
+      "point_count": 8000,
+      "robot_model": "franka",
+      "sample_id": "093363b1fb63d90dbaad",
+      "scene_id": "place_object_scale",
+      "schema_version": 6,
+      "sidecar_uris": {
+        ".bindings.npz": "episodes/franka/093363b1fb63d90dbaad/episode.v6.h5.bindings.npz",
+        ".geometry.npz": "episodes/franka/093363b1fb63d90dbaad/episode.v6.h5.geometry.npz",
+        ".receipt.json": "episodes/franka/093363b1fb63d90dbaad/episode.v6.h5.receipt.json",
+        ".report.json": "episodes/franka/093363b1fb63d90dbaad/episode.v6.h5.report.json",
+        ".robot.urdf": "episodes/franka/093363b1fb63d90dbaad/episode.v6.h5.robot.urdf"
+      },
+      "source_node": "node42",
+      "source_partition": "production",
+      "source_relative_uri": "place_object_scale/franka/episode003.v6.h5",
+      "source_uri": "/local_nvme/zhangrong/robotwin-h5-v6/place_object_scale/franka/episode003.v6.h5",
+      "split": "train",
+      "task_success": true,
+      "uri": "episodes/franka/093363b1fb63d90dbaad/episode.v6.h5",
+      "node": "node42",
+      "dataset_key": "robotwin_v6",
+      "group_id": "robotwin-franka",
+      "source_h5": "/local_nvme/zhangrong/wm3d/datasets_node42/robotwin_v6/episodes/franka/093363b1fb63d90dbaad/episode.v6.h5",
+      "manifest_path": "/local_nvme/zhangrong/wm3d/datasets_node42/robotwin_v6/manifest.jsonl",
+      "manifest_sha256": "5396a9aedf0024821811a1bdbee918d16c8367c50360aef00abfdb7263ce4d77",
+      "rank": 3,
+      "slug": "robotwin-franka-03-093363b1"
+    },
+    {
+      "action_dim": 18,
+      "byte_size": 31054494,
+      "camera_names": [
+        "head_camera",
+        "left_camera",
+        "right_camera",
+        "robotview"
+      ],
+      "content_digest": "a8d6fb512222615693d5f0ee73a1748c185895fa777f5e4f0abdd7d9ed6e8afb",
+      "content_digest_provenance": {
+        "key": "sha256[empty-string]",
+        "path": "/local_nvme/zhangrong/robotwin-h5-v6/move_can_pot/franka/episode039.v6.h5.receipt.json"
+      },
+      "data_contract": "simulator-replay-v6",
+      "data_quality": "production",
+      "dataset_family": "RoboTwin",
+      "dataset_id": "robotwin-randomized-quarc-v6",
+      "dynamic_point_count": 6400,
+      "embodiment": "franka",
+      "episode_id": "39",
+      "episode_json_uri": "episodes/franka/5e11b8ac6ceb80bb761d/episode.json",
+      "episode_key": "5e11b8ac6ceb80bb761d",
+      "fps": 25.0,
+      "has_actions": true,
+      "has_replay_bundle": false,
+      "has_robot_state": true,
+      "image_shapes": [
+        [
+          480,
+          640
+        ],
+        [
+          480,
+          640
+        ],
+        [
+          480,
+          640
+        ],
+        [
+          480,
+          640
+        ]
+      ],
+      "joint_dim": 18,
+      "language": "move can pot",
+      "manifest_schema_version": 2,
+      "num_frames": 116,
+      "phase1a_eligible": true,
+      "phase1b_eligible": false,
+      "point_count": 8000,
+      "robot_model": "franka",
+      "sample_id": "5e11b8ac6ceb80bb761d",
+      "scene_id": "move_can_pot",
+      "schema_version": 6,
+      "sidecar_uris": {
+        ".bindings.npz": "episodes/franka/5e11b8ac6ceb80bb761d/episode.v6.h5.bindings.npz",
+        ".geometry.npz": "episodes/franka/5e11b8ac6ceb80bb761d/episode.v6.h5.geometry.npz",
+        ".receipt.json": "episodes/franka/5e11b8ac6ceb80bb761d/episode.v6.h5.receipt.json",
+        ".report.json": "episodes/franka/5e11b8ac6ceb80bb761d/episode.v6.h5.report.json",
+        ".robot.urdf": "episodes/franka/5e11b8ac6ceb80bb761d/episode.v6.h5.robot.urdf"
+      },
+      "source_node": "node42",
+      "source_partition": "production",
+      "source_relative_uri": "move_can_pot/franka/episode039.v6.h5",
+      "source_uri": "/local_nvme/zhangrong/robotwin-h5-v6/move_can_pot/franka/episode039.v6.h5",
+      "split": "train",
+      "task_success": true,
+      "uri": "episodes/franka/5e11b8ac6ceb80bb761d/episode.v6.h5",
+      "node": "node42",
+      "dataset_key": "robotwin_v6",
+      "group_id": "robotwin-franka",
+      "source_h5": "/local_nvme/zhangrong/wm3d/datasets_node42/robotwin_v6/episodes/franka/5e11b8ac6ceb80bb761d/episode.v6.h5",
+      "manifest_path": "/local_nvme/zhangrong/wm3d/datasets_node42/robotwin_v6/manifest.jsonl",
+      "manifest_sha256": "5396a9aedf0024821811a1bdbee918d16c8367c50360aef00abfdb7263ce4d77",
+      "rank": 4,
+      "slug": "robotwin-franka-04-5e11b8ac"
+    },
+    {
+      "action_dim": 18,
+      "byte_size": 92816995,
+      "camera_names": [
+        "head_camera",
+        "left_camera",
+        "right_camera",
+        "robotview"
+      ],
+      "content_digest": "b7d77d2fe091a45743915bb76484fc5a551ba2c96428ede64b015ef02176e890",
+      "content_digest_provenance": {
+        "key": "sha256[empty-string]",
+        "path": "/local_nvme/zhangrong/robotwin-h5-v6/dump_bin_bigbin/franka/episode043.v6.h5.receipt.json"
+      },
+      "data_contract": "simulator-replay-v6",
+      "data_quality": "production",
+      "dataset_family": "RoboTwin",
+      "dataset_id": "robotwin-randomized-quarc-v6",
+      "dynamic_point_count": 6400,
+      "embodiment": "franka",
+      "episode_id": "43",
+      "episode_json_uri": "episodes/franka/b8b5cc380c8a3a321506/episode.json",
+      "episode_key": "b8b5cc380c8a3a321506",
+      "fps": 25.0,
+      "has_actions": true,
+      "has_replay_bundle": false,
+      "has_robot_state": true,
+      "image_shapes": [
+        [
+          480,
+          640
+        ],
+        [
+          480,
+          640
+        ],
+        [
+          480,
+          640
+        ],
+        [
+          480,
+          640
+        ]
+      ],
+      "joint_dim": 18,
+      "language": "dump bin bigbin",
+      "manifest_schema_version": 2,
+      "num_frames": 431,
+      "phase1a_eligible": true,
+      "phase1b_eligible": false,
+      "point_count": 8000,
+      "robot_model": "franka",
+      "sample_id": "b8b5cc380c8a3a321506",
+      "scene_id": "dump_bin_bigbin",
+      "schema_version": 6,
+      "sidecar_uris": {
+        ".bindings.npz": "episodes/franka/b8b5cc380c8a3a321506/episode.v6.h5.bindings.npz",
+        ".geometry.npz": "episodes/franka/b8b5cc380c8a3a321506/episode.v6.h5.geometry.npz",
+        ".receipt.json": "episodes/franka/b8b5cc380c8a3a321506/episode.v6.h5.receipt.json",
+        ".report.json": "episodes/franka/b8b5cc380c8a3a321506/episode.v6.h5.report.json",
+        ".robot.urdf": "episodes/franka/b8b5cc380c8a3a321506/episode.v6.h5.robot.urdf"
+      },
+      "source_node": "node42",
+      "source_partition": "production",
+      "source_relative_uri": "dump_bin_bigbin/franka/episode043.v6.h5",
+      "source_uri": "/local_nvme/zhangrong/robotwin-h5-v6/dump_bin_bigbin/franka/episode043.v6.h5",
+      "split": "train",
+      "task_success": true,
+      "uri": "episodes/franka/b8b5cc380c8a3a321506/episode.v6.h5",
+      "node": "node42",
+      "dataset_key": "robotwin_v6",
+      "group_id": "robotwin-franka",
+      "source_h5": "/local_nvme/zhangrong/wm3d/datasets_node42/robotwin_v6/episodes/franka/b8b5cc380c8a3a321506/episode.v6.h5",
+      "manifest_path": "/local_nvme/zhangrong/wm3d/datasets_node42/robotwin_v6/manifest.jsonl",
+      "manifest_sha256": "5396a9aedf0024821811a1bdbee918d16c8367c50360aef00abfdb7263ce4d77",
+      "rank": 5,
+      "slug": "robotwin-franka-05-b8b5cc38"
+    },
+    {
+      "action_dim": 16,
+      "byte_size": 35191808,
+      "camera_names": [
+        "head_camera",
+        "left_camera",
+        "right_camera",
+        "robotview"
+      ],
+      "content_digest": "8073c702241d8c1c8cb0acffab86439be064f23c027ac613b053f9b1acaa9fd8",
+      "content_digest_provenance": {
+        "key": "sha256[empty-string]",
+        "path": "/local_nvme/zhangrong/robotwin-h5-v6/place_object_stand/piper/episode049.v6.h5.receipt.json"
+      },
+      "data_contract": "simulator-replay-v6",
+      "data_quality": "production",
+      "dataset_family": "RoboTwin",
+      "dataset_id": "robotwin-randomized-quarc-v6",
+      "dynamic_point_count": 6400,
+      "embodiment": "piper",
+      "episode_id": "49",
+      "episode_json_uri": "episodes/piper/066abe4ab8475be673d1/episode.json",
+      "episode_key": "066abe4ab8475be673d1",
+      "fps": 25.0,
+      "has_actions": true,
+      "has_replay_bundle": false,
+      "has_robot_state": true,
+      "image_shapes": [
+        [
+          480,
+          640
+        ],
+        [
+          480,
+          640
+        ],
+        [
+          480,
+          640
+        ],
+        [
+          480,
+          640
+        ]
+      ],
+      "joint_dim": 16,
+      "language": "place object stand",
+      "manifest_schema_version": 2,
+      "num_frames": 128,
+      "phase1a_eligible": true,
+      "phase1b_eligible": false,
+      "point_count": 8000,
+      "robot_model": "piper",
+      "sample_id": "066abe4ab8475be673d1",
+      "scene_id": "place_object_stand",
+      "schema_version": 6,
+      "sidecar_uris": {
+        ".bindings.npz": "episodes/piper/066abe4ab8475be673d1/episode.v6.h5.bindings.npz",
+        ".geometry.npz": "episodes/piper/066abe4ab8475be673d1/episode.v6.h5.geometry.npz",
+        ".receipt.json": "episodes/piper/066abe4ab8475be673d1/episode.v6.h5.receipt.json",
+        ".report.json": "episodes/piper/066abe4ab8475be673d1/episode.v6.h5.report.json",
+        ".robot.urdf": "episodes/piper/066abe4ab8475be673d1/episode.v6.h5.robot.urdf"
+      },
+      "source_node": "node42",
+      "source_partition": "production",
+      "source_relative_uri": "place_object_stand/piper/episode049.v6.h5",
+      "source_uri": "/local_nvme/zhangrong/robotwin-h5-v6/place_object_stand/piper/episode049.v6.h5",
+      "split": "train",
+      "task_success": true,
+      "uri": "episodes/piper/066abe4ab8475be673d1/episode.v6.h5",
+      "node": "node42",
+      "dataset_key": "robotwin_v6",
+      "group_id": "robotwin-piper",
+      "source_h5": "/local_nvme/zhangrong/wm3d/datasets_node42/robotwin_v6/episodes/piper/066abe4ab8475be673d1/episode.v6.h5",
+      "manifest_path": "/local_nvme/zhangrong/wm3d/datasets_node42/robotwin_v6/manifest.jsonl",
+      "manifest_sha256": "5396a9aedf0024821811a1bdbee918d16c8367c50360aef00abfdb7263ce4d77",
+      "rank": 1,
+      "slug": "robotwin-piper-01-066abe4a"
+    },
+    {
+      "action_dim": 16,
+      "byte_size": 34983516,
+      "camera_names": [
+        "head_camera",
+        "left_camera",
+        "right_camera",
+        "robotview"
+      ],
+      "content_digest": "79a7611540fb9b460c8aecd9e29d19ab9a9d8903c65c93009743b3b8774266ee",
+      "content_digest_provenance": {
+        "key": "sha256[empty-string]",
+        "path": "/local_nvme/zhangrong/robotwin-h5-v6/move_playingcard_away/piper/episode027.v6.h5.receipt.json"
+      },
+      "data_contract": "simulator-replay-v6",
+      "data_quality": "production",
+      "dataset_family": "RoboTwin",
+      "dataset_id": "robotwin-randomized-quarc-v6",
+      "dynamic_point_count": 6400,
+      "embodiment": "piper",
+      "episode_id": "27",
+      "episode_json_uri": "episodes/piper/bc5f2982ee1314f0c4f3/episode.json",
+      "episode_key": "bc5f2982ee1314f0c4f3",
+      "fps": 25.0,
+      "has_actions": true,
+      "has_replay_bundle": false,
+      "has_robot_state": true,
+      "image_shapes": [
+        [
+          480,
+          640
+        ],
+        [
+          480,
+          640
+        ],
+        [
+          480,
+          640
+        ],
+        [
+          480,
+          640
+        ]
+      ],
+      "joint_dim": 16,
+      "language": "move playingcard away",
+      "manifest_schema_version": 2,
+      "num_frames": 110,
+      "phase1a_eligible": true,
+      "phase1b_eligible": false,
+      "point_count": 8000,
+      "robot_model": "piper",
+      "sample_id": "bc5f2982ee1314f0c4f3",
+      "scene_id": "move_playingcard_away",
+      "schema_version": 6,
+      "sidecar_uris": {
+        ".bindings.npz": "episodes/piper/bc5f2982ee1314f0c4f3/episode.v6.h5.bindings.npz",
+        ".geometry.npz": "episodes/piper/bc5f2982ee1314f0c4f3/episode.v6.h5.geometry.npz",
+        ".receipt.json": "episodes/piper/bc5f2982ee1314f0c4f3/episode.v6.h5.receipt.json",
+        ".report.json": "episodes/piper/bc5f2982ee1314f0c4f3/episode.v6.h5.report.json",
+        ".robot.urdf": "episodes/piper/bc5f2982ee1314f0c4f3/episode.v6.h5.robot.urdf"
+      },
+      "source_node": "node42",
+      "source_partition": "production",
+      "source_relative_uri": "move_playingcard_away/piper/episode027.v6.h5",
+      "source_uri": "/local_nvme/zhangrong/robotwin-h5-v6/move_playingcard_away/piper/episode027.v6.h5",
+      "split": "train",
+      "task_success": true,
+      "uri": "episodes/piper/bc5f2982ee1314f0c4f3/episode.v6.h5",
+      "node": "node42",
+      "dataset_key": "robotwin_v6",
+      "group_id": "robotwin-piper",
+      "source_h5": "/local_nvme/zhangrong/wm3d/datasets_node42/robotwin_v6/episodes/piper/bc5f2982ee1314f0c4f3/episode.v6.h5",
+      "manifest_path": "/local_nvme/zhangrong/wm3d/datasets_node42/robotwin_v6/manifest.jsonl",
+      "manifest_sha256": "5396a9aedf0024821811a1bdbee918d16c8367c50360aef00abfdb7263ce4d77",
+      "rank": 2,
+      "slug": "robotwin-piper-02-bc5f2982"
+    },
+    {
+      "action_dim": 16,
+      "byte_size": 40864292,
+      "camera_names": [
+        "head_camera",
+        "left_camera",
+        "right_camera",
+        "robotview"
+      ],
+      "content_digest": "79c904cbce0ee68f33a4e146d97ea9179a24d7ca51f13c2a78243c9f9540d916",
+      "content_digest_provenance": {
+        "key": "sha256[empty-string]",
+        "path": "/local_nvme/zhangrong/robotwin-h5-v6/move_pillbottle_pad/piper/episode006.v6.h5.receipt.json"
+      },
+      "data_contract": "simulator-replay-v6",
+      "data_quality": "production",
+      "dataset_family": "RoboTwin",
+      "dataset_id": "robotwin-randomized-quarc-v6",
+      "dynamic_point_count": 6400,
+      "embodiment": "piper",
+      "episode_id": "6",
+      "episode_json_uri": "episodes/piper/3abbad09a64dd6556b3e/episode.json",
+      "episode_key": "3abbad09a64dd6556b3e",
+      "fps": 25.0,
+      "has_actions": true,
+      "has_replay_bundle": false,
+      "has_robot_state": true,
+      "image_shapes": [
+        [
+          480,
+          640
+        ],
+        [
+          480,
+          640
+        ],
+        [
+          480,
+          640
+        ],
+        [
+          480,
+          640
+        ]
+      ],
+      "joint_dim": 16,
+      "language": "move pillbottle pad",
+      "manifest_schema_version": 2,
+      "num_frames": 135,
+      "phase1a_eligible": true,
+      "phase1b_eligible": false,
+      "point_count": 8000,
+      "robot_model": "piper",
+      "sample_id": "3abbad09a64dd6556b3e",
+      "scene_id": "move_pillbottle_pad",
+      "schema_version": 6,
+      "sidecar_uris": {
+        ".bindings.npz": "episodes/piper/3abbad09a64dd6556b3e/episode.v6.h5.bindings.npz",
+        ".geometry.npz": "episodes/piper/3abbad09a64dd6556b3e/episode.v6.h5.geometry.npz",
+        ".receipt.json": "episodes/piper/3abbad09a64dd6556b3e/episode.v6.h5.receipt.json",
+        ".report.json": "episodes/piper/3abbad09a64dd6556b3e/episode.v6.h5.report.json",
+        ".robot.urdf": "episodes/piper/3abbad09a64dd6556b3e/episode.v6.h5.robot.urdf"
+      },
+      "source_node": "node42",
+      "source_partition": "production",
+      "source_relative_uri": "move_pillbottle_pad/piper/episode006.v6.h5",
+      "source_uri": "/local_nvme/zhangrong/robotwin-h5-v6/move_pillbottle_pad/piper/episode006.v6.h5",
+      "split": "train",
+      "task_success": true,
+      "uri": "episodes/piper/3abbad09a64dd6556b3e/episode.v6.h5",
+      "node": "node42",
+      "dataset_key": "robotwin_v6",
+      "group_id": "robotwin-piper",
+      "source_h5": "/local_nvme/zhangrong/wm3d/datasets_node42/robotwin_v6/episodes/piper/3abbad09a64dd6556b3e/episode.v6.h5",
+      "manifest_path": "/local_nvme/zhangrong/wm3d/datasets_node42/robotwin_v6/manifest.jsonl",
+      "manifest_sha256": "5396a9aedf0024821811a1bdbee918d16c8367c50360aef00abfdb7263ce4d77",
+      "rank": 3,
+      "slug": "robotwin-piper-03-3abbad09"
+    },
+    {
+      "action_dim": 16,
+      "byte_size": 49345277,
+      "camera_names": [
+        "head_camera",
+        "left_camera",
+        "right_camera",
+        "robotview"
+      ],
+      "content_digest": "bd3a83e12cfc5258bd278a2e1a33ad63604a6ed6ffd7b41d23455222798062c0",
+      "content_digest_provenance": {
+        "key": "sha256[empty-string]",
+        "path": "/local_nvme/zhangrong/robotwin-h5-v6/place_shoe/piper/episode006.v6.h5.receipt.json"
+      },
+      "data_contract": "simulator-replay-v6",
+      "data_quality": "production",
+      "dataset_family": "RoboTwin",
+      "dataset_id": "robotwin-randomized-quarc-v6",
+      "dynamic_point_count": 6400,
+      "embodiment": "piper",
+      "episode_id": "6",
+      "episode_json_uri": "episodes/piper/711d7a4e532c8abe1d95/episode.json",
+      "episode_key": "711d7a4e532c8abe1d95",
+      "fps": 25.0,
+      "has_actions": true,
+      "has_replay_bundle": false,
+      "has_robot_state": true,
+      "image_shapes": [
+        [
+          480,
+          640
+        ],
+        [
+          480,
+          640
+        ],
+        [
+          480,
+          640
+        ],
+        [
+          480,
+          640
+        ]
+      ],
+      "joint_dim": 16,
+      "language": "place shoe",
+      "manifest_schema_version": 2,
+      "num_frames": 178,
+      "phase1a_eligible": true,
+      "phase1b_eligible": false,
+      "point_count": 8000,
+      "robot_model": "piper",
+      "sample_id": "711d7a4e532c8abe1d95",
+      "scene_id": "place_shoe",
+      "schema_version": 6,
+      "sidecar_uris": {
+        ".bindings.npz": "episodes/piper/711d7a4e532c8abe1d95/episode.v6.h5.bindings.npz",
+        ".geometry.npz": "episodes/piper/711d7a4e532c8abe1d95/episode.v6.h5.geometry.npz",
+        ".receipt.json": "episodes/piper/711d7a4e532c8abe1d95/episode.v6.h5.receipt.json",
+        ".report.json": "episodes/piper/711d7a4e532c8abe1d95/episode.v6.h5.report.json",
+        ".robot.urdf": "episodes/piper/711d7a4e532c8abe1d95/episode.v6.h5.robot.urdf"
+      },
+      "source_node": "node42",
+      "source_partition": "production",
+      "source_relative_uri": "place_shoe/piper/episode006.v6.h5",
+      "source_uri": "/local_nvme/zhangrong/robotwin-h5-v6/place_shoe/piper/episode006.v6.h5",
+      "split": "train",
+      "task_success": true,
+      "uri": "episodes/piper/711d7a4e532c8abe1d95/episode.v6.h5",
+      "node": "node42",
+      "dataset_key": "robotwin_v6",
+      "group_id": "robotwin-piper",
+      "source_h5": "/local_nvme/zhangrong/wm3d/datasets_node42/robotwin_v6/episodes/piper/711d7a4e532c8abe1d95/episode.v6.h5",
+      "manifest_path": "/local_nvme/zhangrong/wm3d/datasets_node42/robotwin_v6/manifest.jsonl",
+      "manifest_sha256": "5396a9aedf0024821811a1bdbee918d16c8367c50360aef00abfdb7263ce4d77",
+      "rank": 4,
+      "slug": "robotwin-piper-04-711d7a4e"
+    },
+    {
+      "action_dim": 16,
+      "byte_size": 90140910,
+      "camera_names": [
+        "head_camera",
+        "left_camera",
+        "right_camera",
+        "robotview"
+      ],
+      "content_digest": "39292b03306072d0a9f265d21c6cf1f913a63bc9f945834113c82796164819c7",
+      "content_digest_provenance": {
+        "key": "sha256[empty-string]",
+        "path": "/local_nvme/zhangrong/robotwin-h5-v6/place_dual_shoes/piper/episode023.v6.h5.receipt.json"
+      },
+      "data_contract": "simulator-replay-v6",
+      "data_quality": "production",
+      "dataset_family": "RoboTwin",
+      "dataset_id": "robotwin-randomized-quarc-v6",
+      "dynamic_point_count": 6400,
+      "embodiment": "piper",
+      "episode_id": "23",
+      "episode_json_uri": "episodes/piper/5a20e4d38d3cb879aa9c/episode.json",
+      "episode_key": "5a20e4d38d3cb879aa9c",
+      "fps": 25.0,
+      "has_actions": true,
+      "has_replay_bundle": false,
+      "has_robot_state": true,
+      "image_shapes": [
+        [
+          480,
+          640
+        ],
+        [
+          480,
+          640
+        ],
+        [
+          480,
+          640
+        ],
+        [
+          480,
+          640
+        ]
+      ],
+      "joint_dim": 16,
+      "language": "place dual shoes",
+      "manifest_schema_version": 2,
+      "num_frames": 291,
+      "phase1a_eligible": true,
+      "phase1b_eligible": false,
+      "point_count": 8000,
+      "robot_model": "piper",
+      "sample_id": "5a20e4d38d3cb879aa9c",
+      "scene_id": "place_dual_shoes",
+      "schema_version": 6,
+      "sidecar_uris": {
+        ".bindings.npz": "episodes/piper/5a20e4d38d3cb879aa9c/episode.v6.h5.bindings.npz",
+        ".geometry.npz": "episodes/piper/5a20e4d38d3cb879aa9c/episode.v6.h5.geometry.npz",
+        ".receipt.json": "episodes/piper/5a20e4d38d3cb879aa9c/episode.v6.h5.receipt.json",
+        ".report.json": "episodes/piper/5a20e4d38d3cb879aa9c/episode.v6.h5.report.json",
+        ".robot.urdf": "episodes/piper/5a20e4d38d3cb879aa9c/episode.v6.h5.robot.urdf"
+      },
+      "source_node": "node42",
+      "source_partition": "production",
+      "source_relative_uri": "place_dual_shoes/piper/episode023.v6.h5",
+      "source_uri": "/local_nvme/zhangrong/robotwin-h5-v6/place_dual_shoes/piper/episode023.v6.h5",
+      "split": "train",
+      "task_success": true,
+      "uri": "episodes/piper/5a20e4d38d3cb879aa9c/episode.v6.h5",
+      "node": "node42",
+      "dataset_key": "robotwin_v6",
+      "group_id": "robotwin-piper",
+      "source_h5": "/local_nvme/zhangrong/wm3d/datasets_node42/robotwin_v6/episodes/piper/5a20e4d38d3cb879aa9c/episode.v6.h5",
+      "manifest_path": "/local_nvme/zhangrong/wm3d/datasets_node42/robotwin_v6/manifest.jsonl",
+      "manifest_sha256": "5396a9aedf0024821811a1bdbee918d16c8367c50360aef00abfdb7263ce4d77",
+      "rank": 5,
+      "slug": "robotwin-piper-05-5a20e4d3"
+    },
+    {
+      "action_dim": 16,
+      "byte_size": 39400569,
+      "camera_names": [
+        "head_camera",
+        "left_camera",
+        "right_camera",
+        "robotview"
+      ],
+      "content_digest": "055fdbb8fef975f238d1eab2377b2bd94fa2642d76b04e3ca4d99e8da5bf4ee3",
+      "content_digest_provenance": {
+        "key": "sha256[empty-string]",
+        "path": "/local_nvme/zhangrong/robotwin-h5-v6/place_empty_cup/ur5/episode006.v6.h5.receipt.json"
+      },
+      "data_contract": "simulator-replay-v6",
+      "data_quality": "production",
+      "dataset_family": "RoboTwin",
+      "dataset_id": "robotwin-randomized-quarc-v6",
+      "dynamic_point_count": 6400,
+      "embodiment": "ur5",
+      "episode_id": "6",
+      "episode_json_uri": "episodes/ur5/30c615f16748ad3ebec0/episode.json",
+      "episode_key": "30c615f16748ad3ebec0",
+      "fps": 25.0,
+      "has_actions": true,
+      "has_replay_bundle": false,
+      "has_robot_state": true,
+      "image_shapes": [
+        [
+          480,
+          640
+        ],
+        [
+          480,
+          640
+        ],
+        [
+          480,
+          640
+        ],
+        [
+          480,
+          640
+        ]
+      ],
+      "joint_dim": 16,
+      "language": "place empty cup",
+      "manifest_schema_version": 2,
+      "num_frames": 142,
+      "phase1a_eligible": true,
+      "phase1b_eligible": false,
+      "point_count": 8000,
+      "robot_model": "ur5",
+      "sample_id": "30c615f16748ad3ebec0",
+      "scene_id": "place_empty_cup",
+      "schema_version": 6,
+      "sidecar_uris": {
+        ".bindings.npz": "episodes/ur5/30c615f16748ad3ebec0/episode.v6.h5.bindings.npz",
+        ".geometry.npz": "episodes/ur5/30c615f16748ad3ebec0/episode.v6.h5.geometry.npz",
+        ".receipt.json": "episodes/ur5/30c615f16748ad3ebec0/episode.v6.h5.receipt.json",
+        ".report.json": "episodes/ur5/30c615f16748ad3ebec0/episode.v6.h5.report.json",
+        ".robot.urdf": "episodes/ur5/30c615f16748ad3ebec0/episode.v6.h5.robot.urdf"
+      },
+      "source_node": "node42",
+      "source_partition": "production",
+      "source_relative_uri": "place_empty_cup/ur5/episode006.v6.h5",
+      "source_uri": "/local_nvme/zhangrong/robotwin-h5-v6/place_empty_cup/ur5/episode006.v6.h5",
+      "split": "train",
+      "task_success": true,
+      "uri": "episodes/ur5/30c615f16748ad3ebec0/episode.v6.h5",
+      "node": "node42",
+      "dataset_key": "robotwin_v6",
+      "group_id": "robotwin-ur5",
+      "source_h5": "/local_nvme/zhangrong/wm3d/datasets_node42/robotwin_v6/episodes/ur5/30c615f16748ad3ebec0/episode.v6.h5",
+      "manifest_path": "/local_nvme/zhangrong/wm3d/datasets_node42/robotwin_v6/manifest.jsonl",
+      "manifest_sha256": "5396a9aedf0024821811a1bdbee918d16c8367c50360aef00abfdb7263ce4d77",
+      "rank": 1,
+      "slug": "robotwin-ur5-01-30c615f1"
+    },
+    {
+      "action_dim": 16,
+      "byte_size": 36960866,
+      "camera_names": [
+        "head_camera",
+        "left_camera",
+        "right_camera",
+        "robotview"
+      ],
+      "content_digest": "7ed2a67258339f3ebe18eb2a39e2f90601ced3d26a89f565553a3b082a588376",
+      "content_digest_provenance": {
+        "key": "sha256[empty-string]",
+        "path": "/local_nvme/zhangrong/robotwin-h5-v6/place_a2b_left/ur5/episode019.v6.h5.receipt.json"
+      },
+      "data_contract": "simulator-replay-v6",
+      "data_quality": "production",
+      "dataset_family": "RoboTwin",
+      "dataset_id": "robotwin-randomized-quarc-v6",
+      "dynamic_point_count": 6400,
+      "embodiment": "ur5",
+      "episode_id": "19",
+      "episode_json_uri": "episodes/ur5/cea5d99f42a462284c7a/episode.json",
+      "episode_key": "cea5d99f42a462284c7a",
+      "fps": 25.0,
+      "has_actions": true,
+      "has_replay_bundle": false,
+      "has_robot_state": true,
+      "image_shapes": [
+        [
+          480,
+          640
+        ],
+        [
+          480,
+          640
+        ],
+        [
+          480,
+          640
+        ],
+        [
+          480,
+          640
+        ]
+      ],
+      "joint_dim": 16,
+      "language": "place a2b left",
+      "manifest_schema_version": 2,
+      "num_frames": 123,
+      "phase1a_eligible": true,
+      "phase1b_eligible": false,
+      "point_count": 8000,
+      "robot_model": "ur5",
+      "sample_id": "cea5d99f42a462284c7a",
+      "scene_id": "place_a2b_left",
+      "schema_version": 6,
+      "sidecar_uris": {
+        ".bindings.npz": "episodes/ur5/cea5d99f42a462284c7a/episode.v6.h5.bindings.npz",
+        ".geometry.npz": "episodes/ur5/cea5d99f42a462284c7a/episode.v6.h5.geometry.npz",
+        ".receipt.json": "episodes/ur5/cea5d99f42a462284c7a/episode.v6.h5.receipt.json",
+        ".report.json": "episodes/ur5/cea5d99f42a462284c7a/episode.v6.h5.report.json",
+        ".robot.urdf": "episodes/ur5/cea5d99f42a462284c7a/episode.v6.h5.robot.urdf"
+      },
+      "source_node": "node42",
+      "source_partition": "production",
+      "source_relative_uri": "place_a2b_left/ur5/episode019.v6.h5",
+      "source_uri": "/local_nvme/zhangrong/robotwin-h5-v6/place_a2b_left/ur5/episode019.v6.h5",
+      "split": "train",
+      "task_success": true,
+      "uri": "episodes/ur5/cea5d99f42a462284c7a/episode.v6.h5",
+      "node": "node42",
+      "dataset_key": "robotwin_v6",
+      "group_id": "robotwin-ur5",
+      "source_h5": "/local_nvme/zhangrong/wm3d/datasets_node42/robotwin_v6/episodes/ur5/cea5d99f42a462284c7a/episode.v6.h5",
+      "manifest_path": "/local_nvme/zhangrong/wm3d/datasets_node42/robotwin_v6/manifest.jsonl",
+      "manifest_sha256": "5396a9aedf0024821811a1bdbee918d16c8367c50360aef00abfdb7263ce4d77",
+      "rank": 2,
+      "slug": "robotwin-ur5-02-cea5d99f"
+    },
+    {
+      "action_dim": 16,
+      "byte_size": 52271608,
+      "camera_names": [
+        "head_camera",
+        "left_camera",
+        "right_camera",
+        "robotview"
+      ],
+      "content_digest": "174d1d83d48c49f6f6a321f11837ee9d8b929a91d255b927dea9c00fe5d6707d",
+      "content_digest_provenance": {
+        "key": "sha256[empty-string]",
+        "path": "/local_nvme/zhangrong/robotwin-h5-v6/rotate_qrcode/ur5/episode031.v6.h5.receipt.json"
+      },
+      "data_contract": "simulator-replay-v6",
+      "data_quality": "production",
+      "dataset_family": "RoboTwin",
+      "dataset_id": "robotwin-randomized-quarc-v6",
+      "dynamic_point_count": 6400,
+      "embodiment": "ur5",
+      "episode_id": "31",
+      "episode_json_uri": "episodes/ur5/69f46a3a7b88dca44a41/episode.json",
+      "episode_key": "69f46a3a7b88dca44a41",
+      "fps": 25.0,
+      "has_actions": true,
+      "has_replay_bundle": false,
+      "has_robot_state": true,
+      "image_shapes": [
+        [
+          480,
+          640
+        ],
+        [
+          480,
+          640
+        ],
+        [
+          480,
+          640
+        ],
+        [
+          480,
+          640
+        ]
+      ],
+      "joint_dim": 16,
+      "language": "rotate qrcode",
+      "manifest_schema_version": 2,
+      "num_frames": 143,
+      "phase1a_eligible": true,
+      "phase1b_eligible": false,
+      "point_count": 8000,
+      "robot_model": "ur5",
+      "sample_id": "69f46a3a7b88dca44a41",
+      "scene_id": "rotate_qrcode",
+      "schema_version": 6,
+      "sidecar_uris": {
+        ".bindings.npz": "episodes/ur5/69f46a3a7b88dca44a41/episode.v6.h5.bindings.npz",
+        ".geometry.npz": "episodes/ur5/69f46a3a7b88dca44a41/episode.v6.h5.geometry.npz",
+        ".receipt.json": "episodes/ur5/69f46a3a7b88dca44a41/episode.v6.h5.receipt.json",
+        ".report.json": "episodes/ur5/69f46a3a7b88dca44a41/episode.v6.h5.report.json",
+        ".robot.urdf": "episodes/ur5/69f46a3a7b88dca44a41/episode.v6.h5.robot.urdf"
+      },
+      "source_node": "node42",
+      "source_partition": "production",
+      "source_relative_uri": "rotate_qrcode/ur5/episode031.v6.h5",
+      "source_uri": "/local_nvme/zhangrong/robotwin-h5-v6/rotate_qrcode/ur5/episode031.v6.h5",
+      "split": "train",
+      "task_success": true,
+      "uri": "episodes/ur5/69f46a3a7b88dca44a41/episode.v6.h5",
+      "node": "node42",
+      "dataset_key": "robotwin_v6",
+      "group_id": "robotwin-ur5",
+      "source_h5": "/local_nvme/zhangrong/wm3d/datasets_node42/robotwin_v6/episodes/ur5/69f46a3a7b88dca44a41/episode.v6.h5",
+      "manifest_path": "/local_nvme/zhangrong/wm3d/datasets_node42/robotwin_v6/manifest.jsonl",
+      "manifest_sha256": "5396a9aedf0024821811a1bdbee918d16c8367c50360aef00abfdb7263ce4d77",
+      "rank": 3,
+      "slug": "robotwin-ur5-03-69f46a3a"
+    },
+    {
+      "action_dim": 16,
+      "byte_size": 41491677,
+      "camera_names": [
+        "head_camera",
+        "left_camera",
+        "right_camera",
+        "robotview"
+      ],
+      "content_digest": "6b6028b9eb787753a0bb9d509a2ed41889c0b401556e7246d4f5e39d0fd132e0",
+      "content_digest_provenance": {
+        "key": "sha256[empty-string]",
+        "path": "/local_nvme/zhangrong/robotwin-h5-v6/place_mouse_pad/ur5/episode006.v6.h5.receipt.json"
+      },
+      "data_contract": "simulator-replay-v6",
+      "data_quality": "production",
+      "dataset_family": "RoboTwin",
+      "dataset_id": "robotwin-randomized-quarc-v6",
+      "dynamic_point_count": 6400,
+      "embodiment": "ur5",
+      "episode_id": "6",
+      "episode_json_uri": "episodes/ur5/6fa6d81d4451d23650ac/episode.json",
+      "episode_key": "6fa6d81d4451d23650ac",
+      "fps": 25.0,
+      "has_actions": true,
+      "has_replay_bundle": false,
+      "has_robot_state": true,
+      "image_shapes": [
+        [
+          480,
+          640
+        ],
+        [
+          480,
+          640
+        ],
+        [
+          480,
+          640
+        ],
+        [
+          480,
+          640
+        ]
+      ],
+      "joint_dim": 16,
+      "language": "place mouse pad",
+      "manifest_schema_version": 2,
+      "num_frames": 130,
+      "phase1a_eligible": true,
+      "phase1b_eligible": false,
+      "point_count": 8000,
+      "robot_model": "ur5",
+      "sample_id": "6fa6d81d4451d23650ac",
+      "scene_id": "place_mouse_pad",
+      "schema_version": 6,
+      "sidecar_uris": {
+        ".bindings.npz": "episodes/ur5/6fa6d81d4451d23650ac/episode.v6.h5.bindings.npz",
+        ".geometry.npz": "episodes/ur5/6fa6d81d4451d23650ac/episode.v6.h5.geometry.npz",
+        ".receipt.json": "episodes/ur5/6fa6d81d4451d23650ac/episode.v6.h5.receipt.json",
+        ".report.json": "episodes/ur5/6fa6d81d4451d23650ac/episode.v6.h5.report.json",
+        ".robot.urdf": "episodes/ur5/6fa6d81d4451d23650ac/episode.v6.h5.robot.urdf"
+      },
+      "source_node": "node42",
+      "source_partition": "production",
+      "source_relative_uri": "place_mouse_pad/ur5/episode006.v6.h5",
+      "source_uri": "/local_nvme/zhangrong/robotwin-h5-v6/place_mouse_pad/ur5/episode006.v6.h5",
+      "split": "train",
+      "task_success": true,
+      "uri": "episodes/ur5/6fa6d81d4451d23650ac/episode.v6.h5",
+      "node": "node42",
+      "dataset_key": "robotwin_v6",
+      "group_id": "robotwin-ur5",
+      "source_h5": "/local_nvme/zhangrong/wm3d/datasets_node42/robotwin_v6/episodes/ur5/6fa6d81d4451d23650ac/episode.v6.h5",
+      "manifest_path": "/local_nvme/zhangrong/wm3d/datasets_node42/robotwin_v6/manifest.jsonl",
+      "manifest_sha256": "5396a9aedf0024821811a1bdbee918d16c8367c50360aef00abfdb7263ce4d77",
+      "rank": 4,
+      "slug": "robotwin-ur5-04-6fa6d81d"
+    },
+    {
+      "action_dim": 16,
+      "byte_size": 78531132,
+      "camera_names": [
+        "head_camera",
+        "left_camera",
+        "right_camera",
+        "robotview"
+      ],
+      "content_digest": "6aa6cf7f98383b3c717ccefc7bf8bbaebe3aa4ddd049cc2daa615f82e65225d1",
+      "content_digest_provenance": {
+        "key": "sha256[empty-string]",
+        "path": "/local_nvme/zhangrong/robotwin-h5-v6/open_laptop/ur5/episode004.v6.h5.receipt.json"
+      },
+      "data_contract": "simulator-replay-v6",
+      "data_quality": "production",
+      "dataset_family": "RoboTwin",
+      "dataset_id": "robotwin-randomized-quarc-v6",
+      "dynamic_point_count": 6400,
+      "embodiment": "ur5",
+      "episode_id": "4",
+      "episode_json_uri": "episodes/ur5/a9bbb981e1f6c21c8042/episode.json",
+      "episode_key": "a9bbb981e1f6c21c8042",
+      "fps": 25.0,
+      "has_actions": true,
+      "has_replay_bundle": false,
+      "has_robot_state": true,
+      "image_shapes": [
+        [
+          480,
+          640
+        ],
+        [
+          480,
+          640
+        ],
+        [
+          480,
+          640
+        ],
+        [
+          480,
+          640
+        ]
+      ],
+      "joint_dim": 16,
+      "language": "open laptop",
+      "manifest_schema_version": 2,
+      "num_frames": 261,
+      "phase1a_eligible": true,
+      "phase1b_eligible": false,
+      "point_count": 8000,
+      "robot_model": "ur5",
+      "sample_id": "a9bbb981e1f6c21c8042",
+      "scene_id": "open_laptop",
+      "schema_version": 6,
+      "sidecar_uris": {
+        ".bindings.npz": "episodes/ur5/a9bbb981e1f6c21c8042/episode.v6.h5.bindings.npz",
+        ".geometry.npz": "episodes/ur5/a9bbb981e1f6c21c8042/episode.v6.h5.geometry.npz",
+        ".receipt.json": "episodes/ur5/a9bbb981e1f6c21c8042/episode.v6.h5.receipt.json",
+        ".report.json": "episodes/ur5/a9bbb981e1f6c21c8042/episode.v6.h5.report.json",
+        ".robot.urdf": "episodes/ur5/a9bbb981e1f6c21c8042/episode.v6.h5.robot.urdf"
+      },
+      "source_node": "node42",
+      "source_partition": "production",
+      "source_relative_uri": "open_laptop/ur5/episode004.v6.h5",
+      "source_uri": "/local_nvme/zhangrong/robotwin-h5-v6/open_laptop/ur5/episode004.v6.h5",
+      "split": "train",
+      "task_success": true,
+      "uri": "episodes/ur5/a9bbb981e1f6c21c8042/episode.v6.h5",
+      "node": "node42",
+      "dataset_key": "robotwin_v6",
+      "group_id": "robotwin-ur5",
+      "source_h5": "/local_nvme/zhangrong/wm3d/datasets_node42/robotwin_v6/episodes/ur5/a9bbb981e1f6c21c8042/episode.v6.h5",
+      "manifest_path": "/local_nvme/zhangrong/wm3d/datasets_node42/robotwin_v6/manifest.jsonl",
+      "manifest_sha256": "5396a9aedf0024821811a1bdbee918d16c8367c50360aef00abfdb7263ce4d77",
+      "rank": 5,
+      "slug": "robotwin-ur5-05-a9bbb981"
+    },
+    {
+      "action_dim": 8,
+      "byte_size": 75804420,
+      "camera_names": [
+        "franka_hand",
+        "franka_head",
+        "agent_view",
+        "agent_view_left",
+        "agent_view_right"
+      ],
+      "catalog_sample_id": "InternData:node43:ff7150685bf73c73c33a",
+      "content_digest": "09ab441b621b452df549610947a0cde83f589187bb5545b399cffafe1e465e53",
+      "content_digest_provenance": {
+        "key": "manifest.content_digest",
+        "path": "/local_nvme/zhangrong/quarc-datasets/quarc_v6_node43_zero_h5_p20r5_cap20000_20261007/task_batches/0101_pick_and_place__franka__single_pick__omniobject3/round_001/episodes/ff7150685bf73c73c33a/episode.json"
+      },
+      "data_contract": "simulator-replay-v6",
+      "data_quality": "production",
+      "dataset_family": "InternData",
+      "dataset_id": "round_001",
+      "dynamic_point_count": 6400,
+      "embodiment": "franka",
+      "episode_id": "000021_r000",
+      "episode_json_uri": "episodes/franka/ff7150685bf73c73c33a/episode.json",
+      "episode_key": "ff7150685bf73c73c33a",
+      "fps": 30.0,
+      "has_actions": true,
+      "has_replay_bundle": true,
+      "has_robot_state": true,
+      "image_shapes": [
+        [
+          480,
+          640
+        ],
+        [
+          480,
+          640
+        ],
+        [
+          480,
+          640
+        ],
+        [
+          480,
+          640
+        ],
+        [
+          480,
+          640
+        ]
+      ],
+      "joint_dim": 9,
+      "language": "['Pick up the toy boat.']",
+      "manifest_schema_version": 2,
+      "num_frames": 129,
+      "phase1a_eligible": true,
+      "phase1b_eligible": false,
+      "plan_id": "round_001/pick_and_place__franka__single_pick__omniobject3d-toy_boat__0/000021",
+      "plan_key": "f17fcb7e1a09a082c12e",
+      "plan_seed": 733138436,
+      "planning_success": true,
+      "point_count": 8000,
+      "render_index": 0,
+      "render_seed": 1518870638,
+      "replay_bundle_byte_size": 1001865,
+      "replay_bundle_content_digest": "d80347e71e8cb45dd05af4df43e3894e5f90c9d12aa4fba6f373d7c91a889f79",
+      "replay_bundle_uri": "episodes/franka/ff7150685bf73c73c33a/replay.bundle.h5",
+      "robot_model": "franka",
+      "sample_id": "round_001/pick_and_place__franka__single_pick__omniobject3d-toy_boat__0/000021/render_000",
+      "scene_id": "pick_and_place__franka__single_pick__omniobject3d-toy_boat__0",
+      "schema_version": 6,
+      "sidecar_uris": {
+        "replay_bundle": "episodes/franka/ff7150685bf73c73c33a/replay.bundle.h5",
+        "source_metadata": "episodes/franka/ff7150685bf73c73c33a/episode.source.json"
+      },
+      "source_batch": "quarc_v6_node43_zero_h5_p20r5_cap20000_20261007",
+      "source_episode_json_uri": "episodes/franka/ff7150685bf73c73c33a/episode.source.json",
+      "source_node": "node43",
+      "source_plan_sha256": "cd654d3299d5759a3a928e6a5a61a06bd7a9ac46e0b6d9e409edd297075e98f6",
+      "source_relative_uri": "task_batches/0101_pick_and_place__franka__single_pick__omniobject3/round_001/episodes/ff7150685bf73c73c33a/episode.v6.h5",
+      "source_uri": "/local_nvme/zhangrong/quarc-datasets/quarc_v6_node43_zero_h5_p20r5_cap20000_20261007/task_batches/0101_pick_and_place__franka__single_pick__omniobject3/round_001/episodes/ff7150685bf73c73c33a/episode.v6.h5",
+      "split": "train",
+      "uri": "episodes/franka/ff7150685bf73c73c33a/episode.v6.h5",
+      "validation_mode": "structure_only",
+      "node": "node43",
+      "dataset_key": "interndata_v6",
+      "group_id": "intern-franka",
+      "source_h5": "/local_nvme/zhangrong/wm3d/datasets_node43/interndata_v6/episodes/franka/ff7150685bf73c73c33a/episode.v6.h5",
+      "manifest_path": "/local_nvme/zhangrong/wm3d/datasets_node43/interndata_v6/manifest.jsonl",
+      "manifest_sha256": "7dc897f4fc71d0dd656f7f8a1dbd4d502e4e6734dd500519bb6733f0d82a7de5",
+      "rank": 3,
+      "slug": "intern-franka-03-ff715068"
+    },
+    {
+      "action_dim": 8,
+      "byte_size": 89529771,
+      "camera_names": [
+        "franka_hand",
+        "franka_head",
+        "agent_view",
+        "agent_view_left",
+        "agent_view_right"
+      ],
+      "catalog_sample_id": "InternData:node43:9f7e50b778194981c3a5",
+      "content_digest": "9cfdde243e8707f4c0721131c0ae78bea6324f06d3d3e2d933dbbdd007e5fe54",
+      "content_digest_provenance": {
+        "key": "manifest.content_digest",
+        "path": "/local_nvme/zhangrong/quarc-datasets/quarc_v6_node43_zero_h5_p20r5_cap20000_20261007/task_batches/0033_pick_and_place__franka__single_pick__omniobject3/round_001/episodes/9f7e50b778194981c3a5/episode.json"
+      },
+      "data_contract": "simulator-replay-v6",
+      "data_quality": "production",
+      "dataset_family": "InternData",
+      "dataset_id": "round_001",
+      "dynamic_point_count": 6400,
+      "embodiment": "franka",
+      "episode_id": "000023_r001",
+      "episode_json_uri": "episodes/franka/9f7e50b778194981c3a5/episode.json",
+      "episode_key": "9f7e50b778194981c3a5",
+      "fps": 30.0,
+      "has_actions": true,
+      "has_replay_bundle": true,
+      "has_robot_state": true,
+      "image_shapes": [
+        [
+          480,
+          640
+        ],
+        [
+          480,
+          640
+        ],
+        [
+          480,
+          640
+        ],
+        [
+          480,
+          640
+        ],
+        [
+          480,
+          640
+        ]
+      ],
+      "joint_dim": 9,
+      "language": "['Pick up the pineapple.']",
+      "manifest_schema_version": 2,
+      "num_frames": 191,
+      "phase1a_eligible": true,
+      "phase1b_eligible": false,
+      "plan_id": "round_001/pick_and_place__franka__single_pick__omniobject3d-pineapple__0/000023",
+      "plan_key": "6867f76a3e1d8ba4e2e2",
+      "plan_seed": 1815090659,
+      "planning_success": true,
+      "point_count": 8000,
+      "render_index": 1,
+      "render_seed": 1905984765,
+      "replay_bundle_byte_size": 1404239,
+      "replay_bundle_content_digest": "95dcf56b68ad2a6cb454cd9c1b789333b38fb6713f8403c183690b96fabd8c7a",
+      "replay_bundle_uri": "episodes/franka/9f7e50b778194981c3a5/replay.bundle.h5",
+      "robot_model": "franka",
+      "sample_id": "round_001/pick_and_place__franka__single_pick__omniobject3d-pineapple__0/000023/render_001",
+      "scene_id": "pick_and_place__franka__single_pick__omniobject3d-pineapple__0",
+      "schema_version": 6,
+      "sidecar_uris": {
+        "replay_bundle": "episodes/franka/9f7e50b778194981c3a5/replay.bundle.h5",
+        "source_metadata": "episodes/franka/9f7e50b778194981c3a5/episode.source.json"
+      },
+      "source_batch": "quarc_v6_node43_zero_h5_p20r5_cap20000_20261007",
+      "source_episode_json_uri": "episodes/franka/9f7e50b778194981c3a5/episode.source.json",
+      "source_node": "node43",
+      "source_plan_sha256": "55a26c46a6519da7e01f849a4f96fed576741e39255b5d2511c5f066141dec9c",
+      "source_relative_uri": "task_batches/0033_pick_and_place__franka__single_pick__omniobject3/round_001/episodes/9f7e50b778194981c3a5/episode.v6.h5",
+      "source_uri": "/local_nvme/zhangrong/quarc-datasets/quarc_v6_node43_zero_h5_p20r5_cap20000_20261007/task_batches/0033_pick_and_place__franka__single_pick__omniobject3/round_001/episodes/9f7e50b778194981c3a5/episode.v6.h5",
+      "split": "train",
+      "uri": "episodes/franka/9f7e50b778194981c3a5/episode.v6.h5",
+      "validation_mode": "structure_only",
+      "node": "node43",
+      "dataset_key": "interndata_v6",
+      "group_id": "intern-franka",
+      "source_h5": "/local_nvme/zhangrong/wm3d/datasets_node43/interndata_v6/episodes/franka/9f7e50b778194981c3a5/episode.v6.h5",
+      "manifest_path": "/local_nvme/zhangrong/wm3d/datasets_node43/interndata_v6/manifest.jsonl",
+      "manifest_sha256": "7dc897f4fc71d0dd656f7f8a1dbd4d502e4e6734dd500519bb6733f0d82a7de5",
+      "rank": 4,
+      "slug": "intern-franka-04-9f7e50b7"
+    },
+    {
+      "action_dim": 8,
+      "byte_size": 95535636,
+      "camera_names": [
+        "franka_hand",
+        "franka_head",
+        "agent_view",
+        "agent_view_left",
+        "agent_view_right"
+      ],
+      "catalog_sample_id": "InternData:node43:380d7f1263a3966dd5af",
+      "content_digest": "229ac1779bf54821d3a904f51a1731c0de348270122dafbed0395ce81277f896",
+      "content_digest_provenance": {
+        "key": "manifest.content_digest",
+        "path": "/local_nvme/zhangrong/quarc-datasets/quarc_v6_node43_zero_h5_p20r5_cap20000_20261007/task_batches/0141_pick_and_place__franka__single_pick__omniobject3/round_001/episodes/380d7f1263a3966dd5af/episode.json"
+      },
+      "data_contract": "simulator-replay-v6",
+      "data_quality": "production",
+      "dataset_family": "InternData",
+      "dataset_id": "round_001",
+      "dynamic_point_count": 6400,
+      "embodiment": "franka",
+      "episode_id": "000025_r002",
+      "episode_json_uri": "episodes/franka/380d7f1263a3966dd5af/episode.json",
+      "episode_key": "380d7f1263a3966dd5af",
+      "fps": 30.0,
+      "has_actions": true,
+      "has_replay_bundle": true,
+      "has_robot_state": true,
+      "image_shapes": [
+        [
+          480,
+          640
+        ],
+        [
+          480,
+          640
+        ],
+        [
+          480,
+          640
+        ],
+        [
+          480,
+          640
+        ],
+        [
+          480,
+          640
+        ]
+      ],
+      "joint_dim": 9,
+      "language": "['Pick up the corn.']",
+      "manifest_schema_version": 2,
+      "num_frames": 138,
+      "phase1a_eligible": true,
+      "phase1b_eligible": false,
+      "plan_id": "round_001/pick_and_place__franka__single_pick__omniobject3d-corn__0/000025",
+      "plan_key": "4bc94899701904e4e0e9",
+      "plan_seed": 1440876497,
+      "planning_success": true,
+      "point_count": 8000,
+      "render_index": 2,
+      "render_seed": 137953684,
+      "replay_bundle_byte_size": 1076243,
+      "replay_bundle_content_digest": "93ed0a9bd68a9ea7d5971492a1e1ae6921c7917fd7cc19745ab8be86ab8e585c",
+      "replay_bundle_uri": "episodes/franka/380d7f1263a3966dd5af/replay.bundle.h5",
+      "robot_model": "franka",
+      "sample_id": "round_001/pick_and_place__franka__single_pick__omniobject3d-corn__0/000025/render_002",
+      "scene_id": "pick_and_place__franka__single_pick__omniobject3d-corn__0",
+      "schema_version": 6,
+      "sidecar_uris": {
+        "replay_bundle": "episodes/franka/380d7f1263a3966dd5af/replay.bundle.h5",
+        "source_metadata": "episodes/franka/380d7f1263a3966dd5af/episode.source.json"
+      },
+      "source_batch": "quarc_v6_node43_zero_h5_p20r5_cap20000_20261007",
+      "source_episode_json_uri": "episodes/franka/380d7f1263a3966dd5af/episode.source.json",
+      "source_node": "node43",
+      "source_plan_sha256": "60fd7ae10120529ddaab0de26d46511a682c43448b9d2ebcfc2f4b39b1015f6b",
+      "source_relative_uri": "task_batches/0141_pick_and_place__franka__single_pick__omniobject3/round_001/episodes/380d7f1263a3966dd5af/episode.v6.h5",
+      "source_uri": "/local_nvme/zhangrong/quarc-datasets/quarc_v6_node43_zero_h5_p20r5_cap20000_20261007/task_batches/0141_pick_and_place__franka__single_pick__omniobject3/round_001/episodes/380d7f1263a3966dd5af/episode.v6.h5",
+      "split": "train",
+      "uri": "episodes/franka/380d7f1263a3966dd5af/episode.v6.h5",
+      "validation_mode": "structure_only",
+      "node": "node43",
+      "dataset_key": "interndata_v6",
+      "group_id": "intern-franka",
+      "source_h5": "/local_nvme/zhangrong/wm3d/datasets_node43/interndata_v6/episodes/franka/380d7f1263a3966dd5af/episode.v6.h5",
+      "manifest_path": "/local_nvme/zhangrong/wm3d/datasets_node43/interndata_v6/manifest.jsonl",
+      "manifest_sha256": "7dc897f4fc71d0dd656f7f8a1dbd4d502e4e6734dd500519bb6733f0d82a7de5",
+      "rank": 5,
+      "slug": "intern-franka-05-380d7f12"
+    },
+    {
+      "action_dim": 14,
+      "byte_size": 397412869,
+      "camera_names": [
+        "split_aloha_hand_left",
+        "split_aloha_hand_right",
+        "split_aloha_head",
+        "agent_view",
+        "agent_view_left",
+        "agent_view_right"
+      ],
+      "catalog_sample_id": "InternData:node43:06727d4028cf23c38930",
+      "content_digest": "2d9f6d5de71ba25041279c0c8bd680b44a18d097a106931d476e7ed13a73c84c",
+      "content_digest_provenance": {
+        "key": "manifest.content_digest",
+        "path": "/local_nvme/zhangrong/quarc-datasets/quarc_v6_node43_zero_h5_p20r5_cap20000_20261007/task_batches/0021_basic__split_aloha__insert_the_flower_in_vase__i/round_000/episodes/06727d4028cf23c38930/episode.json"
+      },
+      "data_contract": "simulator-replay-v6",
+      "data_quality": "production",
+      "dataset_family": "InternData",
+      "dataset_id": "round_000",
+      "dynamic_point_count": 6400,
+      "embodiment": "split_aloha",
+      "episode_id": "000011_r001",
+      "episode_json_uri": "episodes/split_aloha/06727d4028cf23c38930/episode.json",
+      "episode_key": "06727d4028cf23c38930",
+      "fps": 30.0,
+      "has_actions": true,
+      "has_replay_bundle": true,
+      "has_robot_state": true,
+      "image_shapes": [
+        [
+          480,
+          640
+        ],
+        [
+          480,
+          640
+        ],
+        [
+          480,
+          640
+        ],
+        [
+          480,
+          640
+        ],
+        [
+          480,
+          640
+        ],
+        [
+          480,
+          640
+        ]
+      ],
+      "joint_dim": 28,
+      "language": "['Place flower into the vase with right arm.']",
+      "manifest_schema_version": 2,
+      "num_frames": 472,
+      "phase1a_eligible": true,
+      "phase1b_eligible": false,
+      "plan_id": "round_000/basic__split_aloha__insert_the_flower_in_vase__insert_the_flower_in_vase_part1__0/000011",
+      "plan_key": "feb4980b6a7c3416597c",
+      "plan_seed": 735107575,
+      "planning_success": true,
+      "point_count": 8000,
+      "render_index": 1,
+      "render_seed": 1277406074,
+      "replay_bundle_byte_size": 3372807,
+      "replay_bundle_content_digest": "0a4b96873b8a4b015c5b788f2c938369f216c337d398974bbf4ea83e775a65ea",
+      "replay_bundle_uri": "episodes/split_aloha/06727d4028cf23c38930/replay.bundle.h5",
+      "robot_model": "split_aloha",
+      "sample_id": "round_000/basic__split_aloha__insert_the_flower_in_vase__insert_the_flower_in_vase_part1__0/000011/render_001",
+      "scene_id": "basic__split_aloha__insert_the_flower_in_vase__insert_the_flower_in_vase_part1__0",
+      "schema_version": 6,
+      "sidecar_uris": {
+        "replay_bundle": "episodes/split_aloha/06727d4028cf23c38930/replay.bundle.h5",
+        "source_metadata": "episodes/split_aloha/06727d4028cf23c38930/episode.source.json"
+      },
+      "source_batch": "quarc_v6_node43_zero_h5_p20r5_cap20000_20261007",
+      "source_episode_json_uri": "episodes/split_aloha/06727d4028cf23c38930/episode.source.json",
+      "source_node": "node43",
+      "source_plan_sha256": "e95badfe33b216a796e997879000318ecdd7f553f7178d5095253004f6637034",
+      "source_relative_uri": "task_batches/0021_basic__split_aloha__insert_the_flower_in_vase__i/round_000/episodes/06727d4028cf23c38930/episode.v6.h5",
+      "source_uri": "/local_nvme/zhangrong/quarc-datasets/quarc_v6_node43_zero_h5_p20r5_cap20000_20261007/task_batches/0021_basic__split_aloha__insert_the_flower_in_vase__i/round_000/episodes/06727d4028cf23c38930/episode.v6.h5",
+      "split": "train",
+      "uri": "episodes/split_aloha/06727d4028cf23c38930/episode.v6.h5",
+      "validation_mode": "structure_only",
+      "node": "node43",
+      "dataset_key": "interndata_v6",
+      "group_id": "intern-split-aloha",
+      "source_h5": "/local_nvme/zhangrong/wm3d/datasets_node43/interndata_v6/episodes/split_aloha/06727d4028cf23c38930/episode.v6.h5",
+      "manifest_path": "/local_nvme/zhangrong/wm3d/datasets_node43/interndata_v6/manifest.jsonl",
+      "manifest_sha256": "7dc897f4fc71d0dd656f7f8a1dbd4d502e4e6734dd500519bb6733f0d82a7de5",
+      "rank": 3,
+      "slug": "intern-split-aloha-03-06727d40"
+    },
+    {
+      "action_dim": 14,
+      "byte_size": 144202710,
+      "camera_names": [
+        "split_aloha_hand_left",
+        "split_aloha_hand_right",
+        "split_aloha_head",
+        "agent_view",
+        "agent_view_left",
+        "agent_view_right"
+      ],
+      "catalog_sample_id": "InternData:node43:b834c60e9e7e672e6a36",
+      "content_digest": "ba3385492e6a4a3e382b27f6a922e587f4e05cf237f2948114bdd01e6116540c",
+      "content_digest_provenance": {
+        "key": "manifest.content_digest",
+        "path": "/local_nvme/zhangrong/quarc-datasets/quarc_v6_node43_zero_h5_p20r5_cap20000_20261007/task_batches/0216_pick_and_place__split_aloha__single_pick__right_/round_000/episodes/b834c60e9e7e672e6a36/episode.json"
+      },
+      "data_contract": "simulator-replay-v6",
+      "data_quality": "production",
+      "dataset_family": "InternData",
+      "dataset_id": "round_000",
+      "dynamic_point_count": 6400,
+      "embodiment": "split_aloha",
+      "episode_id": "000006_r001",
+      "episode_json_uri": "episodes/split_aloha/b834c60e9e7e672e6a36/episode.json",
+      "episode_key": "b834c60e9e7e672e6a36",
+      "fps": 30.0,
+      "has_actions": true,
+      "has_replay_bundle": true,
+      "has_robot_state": true,
+      "image_shapes": [
+        [
+          480,
+          640
+        ],
+        [
+          480,
+          640
+        ],
+        [
+          480,
+          640
+        ],
+        [
+          480,
+          640
+        ],
+        [
+          480,
+          640
+        ],
+        [
+          480,
+          640
+        ]
+      ],
+      "joint_dim": 28,
+      "language": "['Pick up the bamboo shoots with right arm.']",
+      "manifest_schema_version": 2,
+      "num_frames": 217,
+      "phase1a_eligible": true,
+      "phase1b_eligible": false,
+      "plan_id": "round_000/pick_and_place__split_aloha__single_pick__right__omniobject3d-bamboo_shoots__0/000006",
+      "plan_key": "0be9006eaeafe31e8fe0",
+      "plan_seed": 1212942805,
+      "planning_success": true,
+      "point_count": 8000,
+      "render_index": 1,
+      "render_seed": 1668361899,
+      "replay_bundle_byte_size": 1966565,
+      "replay_bundle_content_digest": "af2ed85718ab8f91e3f4c92985490b4cbe963f0eb4fd4188fd0a7dfb817bdff4",
+      "replay_bundle_uri": "episodes/split_aloha/b834c60e9e7e672e6a36/replay.bundle.h5",
+      "robot_model": "split_aloha",
+      "sample_id": "round_000/pick_and_place__split_aloha__single_pick__right__omniobject3d-bamboo_shoots__0/000006/render_001",
+      "scene_id": "pick_and_place__split_aloha__single_pick__right__omniobject3d-bamboo_shoots__0",
+      "schema_version": 6,
+      "sidecar_uris": {
+        "replay_bundle": "episodes/split_aloha/b834c60e9e7e672e6a36/replay.bundle.h5",
+        "source_metadata": "episodes/split_aloha/b834c60e9e7e672e6a36/episode.source.json"
+      },
+      "source_batch": "quarc_v6_node43_zero_h5_p20r5_cap20000_20261007",
+      "source_episode_json_uri": "episodes/split_aloha/b834c60e9e7e672e6a36/episode.source.json",
+      "source_node": "node43",
+      "source_plan_sha256": "68923959c600a7ee74081e84529ef5780d821fc7af4b921f7fe0762190bdd984",
+      "source_relative_uri": "task_batches/0216_pick_and_place__split_aloha__single_pick__right_/round_000/episodes/b834c60e9e7e672e6a36/episode.v6.h5",
+      "source_uri": "/local_nvme/zhangrong/quarc-datasets/quarc_v6_node43_zero_h5_p20r5_cap20000_20261007/task_batches/0216_pick_and_place__split_aloha__single_pick__right_/round_000/episodes/b834c60e9e7e672e6a36/episode.v6.h5",
+      "split": "train",
+      "uri": "episodes/split_aloha/b834c60e9e7e672e6a36/episode.v6.h5",
+      "validation_mode": "structure_only",
+      "node": "node43",
+      "dataset_key": "interndata_v6",
+      "group_id": "intern-split-aloha",
+      "source_h5": "/local_nvme/zhangrong/wm3d/datasets_node43/interndata_v6/episodes/split_aloha/b834c60e9e7e672e6a36/episode.v6.h5",
+      "manifest_path": "/local_nvme/zhangrong/wm3d/datasets_node43/interndata_v6/manifest.jsonl",
+      "manifest_sha256": "7dc897f4fc71d0dd656f7f8a1dbd4d502e4e6734dd500519bb6733f0d82a7de5",
+      "rank": 4,
+      "slug": "intern-split-aloha-04-b834c60e"
+    },
+    {
+      "action_dim": 14,
+      "byte_size": 125147423,
+      "camera_names": [
+        "split_aloha_hand_left",
+        "split_aloha_hand_right",
+        "split_aloha_head",
+        "agent_view",
+        "agent_view_left",
+        "agent_view_right"
+      ],
+      "catalog_sample_id": "InternData:node43:20593b1eb883f13b9d6a",
+      "content_digest": "ef2fadee34a8fbadd2c6aff89ff7655a3bd99c1e91c00171352121431ce6773f",
+      "content_digest_provenance": {
+        "key": "manifest.content_digest",
+        "path": "/local_nvme/zhangrong/quarc-datasets/quarc_v6_node43_zero_h5_p20r5_cap20000_20261007/task_batches/0076_pick_and_place__split_aloha__single_pick__left__/round_000/episodes/20593b1eb883f13b9d6a/episode.json"
+      },
+      "data_contract": "simulator-replay-v6",
+      "data_quality": "production",
+      "dataset_family": "InternData",
+      "dataset_id": "round_000",
+      "dynamic_point_count": 6400,
+      "embodiment": "split_aloha",
+      "episode_id": "000008_r004",
+      "episode_json_uri": "episodes/split_aloha/20593b1eb883f13b9d6a/episode.json",
+      "episode_key": "20593b1eb883f13b9d6a",
+      "fps": 30.0,
+      "has_actions": true,
+      "has_replay_bundle": true,
+      "has_robot_state": true,
+      "image_shapes": [
+        [
+          480,
+          640
+        ],
+        [
+          480,
+          640
+        ],
+        [
+          480,
+          640
+        ],
+        [
+          480,
+          640
+        ],
+        [
+          480,
+          640
+        ],
+        [
+          480,
+          640
+        ]
+      ],
+      "joint_dim": 28,
+      "language": "['Pick up the belt with left arm.']",
+      "manifest_schema_version": 2,
+      "num_frames": 201,
+      "phase1a_eligible": true,
+      "phase1b_eligible": false,
+      "plan_id": "round_000/pick_and_place__split_aloha__single_pick__left__omniobject3d-belt__0/000008",
+      "plan_key": "89c6ba7167d75a440b07",
+      "plan_seed": 643777976,
+      "planning_success": true,
+      "point_count": 8000,
+      "render_index": 4,
+      "render_seed": 579246573,
+      "replay_bundle_byte_size": 1892365,
+      "replay_bundle_content_digest": "f90ed85eb333790b9b2017f1122222baaab6d64aeb35bcd797b26182873496aa",
+      "replay_bundle_uri": "episodes/split_aloha/20593b1eb883f13b9d6a/replay.bundle.h5",
+      "robot_model": "split_aloha",
+      "sample_id": "round_000/pick_and_place__split_aloha__single_pick__left__omniobject3d-belt__0/000008/render_004",
+      "scene_id": "pick_and_place__split_aloha__single_pick__left__omniobject3d-belt__0",
+      "schema_version": 6,
+      "sidecar_uris": {
+        "replay_bundle": "episodes/split_aloha/20593b1eb883f13b9d6a/replay.bundle.h5",
+        "source_metadata": "episodes/split_aloha/20593b1eb883f13b9d6a/episode.source.json"
+      },
+      "source_batch": "quarc_v6_node43_zero_h5_p20r5_cap20000_20261007",
+      "source_episode_json_uri": "episodes/split_aloha/20593b1eb883f13b9d6a/episode.source.json",
+      "source_node": "node43",
+      "source_plan_sha256": "d5c6f0e24d4ae010d9e850fe0ee4efdc43a4fdfb8a88e83e12a5c01c00a35632",
+      "source_relative_uri": "task_batches/0076_pick_and_place__split_aloha__single_pick__left__/round_000/episodes/20593b1eb883f13b9d6a/episode.v6.h5",
+      "source_uri": "/local_nvme/zhangrong/quarc-datasets/quarc_v6_node43_zero_h5_p20r5_cap20000_20261007/task_batches/0076_pick_and_place__split_aloha__single_pick__left__/round_000/episodes/20593b1eb883f13b9d6a/episode.v6.h5",
+      "split": "train",
+      "uri": "episodes/split_aloha/20593b1eb883f13b9d6a/episode.v6.h5",
+      "validation_mode": "structure_only",
+      "node": "node43",
+      "dataset_key": "interndata_v6",
+      "group_id": "intern-split-aloha",
+      "source_h5": "/local_nvme/zhangrong/wm3d/datasets_node43/interndata_v6/episodes/split_aloha/20593b1eb883f13b9d6a/episode.v6.h5",
+      "manifest_path": "/local_nvme/zhangrong/wm3d/datasets_node43/interndata_v6/manifest.jsonl",
+      "manifest_sha256": "7dc897f4fc71d0dd656f7f8a1dbd4d502e4e6734dd500519bb6733f0d82a7de5",
+      "rank": 5,
+      "slug": "intern-split-aloha-05-20593b1e"
+    },
+    {
+      "action_dim": 12,
+      "byte_size": 223327759,
+      "camera_names": [
+        "left",
+        "right",
+        "agentview_center",
+        "eye_in_hand"
+      ],
+      "content_digest": "b5385fe49961e5243d72dbbe09a03e0cf33c4933be4d31f01a0a43e497ca3ad0",
+      "content_digest_provenance": {
+        "column": "hashes_json[.h5]",
+        "key": "pretrain/composite/ButterOnPan/20250724/episode_000048.h5",
+        "path": "/local_nvme/zhangrong/robocasa-quarc-v6/runs/production_20261008_r7/production.sqlite",
+        "table": "episodes"
+      },
+      "data_contract": "simulator-replay-v6",
+      "data_quality": "production",
+      "dataset_family": "RoboCasa365",
+      "dataset_id": "robocasa365-v6",
+      "dynamic_point_count": 6400,
+      "embodiment": "PandaOmron",
+      "episode_id": "episode_000048",
+      "episode_json_uri": "episodes/58bf28d8af8857adb7ba/episode.json",
+      "episode_key": "58bf28d8af8857adb7ba",
+      "fps": 20.0,
+      "has_actions": true,
+      "has_replay_bundle": false,
+      "has_robot_state": true,
+      "image_shapes": [
+        [
+          512,
+          512
+        ],
+        [
+          512,
+          512
+        ],
+        [
+          512,
+          512
+        ],
+        [
+          512,
+          512
+        ]
+      ],
+      "joint_dim": 13,
+      "language": "Pick up the butter stick and place it in the pan. Then turn on the burner for the pan.",
+      "manifest_schema_version": 2,
+      "num_frames": 570,
+      "phase1a_eligible": true,
+      "phase1b_eligible": false,
+      "point_count": 8000,
+      "robot_model": "PandaOmron",
+      "sample_id": "58bf28d8af8857adb7ba",
+      "scene_id": "ButterOnPan",
+      "schema_version": 6,
+      "sidecar_uris": {
+        ".bindings.npz": "episodes/58bf28d8af8857adb7ba/episode.v6.h5.bindings.npz",
+        ".report.json": "episodes/58bf28d8af8857adb7ba/episode.v6.h5.report.json",
+        ".robot.xml": "episodes/58bf28d8af8857adb7ba/episode.v6.h5.robot.xml",
+        ".source.json": "episodes/58bf28d8af8857adb7ba/episode.v6.h5.source.json"
+      },
+      "source_node": "node45",
+      "source_partition": "pretrain",
+      "source_relative_uri": "pretrain/composite/ButterOnPan/20250724/episode_000048.h5",
+      "source_uri": "/local_nvme/zhangrong/robocasa-quarc-v6/outputs/production_20261008_r6/pretrain/composite/ButterOnPan/20250724/episode_000048.h5",
+      "split": "train",
+      "uri": "episodes/58bf28d8af8857adb7ba/episode.v6.h5",
+      "node": "node45",
+      "dataset_key": "robocasa365_v6",
+      "group_id": "robocasa-pandaomron",
+      "source_h5": "/local_nvme/zhangrong/wm3d/datasets_node45/robocasa365_v6/episodes/58bf28d8af8857adb7ba/episode.v6.h5",
+      "manifest_path": "/local_nvme/zhangrong/wm3d/datasets_node45/robocasa365_v6/manifest.jsonl",
+      "manifest_sha256": "a92cffda88920e20731829c81ddb3aa4e336a4823589961a52bec4e516b37083",
+      "rank": 1,
+      "slug": "robocasa-pandaomron-01-58bf28d8"
+    },
+    {
+      "action_dim": 12,
+      "byte_size": 79948503,
+      "camera_names": [
+        "left",
+        "right",
+        "agentview_center",
+        "eye_in_hand"
+      ],
+      "content_digest": "be219adf616541086500d4ffde35fd91c7193ed6504665b3673ebf9a47ff5468",
+      "content_digest_provenance": {
+        "column": "hashes_json[.h5]",
+        "key": "pretrain/atomic/OpenDrawer/20250819/episode_000007.h5",
+        "path": "/local_nvme/zhangrong/robocasa-quarc-v6/runs/production_20261008_r7/production.sqlite",
+        "table": "episodes"
+      },
+      "data_contract": "simulator-replay-v6",
+      "data_quality": "production",
+      "dataset_family": "RoboCasa365",
+      "dataset_id": "robocasa365-v6",
+      "dynamic_point_count": 6400,
+      "embodiment": "PandaOmron",
+      "episode_id": "episode_000007",
+      "episode_json_uri": "episodes/1badeab7313b6853aaf3/episode.json",
+      "episode_key": "1badeab7313b6853aaf3",
+      "fps": 20.0,
+      "has_actions": true,
+      "has_replay_bundle": false,
+      "has_robot_state": true,
+      "image_shapes": [
+        [
+          512,
+          512
+        ],
+        [
+          512,
+          512
+        ],
+        [
+          512,
+          512
+        ],
+        [
+          512,
+          512
+        ]
+      ],
+      "joint_dim": 13,
+      "language": "Open the left drawer.",
+      "manifest_schema_version": 2,
+      "num_frames": 211,
+      "phase1a_eligible": true,
+      "phase1b_eligible": false,
+      "point_count": 8000,
+      "robot_model": "PandaOmron",
+      "sample_id": "1badeab7313b6853aaf3",
+      "scene_id": "OpenDrawer",
+      "schema_version": 6,
+      "sidecar_uris": {
+        ".bindings.npz": "episodes/1badeab7313b6853aaf3/episode.v6.h5.bindings.npz",
+        ".report.json": "episodes/1badeab7313b6853aaf3/episode.v6.h5.report.json",
+        ".robot.xml": "episodes/1badeab7313b6853aaf3/episode.v6.h5.robot.xml",
+        ".source.json": "episodes/1badeab7313b6853aaf3/episode.v6.h5.source.json"
+      },
+      "source_node": "node45",
+      "source_partition": "pretrain",
+      "source_relative_uri": "pretrain/atomic/OpenDrawer/20250819/episode_000007.h5",
+      "source_uri": "/local_nvme/zhangrong/robocasa-quarc-v6/outputs/production_20261008_r6/pretrain/atomic/OpenDrawer/20250819/episode_000007.h5",
+      "split": "train",
+      "uri": "episodes/1badeab7313b6853aaf3/episode.v6.h5",
+      "node": "node45",
+      "dataset_key": "robocasa365_v6",
+      "group_id": "robocasa-pandaomron",
+      "source_h5": "/local_nvme/zhangrong/wm3d/datasets_node45/robocasa365_v6/episodes/1badeab7313b6853aaf3/episode.v6.h5",
+      "manifest_path": "/local_nvme/zhangrong/wm3d/datasets_node45/robocasa365_v6/manifest.jsonl",
+      "manifest_sha256": "a92cffda88920e20731829c81ddb3aa4e336a4823589961a52bec4e516b37083",
+      "rank": 2,
+      "slug": "robocasa-pandaomron-02-1badeab7"
+    },
+    {
+      "action_dim": 12,
+      "byte_size": 42635161,
+      "camera_names": [
+        "left",
+        "right",
+        "agentview_center",
+        "eye_in_hand"
+      ],
+      "content_digest": "1493552509f56cb2cacf26fd3e6afa67e6b457815286c81f661bdfb1d8a174d7",
+      "content_digest_provenance": {
+        "column": "hashes_json[.h5]",
+        "key": "pretrain/atomic/OpenElectricKettleLid/20250820/episode_000035.h5",
+        "path": "/local_nvme/zhangrong/robocasa-quarc-v6/runs/production_20261008_r7/production.sqlite",
+        "table": "episodes"
+      },
+      "data_contract": "simulator-replay-v6",
+      "data_quality": "production",
+      "dataset_family": "RoboCasa365",
+      "dataset_id": "robocasa365-v6",
+      "dynamic_point_count": 6400,
+      "embodiment": "PandaOmron",
+      "episode_id": "episode_000035",
+      "episode_json_uri": "episodes/2176c48659224acc40ee/episode.json",
+      "episode_key": "2176c48659224acc40ee",
+      "fps": 20.0,
+      "has_actions": true,
+      "has_replay_bundle": false,
+      "has_robot_state": true,
+      "image_shapes": [
+        [
+          512,
+          512
+        ],
+        [
+          512,
+          512
+        ],
+        [
+          512,
+          512
+        ],
+        [
+          512,
+          512
+        ]
+      ],
+      "joint_dim": 13,
+      "language": "Press the button to open the lid of the electric kettle.",
+      "manifest_schema_version": 2,
+      "num_frames": 91,
+      "phase1a_eligible": true,
+      "phase1b_eligible": false,
+      "point_count": 8000,
+      "robot_model": "PandaOmron",
+      "sample_id": "2176c48659224acc40ee",
+      "scene_id": "OpenElectricKettleLid",
+      "schema_version": 6,
+      "sidecar_uris": {
+        ".bindings.npz": "episodes/2176c48659224acc40ee/episode.v6.h5.bindings.npz",
+        ".report.json": "episodes/2176c48659224acc40ee/episode.v6.h5.report.json",
+        ".robot.xml": "episodes/2176c48659224acc40ee/episode.v6.h5.robot.xml",
+        ".source.json": "episodes/2176c48659224acc40ee/episode.v6.h5.source.json"
+      },
+      "source_node": "node45",
+      "source_partition": "pretrain",
+      "source_relative_uri": "pretrain/atomic/OpenElectricKettleLid/20250820/episode_000035.h5",
+      "source_uri": "/local_nvme/zhangrong/robocasa-quarc-v6/outputs/production_20261008_r6/pretrain/atomic/OpenElectricKettleLid/20250820/episode_000035.h5",
+      "split": "train",
+      "uri": "episodes/2176c48659224acc40ee/episode.v6.h5",
+      "node": "node45",
+      "dataset_key": "robocasa365_v6",
+      "group_id": "robocasa-pandaomron",
+      "source_h5": "/local_nvme/zhangrong/wm3d/datasets_node45/robocasa365_v6/episodes/2176c48659224acc40ee/episode.v6.h5",
+      "manifest_path": "/local_nvme/zhangrong/wm3d/datasets_node45/robocasa365_v6/manifest.jsonl",
+      "manifest_sha256": "a92cffda88920e20731829c81ddb3aa4e336a4823589961a52bec4e516b37083",
+      "rank": 3,
+      "slug": "robocasa-pandaomron-03-2176c486"
+    },
+    {
+      "action_dim": 12,
+      "byte_size": 67444594,
+      "camera_names": [
+        "left",
+        "right",
+        "agentview_center",
+        "eye_in_hand"
+      ],
+      "content_digest": "384513835325f7a143e9e29354110028ce462f82ca05682cf709e04493cc0401",
+      "content_digest_provenance": {
+        "column": "hashes_json[.h5]",
+        "key": "pretrain/atomic/OpenCabinet/20250819/episode_000000.h5",
+        "path": "/local_nvme/zhangrong/robocasa-quarc-v6/runs/production_20261008_r7/production.sqlite",
+        "table": "episodes"
+      },
+      "data_contract": "simulator-replay-v6",
+      "data_quality": "production",
+      "dataset_family": "RoboCasa365",
+      "dataset_id": "robocasa365-v6",
+      "dynamic_point_count": 6400,
+      "embodiment": "PandaOmron",
+      "episode_id": "episode_000000",
+      "episode_json_uri": "episodes/1c4d648affef1eeb92be/episode.json",
+      "episode_key": "1c4d648affef1eeb92be",
+      "fps": 20.0,
+      "has_actions": true,
+      "has_replay_bundle": false,
+      "has_robot_state": true,
+      "image_shapes": [
+        [
+          512,
+          512
+        ],
+        [
+          512,
+          512
+        ],
+        [
+          512,
+          512
+        ],
+        [
+          512,
+          512
+        ]
+      ],
+      "joint_dim": 13,
+      "language": "Open the cabinet door.",
+      "manifest_schema_version": 2,
+      "num_frames": 169,
+      "phase1a_eligible": true,
+      "phase1b_eligible": false,
+      "point_count": 8000,
+      "robot_model": "PandaOmron",
+      "sample_id": "1c4d648affef1eeb92be",
+      "scene_id": "OpenCabinet",
+      "schema_version": 6,
+      "sidecar_uris": {
+        ".bindings.npz": "episodes/1c4d648affef1eeb92be/episode.v6.h5.bindings.npz",
+        ".report.json": "episodes/1c4d648affef1eeb92be/episode.v6.h5.report.json",
+        ".robot.xml": "episodes/1c4d648affef1eeb92be/episode.v6.h5.robot.xml",
+        ".source.json": "episodes/1c4d648affef1eeb92be/episode.v6.h5.source.json"
+      },
+      "source_node": "node45",
+      "source_partition": "pretrain",
+      "source_relative_uri": "pretrain/atomic/OpenCabinet/20250819/episode_000000.h5",
+      "source_uri": "/local_nvme/zhangrong/robocasa-quarc-v6/outputs/production_20261008_r6/pretrain/atomic/OpenCabinet/20250819/episode_000000.h5",
+      "split": "train",
+      "uri": "episodes/1c4d648affef1eeb92be/episode.v6.h5",
+      "node": "node45",
+      "dataset_key": "robocasa365_v6",
+      "group_id": "robocasa-pandaomron",
+      "source_h5": "/local_nvme/zhangrong/wm3d/datasets_node45/robocasa365_v6/episodes/1c4d648affef1eeb92be/episode.v6.h5",
+      "manifest_path": "/local_nvme/zhangrong/wm3d/datasets_node45/robocasa365_v6/manifest.jsonl",
+      "manifest_sha256": "a92cffda88920e20731829c81ddb3aa4e336a4823589961a52bec4e516b37083",
+      "rank": 4,
+      "slug": "robocasa-pandaomron-04-1c4d648a"
+    },
+    {
+      "action_dim": 12,
+      "byte_size": 1264991365,
+      "camera_names": [
+        "left",
+        "right",
+        "agentview_center",
+        "eye_in_hand"
+      ],
+      "content_digest": "185d6039c69ae4aeda790346cd30ba5cf38e7b6df6f12f93285d06ad3a9c7ac2",
+      "content_digest_provenance": {
+        "column": "hashes_json[.h5]",
+        "key": "pretrain/composite/HotDogSetup/20250805/episode_000019.h5",
+        "path": "/local_nvme/zhangrong/robocasa-quarc-v6/runs/production_20261008_r7/production.sqlite",
+        "table": "episodes"
+      },
+      "data_contract": "simulator-replay-v6",
+      "data_quality": "production",
+      "dataset_family": "RoboCasa365",
+      "dataset_id": "robocasa365-v6",
+      "dynamic_point_count": 6400,
+      "embodiment": "PandaOmron",
+      "episode_id": "episode_000019",
+      "episode_json_uri": "episodes/ce54a29b2f6cb46ba74d/episode.json",
+      "episode_key": "ce54a29b2f6cb46ba74d",
+      "fps": 20.0,
+      "has_actions": true,
+      "has_replay_bundle": false,
+      "has_robot_state": true,
+      "image_shapes": [
+        [
+          512,
+          512
+        ],
+        [
+          512,
+          512
+        ],
+        [
+          512,
+          512
+        ],
+        [
+          512,
+          512
+        ]
+      ],
+      "joint_dim": 13,
+      "language": "Move the hot dog bun to the plate on the dining table and place the {condiment_lang} next to that plate. Then navigate to the fridge and take the sausage and place it on the plate as well.",
+      "manifest_schema_version": 2,
+      "num_frames": 2391,
+      "phase1a_eligible": true,
+      "phase1b_eligible": false,
+      "point_count": 8000,
+      "robot_model": "PandaOmron",
+      "sample_id": "ce54a29b2f6cb46ba74d",
+      "scene_id": "HotDogSetup",
+      "schema_version": 6,
+      "sidecar_uris": {
+        ".bindings.npz": "episodes/ce54a29b2f6cb46ba74d/episode.v6.h5.bindings.npz",
+        ".report.json": "episodes/ce54a29b2f6cb46ba74d/episode.v6.h5.report.json",
+        ".robot.xml": "episodes/ce54a29b2f6cb46ba74d/episode.v6.h5.robot.xml",
+        ".source.json": "episodes/ce54a29b2f6cb46ba74d/episode.v6.h5.source.json"
+      },
+      "source_node": "node45",
+      "source_partition": "pretrain",
+      "source_relative_uri": "pretrain/composite/HotDogSetup/20250805/episode_000019.h5",
+      "source_uri": "/local_nvme/zhangrong/robocasa-quarc-v6/outputs/production_20261008_r6/pretrain/composite/HotDogSetup/20250805/episode_000019.h5",
+      "split": "train",
+      "uri": "episodes/ce54a29b2f6cb46ba74d/episode.v6.h5",
+      "node": "node45",
+      "dataset_key": "robocasa365_v6",
+      "group_id": "robocasa-pandaomron",
+      "source_h5": "/local_nvme/zhangrong/wm3d/datasets_node45/robocasa365_v6/episodes/ce54a29b2f6cb46ba74d/episode.v6.h5",
+      "manifest_path": "/local_nvme/zhangrong/wm3d/datasets_node45/robocasa365_v6/manifest.jsonl",
+      "manifest_sha256": "a92cffda88920e20731829c81ddb3aa4e336a4823589961a52bec4e516b37083",
+      "rank": 5,
+      "slug": "robocasa-pandaomron-05-ce54a29b"
+    }
+  ]
+}

@@ -36,3 +36,7 @@ h3{font-family:var(--heading)}
 .overview-tabs{display:flex;flex-wrap:wrap;gap:9px;margin:20px 0 12px}.overview-tabs button{font:500 14px/1.4 var(--body);padding:12px 18px;transition:background .16s,color .16s,border-color .16s}.overview-tabs button:hover{background:var(--paper-deep);border-color:#7b8388}.overview-tabs button[aria-selected="true"]{color:var(--paper);background:var(--ink);border-color:var(--ink)}
 .overview-panel .table-scroll{margin-top:0}
 @media(max-width:520px){.overview-tabs{display:grid;grid-template-columns:repeat(2,minmax(0,1fr))}.overview-tabs button{font-size:12px;padding:12px 10px;min-height:43px}}
+
+.compression-highlight{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:20px;background:var(--paper-deep);border:1px solid var(--line);padding:18px 20px;margin:16px 0}
+.compression-highlight strong{display:block;font:500 30px/1.25 var(--body);letter-spacing:-.04em}.compression-highlight span{display:block;font-size:11px;color:var(--muted);line-height:1.6;margin-top:5px}
+@media(max-width:520px){.compression-highlight{padding:14px;gap:15px}.compression-highlight span{font-size:10px}}

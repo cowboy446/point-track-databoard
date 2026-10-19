@@ -9,7 +9,7 @@ https://cowboy446.github.io/point-track-databoard/
 - RoboCasa365: 10,000 episodes, PandaOmron.
 - Total: 57,459 episodes, 237.18 hours, 10.18 TB.
 - Nine dataset–embodiment groups, each with five multi-view RGB-D and 3D point-track previews.
-- H5-v6 structures, field shapes, dtypes, attributes and reading examples.
+- H5 structures, field shapes, dtypes, attributes and reading examples.
 
 ## Design & editing
 

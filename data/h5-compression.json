@@ -1,0 +1,7092 @@
+[
+  {
+    "group_id": "intern-franka",
+    "source_h5": "/local_nvme/zhangrong/wm3d/datasets_node42/interndata_v6/episodes/franka/57df5d01aba5caaf503a/episode.v6.h5",
+    "file_bytes": 237774477,
+    "raw_array_baseline_bytes": 4598503118,
+    "rgb_raw_bytes": 1944576000,
+    "jpeg_bytes": 190840832,
+    "nodes": [
+      {
+        "path": "actions",
+        "shape": [
+          422,
+          8
+        ],
+        "dtype": "float32",
+        "array_bytes": 13504,
+        "stored_bytes": 13295,
+        "filters": [
+          {
+            "id": 32000,
+            "options": [
+              4,
+              261,
+              1536
+            ],
+            "name": "lzf"
+          }
+        ]
+      },
+      {
+        "path": "cameras/agent_view/K",
+        "shape": [
+          422,
+          3,
+          3
+        ],
+        "dtype": "float32",
+        "array_bytes": 15192,
+        "stored_bytes": 15552,
+        "filters": []
+      },
+      {
+        "path": "cameras/agent_view/T_wc",
+        "shape": [
+          422,
+          4,
+          4
+        ],
+        "dtype": "float32",
+        "array_bytes": 27008,
+        "stored_bytes": 937,
+        "filters": [
+          {
+            "id": 32000,
+            "options": [
+              4,
+              261,
+              3072
+            ],
+            "name": "lzf"
+          }
+        ]
+      },
+      {
+        "path": "cameras/agent_view/camera_valid",
+        "shape": [
+          422
+        ],
+        "dtype": "bool",
+        "array_bytes": 422,
+        "stored_bytes": 147,
+        "filters": [
+          {
+            "id": 32015,
+            "options": [
+              5
+            ],
+            "name": "HDF5 zstd filter; see https://github.com/HDFGroup/hdf5_plugins/blob/master/docs/RegisteredFilterPlugins.md"
+          }
+        ]
+      },
+      {
+        "path": "cameras/agent_view/depth_m",
+        "shape": [
+          422,
+          480,
+          640
+        ],
+        "dtype": "int16",
+        "array_bytes": 259276800,
+        "stored_bytes": 7464498,
+        "filters": [
+          {
+            "id": 32015,
+            "options": [
+              5
+            ],
+            "name": "HDF5 zstd filter; see https://github.com/HDFGroup/hdf5_plugins/blob/master/docs/RegisteredFilterPlugins.md"
+          }
+        ]
+      },
+      {
+        "path": "cameras/agent_view/point_visible",
+        "shape": [
+          422,
+          8000
+        ],
+        "dtype": "bool",
+        "array_bytes": 3376000,
+        "stored_bytes": 478249,
+        "filters": [
+          {
+            "id": 32015,
+            "options": [
+              5
+            ],
+            "name": "HDF5 zstd filter; see https://github.com/HDFGroup/hdf5_plugins/blob/master/docs/RegisteredFilterPlugins.md"
+          }
+        ]
+      },
+      {
+        "path": "cameras/agent_view/rgb_jpeg_bytes",
+        "shape": [
+          34812667
+        ],
+        "dtype": "uint8",
+        "array_bytes": 34812667,
+        "stored_bytes": 35651584,
+        "filters": []
+      },
+      {
+        "path": "cameras/agent_view/rgb_jpeg_offsets",
+        "shape": [
+          423
+        ],
+        "dtype": "int64",
+        "array_bytes": 3384,
+        "stored_bytes": 1586,
+        "filters": [
+          {
+            "id": 32015,
+            "options": [
+              5
+            ],
+            "name": "HDF5 zstd filter; see https://github.com/HDFGroup/hdf5_plugins/blob/master/docs/RegisteredFilterPlugins.md"
+          }
+        ]
+      },
+      {
+        "path": "cameras/agent_view/timestamps_s",
+        "shape": [
+          422
+        ],
+        "dtype": "float64",
+        "array_bytes": 3376,
+        "stored_bytes": 3456,
+        "filters": []
+      },
+      {
+        "path": "cameras/agent_view_left/K",
+        "shape": [
+          422,
+          3,
+          3
+        ],
+        "dtype": "float32",
+        "array_bytes": 15192,
+        "stored_bytes": 15552,
+        "filters": []
+      },
+      {
+        "path": "cameras/agent_view_left/T_wc",
+        "shape": [
+          422,
+          4,
+          4
+        ],
+        "dtype": "float32",
+        "array_bytes": 27008,
+        "stored_bytes": 903,
+        "filters": [
+          {
+            "id": 32000,
+            "options": [
+              4,
+              261,
+              3072
+            ],
+            "name": "lzf"
+          }
+        ]
+      },
+      {
+        "path": "cameras/agent_view_left/camera_valid",
+        "shape": [
+          422
+        ],
+        "dtype": "bool",
+        "array_bytes": 422,
+        "stored_bytes": 147,
+        "filters": [
+          {
+            "id": 32015,
+            "options": [
+              5
+            ],
+            "name": "HDF5 zstd filter; see https://github.com/HDFGroup/hdf5_plugins/blob/master/docs/RegisteredFilterPlugins.md"
+          }
+        ]
+      },
+      {
+        "path": "cameras/agent_view_left/depth_m",
+        "shape": [
+          422,
+          480,
+          640
+        ],
+        "dtype": "int16",
+        "array_bytes": 259276800,
+        "stored_bytes": 6065541,
+        "filters": [
+          {
+            "id": 32015,
+            "options": [
+              5
+            ],
+            "name": "HDF5 zstd filter; see https://github.com/HDFGroup/hdf5_plugins/blob/master/docs/RegisteredFilterPlugins.md"
+          }
+        ]
+      },
+      {
+        "path": "cameras/agent_view_left/point_visible",
+        "shape": [
+          422,
+          8000
+        ],
+        "dtype": "bool",
+        "array_bytes": 3376000,
+        "stored_bytes": 579688,
+        "filters": [
+          {
+            "id": 32015,
+            "options": [
+              5
+            ],
+            "name": "HDF5 zstd filter; see https://github.com/HDFGroup/hdf5_plugins/blob/master/docs/RegisteredFilterPlugins.md"
+          }
+        ]
+      },
+      {
+        "path": "cameras/agent_view_left/rgb_jpeg_bytes",
+        "shape": [
+          44925003
+        ],
+        "dtype": "uint8",
+        "array_bytes": 44925003,
+        "stored_bytes": 45088768,
+        "filters": []
+      },
+      {
+        "path": "cameras/agent_view_left/rgb_jpeg_offsets",
+        "shape": [
+          423
+        ],
+        "dtype": "int64",
+        "array_bytes": 3384,
+        "stored_bytes": 1588,
+        "filters": [
+          {
+            "id": 32015,
+            "options": [
+              5
+            ],
+            "name": "HDF5 zstd filter; see https://github.com/HDFGroup/hdf5_plugins/blob/master/docs/RegisteredFilterPlugins.md"
+          }
+        ]
+      },
+      {
+        "path": "cameras/agent_view_left/timestamps_s",
+        "shape": [
+          422
+        ],
+        "dtype": "float64",
+        "array_bytes": 3376,
+        "stored_bytes": 3456,
+        "filters": []
+      },
+      {
+        "path": "cameras/agent_view_right/K",
+        "shape": [
+          422,
+          3,
+          3
+        ],
+        "dtype": "float32",
+        "array_bytes": 15192,
+        "stored_bytes": 15552,
+        "filters": []
+      },
+      {
+        "path": "cameras/agent_view_right/T_wc",
+        "shape": [
+          422,
+          4,
+          4
+        ],
+        "dtype": "float32",
+        "array_bytes": 27008,
+        "stored_bytes": 903,
+        "filters": [
+          {
+            "id": 32000,
+            "options": [
+              4,
+              261,
+              3072
+            ],
+            "name": "lzf"
+          }
+        ]
+      },
+      {
+        "path": "cameras/agent_view_right/camera_valid",
+        "shape": [
+          422
+        ],
+        "dtype": "bool",
+        "array_bytes": 422,
+        "stored_bytes": 147,
+        "filters": [
+          {
+            "id": 32015,
+            "options": [
+              5
+            ],
+            "name": "HDF5 zstd filter; see https://github.com/HDFGroup/hdf5_plugins/blob/master/docs/RegisteredFilterPlugins.md"
+          }
+        ]
+      },
+      {
+        "path": "cameras/agent_view_right/depth_m",
+        "shape": [
+          422,
+          480,
+          640
+        ],
+        "dtype": "int16",
+        "array_bytes": 259276800,
+        "stored_bytes": 6876401,
+        "filters": [
+          {
+            "id": 32015,
+            "options": [
+              5
+            ],
+            "name": "HDF5 zstd filter; see https://github.com/HDFGroup/hdf5_plugins/blob/master/docs/RegisteredFilterPlugins.md"
+          }
+        ]
+      },
+      {
+        "path": "cameras/agent_view_right/point_visible",
+        "shape": [
+          422,
+          8000
+        ],
+        "dtype": "bool",
+        "array_bytes": 3376000,
+        "stored_bytes": 420342,
+        "filters": [
+          {
+            "id": 32015,
+            "options": [
+              5
+            ],
+            "name": "HDF5 zstd filter; see https://github.com/HDFGroup/hdf5_plugins/blob/master/docs/RegisteredFilterPlugins.md"
+          }
+        ]
+      },
+      {
+        "path": "cameras/agent_view_right/rgb_jpeg_bytes",
+        "shape": [
+          38448468
+        ],
+        "dtype": "uint8",
+        "array_bytes": 38448468,
+        "stored_bytes": 38797312,
+        "filters": []
+      },
+      {
+        "path": "cameras/agent_view_right/rgb_jpeg_offsets",
+        "shape": [
+          423
+        ],
+        "dtype": "int64",
+        "array_bytes": 3384,
+        "stored_bytes": 1588,
+        "filters": [
+          {
+            "id": 32015,
+            "options": [
+              5
+            ],
+            "name": "HDF5 zstd filter; see https://github.com/HDFGroup/hdf5_plugins/blob/master/docs/RegisteredFilterPlugins.md"
+          }
+        ]
+      },
+      {
+        "path": "cameras/agent_view_right/timestamps_s",
+        "shape": [
+          422
+        ],
+        "dtype": "float64",
+        "array_bytes": 3376,
+        "stored_bytes": 3456,
+        "filters": []
+      },
+      {
+        "path": "cameras/franka_hand/K",
+        "shape": [
+          422,
+          3,
+          3
+        ],
+        "dtype": "float32",
+        "array_bytes": 15192,
+        "stored_bytes": 15552,
+        "filters": []
+      },
+      {
+        "path": "cameras/franka_hand/T_wc",
+        "shape": [
+          422,
+          4,
+          4
+        ],
+        "dtype": "float32",
+        "array_bytes": 27008,
+        "stored_bytes": 21404,
+        "filters": [
+          {
+            "id": 32000,
+            "options": [
+              4,
+              261,
+              3072
+            ],
+            "name": "lzf"
+          }
+        ]
+      },
+      {
+        "path": "cameras/franka_hand/camera_valid",
+        "shape": [
+          422
+        ],
+        "dtype": "bool",
+        "array_bytes": 422,
+        "stored_bytes": 147,
+        "filters": [
+          {
+            "id": 32015,
+            "options": [
+              5
+            ],
+            "name": "HDF5 zstd filter; see https://github.com/HDFGroup/hdf5_plugins/blob/master/docs/RegisteredFilterPlugins.md"
+          }
+        ]
+      },
+      {
+        "path": "cameras/franka_hand/depth_m",
+        "shape": [
+          422,
+          480,
+          640
+        ],
+        "dtype": "int16",
+        "array_bytes": 259276800,
+        "stored_bytes": 7577947,
+        "filters": [
+          {
+            "id": 32015,
+            "options": [
+              5
+            ],
+            "name": "HDF5 zstd filter; see https://github.com/HDFGroup/hdf5_plugins/blob/master/docs/RegisteredFilterPlugins.md"
+          }
+        ]
+      },
+      {
+        "path": "cameras/franka_hand/point_visible",
+        "shape": [
+          422,
+          8000
+        ],
+        "dtype": "bool",
+        "array_bytes": 3376000,
+        "stored_bytes": 473274,
+        "filters": [
+          {
+            "id": 32015,
+            "options": [
+              5
+            ],
+            "name": "HDF5 zstd filter; see https://github.com/HDFGroup/hdf5_plugins/blob/master/docs/RegisteredFilterPlugins.md"
+          }
+        ]
+      },
+      {
+        "path": "cameras/franka_hand/rgb_jpeg_bytes",
+        "shape": [
+          18755704
+        ],
+        "dtype": "uint8",
+        "array_bytes": 18755704,
+        "stored_bytes": 18874368,
+        "filters": []
+      },
+      {
+        "path": "cameras/franka_hand/rgb_jpeg_offsets",
+        "shape": [
+          423
+        ],
+        "dtype": "int64",
+        "array_bytes": 3384,
+        "stored_bytes": 1522,
+        "filters": [
+          {
+            "id": 32015,
+            "options": [
+              5
+            ],
+            "name": "HDF5 zstd filter; see https://github.com/HDFGroup/hdf5_plugins/blob/master/docs/RegisteredFilterPlugins.md"
+          }
+        ]
+      },
+      {
+        "path": "cameras/franka_hand/timestamps_s",
+        "shape": [
+          422
+        ],
+        "dtype": "float64",
+        "array_bytes": 3376,
+        "stored_bytes": 3456,
+        "filters": []
+      },
+      {
+        "path": "cameras/franka_head/K",
+        "shape": [
+          422,
+          3,
+          3
+        ],
+        "dtype": "float32",
+        "array_bytes": 15192,
+        "stored_bytes": 15552,
+        "filters": []
+      },
+      {
+        "path": "cameras/franka_head/T_wc",
+        "shape": [
+          422,
+          4,
+          4
+        ],
+        "dtype": "float32",
+        "array_bytes": 27008,
+        "stored_bytes": 903,
+        "filters": [
+          {
+            "id": 32000,
+            "options": [
+              4,
+              261,
+              3072
+            ],
+            "name": "lzf"
+          }
+        ]
+      },
+      {
+        "path": "cameras/franka_head/camera_valid",
+        "shape": [
+          422
+        ],
+        "dtype": "bool",
+        "array_bytes": 422,
+        "stored_bytes": 147,
+        "filters": [
+          {
+            "id": 32015,
+            "options": [
+              5
+            ],
+            "name": "HDF5 zstd filter; see https://github.com/HDFGroup/hdf5_plugins/blob/master/docs/RegisteredFilterPlugins.md"
+          }
+        ]
+      },
+      {
+        "path": "cameras/franka_head/depth_m",
+        "shape": [
+          422,
+          480,
+          640
+        ],
+        "dtype": "int16",
+        "array_bytes": 259276800,
+        "stored_bytes": 7619092,
+        "filters": [
+          {
+            "id": 32015,
+            "options": [
+              5
+            ],
+            "name": "HDF5 zstd filter; see https://github.com/HDFGroup/hdf5_plugins/blob/master/docs/RegisteredFilterPlugins.md"
+          }
+        ]
+      },
+      {
+        "path": "cameras/franka_head/point_visible",
+        "shape": [
+          422,
+          8000
+        ],
+        "dtype": "bool",
+        "array_bytes": 3376000,
+        "stored_bytes": 498841,
+        "filters": [
+          {
+            "id": 32015,
+            "options": [
+              5
+            ],
+            "name": "HDF5 zstd filter; see https://github.com/HDFGroup/hdf5_plugins/blob/master/docs/RegisteredFilterPlugins.md"
+          }
+        ]
+      },
+      {
+        "path": "cameras/franka_head/rgb_jpeg_bytes",
+        "shape": [
+          52091119
+        ],
+        "dtype": "uint8",
+        "array_bytes": 52091119,
+        "stored_bytes": 52428800,
+        "filters": []
+      },
+      {
+        "path": "cameras/franka_head/rgb_jpeg_offsets",
+        "shape": [
+          423
+        ],
+        "dtype": "int64",
+        "array_bytes": 3384,
+        "stored_bytes": 1598,
+        "filters": [
+          {
+            "id": 32015,
+            "options": [
+              5
+            ],
+            "name": "HDF5 zstd filter; see https://github.com/HDFGroup/hdf5_plugins/blob/master/docs/RegisteredFilterPlugins.md"
+          }
+        ]
+      },
+      {
+        "path": "cameras/franka_head/timestamps_s",
+        "shape": [
+          422
+        ],
+        "dtype": "float64",
+        "array_bytes": 3376,
+        "stored_bytes": 3456,
+        "filters": []
+      },
+      {
+        "path": "points/class_id",
+        "shape": [
+          8000
+        ],
+        "dtype": "uint8",
+        "array_bytes": 8000,
+        "stored_bytes": 26,
+        "filters": [
+          {
+            "id": 32015,
+            "options": [
+              5
+            ],
+            "name": "HDF5 zstd filter; see https://github.com/HDFGroup/hdf5_plugins/blob/master/docs/RegisteredFilterPlugins.md"
+          }
+        ]
+      },
+      {
+        "path": "points/frame0_visible_view_count",
+        "shape": [
+          8000
+        ],
+        "dtype": "uint16",
+        "array_bytes": 16000,
+        "stored_bytes": 16000,
+        "filters": []
+      },
+      {
+        "path": "points/geom_id",
+        "shape": [
+          8000
+        ],
+        "dtype": "int32",
+        "array_bytes": 32000,
+        "stored_bytes": 2619,
+        "filters": [
+          {
+            "id": 32015,
+            "options": [
+              5
+            ],
+            "name": "HDF5 zstd filter; see https://github.com/HDFGroup/hdf5_plugins/blob/master/docs/RegisteredFilterPlugins.md"
+          }
+        ]
+      },
+      {
+        "path": "points/owner_id",
+        "shape": [
+          8000
+        ],
+        "dtype": "int32",
+        "array_bytes": 32000,
+        "stored_bytes": 455,
+        "filters": [
+          {
+            "id": 32015,
+            "options": [
+              5
+            ],
+            "name": "HDF5 zstd filter; see https://github.com/HDFGroup/hdf5_plugins/blob/master/docs/RegisteredFilterPlugins.md"
+          }
+        ]
+      },
+      {
+        "path": "points/point_is_dynamic",
+        "shape": [
+          8000
+        ],
+        "dtype": "bool",
+        "array_bytes": 8000,
+        "stored_bytes": 23,
+        "filters": [
+          {
+            "id": 32015,
+            "options": [
+              5
+            ],
+            "name": "HDF5 zstd filter; see https://github.com/HDFGroup/hdf5_plugins/blob/master/docs/RegisteredFilterPlugins.md"
+          }
+        ]
+      },
+      {
+        "path": "points/point_valid",
+        "shape": [
+          422,
+          8000
+        ],
+        "dtype": "bool",
+        "array_bytes": 3376000,
+        "stored_bytes": 282,
+        "filters": [
+          {
+            "id": 32015,
+            "options": [
+              5
+            ],
+            "name": "HDF5 zstd filter; see https://github.com/HDFGroup/hdf5_plugins/blob/master/docs/RegisteredFilterPlugins.md"
+          }
+        ]
+      },
+      {
+        "path": "points/point_world",
+        "shape": [
+          422,
+          8000,
+          3
+        ],
+        "dtype": "int16",
+        "array_bytes": 20256000,
+        "stored_bytes": 8484026,
+        "filters": [
+          {
+            "id": 32015,
+            "options": [
+              5
+            ],
+            "name": "HDF5 zstd filter; see https://github.com/HDFGroup/hdf5_plugins/blob/master/docs/RegisteredFilterPlugins.md"
+          }
+        ]
+      },
+      {
+        "path": "points/reference_visible_view_count",
+        "shape": [
+          8000
+        ],
+        "dtype": "uint16",
+        "array_bytes": 16000,
+        "stored_bytes": 16000,
+        "filters": []
+      },
+      {
+        "path": "robot/T_episode_from_robot_base",
+        "shape": [
+          4,
+          4
+        ],
+        "dtype": "float32",
+        "array_bytes": 64,
+        "stored_bytes": 64,
+        "filters": []
+      },
+      {
+        "path": "robot/joint_names",
+        "shape": [
+          9
+        ],
+        "dtype": "object",
+        "array_bytes": 72,
+        "stored_bytes": 144,
+        "filters": []
+      },
+      {
+        "path": "robot/joint_pos",
+        "shape": [
+          422,
+          9
+        ],
+        "dtype": "float32",
+        "array_bytes": 15192,
+        "stored_bytes": 14943,
+        "filters": [
+          {
+            "id": 32000,
+            "options": [
+              4,
+              261,
+              1728
+            ],
+            "name": "lzf"
+          }
+        ]
+      },
+      {
+        "path": "timestamps_s",
+        "shape": [
+          422
+        ],
+        "dtype": "float64",
+        "array_bytes": 3376,
+        "stored_bytes": 3456,
+        "filters": []
+      }
+    ]
+  },
+  {
+    "group_id": "intern-split-aloha",
+    "source_h5": "/local_nvme/zhangrong/wm3d/datasets_node42/interndata_v6/episodes/split_aloha/d23cfa22f4e9588b2add/episode.v6.h5",
+    "file_bytes": 157538479,
+    "raw_array_baseline_bytes": 2859218218,
+    "rgb_raw_bytes": 1210982400,
+    "jpeg_bytes": 133169152,
+    "nodes": [
+      {
+        "path": "actions",
+        "shape": [
+          219,
+          14
+        ],
+        "dtype": "float32",
+        "array_bytes": 12264,
+        "stored_bytes": 10170,
+        "filters": [
+          {
+            "id": 32000,
+            "options": [
+              4,
+              261,
+              2688
+            ],
+            "name": "lzf"
+          }
+        ]
+      },
+      {
+        "path": "cameras/agent_view/K",
+        "shape": [
+          219,
+          3,
+          3
+        ],
+        "dtype": "float32",
+        "array_bytes": 7884,
+        "stored_bytes": 8640,
+        "filters": []
+      },
+      {
+        "path": "cameras/agent_view/T_wc",
+        "shape": [
+          219,
+          4,
+          4
+        ],
+        "dtype": "float32",
+        "array_bytes": 14016,
+        "stored_bytes": 506,
+        "filters": [
+          {
+            "id": 32000,
+            "options": [
+              4,
+              261,
+              3072
+            ],
+            "name": "lzf"
+          }
+        ]
+      },
+      {
+        "path": "cameras/agent_view/camera_valid",
+        "shape": [
+          219
+        ],
+        "dtype": "bool",
+        "array_bytes": 219,
+        "stored_bytes": 83,
+        "filters": [
+          {
+            "id": 32015,
+            "options": [
+              5
+            ],
+            "name": "HDF5 zstd filter; see https://github.com/HDFGroup/hdf5_plugins/blob/master/docs/RegisteredFilterPlugins.md"
+          }
+        ]
+      },
+      {
+        "path": "cameras/agent_view/depth_m",
+        "shape": [
+          219,
+          480,
+          640
+        ],
+        "dtype": "int16",
+        "array_bytes": 134553600,
+        "stored_bytes": 3078248,
+        "filters": [
+          {
+            "id": 32015,
+            "options": [
+              5
+            ],
+            "name": "HDF5 zstd filter; see https://github.com/HDFGroup/hdf5_plugins/blob/master/docs/RegisteredFilterPlugins.md"
+          }
+        ]
+      },
+      {
+        "path": "cameras/agent_view/point_visible",
+        "shape": [
+          219,
+          8000
+        ],
+        "dtype": "bool",
+        "array_bytes": 1752000,
+        "stored_bytes": 271682,
+        "filters": [
+          {
+            "id": 32015,
+            "options": [
+              5
+            ],
+            "name": "HDF5 zstd filter; see https://github.com/HDFGroup/hdf5_plugins/blob/master/docs/RegisteredFilterPlugins.md"
+          }
+        ]
+      },
+      {
+        "path": "cameras/agent_view/rgb_jpeg_bytes",
+        "shape": [
+          23701175
+        ],
+        "dtype": "uint8",
+        "array_bytes": 23701175,
+        "stored_bytes": 24117248,
+        "filters": []
+      },
+      {
+        "path": "cameras/agent_view/rgb_jpeg_offsets",
+        "shape": [
+          220
+        ],
+        "dtype": "int64",
+        "array_bytes": 1760,
+        "stored_bytes": 835,
+        "filters": [
+          {
+            "id": 32015,
+            "options": [
+              5
+            ],
+            "name": "HDF5 zstd filter; see https://github.com/HDFGroup/hdf5_plugins/blob/master/docs/RegisteredFilterPlugins.md"
+          }
+        ]
+      },
+      {
+        "path": "cameras/agent_view/timestamps_s",
+        "shape": [
+          219
+        ],
+        "dtype": "float64",
+        "array_bytes": 1752,
+        "stored_bytes": 1920,
+        "filters": []
+      },
+      {
+        "path": "cameras/agent_view_left/K",
+        "shape": [
+          219,
+          3,
+          3
+        ],
+        "dtype": "float32",
+        "array_bytes": 7884,
+        "stored_bytes": 8640,
+        "filters": []
+      },
+      {
+        "path": "cameras/agent_view_left/T_wc",
+        "shape": [
+          219,
+          4,
+          4
+        ],
+        "dtype": "float32",
+        "array_bytes": 14016,
+        "stored_bytes": 506,
+        "filters": [
+          {
+            "id": 32000,
+            "options": [
+              4,
+              261,
+              3072
+            ],
+            "name": "lzf"
+          }
+        ]
+      },
+      {
+        "path": "cameras/agent_view_left/camera_valid",
+        "shape": [
+          219
+        ],
+        "dtype": "bool",
+        "array_bytes": 219,
+        "stored_bytes": 83,
+        "filters": [
+          {
+            "id": 32015,
+            "options": [
+              5
+            ],
+            "name": "HDF5 zstd filter; see https://github.com/HDFGroup/hdf5_plugins/blob/master/docs/RegisteredFilterPlugins.md"
+          }
+        ]
+      },
+      {
+        "path": "cameras/agent_view_left/depth_m",
+        "shape": [
+          219,
+          480,
+          640
+        ],
+        "dtype": "int16",
+        "array_bytes": 134553600,
+        "stored_bytes": 2390234,
+        "filters": [
+          {
+            "id": 32015,
+            "options": [
+              5
+            ],
+            "name": "HDF5 zstd filter; see https://github.com/HDFGroup/hdf5_plugins/blob/master/docs/RegisteredFilterPlugins.md"
+          }
+        ]
+      },
+      {
+        "path": "cameras/agent_view_left/point_visible",
+        "shape": [
+          219,
+          8000
+        ],
+        "dtype": "bool",
+        "array_bytes": 1752000,
+        "stored_bytes": 156028,
+        "filters": [
+          {
+            "id": 32015,
+            "options": [
+              5
+            ],
+            "name": "HDF5 zstd filter; see https://github.com/HDFGroup/hdf5_plugins/blob/master/docs/RegisteredFilterPlugins.md"
+          }
+        ]
+      },
+      {
+        "path": "cameras/agent_view_left/rgb_jpeg_bytes",
+        "shape": [
+          25662063
+        ],
+        "dtype": "uint8",
+        "array_bytes": 25662063,
+        "stored_bytes": 26214400,
+        "filters": []
+      },
+      {
+        "path": "cameras/agent_view_left/rgb_jpeg_offsets",
+        "shape": [
+          220
+        ],
+        "dtype": "int64",
+        "array_bytes": 1760,
+        "stored_bytes": 834,
+        "filters": [
+          {
+            "id": 32015,
+            "options": [
+              5
+            ],
+            "name": "HDF5 zstd filter; see https://github.com/HDFGroup/hdf5_plugins/blob/master/docs/RegisteredFilterPlugins.md"
+          }
+        ]
+      },
+      {
+        "path": "cameras/agent_view_left/timestamps_s",
+        "shape": [
+          219
+        ],
+        "dtype": "float64",
+        "array_bytes": 1752,
+        "stored_bytes": 1920,
+        "filters": []
+      },
+      {
+        "path": "cameras/agent_view_right/K",
+        "shape": [
+          219,
+          3,
+          3
+        ],
+        "dtype": "float32",
+        "array_bytes": 7884,
+        "stored_bytes": 8640,
+        "filters": []
+      },
+      {
+        "path": "cameras/agent_view_right/T_wc",
+        "shape": [
+          219,
+          4,
+          4
+        ],
+        "dtype": "float32",
+        "array_bytes": 14016,
+        "stored_bytes": 506,
+        "filters": [
+          {
+            "id": 32000,
+            "options": [
+              4,
+              261,
+              3072
+            ],
+            "name": "lzf"
+          }
+        ]
+      },
+      {
+        "path": "cameras/agent_view_right/camera_valid",
+        "shape": [
+          219
+        ],
+        "dtype": "bool",
+        "array_bytes": 219,
+        "stored_bytes": 83,
+        "filters": [
+          {
+            "id": 32015,
+            "options": [
+              5
+            ],
+            "name": "HDF5 zstd filter; see https://github.com/HDFGroup/hdf5_plugins/blob/master/docs/RegisteredFilterPlugins.md"
+          }
+        ]
+      },
+      {
+        "path": "cameras/agent_view_right/depth_m",
+        "shape": [
+          219,
+          480,
+          640
+        ],
+        "dtype": "int16",
+        "array_bytes": 134553600,
+        "stored_bytes": 4103951,
+        "filters": [
+          {
+            "id": 32015,
+            "options": [
+              5
+            ],
+            "name": "HDF5 zstd filter; see https://github.com/HDFGroup/hdf5_plugins/blob/master/docs/RegisteredFilterPlugins.md"
+          }
+        ]
+      },
+      {
+        "path": "cameras/agent_view_right/point_visible",
+        "shape": [
+          219,
+          8000
+        ],
+        "dtype": "bool",
+        "array_bytes": 1752000,
+        "stored_bytes": 304267,
+        "filters": [
+          {
+            "id": 32015,
+            "options": [
+              5
+            ],
+            "name": "HDF5 zstd filter; see https://github.com/HDFGroup/hdf5_plugins/blob/master/docs/RegisteredFilterPlugins.md"
+          }
+        ]
+      },
+      {
+        "path": "cameras/agent_view_right/rgb_jpeg_bytes",
+        "shape": [
+          25683058
+        ],
+        "dtype": "uint8",
+        "array_bytes": 25683058,
+        "stored_bytes": 26214400,
+        "filters": []
+      },
+      {
+        "path": "cameras/agent_view_right/rgb_jpeg_offsets",
+        "shape": [
+          220
+        ],
+        "dtype": "int64",
+        "array_bytes": 1760,
+        "stored_bytes": 833,
+        "filters": [
+          {
+            "id": 32015,
+            "options": [
+              5
+            ],
+            "name": "HDF5 zstd filter; see https://github.com/HDFGroup/hdf5_plugins/blob/master/docs/RegisteredFilterPlugins.md"
+          }
+        ]
+      },
+      {
+        "path": "cameras/agent_view_right/timestamps_s",
+        "shape": [
+          219
+        ],
+        "dtype": "float64",
+        "array_bytes": 1752,
+        "stored_bytes": 1920,
+        "filters": []
+      },
+      {
+        "path": "cameras/split_aloha_hand_left/K",
+        "shape": [
+          219,
+          3,
+          3
+        ],
+        "dtype": "float32",
+        "array_bytes": 7884,
+        "stored_bytes": 8640,
+        "filters": []
+      },
+      {
+        "path": "cameras/split_aloha_hand_left/T_wc",
+        "shape": [
+          219,
+          4,
+          4
+        ],
+        "dtype": "float32",
+        "array_bytes": 14016,
+        "stored_bytes": 10959,
+        "filters": [
+          {
+            "id": 32000,
+            "options": [
+              4,
+              261,
+              3072
+            ],
+            "name": "lzf"
+          }
+        ]
+      },
+      {
+        "path": "cameras/split_aloha_hand_left/camera_valid",
+        "shape": [
+          219
+        ],
+        "dtype": "bool",
+        "array_bytes": 219,
+        "stored_bytes": 83,
+        "filters": [
+          {
+            "id": 32015,
+            "options": [
+              5
+            ],
+            "name": "HDF5 zstd filter; see https://github.com/HDFGroup/hdf5_plugins/blob/master/docs/RegisteredFilterPlugins.md"
+          }
+        ]
+      },
+      {
+        "path": "cameras/split_aloha_hand_left/depth_m",
+        "shape": [
+          219,
+          480,
+          640
+        ],
+        "dtype": "int16",
+        "array_bytes": 134553600,
+        "stored_bytes": 5593367,
+        "filters": [
+          {
+            "id": 32015,
+            "options": [
+              5
+            ],
+            "name": "HDF5 zstd filter; see https://github.com/HDFGroup/hdf5_plugins/blob/master/docs/RegisteredFilterPlugins.md"
+          }
+        ]
+      },
+      {
+        "path": "cameras/split_aloha_hand_left/point_visible",
+        "shape": [
+          219,
+          8000
+        ],
+        "dtype": "bool",
+        "array_bytes": 1752000,
+        "stored_bytes": 118075,
+        "filters": [
+          {
+            "id": 32015,
+            "options": [
+              5
+            ],
+            "name": "HDF5 zstd filter; see https://github.com/HDFGroup/hdf5_plugins/blob/master/docs/RegisteredFilterPlugins.md"
+          }
+        ]
+      },
+      {
+        "path": "cameras/split_aloha_hand_left/rgb_jpeg_bytes",
+        "shape": [
+          12429510
+        ],
+        "dtype": "uint8",
+        "array_bytes": 12429510,
+        "stored_bytes": 12582912,
+        "filters": []
+      },
+      {
+        "path": "cameras/split_aloha_hand_left/rgb_jpeg_offsets",
+        "shape": [
+          220
+        ],
+        "dtype": "int64",
+        "array_bytes": 1760,
+        "stored_bytes": 820,
+        "filters": [
+          {
+            "id": 32015,
+            "options": [
+              5
+            ],
+            "name": "HDF5 zstd filter; see https://github.com/HDFGroup/hdf5_plugins/blob/master/docs/RegisteredFilterPlugins.md"
+          }
+        ]
+      },
+      {
+        "path": "cameras/split_aloha_hand_left/timestamps_s",
+        "shape": [
+          219
+        ],
+        "dtype": "float64",
+        "array_bytes": 1752,
+        "stored_bytes": 1920,
+        "filters": []
+      },
+      {
+        "path": "cameras/split_aloha_hand_right/K",
+        "shape": [
+          219,
+          3,
+          3
+        ],
+        "dtype": "float32",
+        "array_bytes": 7884,
+        "stored_bytes": 8640,
+        "filters": []
+      },
+      {
+        "path": "cameras/split_aloha_hand_right/T_wc",
+        "shape": [
+          219,
+          4,
+          4
+        ],
+        "dtype": "float32",
+        "array_bytes": 14016,
+        "stored_bytes": 8201,
+        "filters": [
+          {
+            "id": 32000,
+            "options": [
+              4,
+              261,
+              3072
+            ],
+            "name": "lzf"
+          }
+        ]
+      },
+      {
+        "path": "cameras/split_aloha_hand_right/camera_valid",
+        "shape": [
+          219
+        ],
+        "dtype": "bool",
+        "array_bytes": 219,
+        "stored_bytes": 83,
+        "filters": [
+          {
+            "id": 32015,
+            "options": [
+              5
+            ],
+            "name": "HDF5 zstd filter; see https://github.com/HDFGroup/hdf5_plugins/blob/master/docs/RegisteredFilterPlugins.md"
+          }
+        ]
+      },
+      {
+        "path": "cameras/split_aloha_hand_right/depth_m",
+        "shape": [
+          219,
+          480,
+          640
+        ],
+        "dtype": "int16",
+        "array_bytes": 134553600,
+        "stored_bytes": 1255607,
+        "filters": [
+          {
+            "id": 32015,
+            "options": [
+              5
+            ],
+            "name": "HDF5 zstd filter; see https://github.com/HDFGroup/hdf5_plugins/blob/master/docs/RegisteredFilterPlugins.md"
+          }
+        ]
+      },
+      {
+        "path": "cameras/split_aloha_hand_right/point_visible",
+        "shape": [
+          219,
+          8000
+        ],
+        "dtype": "bool",
+        "array_bytes": 1752000,
+        "stored_bytes": 2141,
+        "filters": [
+          {
+            "id": 32015,
+            "options": [
+              5
+            ],
+            "name": "HDF5 zstd filter; see https://github.com/HDFGroup/hdf5_plugins/blob/master/docs/RegisteredFilterPlugins.md"
+          }
+        ]
+      },
+      {
+        "path": "cameras/split_aloha_hand_right/rgb_jpeg_bytes",
+        "shape": [
+          24567684
+        ],
+        "dtype": "uint8",
+        "array_bytes": 24567684,
+        "stored_bytes": 25165824,
+        "filters": []
+      },
+      {
+        "path": "cameras/split_aloha_hand_right/rgb_jpeg_offsets",
+        "shape": [
+          220
+        ],
+        "dtype": "int64",
+        "array_bytes": 1760,
+        "stored_bytes": 834,
+        "filters": [
+          {
+            "id": 32015,
+            "options": [
+              5
+            ],
+            "name": "HDF5 zstd filter; see https://github.com/HDFGroup/hdf5_plugins/blob/master/docs/RegisteredFilterPlugins.md"
+          }
+        ]
+      },
+      {
+        "path": "cameras/split_aloha_hand_right/timestamps_s",
+        "shape": [
+          219
+        ],
+        "dtype": "float64",
+        "array_bytes": 1752,
+        "stored_bytes": 1920,
+        "filters": []
+      },
+      {
+        "path": "cameras/split_aloha_head/K",
+        "shape": [
+          219,
+          3,
+          3
+        ],
+        "dtype": "float32",
+        "array_bytes": 7884,
+        "stored_bytes": 8640,
+        "filters": []
+      },
+      {
+        "path": "cameras/split_aloha_head/T_wc",
+        "shape": [
+          219,
+          4,
+          4
+        ],
+        "dtype": "float32",
+        "array_bytes": 14016,
+        "stored_bytes": 4464,
+        "filters": [
+          {
+            "id": 32000,
+            "options": [
+              4,
+              261,
+              3072
+            ],
+            "name": "lzf"
+          }
+        ]
+      },
+      {
+        "path": "cameras/split_aloha_head/camera_valid",
+        "shape": [
+          219
+        ],
+        "dtype": "bool",
+        "array_bytes": 219,
+        "stored_bytes": 83,
+        "filters": [
+          {
+            "id": 32015,
+            "options": [
+              5
+            ],
+            "name": "HDF5 zstd filter; see https://github.com/HDFGroup/hdf5_plugins/blob/master/docs/RegisteredFilterPlugins.md"
+          }
+        ]
+      },
+      {
+        "path": "cameras/split_aloha_head/depth_m",
+        "shape": [
+          219,
+          480,
+          640
+        ],
+        "dtype": "int16",
+        "array_bytes": 134553600,
+        "stored_bytes": 2673786,
+        "filters": [
+          {
+            "id": 32015,
+            "options": [
+              5
+            ],
+            "name": "HDF5 zstd filter; see https://github.com/HDFGroup/hdf5_plugins/blob/master/docs/RegisteredFilterPlugins.md"
+          }
+        ]
+      },
+      {
+        "path": "cameras/split_aloha_head/point_visible",
+        "shape": [
+          219,
+          8000
+        ],
+        "dtype": "bool",
+        "array_bytes": 1752000,
+        "stored_bytes": 279646,
+        "filters": [
+          {
+            "id": 32015,
+            "options": [
+              5
+            ],
+            "name": "HDF5 zstd filter; see https://github.com/HDFGroup/hdf5_plugins/blob/master/docs/RegisteredFilterPlugins.md"
+          }
+        ]
+      },
+      {
+        "path": "cameras/split_aloha_head/rgb_jpeg_bytes",
+        "shape": [
+          18280993
+        ],
+        "dtype": "uint8",
+        "array_bytes": 18280993,
+        "stored_bytes": 18874368,
+        "filters": []
+      },
+      {
+        "path": "cameras/split_aloha_head/rgb_jpeg_offsets",
+        "shape": [
+          220
+        ],
+        "dtype": "int64",
+        "array_bytes": 1760,
+        "stored_bytes": 875,
+        "filters": [
+          {
+            "id": 32015,
+            "options": [
+              5
+            ],
+            "name": "HDF5 zstd filter; see https://github.com/HDFGroup/hdf5_plugins/blob/master/docs/RegisteredFilterPlugins.md"
+          }
+        ]
+      },
+      {
+        "path": "cameras/split_aloha_head/timestamps_s",
+        "shape": [
+          219
+        ],
+        "dtype": "float64",
+        "array_bytes": 1752,
+        "stored_bytes": 1920,
+        "filters": []
+      },
+      {
+        "path": "points/class_id",
+        "shape": [
+          8000
+        ],
+        "dtype": "uint8",
+        "array_bytes": 8000,
+        "stored_bytes": 26,
+        "filters": [
+          {
+            "id": 32015,
+            "options": [
+              5
+            ],
+            "name": "HDF5 zstd filter; see https://github.com/HDFGroup/hdf5_plugins/blob/master/docs/RegisteredFilterPlugins.md"
+          }
+        ]
+      },
+      {
+        "path": "points/frame0_visible_view_count",
+        "shape": [
+          8000
+        ],
+        "dtype": "uint16",
+        "array_bytes": 16000,
+        "stored_bytes": 16000,
+        "filters": []
+      },
+      {
+        "path": "points/geom_id",
+        "shape": [
+          8000
+        ],
+        "dtype": "int32",
+        "array_bytes": 32000,
+        "stored_bytes": 5116,
+        "filters": [
+          {
+            "id": 32015,
+            "options": [
+              5
+            ],
+            "name": "HDF5 zstd filter; see https://github.com/HDFGroup/hdf5_plugins/blob/master/docs/RegisteredFilterPlugins.md"
+          }
+        ]
+      },
+      {
+        "path": "points/owner_id",
+        "shape": [
+          8000
+        ],
+        "dtype": "int32",
+        "array_bytes": 32000,
+        "stored_bytes": 472,
+        "filters": [
+          {
+            "id": 32015,
+            "options": [
+              5
+            ],
+            "name": "HDF5 zstd filter; see https://github.com/HDFGroup/hdf5_plugins/blob/master/docs/RegisteredFilterPlugins.md"
+          }
+        ]
+      },
+      {
+        "path": "points/point_is_dynamic",
+        "shape": [
+          8000
+        ],
+        "dtype": "bool",
+        "array_bytes": 8000,
+        "stored_bytes": 23,
+        "filters": [
+          {
+            "id": 32015,
+            "options": [
+              5
+            ],
+            "name": "HDF5 zstd filter; see https://github.com/HDFGroup/hdf5_plugins/blob/master/docs/RegisteredFilterPlugins.md"
+          }
+        ]
+      },
+      {
+        "path": "points/point_valid",
+        "shape": [
+          219,
+          8000
+        ],
+        "dtype": "bool",
+        "array_bytes": 1752000,
+        "stored_bytes": 166,
+        "filters": [
+          {
+            "id": 32015,
+            "options": [
+              5
+            ],
+            "name": "HDF5 zstd filter; see https://github.com/HDFGroup/hdf5_plugins/blob/master/docs/RegisteredFilterPlugins.md"
+          }
+        ]
+      },
+      {
+        "path": "points/point_world",
+        "shape": [
+          219,
+          8000,
+          3
+        ],
+        "dtype": "int16",
+        "array_bytes": 10512000,
+        "stored_bytes": 3755593,
+        "filters": [
+          {
+            "id": 32015,
+            "options": [
+              5
+            ],
+            "name": "HDF5 zstd filter; see https://github.com/HDFGroup/hdf5_plugins/blob/master/docs/RegisteredFilterPlugins.md"
+          }
+        ]
+      },
+      {
+        "path": "points/reference_visible_view_count",
+        "shape": [
+          8000
+        ],
+        "dtype": "uint16",
+        "array_bytes": 16000,
+        "stored_bytes": 16000,
+        "filters": []
+      },
+      {
+        "path": "robot/T_episode_from_robot_base",
+        "shape": [
+          4,
+          4
+        ],
+        "dtype": "float32",
+        "array_bytes": 64,
+        "stored_bytes": 64,
+        "filters": []
+      },
+      {
+        "path": "robot/joint_names",
+        "shape": [
+          28
+        ],
+        "dtype": "object",
+        "array_bytes": 224,
+        "stored_bytes": 448,
+        "filters": []
+      },
+      {
+        "path": "robot/joint_pos",
+        "shape": [
+          219,
+          28
+        ],
+        "dtype": "float32",
+        "array_bytes": 24528,
+        "stored_bytes": 21693,
+        "filters": [
+          {
+            "id": 32000,
+            "options": [
+              4,
+              261,
+              5376
+            ],
+            "name": "lzf"
+          }
+        ]
+      },
+      {
+        "path": "timestamps_s",
+        "shape": [
+          219
+        ],
+        "dtype": "float64",
+        "array_bytes": 1752,
+        "stored_bytes": 1920,
+        "filters": []
+      }
+    ]
+  },
+  {
+    "group_id": "libero-franka",
+    "source_h5": "/local_nvme/zhangrong/wm3d/datasets_node42/libero_v6/episodes/2230a30ae54c8a0d716c/episode.v6.h5",
+    "file_bytes": 56198210,
+    "raw_array_baseline_bytes": 1173935071,
+    "rgb_raw_bytes": 493879296,
+    "jpeg_bytes": 39845888,
+    "nodes": [
+      {
+        "path": "action_valid",
+        "shape": [
+          157,
+          7
+        ],
+        "dtype": "bool",
+        "array_bytes": 1099,
+        "stored_bytes": 75,
+        "filters": [
+          {
+            "id": 32015,
+            "options": [
+              5
+            ],
+            "name": "Zstandard compression: http://www.zstd.net"
+          }
+        ]
+      },
+      {
+        "path": "actions",
+        "shape": [
+          157,
+          7
+        ],
+        "dtype": "float32",
+        "array_bytes": 4396,
+        "stored_bytes": 3350,
+        "filters": [
+          {
+            "id": 32000,
+            "options": [
+              4,
+              261,
+              1344
+            ],
+            "name": "lzf"
+          }
+        ]
+      },
+      {
+        "path": "cameras/agentview/K",
+        "shape": [
+          157,
+          3,
+          3
+        ],
+        "dtype": "float32",
+        "array_bytes": 5652,
+        "stored_bytes": 6912,
+        "filters": []
+      },
+      {
+        "path": "cameras/agentview/T_wc",
+        "shape": [
+          157,
+          4,
+          4
+        ],
+        "dtype": "float32",
+        "array_bytes": 10048,
+        "stored_bytes": 393,
+        "filters": [
+          {
+            "id": 32000,
+            "options": [
+              4,
+              261,
+              3072
+            ],
+            "name": "lzf"
+          }
+        ]
+      },
+      {
+        "path": "cameras/agentview/camera_valid",
+        "shape": [
+          157
+        ],
+        "dtype": "bool",
+        "array_bytes": 157,
+        "stored_bytes": 67,
+        "filters": [
+          {
+            "id": 32015,
+            "options": [
+              5
+            ],
+            "name": "Zstandard compression: http://www.zstd.net"
+          }
+        ]
+      },
+      {
+        "path": "cameras/agentview/depth_m",
+        "shape": [
+          157,
+          512,
+          512
+        ],
+        "dtype": "int16",
+        "array_bytes": 82313216,
+        "stored_bytes": 2840104,
+        "filters": [
+          {
+            "id": 32015,
+            "options": [
+              5
+            ],
+            "name": "Zstandard compression: http://www.zstd.net"
+          }
+        ]
+      },
+      {
+        "path": "cameras/agentview/point_visible",
+        "shape": [
+          157,
+          8000
+        ],
+        "dtype": "bool",
+        "array_bytes": 1256000,
+        "stored_bytes": 216826,
+        "filters": [
+          {
+            "id": 32015,
+            "options": [
+              5
+            ],
+            "name": "Zstandard compression: http://www.zstd.net"
+          }
+        ]
+      },
+      {
+        "path": "cameras/agentview/rgb_jpeg_bytes",
+        "shape": [
+          9135938
+        ],
+        "dtype": "uint8",
+        "array_bytes": 9135938,
+        "stored_bytes": 9437184,
+        "filters": []
+      },
+      {
+        "path": "cameras/agentview/rgb_jpeg_offsets",
+        "shape": [
+          158
+        ],
+        "dtype": "int64",
+        "array_bytes": 1264,
+        "stored_bytes": 607,
+        "filters": [
+          {
+            "id": 32015,
+            "options": [
+              5
+            ],
+            "name": "Zstandard compression: http://www.zstd.net"
+          }
+        ]
+      },
+      {
+        "path": "cameras/agentview/timestamps_s",
+        "shape": [
+          157
+        ],
+        "dtype": "float64",
+        "array_bytes": 1256,
+        "stored_bytes": 1536,
+        "filters": []
+      },
+      {
+        "path": "cameras/birdview/K",
+        "shape": [
+          157,
+          3,
+          3
+        ],
+        "dtype": "float32",
+        "array_bytes": 5652,
+        "stored_bytes": 6912,
+        "filters": []
+      },
+      {
+        "path": "cameras/birdview/T_wc",
+        "shape": [
+          157,
+          4,
+          4
+        ],
+        "dtype": "float32",
+        "array_bytes": 10048,
+        "stored_bytes": 406,
+        "filters": [
+          {
+            "id": 32000,
+            "options": [
+              4,
+              261,
+              3072
+            ],
+            "name": "lzf"
+          }
+        ]
+      },
+      {
+        "path": "cameras/birdview/camera_valid",
+        "shape": [
+          157
+        ],
+        "dtype": "bool",
+        "array_bytes": 157,
+        "stored_bytes": 67,
+        "filters": [
+          {
+            "id": 32015,
+            "options": [
+              5
+            ],
+            "name": "Zstandard compression: http://www.zstd.net"
+          }
+        ]
+      },
+      {
+        "path": "cameras/birdview/depth_m",
+        "shape": [
+          157,
+          512,
+          512
+        ],
+        "dtype": "int16",
+        "array_bytes": 82313216,
+        "stored_bytes": 1873965,
+        "filters": [
+          {
+            "id": 32015,
+            "options": [
+              5
+            ],
+            "name": "Zstandard compression: http://www.zstd.net"
+          }
+        ]
+      },
+      {
+        "path": "cameras/birdview/point_visible",
+        "shape": [
+          157,
+          8000
+        ],
+        "dtype": "bool",
+        "array_bytes": 1256000,
+        "stored_bytes": 202395,
+        "filters": [
+          {
+            "id": 32015,
+            "options": [
+              5
+            ],
+            "name": "Zstandard compression: http://www.zstd.net"
+          }
+        ]
+      },
+      {
+        "path": "cameras/birdview/rgb_jpeg_bytes",
+        "shape": [
+          10824789
+        ],
+        "dtype": "uint8",
+        "array_bytes": 10824789,
+        "stored_bytes": 11534336,
+        "filters": []
+      },
+      {
+        "path": "cameras/birdview/rgb_jpeg_offsets",
+        "shape": [
+          158
+        ],
+        "dtype": "int64",
+        "array_bytes": 1264,
+        "stored_bytes": 607,
+        "filters": [
+          {
+            "id": 32015,
+            "options": [
+              5
+            ],
+            "name": "Zstandard compression: http://www.zstd.net"
+          }
+        ]
+      },
+      {
+        "path": "cameras/birdview/timestamps_s",
+        "shape": [
+          157
+        ],
+        "dtype": "float64",
+        "array_bytes": 1256,
+        "stored_bytes": 1536,
+        "filters": []
+      },
+      {
+        "path": "cameras/robot0_eye_in_hand/K",
+        "shape": [
+          157,
+          3,
+          3
+        ],
+        "dtype": "float32",
+        "array_bytes": 5652,
+        "stored_bytes": 6912,
+        "filters": []
+      },
+      {
+        "path": "cameras/robot0_eye_in_hand/T_wc",
+        "shape": [
+          157,
+          4,
+          4
+        ],
+        "dtype": "float32",
+        "array_bytes": 10048,
+        "stored_bytes": 8175,
+        "filters": [
+          {
+            "id": 32000,
+            "options": [
+              4,
+              261,
+              3072
+            ],
+            "name": "lzf"
+          }
+        ]
+      },
+      {
+        "path": "cameras/robot0_eye_in_hand/camera_valid",
+        "shape": [
+          157
+        ],
+        "dtype": "bool",
+        "array_bytes": 157,
+        "stored_bytes": 67,
+        "filters": [
+          {
+            "id": 32015,
+            "options": [
+              5
+            ],
+            "name": "Zstandard compression: http://www.zstd.net"
+          }
+        ]
+      },
+      {
+        "path": "cameras/robot0_eye_in_hand/depth_m",
+        "shape": [
+          157,
+          512,
+          512
+        ],
+        "dtype": "int16",
+        "array_bytes": 82313216,
+        "stored_bytes": 2886765,
+        "filters": [
+          {
+            "id": 32015,
+            "options": [
+              5
+            ],
+            "name": "Zstandard compression: http://www.zstd.net"
+          }
+        ]
+      },
+      {
+        "path": "cameras/robot0_eye_in_hand/point_visible",
+        "shape": [
+          157,
+          8000
+        ],
+        "dtype": "bool",
+        "array_bytes": 1256000,
+        "stored_bytes": 136118,
+        "filters": [
+          {
+            "id": 32015,
+            "options": [
+              5
+            ],
+            "name": "Zstandard compression: http://www.zstd.net"
+          }
+        ]
+      },
+      {
+        "path": "cameras/robot0_eye_in_hand/rgb_jpeg_bytes",
+        "shape": [
+          9916083
+        ],
+        "dtype": "uint8",
+        "array_bytes": 9916083,
+        "stored_bytes": 10485760,
+        "filters": []
+      },
+      {
+        "path": "cameras/robot0_eye_in_hand/rgb_jpeg_offsets",
+        "shape": [
+          158
+        ],
+        "dtype": "int64",
+        "array_bytes": 1264,
+        "stored_bytes": 609,
+        "filters": [
+          {
+            "id": 32015,
+            "options": [
+              5
+            ],
+            "name": "Zstandard compression: http://www.zstd.net"
+          }
+        ]
+      },
+      {
+        "path": "cameras/robot0_eye_in_hand/timestamps_s",
+        "shape": [
+          157
+        ],
+        "dtype": "float64",
+        "array_bytes": 1256,
+        "stored_bytes": 1536,
+        "filters": []
+      },
+      {
+        "path": "cameras/sideview/K",
+        "shape": [
+          157,
+          3,
+          3
+        ],
+        "dtype": "float32",
+        "array_bytes": 5652,
+        "stored_bytes": 6912,
+        "filters": []
+      },
+      {
+        "path": "cameras/sideview/T_wc",
+        "shape": [
+          157,
+          4,
+          4
+        ],
+        "dtype": "float32",
+        "array_bytes": 10048,
+        "stored_bytes": 400,
+        "filters": [
+          {
+            "id": 32000,
+            "options": [
+              4,
+              261,
+              3072
+            ],
+            "name": "lzf"
+          }
+        ]
+      },
+      {
+        "path": "cameras/sideview/camera_valid",
+        "shape": [
+          157
+        ],
+        "dtype": "bool",
+        "array_bytes": 157,
+        "stored_bytes": 67,
+        "filters": [
+          {
+            "id": 32015,
+            "options": [
+              5
+            ],
+            "name": "Zstandard compression: http://www.zstd.net"
+          }
+        ]
+      },
+      {
+        "path": "cameras/sideview/depth_m",
+        "shape": [
+          157,
+          512,
+          512
+        ],
+        "dtype": "int16",
+        "array_bytes": 82313216,
+        "stored_bytes": 3267914,
+        "filters": [
+          {
+            "id": 32015,
+            "options": [
+              5
+            ],
+            "name": "Zstandard compression: http://www.zstd.net"
+          }
+        ]
+      },
+      {
+        "path": "cameras/sideview/point_visible",
+        "shape": [
+          157,
+          8000
+        ],
+        "dtype": "bool",
+        "array_bytes": 1256000,
+        "stored_bytes": 205967,
+        "filters": [
+          {
+            "id": 32015,
+            "options": [
+              5
+            ],
+            "name": "Zstandard compression: http://www.zstd.net"
+          }
+        ]
+      },
+      {
+        "path": "cameras/sideview/rgb_jpeg_bytes",
+        "shape": [
+          8108721
+        ],
+        "dtype": "uint8",
+        "array_bytes": 8108721,
+        "stored_bytes": 8388608,
+        "filters": []
+      },
+      {
+        "path": "cameras/sideview/rgb_jpeg_offsets",
+        "shape": [
+          158
+        ],
+        "dtype": "int64",
+        "array_bytes": 1264,
+        "stored_bytes": 604,
+        "filters": [
+          {
+            "id": 32015,
+            "options": [
+              5
+            ],
+            "name": "Zstandard compression: http://www.zstd.net"
+          }
+        ]
+      },
+      {
+        "path": "cameras/sideview/timestamps_s",
+        "shape": [
+          157
+        ],
+        "dtype": "float64",
+        "array_bytes": 1256,
+        "stored_bytes": 1536,
+        "filters": []
+      },
+      {
+        "path": "points/class_id",
+        "shape": [
+          8000
+        ],
+        "dtype": "uint8",
+        "array_bytes": 8000,
+        "stored_bytes": 26,
+        "filters": [
+          {
+            "id": 32015,
+            "options": [
+              5
+            ],
+            "name": "Zstandard compression: http://www.zstd.net"
+          }
+        ]
+      },
+      {
+        "path": "points/frame0_visible_view_count",
+        "shape": [
+          8000
+        ],
+        "dtype": "uint16",
+        "array_bytes": 16000,
+        "stored_bytes": 16000,
+        "filters": []
+      },
+      {
+        "path": "points/geom_id",
+        "shape": [
+          8000
+        ],
+        "dtype": "int32",
+        "array_bytes": 32000,
+        "stored_bytes": 2468,
+        "filters": [
+          {
+            "id": 32015,
+            "options": [
+              5
+            ],
+            "name": "Zstandard compression: http://www.zstd.net"
+          }
+        ]
+      },
+      {
+        "path": "points/owner_id",
+        "shape": [
+          8000
+        ],
+        "dtype": "int32",
+        "array_bytes": 32000,
+        "stored_bytes": 2193,
+        "filters": [
+          {
+            "id": 32015,
+            "options": [
+              5
+            ],
+            "name": "Zstandard compression: http://www.zstd.net"
+          }
+        ]
+      },
+      {
+        "path": "points/point_is_dynamic",
+        "shape": [
+          8000
+        ],
+        "dtype": "bool",
+        "array_bytes": 8000,
+        "stored_bytes": 23,
+        "filters": [
+          {
+            "id": 32015,
+            "options": [
+              5
+            ],
+            "name": "Zstandard compression: http://www.zstd.net"
+          }
+        ]
+      },
+      {
+        "path": "points/point_valid",
+        "shape": [
+          157,
+          8000
+        ],
+        "dtype": "bool",
+        "array_bytes": 1256000,
+        "stored_bytes": 124,
+        "filters": [
+          {
+            "id": 32015,
+            "options": [
+              5
+            ],
+            "name": "Zstandard compression: http://www.zstd.net"
+          }
+        ]
+      },
+      {
+        "path": "points/point_world",
+        "shape": [
+          157,
+          8000,
+          3
+        ],
+        "dtype": "int16",
+        "array_bytes": 7536000,
+        "stored_bytes": 4441046,
+        "filters": [
+          {
+            "id": 32015,
+            "options": [
+              5
+            ],
+            "name": "Zstandard compression: http://www.zstd.net"
+          }
+        ]
+      },
+      {
+        "path": "points/reference_visible_view_count",
+        "shape": [
+          8000
+        ],
+        "dtype": "uint16",
+        "array_bytes": 16000,
+        "stored_bytes": 16000,
+        "filters": []
+      },
+      {
+        "path": "robot/T_episode_from_robot_base",
+        "shape": [
+          4,
+          4
+        ],
+        "dtype": "float32",
+        "array_bytes": 64,
+        "stored_bytes": 64,
+        "filters": []
+      },
+      {
+        "path": "robot/joint_names",
+        "shape": [
+          9
+        ],
+        "dtype": "object",
+        "array_bytes": 72,
+        "stored_bytes": 144,
+        "filters": []
+      },
+      {
+        "path": "robot/joint_pos",
+        "shape": [
+          157,
+          9
+        ],
+        "dtype": "float32",
+        "array_bytes": 5652,
+        "stored_bytes": 5686,
+        "filters": [
+          {
+            "id": 32000,
+            "options": [
+              4,
+              261,
+              1728
+            ],
+            "name": "lzf"
+          }
+        ]
+      },
+      {
+        "path": "timestamps_s",
+        "shape": [
+          157
+        ],
+        "dtype": "float64",
+        "array_bytes": 1256,
+        "stored_bytes": 1536,
+        "filters": []
+      }
+    ]
+  },
+  {
+    "group_id": "robotwin-aloha-agilex",
+    "source_h5": "/local_nvme/zhangrong/wm3d/datasets_node42/robotwin_v6/episodes/aloha-agilex/c7b333bc7ad1554d312e/episode.v6.h5",
+    "file_bytes": 55069806,
+    "raw_array_baseline_bytes": 1739057582,
+    "rgb_raw_bytes": 733593600,
+    "jpeg_bytes": 40894464,
+    "nodes": [
+      {
+        "path": "action_valid",
+        "shape": [
+          199,
+          38
+        ],
+        "dtype": "bool",
+        "array_bytes": 7562,
+        "stored_bytes": 94,
+        "filters": [
+          {
+            "id": 32015,
+            "options": [
+              5
+            ],
+            "name": "HDF5 zstd filter; see https://github.com/HDFGroup/hdf5_plugins/blob/master/docs/RegisteredFilterPlugins.md"
+          }
+        ]
+      },
+      {
+        "path": "actions",
+        "shape": [
+          199,
+          38
+        ],
+        "dtype": "float32",
+        "array_bytes": 30248,
+        "stored_bytes": 6929,
+        "filters": [
+          {
+            "id": 32000,
+            "options": [
+              4,
+              261,
+              7296
+            ],
+            "name": "lzf"
+          }
+        ]
+      },
+      {
+        "path": "cameras/head_camera/K",
+        "shape": [
+          199,
+          3,
+          3
+        ],
+        "dtype": "float32",
+        "array_bytes": 7164,
+        "stored_bytes": 8640,
+        "filters": []
+      },
+      {
+        "path": "cameras/head_camera/T_wc",
+        "shape": [
+          199,
+          4,
+          4
+        ],
+        "dtype": "float32",
+        "array_bytes": 12736,
+        "stored_bytes": 500,
+        "filters": [
+          {
+            "id": 32000,
+            "options": [
+              4,
+              261,
+              3072
+            ],
+            "name": "lzf"
+          }
+        ]
+      },
+      {
+        "path": "cameras/head_camera/camera_valid",
+        "shape": [
+          199
+        ],
+        "dtype": "bool",
+        "array_bytes": 199,
+        "stored_bytes": 83,
+        "filters": [
+          {
+            "id": 32015,
+            "options": [
+              5
+            ],
+            "name": "HDF5 zstd filter; see https://github.com/HDFGroup/hdf5_plugins/blob/master/docs/RegisteredFilterPlugins.md"
+          }
+        ]
+      },
+      {
+        "path": "cameras/head_camera/depth_m",
+        "shape": [
+          199,
+          480,
+          640
+        ],
+        "dtype": "int16",
+        "array_bytes": 122265600,
+        "stored_bytes": 4602978,
+        "filters": [
+          {
+            "id": 32015,
+            "options": [
+              5
+            ],
+            "name": "HDF5 zstd filter; see https://github.com/HDFGroup/hdf5_plugins/blob/master/docs/RegisteredFilterPlugins.md"
+          }
+        ]
+      },
+      {
+        "path": "cameras/head_camera/point_visible",
+        "shape": [
+          199,
+          8000
+        ],
+        "dtype": "bool",
+        "array_bytes": 1592000,
+        "stored_bytes": 238548,
+        "filters": [
+          {
+            "id": 32015,
+            "options": [
+              5
+            ],
+            "name": "HDF5 zstd filter; see https://github.com/HDFGroup/hdf5_plugins/blob/master/docs/RegisteredFilterPlugins.md"
+          }
+        ]
+      },
+      {
+        "path": "cameras/head_camera/rgb_jpeg_bytes",
+        "shape": [
+          10661996
+        ],
+        "dtype": "uint8",
+        "array_bytes": 10661996,
+        "stored_bytes": 11534336,
+        "filters": []
+      },
+      {
+        "path": "cameras/head_camera/rgb_jpeg_offsets",
+        "shape": [
+          200
+        ],
+        "dtype": "int64",
+        "array_bytes": 1600,
+        "stored_bytes": 757,
+        "filters": [
+          {
+            "id": 32015,
+            "options": [
+              5
+            ],
+            "name": "HDF5 zstd filter; see https://github.com/HDFGroup/hdf5_plugins/blob/master/docs/RegisteredFilterPlugins.md"
+          }
+        ]
+      },
+      {
+        "path": "cameras/head_camera/timestamps_s",
+        "shape": [
+          199
+        ],
+        "dtype": "float64",
+        "array_bytes": 1592,
+        "stored_bytes": 1920,
+        "filters": []
+      },
+      {
+        "path": "cameras/left_camera/K",
+        "shape": [
+          199,
+          3,
+          3
+        ],
+        "dtype": "float32",
+        "array_bytes": 7164,
+        "stored_bytes": 8640,
+        "filters": []
+      },
+      {
+        "path": "cameras/left_camera/T_wc",
+        "shape": [
+          199,
+          4,
+          4
+        ],
+        "dtype": "float32",
+        "array_bytes": 12736,
+        "stored_bytes": 10204,
+        "filters": [
+          {
+            "id": 32000,
+            "options": [
+              4,
+              261,
+              3072
+            ],
+            "name": "lzf"
+          }
+        ]
+      },
+      {
+        "path": "cameras/left_camera/camera_valid",
+        "shape": [
+          199
+        ],
+        "dtype": "bool",
+        "array_bytes": 199,
+        "stored_bytes": 83,
+        "filters": [
+          {
+            "id": 32015,
+            "options": [
+              5
+            ],
+            "name": "HDF5 zstd filter; see https://github.com/HDFGroup/hdf5_plugins/blob/master/docs/RegisteredFilterPlugins.md"
+          }
+        ]
+      },
+      {
+        "path": "cameras/left_camera/depth_m",
+        "shape": [
+          199,
+          480,
+          640
+        ],
+        "dtype": "int16",
+        "array_bytes": 122265600,
+        "stored_bytes": 1801330,
+        "filters": [
+          {
+            "id": 32015,
+            "options": [
+              5
+            ],
+            "name": "HDF5 zstd filter; see https://github.com/HDFGroup/hdf5_plugins/blob/master/docs/RegisteredFilterPlugins.md"
+          }
+        ]
+      },
+      {
+        "path": "cameras/left_camera/point_visible",
+        "shape": [
+          199,
+          8000
+        ],
+        "dtype": "bool",
+        "array_bytes": 1592000,
+        "stored_bytes": 41979,
+        "filters": [
+          {
+            "id": 32015,
+            "options": [
+              5
+            ],
+            "name": "HDF5 zstd filter; see https://github.com/HDFGroup/hdf5_plugins/blob/master/docs/RegisteredFilterPlugins.md"
+          }
+        ]
+      },
+      {
+        "path": "cameras/left_camera/rgb_jpeg_bytes",
+        "shape": [
+          6378830
+        ],
+        "dtype": "uint8",
+        "array_bytes": 6378830,
+        "stored_bytes": 7340032,
+        "filters": []
+      },
+      {
+        "path": "cameras/left_camera/rgb_jpeg_offsets",
+        "shape": [
+          200
+        ],
+        "dtype": "int64",
+        "array_bytes": 1600,
+        "stored_bytes": 714,
+        "filters": [
+          {
+            "id": 32015,
+            "options": [
+              5
+            ],
+            "name": "HDF5 zstd filter; see https://github.com/HDFGroup/hdf5_plugins/blob/master/docs/RegisteredFilterPlugins.md"
+          }
+        ]
+      },
+      {
+        "path": "cameras/left_camera/timestamps_s",
+        "shape": [
+          199
+        ],
+        "dtype": "float64",
+        "array_bytes": 1592,
+        "stored_bytes": 1920,
+        "filters": []
+      },
+      {
+        "path": "cameras/right_camera/K",
+        "shape": [
+          199,
+          3,
+          3
+        ],
+        "dtype": "float32",
+        "array_bytes": 7164,
+        "stored_bytes": 8640,
+        "filters": []
+      },
+      {
+        "path": "cameras/right_camera/T_wc",
+        "shape": [
+          199,
+          4,
+          4
+        ],
+        "dtype": "float32",
+        "array_bytes": 12736,
+        "stored_bytes": 4501,
+        "filters": [
+          {
+            "id": 32000,
+            "options": [
+              4,
+              261,
+              3072
+            ],
+            "name": "lzf"
+          }
+        ]
+      },
+      {
+        "path": "cameras/right_camera/camera_valid",
+        "shape": [
+          199
+        ],
+        "dtype": "bool",
+        "array_bytes": 199,
+        "stored_bytes": 83,
+        "filters": [
+          {
+            "id": 32015,
+            "options": [
+              5
+            ],
+            "name": "HDF5 zstd filter; see https://github.com/HDFGroup/hdf5_plugins/blob/master/docs/RegisteredFilterPlugins.md"
+          }
+        ]
+      },
+      {
+        "path": "cameras/right_camera/depth_m",
+        "shape": [
+          199,
+          480,
+          640
+        ],
+        "dtype": "int16",
+        "array_bytes": 122265600,
+        "stored_bytes": 226038,
+        "filters": [
+          {
+            "id": 32015,
+            "options": [
+              5
+            ],
+            "name": "HDF5 zstd filter; see https://github.com/HDFGroup/hdf5_plugins/blob/master/docs/RegisteredFilterPlugins.md"
+          }
+        ]
+      },
+      {
+        "path": "cameras/right_camera/point_visible",
+        "shape": [
+          199,
+          8000
+        ],
+        "dtype": "bool",
+        "array_bytes": 1592000,
+        "stored_bytes": 1977,
+        "filters": [
+          {
+            "id": 32015,
+            "options": [
+              5
+            ],
+            "name": "HDF5 zstd filter; see https://github.com/HDFGroup/hdf5_plugins/blob/master/docs/RegisteredFilterPlugins.md"
+          }
+        ]
+      },
+      {
+        "path": "cameras/right_camera/rgb_jpeg_bytes",
+        "shape": [
+          6372284
+        ],
+        "dtype": "uint8",
+        "array_bytes": 6372284,
+        "stored_bytes": 7340032,
+        "filters": []
+      },
+      {
+        "path": "cameras/right_camera/rgb_jpeg_offsets",
+        "shape": [
+          200
+        ],
+        "dtype": "int64",
+        "array_bytes": 1600,
+        "stored_bytes": 714,
+        "filters": [
+          {
+            "id": 32015,
+            "options": [
+              5
+            ],
+            "name": "HDF5 zstd filter; see https://github.com/HDFGroup/hdf5_plugins/blob/master/docs/RegisteredFilterPlugins.md"
+          }
+        ]
+      },
+      {
+        "path": "cameras/right_camera/timestamps_s",
+        "shape": [
+          199
+        ],
+        "dtype": "float64",
+        "array_bytes": 1592,
+        "stored_bytes": 1920,
+        "filters": []
+      },
+      {
+        "path": "cameras/robotview/K",
+        "shape": [
+          199,
+          3,
+          3
+        ],
+        "dtype": "float32",
+        "array_bytes": 7164,
+        "stored_bytes": 8640,
+        "filters": []
+      },
+      {
+        "path": "cameras/robotview/T_wc",
+        "shape": [
+          199,
+          4,
+          4
+        ],
+        "dtype": "float32",
+        "array_bytes": 12736,
+        "stored_bytes": 500,
+        "filters": [
+          {
+            "id": 32000,
+            "options": [
+              4,
+              261,
+              3072
+            ],
+            "name": "lzf"
+          }
+        ]
+      },
+      {
+        "path": "cameras/robotview/camera_valid",
+        "shape": [
+          199
+        ],
+        "dtype": "bool",
+        "array_bytes": 199,
+        "stored_bytes": 83,
+        "filters": [
+          {
+            "id": 32015,
+            "options": [
+              5
+            ],
+            "name": "HDF5 zstd filter; see https://github.com/HDFGroup/hdf5_plugins/blob/master/docs/RegisteredFilterPlugins.md"
+          }
+        ]
+      },
+      {
+        "path": "cameras/robotview/depth_m",
+        "shape": [
+          199,
+          480,
+          640
+        ],
+        "dtype": "int16",
+        "array_bytes": 122265600,
+        "stored_bytes": 2862921,
+        "filters": [
+          {
+            "id": 32015,
+            "options": [
+              5
+            ],
+            "name": "HDF5 zstd filter; see https://github.com/HDFGroup/hdf5_plugins/blob/master/docs/RegisteredFilterPlugins.md"
+          }
+        ]
+      },
+      {
+        "path": "cameras/robotview/point_visible",
+        "shape": [
+          199,
+          8000
+        ],
+        "dtype": "bool",
+        "array_bytes": 1592000,
+        "stored_bytes": 213746,
+        "filters": [
+          {
+            "id": 32015,
+            "options": [
+              5
+            ],
+            "name": "HDF5 zstd filter; see https://github.com/HDFGroup/hdf5_plugins/blob/master/docs/RegisteredFilterPlugins.md"
+          }
+        ]
+      },
+      {
+        "path": "cameras/robotview/rgb_jpeg_bytes",
+        "shape": [
+          14275742
+        ],
+        "dtype": "uint8",
+        "array_bytes": 14275742,
+        "stored_bytes": 14680064,
+        "filters": []
+      },
+      {
+        "path": "cameras/robotview/rgb_jpeg_offsets",
+        "shape": [
+          200
+        ],
+        "dtype": "int64",
+        "array_bytes": 1600,
+        "stored_bytes": 763,
+        "filters": [
+          {
+            "id": 32015,
+            "options": [
+              5
+            ],
+            "name": "HDF5 zstd filter; see https://github.com/HDFGroup/hdf5_plugins/blob/master/docs/RegisteredFilterPlugins.md"
+          }
+        ]
+      },
+      {
+        "path": "cameras/robotview/timestamps_s",
+        "shape": [
+          199
+        ],
+        "dtype": "float64",
+        "array_bytes": 1592,
+        "stored_bytes": 1920,
+        "filters": []
+      },
+      {
+        "path": "points/class_id",
+        "shape": [
+          8000
+        ],
+        "dtype": "uint8",
+        "array_bytes": 8000,
+        "stored_bytes": 26,
+        "filters": [
+          {
+            "id": 32015,
+            "options": [
+              5
+            ],
+            "name": "HDF5 zstd filter; see https://github.com/HDFGroup/hdf5_plugins/blob/master/docs/RegisteredFilterPlugins.md"
+          }
+        ]
+      },
+      {
+        "path": "points/frame0_visible_view_count",
+        "shape": [
+          8000
+        ],
+        "dtype": "uint16",
+        "array_bytes": 16000,
+        "stored_bytes": 16000,
+        "filters": []
+      },
+      {
+        "path": "points/geom_id",
+        "shape": [
+          8000
+        ],
+        "dtype": "int32",
+        "array_bytes": 32000,
+        "stored_bytes": 1720,
+        "filters": [
+          {
+            "id": 32015,
+            "options": [
+              5
+            ],
+            "name": "HDF5 zstd filter; see https://github.com/HDFGroup/hdf5_plugins/blob/master/docs/RegisteredFilterPlugins.md"
+          }
+        ]
+      },
+      {
+        "path": "points/owner_id",
+        "shape": [
+          8000
+        ],
+        "dtype": "int32",
+        "array_bytes": 32000,
+        "stored_bytes": 1720,
+        "filters": [
+          {
+            "id": 32015,
+            "options": [
+              5
+            ],
+            "name": "HDF5 zstd filter; see https://github.com/HDFGroup/hdf5_plugins/blob/master/docs/RegisteredFilterPlugins.md"
+          }
+        ]
+      },
+      {
+        "path": "points/point_is_dynamic",
+        "shape": [
+          8000
+        ],
+        "dtype": "bool",
+        "array_bytes": 8000,
+        "stored_bytes": 23,
+        "filters": [
+          {
+            "id": 32015,
+            "options": [
+              5
+            ],
+            "name": "HDF5 zstd filter; see https://github.com/HDFGroup/hdf5_plugins/blob/master/docs/RegisteredFilterPlugins.md"
+          }
+        ]
+      },
+      {
+        "path": "points/point_valid",
+        "shape": [
+          199,
+          8000
+        ],
+        "dtype": "bool",
+        "array_bytes": 1592000,
+        "stored_bytes": 155,
+        "filters": [
+          {
+            "id": 32015,
+            "options": [
+              5
+            ],
+            "name": "HDF5 zstd filter; see https://github.com/HDFGroup/hdf5_plugins/blob/master/docs/RegisteredFilterPlugins.md"
+          }
+        ]
+      },
+      {
+        "path": "points/point_world",
+        "shape": [
+          199,
+          8000,
+          3
+        ],
+        "dtype": "int16",
+        "array_bytes": 9552000,
+        "stored_bytes": 3833686,
+        "filters": [
+          {
+            "id": 32015,
+            "options": [
+              5
+            ],
+            "name": "HDF5 zstd filter; see https://github.com/HDFGroup/hdf5_plugins/blob/master/docs/RegisteredFilterPlugins.md"
+          }
+        ]
+      },
+      {
+        "path": "points/reference_visible_view_count",
+        "shape": [
+          8000
+        ],
+        "dtype": "uint16",
+        "array_bytes": 16000,
+        "stored_bytes": 16000,
+        "filters": []
+      },
+      {
+        "path": "robot/T_episode_from_robot_base",
+        "shape": [
+          4,
+          4
+        ],
+        "dtype": "float32",
+        "array_bytes": 64,
+        "stored_bytes": 64,
+        "filters": []
+      },
+      {
+        "path": "robot/joint_names",
+        "shape": [
+          38
+        ],
+        "dtype": "object",
+        "array_bytes": 304,
+        "stored_bytes": 608,
+        "filters": []
+      },
+      {
+        "path": "robot/joint_pos",
+        "shape": [
+          199,
+          38
+        ],
+        "dtype": "float32",
+        "array_bytes": 30248,
+        "stored_bytes": 27880,
+        "filters": [
+          {
+            "id": 32000,
+            "options": [
+              4,
+              261,
+              7296
+            ],
+            "name": "lzf"
+          }
+        ]
+      },
+      {
+        "path": "timestamps_s",
+        "shape": [
+          199
+        ],
+        "dtype": "float64",
+        "array_bytes": 1592,
+        "stored_bytes": 1920,
+        "filters": []
+      }
+    ]
+  },
+  {
+    "group_id": "robotwin-arx-x5",
+    "source_h5": "/local_nvme/zhangrong/wm3d/datasets_node42/robotwin_v6/episodes/arx-x5/74df0f45086b494284b9/episode.v6.h5",
+    "file_bytes": 27288227,
+    "raw_array_baseline_bytes": 804028464,
+    "rgb_raw_bytes": 339148800,
+    "jpeg_bytes": 20971520,
+    "nodes": [
+      {
+        "path": "action_valid",
+        "shape": [
+          92,
+          16
+        ],
+        "dtype": "bool",
+        "array_bytes": 1472,
+        "stored_bytes": 39,
+        "filters": [
+          {
+            "id": 32015,
+            "options": [
+              5
+            ],
+            "name": "HDF5 zstd filter; see https://github.com/HDFGroup/hdf5_plugins/blob/master/docs/RegisteredFilterPlugins.md"
+          }
+        ]
+      },
+      {
+        "path": "actions",
+        "shape": [
+          92,
+          16
+        ],
+        "dtype": "float32",
+        "array_bytes": 5888,
+        "stored_bytes": 2121,
+        "filters": [
+          {
+            "id": 32000,
+            "options": [
+              4,
+              261,
+              3072
+            ],
+            "name": "lzf"
+          }
+        ]
+      },
+      {
+        "path": "cameras/head_camera/K",
+        "shape": [
+          92,
+          3,
+          3
+        ],
+        "dtype": "float32",
+        "array_bytes": 3312,
+        "stored_bytes": 3456,
+        "filters": []
+      },
+      {
+        "path": "cameras/head_camera/T_wc",
+        "shape": [
+          92,
+          4,
+          4
+        ],
+        "dtype": "float32",
+        "array_bytes": 5888,
+        "stored_bytes": 203,
+        "filters": [
+          {
+            "id": 32000,
+            "options": [
+              4,
+              261,
+              3072
+            ],
+            "name": "lzf"
+          }
+        ]
+      },
+      {
+        "path": "cameras/head_camera/camera_valid",
+        "shape": [
+          92
+        ],
+        "dtype": "bool",
+        "array_bytes": 92,
+        "stored_bytes": 36,
+        "filters": [
+          {
+            "id": 32015,
+            "options": [
+              5
+            ],
+            "name": "HDF5 zstd filter; see https://github.com/HDFGroup/hdf5_plugins/blob/master/docs/RegisteredFilterPlugins.md"
+          }
+        ]
+      },
+      {
+        "path": "cameras/head_camera/depth_m",
+        "shape": [
+          92,
+          480,
+          640
+        ],
+        "dtype": "int16",
+        "array_bytes": 56524800,
+        "stored_bytes": 1493447,
+        "filters": [
+          {
+            "id": 32015,
+            "options": [
+              5
+            ],
+            "name": "HDF5 zstd filter; see https://github.com/HDFGroup/hdf5_plugins/blob/master/docs/RegisteredFilterPlugins.md"
+          }
+        ]
+      },
+      {
+        "path": "cameras/head_camera/point_visible",
+        "shape": [
+          92,
+          8000
+        ],
+        "dtype": "bool",
+        "array_bytes": 736000,
+        "stored_bytes": 119664,
+        "filters": [
+          {
+            "id": 32015,
+            "options": [
+              5
+            ],
+            "name": "HDF5 zstd filter; see https://github.com/HDFGroup/hdf5_plugins/blob/master/docs/RegisteredFilterPlugins.md"
+          }
+        ]
+      },
+      {
+        "path": "cameras/head_camera/rgb_jpeg_bytes",
+        "shape": [
+          5606340
+        ],
+        "dtype": "uint8",
+        "array_bytes": 5606340,
+        "stored_bytes": 6291456,
+        "filters": []
+      },
+      {
+        "path": "cameras/head_camera/rgb_jpeg_offsets",
+        "shape": [
+          93
+        ],
+        "dtype": "int64",
+        "array_bytes": 744,
+        "stored_bytes": 347,
+        "filters": [
+          {
+            "id": 32015,
+            "options": [
+              5
+            ],
+            "name": "HDF5 zstd filter; see https://github.com/HDFGroup/hdf5_plugins/blob/master/docs/RegisteredFilterPlugins.md"
+          }
+        ]
+      },
+      {
+        "path": "cameras/head_camera/timestamps_s",
+        "shape": [
+          92
+        ],
+        "dtype": "float64",
+        "array_bytes": 736,
+        "stored_bytes": 768,
+        "filters": []
+      },
+      {
+        "path": "cameras/left_camera/K",
+        "shape": [
+          92,
+          3,
+          3
+        ],
+        "dtype": "float32",
+        "array_bytes": 3312,
+        "stored_bytes": 3456,
+        "filters": []
+      },
+      {
+        "path": "cameras/left_camera/T_wc",
+        "shape": [
+          92,
+          4,
+          4
+        ],
+        "dtype": "float32",
+        "array_bytes": 5888,
+        "stored_bytes": 4710,
+        "filters": [
+          {
+            "id": 32000,
+            "options": [
+              4,
+              261,
+              3072
+            ],
+            "name": "lzf"
+          }
+        ]
+      },
+      {
+        "path": "cameras/left_camera/camera_valid",
+        "shape": [
+          92
+        ],
+        "dtype": "bool",
+        "array_bytes": 92,
+        "stored_bytes": 36,
+        "filters": [
+          {
+            "id": 32015,
+            "options": [
+              5
+            ],
+            "name": "HDF5 zstd filter; see https://github.com/HDFGroup/hdf5_plugins/blob/master/docs/RegisteredFilterPlugins.md"
+          }
+        ]
+      },
+      {
+        "path": "cameras/left_camera/depth_m",
+        "shape": [
+          92,
+          480,
+          640
+        ],
+        "dtype": "int16",
+        "array_bytes": 56524800,
+        "stored_bytes": 963234,
+        "filters": [
+          {
+            "id": 32015,
+            "options": [
+              5
+            ],
+            "name": "HDF5 zstd filter; see https://github.com/HDFGroup/hdf5_plugins/blob/master/docs/RegisteredFilterPlugins.md"
+          }
+        ]
+      },
+      {
+        "path": "cameras/left_camera/point_visible",
+        "shape": [
+          92,
+          8000
+        ],
+        "dtype": "bool",
+        "array_bytes": 736000,
+        "stored_bytes": 23340,
+        "filters": [
+          {
+            "id": 32015,
+            "options": [
+              5
+            ],
+            "name": "HDF5 zstd filter; see https://github.com/HDFGroup/hdf5_plugins/blob/master/docs/RegisteredFilterPlugins.md"
+          }
+        ]
+      },
+      {
+        "path": "cameras/left_camera/rgb_jpeg_bytes",
+        "shape": [
+          2168330
+        ],
+        "dtype": "uint8",
+        "array_bytes": 2168330,
+        "stored_bytes": 3145728,
+        "filters": []
+      },
+      {
+        "path": "cameras/left_camera/rgb_jpeg_offsets",
+        "shape": [
+          93
+        ],
+        "dtype": "int64",
+        "array_bytes": 744,
+        "stored_bytes": 308,
+        "filters": [
+          {
+            "id": 32015,
+            "options": [
+              5
+            ],
+            "name": "HDF5 zstd filter; see https://github.com/HDFGroup/hdf5_plugins/blob/master/docs/RegisteredFilterPlugins.md"
+          }
+        ]
+      },
+      {
+        "path": "cameras/left_camera/timestamps_s",
+        "shape": [
+          92
+        ],
+        "dtype": "float64",
+        "array_bytes": 736,
+        "stored_bytes": 768,
+        "filters": []
+      },
+      {
+        "path": "cameras/right_camera/K",
+        "shape": [
+          92,
+          3,
+          3
+        ],
+        "dtype": "float32",
+        "array_bytes": 3312,
+        "stored_bytes": 3456,
+        "filters": []
+      },
+      {
+        "path": "cameras/right_camera/T_wc",
+        "shape": [
+          92,
+          4,
+          4
+        ],
+        "dtype": "float32",
+        "array_bytes": 5888,
+        "stored_bytes": 2981,
+        "filters": [
+          {
+            "id": 32000,
+            "options": [
+              4,
+              261,
+              3072
+            ],
+            "name": "lzf"
+          }
+        ]
+      },
+      {
+        "path": "cameras/right_camera/camera_valid",
+        "shape": [
+          92
+        ],
+        "dtype": "bool",
+        "array_bytes": 92,
+        "stored_bytes": 36,
+        "filters": [
+          {
+            "id": 32015,
+            "options": [
+              5
+            ],
+            "name": "HDF5 zstd filter; see https://github.com/HDFGroup/hdf5_plugins/blob/master/docs/RegisteredFilterPlugins.md"
+          }
+        ]
+      },
+      {
+        "path": "cameras/right_camera/depth_m",
+        "shape": [
+          92,
+          480,
+          640
+        ],
+        "dtype": "int16",
+        "array_bytes": 56524800,
+        "stored_bytes": 81268,
+        "filters": [
+          {
+            "id": 32015,
+            "options": [
+              5
+            ],
+            "name": "HDF5 zstd filter; see https://github.com/HDFGroup/hdf5_plugins/blob/master/docs/RegisteredFilterPlugins.md"
+          }
+        ]
+      },
+      {
+        "path": "cameras/right_camera/point_visible",
+        "shape": [
+          92,
+          8000
+        ],
+        "dtype": "bool",
+        "array_bytes": 736000,
+        "stored_bytes": 772,
+        "filters": [
+          {
+            "id": 32015,
+            "options": [
+              5
+            ],
+            "name": "HDF5 zstd filter; see https://github.com/HDFGroup/hdf5_plugins/blob/master/docs/RegisteredFilterPlugins.md"
+          }
+        ]
+      },
+      {
+        "path": "cameras/right_camera/rgb_jpeg_bytes",
+        "shape": [
+          2728824
+        ],
+        "dtype": "uint8",
+        "array_bytes": 2728824,
+        "stored_bytes": 3145728,
+        "filters": []
+      },
+      {
+        "path": "cameras/right_camera/rgb_jpeg_offsets",
+        "shape": [
+          93
+        ],
+        "dtype": "int64",
+        "array_bytes": 744,
+        "stored_bytes": 318,
+        "filters": [
+          {
+            "id": 32015,
+            "options": [
+              5
+            ],
+            "name": "HDF5 zstd filter; see https://github.com/HDFGroup/hdf5_plugins/blob/master/docs/RegisteredFilterPlugins.md"
+          }
+        ]
+      },
+      {
+        "path": "cameras/right_camera/timestamps_s",
+        "shape": [
+          92
+        ],
+        "dtype": "float64",
+        "array_bytes": 736,
+        "stored_bytes": 768,
+        "filters": []
+      },
+      {
+        "path": "cameras/robotview/K",
+        "shape": [
+          92,
+          3,
+          3
+        ],
+        "dtype": "float32",
+        "array_bytes": 3312,
+        "stored_bytes": 3456,
+        "filters": []
+      },
+      {
+        "path": "cameras/robotview/T_wc",
+        "shape": [
+          92,
+          4,
+          4
+        ],
+        "dtype": "float32",
+        "array_bytes": 5888,
+        "stored_bytes": 203,
+        "filters": [
+          {
+            "id": 32000,
+            "options": [
+              4,
+              261,
+              3072
+            ],
+            "name": "lzf"
+          }
+        ]
+      },
+      {
+        "path": "cameras/robotview/camera_valid",
+        "shape": [
+          92
+        ],
+        "dtype": "bool",
+        "array_bytes": 92,
+        "stored_bytes": 36,
+        "filters": [
+          {
+            "id": 32015,
+            "options": [
+              5
+            ],
+            "name": "HDF5 zstd filter; see https://github.com/HDFGroup/hdf5_plugins/blob/master/docs/RegisteredFilterPlugins.md"
+          }
+        ]
+      },
+      {
+        "path": "cameras/robotview/depth_m",
+        "shape": [
+          92,
+          480,
+          640
+        ],
+        "dtype": "int16",
+        "array_bytes": 56524800,
+        "stored_bytes": 1504242,
+        "filters": [
+          {
+            "id": 32015,
+            "options": [
+              5
+            ],
+            "name": "HDF5 zstd filter; see https://github.com/HDFGroup/hdf5_plugins/blob/master/docs/RegisteredFilterPlugins.md"
+          }
+        ]
+      },
+      {
+        "path": "cameras/robotview/point_visible",
+        "shape": [
+          92,
+          8000
+        ],
+        "dtype": "bool",
+        "array_bytes": 736000,
+        "stored_bytes": 106439,
+        "filters": [
+          {
+            "id": 32015,
+            "options": [
+              5
+            ],
+            "name": "HDF5 zstd filter; see https://github.com/HDFGroup/hdf5_plugins/blob/master/docs/RegisteredFilterPlugins.md"
+          }
+        ]
+      },
+      {
+        "path": "cameras/robotview/rgb_jpeg_bytes",
+        "shape": [
+          7944799
+        ],
+        "dtype": "uint8",
+        "array_bytes": 7944799,
+        "stored_bytes": 8388608,
+        "filters": []
+      },
+      {
+        "path": "cameras/robotview/rgb_jpeg_offsets",
+        "shape": [
+          93
+        ],
+        "dtype": "int64",
+        "array_bytes": 744,
+        "stored_bytes": 345,
+        "filters": [
+          {
+            "id": 32015,
+            "options": [
+              5
+            ],
+            "name": "HDF5 zstd filter; see https://github.com/HDFGroup/hdf5_plugins/blob/master/docs/RegisteredFilterPlugins.md"
+          }
+        ]
+      },
+      {
+        "path": "cameras/robotview/timestamps_s",
+        "shape": [
+          92
+        ],
+        "dtype": "float64",
+        "array_bytes": 736,
+        "stored_bytes": 768,
+        "filters": []
+      },
+      {
+        "path": "points/class_id",
+        "shape": [
+          8000
+        ],
+        "dtype": "uint8",
+        "array_bytes": 8000,
+        "stored_bytes": 26,
+        "filters": [
+          {
+            "id": 32015,
+            "options": [
+              5
+            ],
+            "name": "HDF5 zstd filter; see https://github.com/HDFGroup/hdf5_plugins/blob/master/docs/RegisteredFilterPlugins.md"
+          }
+        ]
+      },
+      {
+        "path": "points/frame0_visible_view_count",
+        "shape": [
+          8000
+        ],
+        "dtype": "uint16",
+        "array_bytes": 16000,
+        "stored_bytes": 16000,
+        "filters": []
+      },
+      {
+        "path": "points/geom_id",
+        "shape": [
+          8000
+        ],
+        "dtype": "int32",
+        "array_bytes": 32000,
+        "stored_bytes": 1764,
+        "filters": [
+          {
+            "id": 32015,
+            "options": [
+              5
+            ],
+            "name": "HDF5 zstd filter; see https://github.com/HDFGroup/hdf5_plugins/blob/master/docs/RegisteredFilterPlugins.md"
+          }
+        ]
+      },
+      {
+        "path": "points/owner_id",
+        "shape": [
+          8000
+        ],
+        "dtype": "int32",
+        "array_bytes": 32000,
+        "stored_bytes": 1763,
+        "filters": [
+          {
+            "id": 32015,
+            "options": [
+              5
+            ],
+            "name": "HDF5 zstd filter; see https://github.com/HDFGroup/hdf5_plugins/blob/master/docs/RegisteredFilterPlugins.md"
+          }
+        ]
+      },
+      {
+        "path": "points/point_is_dynamic",
+        "shape": [
+          8000
+        ],
+        "dtype": "bool",
+        "array_bytes": 8000,
+        "stored_bytes": 23,
+        "filters": [
+          {
+            "id": 32015,
+            "options": [
+              5
+            ],
+            "name": "HDF5 zstd filter; see https://github.com/HDFGroup/hdf5_plugins/blob/master/docs/RegisteredFilterPlugins.md"
+          }
+        ]
+      },
+      {
+        "path": "points/point_valid",
+        "shape": [
+          92,
+          8000
+        ],
+        "dtype": "bool",
+        "array_bytes": 736000,
+        "stored_bytes": 72,
+        "filters": [
+          {
+            "id": 32015,
+            "options": [
+              5
+            ],
+            "name": "HDF5 zstd filter; see https://github.com/HDFGroup/hdf5_plugins/blob/master/docs/RegisteredFilterPlugins.md"
+          }
+        ]
+      },
+      {
+        "path": "points/point_world",
+        "shape": [
+          92,
+          8000,
+          3
+        ],
+        "dtype": "int16",
+        "array_bytes": 4416000,
+        "stored_bytes": 1790734,
+        "filters": [
+          {
+            "id": 32015,
+            "options": [
+              5
+            ],
+            "name": "HDF5 zstd filter; see https://github.com/HDFGroup/hdf5_plugins/blob/master/docs/RegisteredFilterPlugins.md"
+          }
+        ]
+      },
+      {
+        "path": "points/reference_visible_view_count",
+        "shape": [
+          8000
+        ],
+        "dtype": "uint16",
+        "array_bytes": 16000,
+        "stored_bytes": 16000,
+        "filters": []
+      },
+      {
+        "path": "robot/T_episode_from_robot_base",
+        "shape": [
+          4,
+          4
+        ],
+        "dtype": "float32",
+        "array_bytes": 64,
+        "stored_bytes": 64,
+        "filters": []
+      },
+      {
+        "path": "robot/joint_names",
+        "shape": [
+          16
+        ],
+        "dtype": "object",
+        "array_bytes": 128,
+        "stored_bytes": 256,
+        "filters": []
+      },
+      {
+        "path": "robot/joint_pos",
+        "shape": [
+          92,
+          16
+        ],
+        "dtype": "float32",
+        "array_bytes": 5888,
+        "stored_bytes": 5428,
+        "filters": [
+          {
+            "id": 32000,
+            "options": [
+              4,
+              261,
+              3072
+            ],
+            "name": "lzf"
+          }
+        ]
+      },
+      {
+        "path": "timestamps_s",
+        "shape": [
+          92
+        ],
+        "dtype": "float64",
+        "array_bytes": 736,
+        "stored_bytes": 768,
+        "filters": []
+      }
+    ]
+  },
+  {
+    "group_id": "robotwin-franka",
+    "source_h5": "/local_nvme/zhangrong/wm3d/datasets_node42/robotwin_v6/episodes/franka/05d4b7f566bf4e78940c/episode.v6.h5",
+    "file_bytes": 61442209,
+    "raw_array_baseline_bytes": 1861356934,
+    "rgb_raw_bytes": 785203200,
+    "jpeg_bytes": 49283072,
+    "nodes": [
+      {
+        "path": "action_valid",
+        "shape": [
+          213,
+          18
+        ],
+        "dtype": "bool",
+        "array_bytes": 3834,
+        "stored_bytes": 94,
+        "filters": [
+          {
+            "id": 32015,
+            "options": [
+              5
+            ],
+            "name": "HDF5 zstd filter; see https://github.com/HDFGroup/hdf5_plugins/blob/master/docs/RegisteredFilterPlugins.md"
+          }
+        ]
+      },
+      {
+        "path": "actions",
+        "shape": [
+          213,
+          18
+        ],
+        "dtype": "float32",
+        "array_bytes": 15336,
+        "stored_bytes": 4491,
+        "filters": [
+          {
+            "id": 32000,
+            "options": [
+              4,
+              261,
+              3456
+            ],
+            "name": "lzf"
+          }
+        ]
+      },
+      {
+        "path": "cameras/head_camera/K",
+        "shape": [
+          213,
+          3,
+          3
+        ],
+        "dtype": "float32",
+        "array_bytes": 7668,
+        "stored_bytes": 8640,
+        "filters": []
+      },
+      {
+        "path": "cameras/head_camera/T_wc",
+        "shape": [
+          213,
+          4,
+          4
+        ],
+        "dtype": "float32",
+        "array_bytes": 13632,
+        "stored_bytes": 500,
+        "filters": [
+          {
+            "id": 32000,
+            "options": [
+              4,
+              261,
+              3072
+            ],
+            "name": "lzf"
+          }
+        ]
+      },
+      {
+        "path": "cameras/head_camera/camera_valid",
+        "shape": [
+          213
+        ],
+        "dtype": "bool",
+        "array_bytes": 213,
+        "stored_bytes": 83,
+        "filters": [
+          {
+            "id": 32015,
+            "options": [
+              5
+            ],
+            "name": "HDF5 zstd filter; see https://github.com/HDFGroup/hdf5_plugins/blob/master/docs/RegisteredFilterPlugins.md"
+          }
+        ]
+      },
+      {
+        "path": "cameras/head_camera/depth_m",
+        "shape": [
+          213,
+          480,
+          640
+        ],
+        "dtype": "int16",
+        "array_bytes": 130867200,
+        "stored_bytes": 2405552,
+        "filters": [
+          {
+            "id": 32015,
+            "options": [
+              5
+            ],
+            "name": "HDF5 zstd filter; see https://github.com/HDFGroup/hdf5_plugins/blob/master/docs/RegisteredFilterPlugins.md"
+          }
+        ]
+      },
+      {
+        "path": "cameras/head_camera/point_visible",
+        "shape": [
+          213,
+          8000
+        ],
+        "dtype": "bool",
+        "array_bytes": 1704000,
+        "stored_bytes": 229949,
+        "filters": [
+          {
+            "id": 32015,
+            "options": [
+              5
+            ],
+            "name": "HDF5 zstd filter; see https://github.com/HDFGroup/hdf5_plugins/blob/master/docs/RegisteredFilterPlugins.md"
+          }
+        ]
+      },
+      {
+        "path": "cameras/head_camera/rgb_jpeg_bytes",
+        "shape": [
+          13370241
+        ],
+        "dtype": "uint8",
+        "array_bytes": 13370241,
+        "stored_bytes": 13631488,
+        "filters": []
+      },
+      {
+        "path": "cameras/head_camera/rgb_jpeg_offsets",
+        "shape": [
+          214
+        ],
+        "dtype": "int64",
+        "array_bytes": 1712,
+        "stored_bytes": 813,
+        "filters": [
+          {
+            "id": 32015,
+            "options": [
+              5
+            ],
+            "name": "HDF5 zstd filter; see https://github.com/HDFGroup/hdf5_plugins/blob/master/docs/RegisteredFilterPlugins.md"
+          }
+        ]
+      },
+      {
+        "path": "cameras/head_camera/timestamps_s",
+        "shape": [
+          213
+        ],
+        "dtype": "float64",
+        "array_bytes": 1704,
+        "stored_bytes": 1920,
+        "filters": []
+      },
+      {
+        "path": "cameras/left_camera/K",
+        "shape": [
+          213,
+          3,
+          3
+        ],
+        "dtype": "float32",
+        "array_bytes": 7668,
+        "stored_bytes": 8640,
+        "filters": []
+      },
+      {
+        "path": "cameras/left_camera/T_wc",
+        "shape": [
+          213,
+          4,
+          4
+        ],
+        "dtype": "float32",
+        "array_bytes": 13632,
+        "stored_bytes": 10254,
+        "filters": [
+          {
+            "id": 32000,
+            "options": [
+              4,
+              261,
+              3072
+            ],
+            "name": "lzf"
+          }
+        ]
+      },
+      {
+        "path": "cameras/left_camera/camera_valid",
+        "shape": [
+          213
+        ],
+        "dtype": "bool",
+        "array_bytes": 213,
+        "stored_bytes": 83,
+        "filters": [
+          {
+            "id": 32015,
+            "options": [
+              5
+            ],
+            "name": "HDF5 zstd filter; see https://github.com/HDFGroup/hdf5_plugins/blob/master/docs/RegisteredFilterPlugins.md"
+          }
+        ]
+      },
+      {
+        "path": "cameras/left_camera/depth_m",
+        "shape": [
+          213,
+          480,
+          640
+        ],
+        "dtype": "int16",
+        "array_bytes": 130867200,
+        "stored_bytes": 1268383,
+        "filters": [
+          {
+            "id": 32015,
+            "options": [
+              5
+            ],
+            "name": "HDF5 zstd filter; see https://github.com/HDFGroup/hdf5_plugins/blob/master/docs/RegisteredFilterPlugins.md"
+          }
+        ]
+      },
+      {
+        "path": "cameras/left_camera/point_visible",
+        "shape": [
+          213,
+          8000
+        ],
+        "dtype": "bool",
+        "array_bytes": 1704000,
+        "stored_bytes": 20946,
+        "filters": [
+          {
+            "id": 32015,
+            "options": [
+              5
+            ],
+            "name": "HDF5 zstd filter; see https://github.com/HDFGroup/hdf5_plugins/blob/master/docs/RegisteredFilterPlugins.md"
+          }
+        ]
+      },
+      {
+        "path": "cameras/left_camera/rgb_jpeg_bytes",
+        "shape": [
+          7240131
+        ],
+        "dtype": "uint8",
+        "array_bytes": 7240131,
+        "stored_bytes": 7340032,
+        "filters": []
+      },
+      {
+        "path": "cameras/left_camera/rgb_jpeg_offsets",
+        "shape": [
+          214
+        ],
+        "dtype": "int64",
+        "array_bytes": 1712,
+        "stored_bytes": 759,
+        "filters": [
+          {
+            "id": 32015,
+            "options": [
+              5
+            ],
+            "name": "HDF5 zstd filter; see https://github.com/HDFGroup/hdf5_plugins/blob/master/docs/RegisteredFilterPlugins.md"
+          }
+        ]
+      },
+      {
+        "path": "cameras/left_camera/timestamps_s",
+        "shape": [
+          213
+        ],
+        "dtype": "float64",
+        "array_bytes": 1704,
+        "stored_bytes": 1920,
+        "filters": []
+      },
+      {
+        "path": "cameras/right_camera/K",
+        "shape": [
+          213,
+          3,
+          3
+        ],
+        "dtype": "float32",
+        "array_bytes": 7668,
+        "stored_bytes": 8640,
+        "filters": []
+      },
+      {
+        "path": "cameras/right_camera/T_wc",
+        "shape": [
+          213,
+          4,
+          4
+        ],
+        "dtype": "float32",
+        "array_bytes": 13632,
+        "stored_bytes": 10787,
+        "filters": [
+          {
+            "id": 32000,
+            "options": [
+              4,
+              261,
+              3072
+            ],
+            "name": "lzf"
+          }
+        ]
+      },
+      {
+        "path": "cameras/right_camera/camera_valid",
+        "shape": [
+          213
+        ],
+        "dtype": "bool",
+        "array_bytes": 213,
+        "stored_bytes": 83,
+        "filters": [
+          {
+            "id": 32015,
+            "options": [
+              5
+            ],
+            "name": "HDF5 zstd filter; see https://github.com/HDFGroup/hdf5_plugins/blob/master/docs/RegisteredFilterPlugins.md"
+          }
+        ]
+      },
+      {
+        "path": "cameras/right_camera/depth_m",
+        "shape": [
+          213,
+          480,
+          640
+        ],
+        "dtype": "int16",
+        "array_bytes": 130867200,
+        "stored_bytes": 1454060,
+        "filters": [
+          {
+            "id": 32015,
+            "options": [
+              5
+            ],
+            "name": "HDF5 zstd filter; see https://github.com/HDFGroup/hdf5_plugins/blob/master/docs/RegisteredFilterPlugins.md"
+          }
+        ]
+      },
+      {
+        "path": "cameras/right_camera/point_visible",
+        "shape": [
+          213,
+          8000
+        ],
+        "dtype": "bool",
+        "array_bytes": 1704000,
+        "stored_bytes": 21622,
+        "filters": [
+          {
+            "id": 32015,
+            "options": [
+              5
+            ],
+            "name": "HDF5 zstd filter; see https://github.com/HDFGroup/hdf5_plugins/blob/master/docs/RegisteredFilterPlugins.md"
+          }
+        ]
+      },
+      {
+        "path": "cameras/right_camera/rgb_jpeg_bytes",
+        "shape": [
+          6539953
+        ],
+        "dtype": "uint8",
+        "array_bytes": 6539953,
+        "stored_bytes": 7340032,
+        "filters": []
+      },
+      {
+        "path": "cameras/right_camera/rgb_jpeg_offsets",
+        "shape": [
+          214
+        ],
+        "dtype": "int64",
+        "array_bytes": 1712,
+        "stored_bytes": 753,
+        "filters": [
+          {
+            "id": 32015,
+            "options": [
+              5
+            ],
+            "name": "HDF5 zstd filter; see https://github.com/HDFGroup/hdf5_plugins/blob/master/docs/RegisteredFilterPlugins.md"
+          }
+        ]
+      },
+      {
+        "path": "cameras/right_camera/timestamps_s",
+        "shape": [
+          213
+        ],
+        "dtype": "float64",
+        "array_bytes": 1704,
+        "stored_bytes": 1920,
+        "filters": []
+      },
+      {
+        "path": "cameras/robotview/K",
+        "shape": [
+          213,
+          3,
+          3
+        ],
+        "dtype": "float32",
+        "array_bytes": 7668,
+        "stored_bytes": 8640,
+        "filters": []
+      },
+      {
+        "path": "cameras/robotview/T_wc",
+        "shape": [
+          213,
+          4,
+          4
+        ],
+        "dtype": "float32",
+        "array_bytes": 13632,
+        "stored_bytes": 500,
+        "filters": [
+          {
+            "id": 32000,
+            "options": [
+              4,
+              261,
+              3072
+            ],
+            "name": "lzf"
+          }
+        ]
+      },
+      {
+        "path": "cameras/robotview/camera_valid",
+        "shape": [
+          213
+        ],
+        "dtype": "bool",
+        "array_bytes": 213,
+        "stored_bytes": 83,
+        "filters": [
+          {
+            "id": 32015,
+            "options": [
+              5
+            ],
+            "name": "HDF5 zstd filter; see https://github.com/HDFGroup/hdf5_plugins/blob/master/docs/RegisteredFilterPlugins.md"
+          }
+        ]
+      },
+      {
+        "path": "cameras/robotview/depth_m",
+        "shape": [
+          213,
+          480,
+          640
+        ],
+        "dtype": "int16",
+        "array_bytes": 130867200,
+        "stored_bytes": 4341584,
+        "filters": [
+          {
+            "id": 32015,
+            "options": [
+              5
+            ],
+            "name": "HDF5 zstd filter; see https://github.com/HDFGroup/hdf5_plugins/blob/master/docs/RegisteredFilterPlugins.md"
+          }
+        ]
+      },
+      {
+        "path": "cameras/robotview/point_visible",
+        "shape": [
+          213,
+          8000
+        ],
+        "dtype": "bool",
+        "array_bytes": 1704000,
+        "stored_bytes": 223939,
+        "filters": [
+          {
+            "id": 32015,
+            "options": [
+              5
+            ],
+            "name": "HDF5 zstd filter; see https://github.com/HDFGroup/hdf5_plugins/blob/master/docs/RegisteredFilterPlugins.md"
+          }
+        ]
+      },
+      {
+        "path": "cameras/robotview/rgb_jpeg_bytes",
+        "shape": [
+          20321658
+        ],
+        "dtype": "uint8",
+        "array_bytes": 20321658,
+        "stored_bytes": 20971520,
+        "filters": []
+      },
+      {
+        "path": "cameras/robotview/rgb_jpeg_offsets",
+        "shape": [
+          214
+        ],
+        "dtype": "int64",
+        "array_bytes": 1712,
+        "stored_bytes": 817,
+        "filters": [
+          {
+            "id": 32015,
+            "options": [
+              5
+            ],
+            "name": "HDF5 zstd filter; see https://github.com/HDFGroup/hdf5_plugins/blob/master/docs/RegisteredFilterPlugins.md"
+          }
+        ]
+      },
+      {
+        "path": "cameras/robotview/timestamps_s",
+        "shape": [
+          213
+        ],
+        "dtype": "float64",
+        "array_bytes": 1704,
+        "stored_bytes": 1920,
+        "filters": []
+      },
+      {
+        "path": "points/class_id",
+        "shape": [
+          8000
+        ],
+        "dtype": "uint8",
+        "array_bytes": 8000,
+        "stored_bytes": 26,
+        "filters": [
+          {
+            "id": 32015,
+            "options": [
+              5
+            ],
+            "name": "HDF5 zstd filter; see https://github.com/HDFGroup/hdf5_plugins/blob/master/docs/RegisteredFilterPlugins.md"
+          }
+        ]
+      },
+      {
+        "path": "points/frame0_visible_view_count",
+        "shape": [
+          8000
+        ],
+        "dtype": "uint16",
+        "array_bytes": 16000,
+        "stored_bytes": 16000,
+        "filters": []
+      },
+      {
+        "path": "points/geom_id",
+        "shape": [
+          8000
+        ],
+        "dtype": "int32",
+        "array_bytes": 32000,
+        "stored_bytes": 2722,
+        "filters": [
+          {
+            "id": 32015,
+            "options": [
+              5
+            ],
+            "name": "HDF5 zstd filter; see https://github.com/HDFGroup/hdf5_plugins/blob/master/docs/RegisteredFilterPlugins.md"
+          }
+        ]
+      },
+      {
+        "path": "points/owner_id",
+        "shape": [
+          8000
+        ],
+        "dtype": "int32",
+        "array_bytes": 32000,
+        "stored_bytes": 2719,
+        "filters": [
+          {
+            "id": 32015,
+            "options": [
+              5
+            ],
+            "name": "HDF5 zstd filter; see https://github.com/HDFGroup/hdf5_plugins/blob/master/docs/RegisteredFilterPlugins.md"
+          }
+        ]
+      },
+      {
+        "path": "points/point_is_dynamic",
+        "shape": [
+          8000
+        ],
+        "dtype": "bool",
+        "array_bytes": 8000,
+        "stored_bytes": 23,
+        "filters": [
+          {
+            "id": 32015,
+            "options": [
+              5
+            ],
+            "name": "HDF5 zstd filter; see https://github.com/HDFGroup/hdf5_plugins/blob/master/docs/RegisteredFilterPlugins.md"
+          }
+        ]
+      },
+      {
+        "path": "points/point_valid",
+        "shape": [
+          213,
+          8000
+        ],
+        "dtype": "bool",
+        "array_bytes": 1704000,
+        "stored_bytes": 166,
+        "filters": [
+          {
+            "id": 32015,
+            "options": [
+              5
+            ],
+            "name": "HDF5 zstd filter; see https://github.com/HDFGroup/hdf5_plugins/blob/master/docs/RegisteredFilterPlugins.md"
+          }
+        ]
+      },
+      {
+        "path": "points/point_world",
+        "shape": [
+          213,
+          8000,
+          3
+        ],
+        "dtype": "int16",
+        "array_bytes": 10224000,
+        "stored_bytes": 1877409,
+        "filters": [
+          {
+            "id": 32015,
+            "options": [
+              5
+            ],
+            "name": "HDF5 zstd filter; see https://github.com/HDFGroup/hdf5_plugins/blob/master/docs/RegisteredFilterPlugins.md"
+          }
+        ]
+      },
+      {
+        "path": "points/reference_visible_view_count",
+        "shape": [
+          8000
+        ],
+        "dtype": "uint16",
+        "array_bytes": 16000,
+        "stored_bytes": 16000,
+        "filters": []
+      },
+      {
+        "path": "robot/T_episode_from_robot_base",
+        "shape": [
+          4,
+          4
+        ],
+        "dtype": "float32",
+        "array_bytes": 64,
+        "stored_bytes": 64,
+        "filters": []
+      },
+      {
+        "path": "robot/joint_names",
+        "shape": [
+          18
+        ],
+        "dtype": "object",
+        "array_bytes": 144,
+        "stored_bytes": 288,
+        "filters": []
+      },
+      {
+        "path": "robot/joint_pos",
+        "shape": [
+          213,
+          18
+        ],
+        "dtype": "float32",
+        "array_bytes": 15336,
+        "stored_bytes": 12520,
+        "filters": [
+          {
+            "id": 32000,
+            "options": [
+              4,
+              261,
+              3456
+            ],
+            "name": "lzf"
+          }
+        ]
+      },
+      {
+        "path": "timestamps_s",
+        "shape": [
+          213
+        ],
+        "dtype": "float64",
+        "array_bytes": 1704,
+        "stored_bytes": 1920,
+        "filters": []
+      }
+    ]
+  },
+  {
+    "group_id": "robotwin-piper",
+    "source_h5": "/local_nvme/zhangrong/wm3d/datasets_node42/robotwin_v6/episodes/piper/066abe4ab8475be673d1/episode.v6.h5",
+    "file_bytes": 35191808,
+    "raw_array_baseline_bytes": 1118604384,
+    "rgb_raw_bytes": 471859200,
+    "jpeg_bytes": 27262976,
+    "nodes": [
+      {
+        "path": "action_valid",
+        "shape": [
+          128,
+          16
+        ],
+        "dtype": "bool",
+        "array_bytes": 2048,
+        "stored_bytes": 58,
+        "filters": [
+          {
+            "id": 32015,
+            "options": [
+              5
+            ],
+            "name": "HDF5 zstd filter; see https://github.com/HDFGroup/hdf5_plugins/blob/master/docs/RegisteredFilterPlugins.md"
+          }
+        ]
+      },
+      {
+        "path": "actions",
+        "shape": [
+          128,
+          16
+        ],
+        "dtype": "float32",
+        "array_bytes": 8192,
+        "stored_bytes": 2726,
+        "filters": [
+          {
+            "id": 32000,
+            "options": [
+              4,
+              261,
+              3072
+            ],
+            "name": "lzf"
+          }
+        ]
+      },
+      {
+        "path": "cameras/head_camera/K",
+        "shape": [
+          128,
+          3,
+          3
+        ],
+        "dtype": "float32",
+        "array_bytes": 4608,
+        "stored_bytes": 5184,
+        "filters": []
+      },
+      {
+        "path": "cameras/head_camera/T_wc",
+        "shape": [
+          128,
+          4,
+          4
+        ],
+        "dtype": "float32",
+        "array_bytes": 8192,
+        "stored_bytes": 300,
+        "filters": [
+          {
+            "id": 32000,
+            "options": [
+              4,
+              261,
+              3072
+            ],
+            "name": "lzf"
+          }
+        ]
+      },
+      {
+        "path": "cameras/head_camera/camera_valid",
+        "shape": [
+          128
+        ],
+        "dtype": "bool",
+        "array_bytes": 128,
+        "stored_bytes": 51,
+        "filters": [
+          {
+            "id": 32015,
+            "options": [
+              5
+            ],
+            "name": "HDF5 zstd filter; see https://github.com/HDFGroup/hdf5_plugins/blob/master/docs/RegisteredFilterPlugins.md"
+          }
+        ]
+      },
+      {
+        "path": "cameras/head_camera/depth_m",
+        "shape": [
+          128,
+          480,
+          640
+        ],
+        "dtype": "int16",
+        "array_bytes": 78643200,
+        "stored_bytes": 1235591,
+        "filters": [
+          {
+            "id": 32015,
+            "options": [
+              5
+            ],
+            "name": "HDF5 zstd filter; see https://github.com/HDFGroup/hdf5_plugins/blob/master/docs/RegisteredFilterPlugins.md"
+          }
+        ]
+      },
+      {
+        "path": "cameras/head_camera/point_visible",
+        "shape": [
+          128,
+          8000
+        ],
+        "dtype": "bool",
+        "array_bytes": 1024000,
+        "stored_bytes": 122880,
+        "filters": [
+          {
+            "id": 32015,
+            "options": [
+              5
+            ],
+            "name": "HDF5 zstd filter; see https://github.com/HDFGroup/hdf5_plugins/blob/master/docs/RegisteredFilterPlugins.md"
+          }
+        ]
+      },
+      {
+        "path": "cameras/head_camera/rgb_jpeg_bytes",
+        "shape": [
+          5821375
+        ],
+        "dtype": "uint8",
+        "array_bytes": 5821375,
+        "stored_bytes": 6291456,
+        "filters": []
+      },
+      {
+        "path": "cameras/head_camera/rgb_jpeg_offsets",
+        "shape": [
+          129
+        ],
+        "dtype": "int64",
+        "array_bytes": 1032,
+        "stored_bytes": 480,
+        "filters": [
+          {
+            "id": 32015,
+            "options": [
+              5
+            ],
+            "name": "HDF5 zstd filter; see https://github.com/HDFGroup/hdf5_plugins/blob/master/docs/RegisteredFilterPlugins.md"
+          }
+        ]
+      },
+      {
+        "path": "cameras/head_camera/timestamps_s",
+        "shape": [
+          128
+        ],
+        "dtype": "float64",
+        "array_bytes": 1024,
+        "stored_bytes": 1152,
+        "filters": []
+      },
+      {
+        "path": "cameras/left_camera/K",
+        "shape": [
+          128,
+          3,
+          3
+        ],
+        "dtype": "float32",
+        "array_bytes": 4608,
+        "stored_bytes": 5184,
+        "filters": []
+      },
+      {
+        "path": "cameras/left_camera/T_wc",
+        "shape": [
+          128,
+          4,
+          4
+        ],
+        "dtype": "float32",
+        "array_bytes": 8192,
+        "stored_bytes": 3894,
+        "filters": [
+          {
+            "id": 32000,
+            "options": [
+              4,
+              261,
+              3072
+            ],
+            "name": "lzf"
+          }
+        ]
+      },
+      {
+        "path": "cameras/left_camera/camera_valid",
+        "shape": [
+          128
+        ],
+        "dtype": "bool",
+        "array_bytes": 128,
+        "stored_bytes": 51,
+        "filters": [
+          {
+            "id": 32015,
+            "options": [
+              5
+            ],
+            "name": "HDF5 zstd filter; see https://github.com/HDFGroup/hdf5_plugins/blob/master/docs/RegisteredFilterPlugins.md"
+          }
+        ]
+      },
+      {
+        "path": "cameras/left_camera/depth_m",
+        "shape": [
+          128,
+          480,
+          640
+        ],
+        "dtype": "int16",
+        "array_bytes": 78643200,
+        "stored_bytes": 395468,
+        "filters": [
+          {
+            "id": 32015,
+            "options": [
+              5
+            ],
+            "name": "HDF5 zstd filter; see https://github.com/HDFGroup/hdf5_plugins/blob/master/docs/RegisteredFilterPlugins.md"
+          }
+        ]
+      },
+      {
+        "path": "cameras/left_camera/point_visible",
+        "shape": [
+          128,
+          8000
+        ],
+        "dtype": "bool",
+        "array_bytes": 1024000,
+        "stored_bytes": 38185,
+        "filters": [
+          {
+            "id": 32015,
+            "options": [
+              5
+            ],
+            "name": "HDF5 zstd filter; see https://github.com/HDFGroup/hdf5_plugins/blob/master/docs/RegisteredFilterPlugins.md"
+          }
+        ]
+      },
+      {
+        "path": "cameras/left_camera/rgb_jpeg_bytes",
+        "shape": [
+          4042878
+        ],
+        "dtype": "uint8",
+        "array_bytes": 4042878,
+        "stored_bytes": 4194304,
+        "filters": []
+      },
+      {
+        "path": "cameras/left_camera/rgb_jpeg_offsets",
+        "shape": [
+          129
+        ],
+        "dtype": "int64",
+        "array_bytes": 1032,
+        "stored_bytes": 456,
+        "filters": [
+          {
+            "id": 32015,
+            "options": [
+              5
+            ],
+            "name": "HDF5 zstd filter; see https://github.com/HDFGroup/hdf5_plugins/blob/master/docs/RegisteredFilterPlugins.md"
+          }
+        ]
+      },
+      {
+        "path": "cameras/left_camera/timestamps_s",
+        "shape": [
+          128
+        ],
+        "dtype": "float64",
+        "array_bytes": 1024,
+        "stored_bytes": 1152,
+        "filters": []
+      },
+      {
+        "path": "cameras/right_camera/K",
+        "shape": [
+          128,
+          3,
+          3
+        ],
+        "dtype": "float32",
+        "array_bytes": 4608,
+        "stored_bytes": 5184,
+        "filters": []
+      },
+      {
+        "path": "cameras/right_camera/T_wc",
+        "shape": [
+          128,
+          4,
+          4
+        ],
+        "dtype": "float32",
+        "array_bytes": 8192,
+        "stored_bytes": 6553,
+        "filters": [
+          {
+            "id": 32000,
+            "options": [
+              4,
+              261,
+              3072
+            ],
+            "name": "lzf"
+          }
+        ]
+      },
+      {
+        "path": "cameras/right_camera/camera_valid",
+        "shape": [
+          128
+        ],
+        "dtype": "bool",
+        "array_bytes": 128,
+        "stored_bytes": 51,
+        "filters": [
+          {
+            "id": 32015,
+            "options": [
+              5
+            ],
+            "name": "HDF5 zstd filter; see https://github.com/HDFGroup/hdf5_plugins/blob/master/docs/RegisteredFilterPlugins.md"
+          }
+        ]
+      },
+      {
+        "path": "cameras/right_camera/depth_m",
+        "shape": [
+          128,
+          480,
+          640
+        ],
+        "dtype": "int16",
+        "array_bytes": 78643200,
+        "stored_bytes": 1674377,
+        "filters": [
+          {
+            "id": 32015,
+            "options": [
+              5
+            ],
+            "name": "HDF5 zstd filter; see https://github.com/HDFGroup/hdf5_plugins/blob/master/docs/RegisteredFilterPlugins.md"
+          }
+        ]
+      },
+      {
+        "path": "cameras/right_camera/point_visible",
+        "shape": [
+          128,
+          8000
+        ],
+        "dtype": "bool",
+        "array_bytes": 1024000,
+        "stored_bytes": 135720,
+        "filters": [
+          {
+            "id": 32015,
+            "options": [
+              5
+            ],
+            "name": "HDF5 zstd filter; see https://github.com/HDFGroup/hdf5_plugins/blob/master/docs/RegisteredFilterPlugins.md"
+          }
+        ]
+      },
+      {
+        "path": "cameras/right_camera/rgb_jpeg_bytes",
+        "shape": [
+          3468123
+        ],
+        "dtype": "uint8",
+        "array_bytes": 3468123,
+        "stored_bytes": 4194304,
+        "filters": []
+      },
+      {
+        "path": "cameras/right_camera/rgb_jpeg_offsets",
+        "shape": [
+          129
+        ],
+        "dtype": "int64",
+        "array_bytes": 1032,
+        "stored_bytes": 446,
+        "filters": [
+          {
+            "id": 32015,
+            "options": [
+              5
+            ],
+            "name": "HDF5 zstd filter; see https://github.com/HDFGroup/hdf5_plugins/blob/master/docs/RegisteredFilterPlugins.md"
+          }
+        ]
+      },
+      {
+        "path": "cameras/right_camera/timestamps_s",
+        "shape": [
+          128
+        ],
+        "dtype": "float64",
+        "array_bytes": 1024,
+        "stored_bytes": 1152,
+        "filters": []
+      },
+      {
+        "path": "cameras/robotview/K",
+        "shape": [
+          128,
+          3,
+          3
+        ],
+        "dtype": "float32",
+        "array_bytes": 4608,
+        "stored_bytes": 5184,
+        "filters": []
+      },
+      {
+        "path": "cameras/robotview/T_wc",
+        "shape": [
+          128,
+          4,
+          4
+        ],
+        "dtype": "float32",
+        "array_bytes": 8192,
+        "stored_bytes": 303,
+        "filters": [
+          {
+            "id": 32000,
+            "options": [
+              4,
+              261,
+              3072
+            ],
+            "name": "lzf"
+          }
+        ]
+      },
+      {
+        "path": "cameras/robotview/camera_valid",
+        "shape": [
+          128
+        ],
+        "dtype": "bool",
+        "array_bytes": 128,
+        "stored_bytes": 51,
+        "filters": [
+          {
+            "id": 32015,
+            "options": [
+              5
+            ],
+            "name": "HDF5 zstd filter; see https://github.com/HDFGroup/hdf5_plugins/blob/master/docs/RegisteredFilterPlugins.md"
+          }
+        ]
+      },
+      {
+        "path": "cameras/robotview/depth_m",
+        "shape": [
+          128,
+          480,
+          640
+        ],
+        "dtype": "int16",
+        "array_bytes": 78643200,
+        "stored_bytes": 1652643,
+        "filters": [
+          {
+            "id": 32015,
+            "options": [
+              5
+            ],
+            "name": "HDF5 zstd filter; see https://github.com/HDFGroup/hdf5_plugins/blob/master/docs/RegisteredFilterPlugins.md"
+          }
+        ]
+      },
+      {
+        "path": "cameras/robotview/point_visible",
+        "shape": [
+          128,
+          8000
+        ],
+        "dtype": "bool",
+        "array_bytes": 1024000,
+        "stored_bytes": 154346,
+        "filters": [
+          {
+            "id": 32015,
+            "options": [
+              5
+            ],
+            "name": "HDF5 zstd filter; see https://github.com/HDFGroup/hdf5_plugins/blob/master/docs/RegisteredFilterPlugins.md"
+          }
+        ]
+      },
+      {
+        "path": "cameras/robotview/rgb_jpeg_bytes",
+        "shape": [
+          11586710
+        ],
+        "dtype": "uint8",
+        "array_bytes": 11586710,
+        "stored_bytes": 12582912,
+        "filters": []
+      },
+      {
+        "path": "cameras/robotview/rgb_jpeg_offsets",
+        "shape": [
+          129
+        ],
+        "dtype": "int64",
+        "array_bytes": 1032,
+        "stored_bytes": 487,
+        "filters": [
+          {
+            "id": 32015,
+            "options": [
+              5
+            ],
+            "name": "HDF5 zstd filter; see https://github.com/HDFGroup/hdf5_plugins/blob/master/docs/RegisteredFilterPlugins.md"
+          }
+        ]
+      },
+      {
+        "path": "cameras/robotview/timestamps_s",
+        "shape": [
+          128
+        ],
+        "dtype": "float64",
+        "array_bytes": 1024,
+        "stored_bytes": 1152,
+        "filters": []
+      },
+      {
+        "path": "points/class_id",
+        "shape": [
+          8000
+        ],
+        "dtype": "uint8",
+        "array_bytes": 8000,
+        "stored_bytes": 26,
+        "filters": [
+          {
+            "id": 32015,
+            "options": [
+              5
+            ],
+            "name": "HDF5 zstd filter; see https://github.com/HDFGroup/hdf5_plugins/blob/master/docs/RegisteredFilterPlugins.md"
+          }
+        ]
+      },
+      {
+        "path": "points/frame0_visible_view_count",
+        "shape": [
+          8000
+        ],
+        "dtype": "uint16",
+        "array_bytes": 16000,
+        "stored_bytes": 16000,
+        "filters": []
+      },
+      {
+        "path": "points/geom_id",
+        "shape": [
+          8000
+        ],
+        "dtype": "int32",
+        "array_bytes": 32000,
+        "stored_bytes": 1770,
+        "filters": [
+          {
+            "id": 32015,
+            "options": [
+              5
+            ],
+            "name": "HDF5 zstd filter; see https://github.com/HDFGroup/hdf5_plugins/blob/master/docs/RegisteredFilterPlugins.md"
+          }
+        ]
+      },
+      {
+        "path": "points/owner_id",
+        "shape": [
+          8000
+        ],
+        "dtype": "int32",
+        "array_bytes": 32000,
+        "stored_bytes": 1769,
+        "filters": [
+          {
+            "id": 32015,
+            "options": [
+              5
+            ],
+            "name": "HDF5 zstd filter; see https://github.com/HDFGroup/hdf5_plugins/blob/master/docs/RegisteredFilterPlugins.md"
+          }
+        ]
+      },
+      {
+        "path": "points/point_is_dynamic",
+        "shape": [
+          8000
+        ],
+        "dtype": "bool",
+        "array_bytes": 8000,
+        "stored_bytes": 23,
+        "filters": [
+          {
+            "id": 32015,
+            "options": [
+              5
+            ],
+            "name": "HDF5 zstd filter; see https://github.com/HDFGroup/hdf5_plugins/blob/master/docs/RegisteredFilterPlugins.md"
+          }
+        ]
+      },
+      {
+        "path": "points/point_valid",
+        "shape": [
+          128,
+          8000
+        ],
+        "dtype": "bool",
+        "array_bytes": 1024000,
+        "stored_bytes": 102,
+        "filters": [
+          {
+            "id": 32015,
+            "options": [
+              5
+            ],
+            "name": "HDF5 zstd filter; see https://github.com/HDFGroup/hdf5_plugins/blob/master/docs/RegisteredFilterPlugins.md"
+          }
+        ]
+      },
+      {
+        "path": "points/point_world",
+        "shape": [
+          128,
+          8000,
+          3
+        ],
+        "dtype": "int16",
+        "array_bytes": 6144000,
+        "stored_bytes": 2263228,
+        "filters": [
+          {
+            "id": 32015,
+            "options": [
+              5
+            ],
+            "name": "HDF5 zstd filter; see https://github.com/HDFGroup/hdf5_plugins/blob/master/docs/RegisteredFilterPlugins.md"
+          }
+        ]
+      },
+      {
+        "path": "points/reference_visible_view_count",
+        "shape": [
+          8000
+        ],
+        "dtype": "uint16",
+        "array_bytes": 16000,
+        "stored_bytes": 16000,
+        "filters": []
+      },
+      {
+        "path": "robot/T_episode_from_robot_base",
+        "shape": [
+          4,
+          4
+        ],
+        "dtype": "float32",
+        "array_bytes": 64,
+        "stored_bytes": 64,
+        "filters": []
+      },
+      {
+        "path": "robot/joint_names",
+        "shape": [
+          16
+        ],
+        "dtype": "object",
+        "array_bytes": 128,
+        "stored_bytes": 256,
+        "filters": []
+      },
+      {
+        "path": "robot/joint_pos",
+        "shape": [
+          128,
+          16
+        ],
+        "dtype": "float32",
+        "array_bytes": 8192,
+        "stored_bytes": 8192,
+        "filters": [
+          {
+            "id": 32000,
+            "options": [
+              4,
+              261,
+              3072
+            ],
+            "name": "lzf"
+          }
+        ]
+      },
+      {
+        "path": "timestamps_s",
+        "shape": [
+          128
+        ],
+        "dtype": "float64",
+        "array_bytes": 1024,
+        "stored_bytes": 1152,
+        "filters": []
+      }
+    ]
+  },
+  {
+    "group_id": "robotwin-ur5",
+    "source_h5": "/local_nvme/zhangrong/wm3d/datasets_node42/robotwin_v6/episodes/ur5/30c615f16748ad3ebec0/episode.v6.h5",
+    "file_bytes": 39400569,
+    "raw_array_baseline_bytes": 1240939464,
+    "rgb_raw_bytes": 523468800,
+    "jpeg_bytes": 31457280,
+    "nodes": [
+      {
+        "path": "action_valid",
+        "shape": [
+          142,
+          16
+        ],
+        "dtype": "bool",
+        "array_bytes": 2272,
+        "stored_bytes": 57,
+        "filters": [
+          {
+            "id": 32015,
+            "options": [
+              5
+            ],
+            "name": "HDF5 zstd filter; see https://github.com/HDFGroup/hdf5_plugins/blob/master/docs/RegisteredFilterPlugins.md"
+          }
+        ]
+      },
+      {
+        "path": "actions",
+        "shape": [
+          142,
+          16
+        ],
+        "dtype": "float32",
+        "array_bytes": 9088,
+        "stored_bytes": 2251,
+        "filters": [
+          {
+            "id": 32000,
+            "options": [
+              4,
+              261,
+              3072
+            ],
+            "name": "lzf"
+          }
+        ]
+      },
+      {
+        "path": "cameras/head_camera/K",
+        "shape": [
+          142,
+          3,
+          3
+        ],
+        "dtype": "float32",
+        "array_bytes": 5112,
+        "stored_bytes": 5184,
+        "filters": []
+      },
+      {
+        "path": "cameras/head_camera/T_wc",
+        "shape": [
+          142,
+          4,
+          4
+        ],
+        "dtype": "float32",
+        "array_bytes": 9088,
+        "stored_bytes": 303,
+        "filters": [
+          {
+            "id": 32000,
+            "options": [
+              4,
+              261,
+              3072
+            ],
+            "name": "lzf"
+          }
+        ]
+      },
+      {
+        "path": "cameras/head_camera/camera_valid",
+        "shape": [
+          142
+        ],
+        "dtype": "bool",
+        "array_bytes": 142,
+        "stored_bytes": 50,
+        "filters": [
+          {
+            "id": 32015,
+            "options": [
+              5
+            ],
+            "name": "HDF5 zstd filter; see https://github.com/HDFGroup/hdf5_plugins/blob/master/docs/RegisteredFilterPlugins.md"
+          }
+        ]
+      },
+      {
+        "path": "cameras/head_camera/depth_m",
+        "shape": [
+          142,
+          480,
+          640
+        ],
+        "dtype": "int16",
+        "array_bytes": 87244800,
+        "stored_bytes": 1649588,
+        "filters": [
+          {
+            "id": 32015,
+            "options": [
+              5
+            ],
+            "name": "HDF5 zstd filter; see https://github.com/HDFGroup/hdf5_plugins/blob/master/docs/RegisteredFilterPlugins.md"
+          }
+        ]
+      },
+      {
+        "path": "cameras/head_camera/point_visible",
+        "shape": [
+          142,
+          8000
+        ],
+        "dtype": "bool",
+        "array_bytes": 1136000,
+        "stored_bytes": 130084,
+        "filters": [
+          {
+            "id": 32015,
+            "options": [
+              5
+            ],
+            "name": "HDF5 zstd filter; see https://github.com/HDFGroup/hdf5_plugins/blob/master/docs/RegisteredFilterPlugins.md"
+          }
+        ]
+      },
+      {
+        "path": "cameras/head_camera/rgb_jpeg_bytes",
+        "shape": [
+          9140549
+        ],
+        "dtype": "uint8",
+        "array_bytes": 9140549,
+        "stored_bytes": 9437184,
+        "filters": []
+      },
+      {
+        "path": "cameras/head_camera/rgb_jpeg_offsets",
+        "shape": [
+          143
+        ],
+        "dtype": "int64",
+        "array_bytes": 1144,
+        "stored_bytes": 528,
+        "filters": [
+          {
+            "id": 32015,
+            "options": [
+              5
+            ],
+            "name": "HDF5 zstd filter; see https://github.com/HDFGroup/hdf5_plugins/blob/master/docs/RegisteredFilterPlugins.md"
+          }
+        ]
+      },
+      {
+        "path": "cameras/head_camera/timestamps_s",
+        "shape": [
+          142
+        ],
+        "dtype": "float64",
+        "array_bytes": 1136,
+        "stored_bytes": 1152,
+        "filters": []
+      },
+      {
+        "path": "cameras/left_camera/K",
+        "shape": [
+          142,
+          3,
+          3
+        ],
+        "dtype": "float32",
+        "array_bytes": 5112,
+        "stored_bytes": 5184,
+        "filters": []
+      },
+      {
+        "path": "cameras/left_camera/T_wc",
+        "shape": [
+          142,
+          4,
+          4
+        ],
+        "dtype": "float32",
+        "array_bytes": 9088,
+        "stored_bytes": 7140,
+        "filters": [
+          {
+            "id": 32000,
+            "options": [
+              4,
+              261,
+              3072
+            ],
+            "name": "lzf"
+          }
+        ]
+      },
+      {
+        "path": "cameras/left_camera/camera_valid",
+        "shape": [
+          142
+        ],
+        "dtype": "bool",
+        "array_bytes": 142,
+        "stored_bytes": 50,
+        "filters": [
+          {
+            "id": 32015,
+            "options": [
+              5
+            ],
+            "name": "HDF5 zstd filter; see https://github.com/HDFGroup/hdf5_plugins/blob/master/docs/RegisteredFilterPlugins.md"
+          }
+        ]
+      },
+      {
+        "path": "cameras/left_camera/depth_m",
+        "shape": [
+          142,
+          480,
+          640
+        ],
+        "dtype": "int16",
+        "array_bytes": 87244800,
+        "stored_bytes": 1361407,
+        "filters": [
+          {
+            "id": 32015,
+            "options": [
+              5
+            ],
+            "name": "HDF5 zstd filter; see https://github.com/HDFGroup/hdf5_plugins/blob/master/docs/RegisteredFilterPlugins.md"
+          }
+        ]
+      },
+      {
+        "path": "cameras/left_camera/point_visible",
+        "shape": [
+          142,
+          8000
+        ],
+        "dtype": "bool",
+        "array_bytes": 1136000,
+        "stored_bytes": 44675,
+        "filters": [
+          {
+            "id": 32015,
+            "options": [
+              5
+            ],
+            "name": "HDF5 zstd filter; see https://github.com/HDFGroup/hdf5_plugins/blob/master/docs/RegisteredFilterPlugins.md"
+          }
+        ]
+      },
+      {
+        "path": "cameras/left_camera/rgb_jpeg_bytes",
+        "shape": [
+          5014345
+        ],
+        "dtype": "uint8",
+        "array_bytes": 5014345,
+        "stored_bytes": 5242880,
+        "filters": []
+      },
+      {
+        "path": "cameras/left_camera/rgb_jpeg_offsets",
+        "shape": [
+          143
+        ],
+        "dtype": "int64",
+        "array_bytes": 1144,
+        "stored_bytes": 498,
+        "filters": [
+          {
+            "id": 32015,
+            "options": [
+              5
+            ],
+            "name": "HDF5 zstd filter; see https://github.com/HDFGroup/hdf5_plugins/blob/master/docs/RegisteredFilterPlugins.md"
+          }
+        ]
+      },
+      {
+        "path": "cameras/left_camera/timestamps_s",
+        "shape": [
+          142
+        ],
+        "dtype": "float64",
+        "array_bytes": 1136,
+        "stored_bytes": 1152,
+        "filters": []
+      },
+      {
+        "path": "cameras/right_camera/K",
+        "shape": [
+          142,
+          3,
+          3
+        ],
+        "dtype": "float32",
+        "array_bytes": 5112,
+        "stored_bytes": 5184,
+        "filters": []
+      },
+      {
+        "path": "cameras/right_camera/T_wc",
+        "shape": [
+          142,
+          4,
+          4
+        ],
+        "dtype": "float32",
+        "array_bytes": 9088,
+        "stored_bytes": 7036,
+        "filters": [
+          {
+            "id": 32000,
+            "options": [
+              4,
+              261,
+              3072
+            ],
+            "name": "lzf"
+          }
+        ]
+      },
+      {
+        "path": "cameras/right_camera/camera_valid",
+        "shape": [
+          142
+        ],
+        "dtype": "bool",
+        "array_bytes": 142,
+        "stored_bytes": 50,
+        "filters": [
+          {
+            "id": 32015,
+            "options": [
+              5
+            ],
+            "name": "HDF5 zstd filter; see https://github.com/HDFGroup/hdf5_plugins/blob/master/docs/RegisteredFilterPlugins.md"
+          }
+        ]
+      },
+      {
+        "path": "cameras/right_camera/depth_m",
+        "shape": [
+          142,
+          480,
+          640
+        ],
+        "dtype": "int16",
+        "array_bytes": 87244800,
+        "stored_bytes": 452402,
+        "filters": [
+          {
+            "id": 32015,
+            "options": [
+              5
+            ],
+            "name": "HDF5 zstd filter; see https://github.com/HDFGroup/hdf5_plugins/blob/master/docs/RegisteredFilterPlugins.md"
+          }
+        ]
+      },
+      {
+        "path": "cameras/right_camera/point_visible",
+        "shape": [
+          142,
+          8000
+        ],
+        "dtype": "bool",
+        "array_bytes": 1136000,
+        "stored_bytes": 1308,
+        "filters": [
+          {
+            "id": 32015,
+            "options": [
+              5
+            ],
+            "name": "HDF5 zstd filter; see https://github.com/HDFGroup/hdf5_plugins/blob/master/docs/RegisteredFilterPlugins.md"
+          }
+        ]
+      },
+      {
+        "path": "cameras/right_camera/rgb_jpeg_bytes",
+        "shape": [
+          5049032
+        ],
+        "dtype": "uint8",
+        "array_bytes": 5049032,
+        "stored_bytes": 5242880,
+        "filters": []
+      },
+      {
+        "path": "cameras/right_camera/rgb_jpeg_offsets",
+        "shape": [
+          143
+        ],
+        "dtype": "int64",
+        "array_bytes": 1144,
+        "stored_bytes": 496,
+        "filters": [
+          {
+            "id": 32015,
+            "options": [
+              5
+            ],
+            "name": "HDF5 zstd filter; see https://github.com/HDFGroup/hdf5_plugins/blob/master/docs/RegisteredFilterPlugins.md"
+          }
+        ]
+      },
+      {
+        "path": "cameras/right_camera/timestamps_s",
+        "shape": [
+          142
+        ],
+        "dtype": "float64",
+        "array_bytes": 1136,
+        "stored_bytes": 1152,
+        "filters": []
+      },
+      {
+        "path": "cameras/robotview/K",
+        "shape": [
+          142,
+          3,
+          3
+        ],
+        "dtype": "float32",
+        "array_bytes": 5112,
+        "stored_bytes": 5184,
+        "filters": []
+      },
+      {
+        "path": "cameras/robotview/T_wc",
+        "shape": [
+          142,
+          4,
+          4
+        ],
+        "dtype": "float32",
+        "array_bytes": 9088,
+        "stored_bytes": 313,
+        "filters": [
+          {
+            "id": 32000,
+            "options": [
+              4,
+              261,
+              3072
+            ],
+            "name": "lzf"
+          }
+        ]
+      },
+      {
+        "path": "cameras/robotview/camera_valid",
+        "shape": [
+          142
+        ],
+        "dtype": "bool",
+        "array_bytes": 142,
+        "stored_bytes": 50,
+        "filters": [
+          {
+            "id": 32015,
+            "options": [
+              5
+            ],
+            "name": "HDF5 zstd filter; see https://github.com/HDFGroup/hdf5_plugins/blob/master/docs/RegisteredFilterPlugins.md"
+          }
+        ]
+      },
+      {
+        "path": "cameras/robotview/depth_m",
+        "shape": [
+          142,
+          480,
+          640
+        ],
+        "dtype": "int16",
+        "array_bytes": 87244800,
+        "stored_bytes": 1931814,
+        "filters": [
+          {
+            "id": 32015,
+            "options": [
+              5
+            ],
+            "name": "HDF5 zstd filter; see https://github.com/HDFGroup/hdf5_plugins/blob/master/docs/RegisteredFilterPlugins.md"
+          }
+        ]
+      },
+      {
+        "path": "cameras/robotview/point_visible",
+        "shape": [
+          142,
+          8000
+        ],
+        "dtype": "bool",
+        "array_bytes": 1136000,
+        "stored_bytes": 134312,
+        "filters": [
+          {
+            "id": 32015,
+            "options": [
+              5
+            ],
+            "name": "HDF5 zstd filter; see https://github.com/HDFGroup/hdf5_plugins/blob/master/docs/RegisteredFilterPlugins.md"
+          }
+        ]
+      },
+      {
+        "path": "cameras/robotview/rgb_jpeg_bytes",
+        "shape": [
+          10691225
+        ],
+        "dtype": "uint8",
+        "array_bytes": 10691225,
+        "stored_bytes": 11534336,
+        "filters": []
+      },
+      {
+        "path": "cameras/robotview/rgb_jpeg_offsets",
+        "shape": [
+          143
+        ],
+        "dtype": "int64",
+        "array_bytes": 1144,
+        "stored_bytes": 529,
+        "filters": [
+          {
+            "id": 32015,
+            "options": [
+              5
+            ],
+            "name": "HDF5 zstd filter; see https://github.com/HDFGroup/hdf5_plugins/blob/master/docs/RegisteredFilterPlugins.md"
+          }
+        ]
+      },
+      {
+        "path": "cameras/robotview/timestamps_s",
+        "shape": [
+          142
+        ],
+        "dtype": "float64",
+        "array_bytes": 1136,
+        "stored_bytes": 1152,
+        "filters": []
+      },
+      {
+        "path": "points/class_id",
+        "shape": [
+          8000
+        ],
+        "dtype": "uint8",
+        "array_bytes": 8000,
+        "stored_bytes": 26,
+        "filters": [
+          {
+            "id": 32015,
+            "options": [
+              5
+            ],
+            "name": "HDF5 zstd filter; see https://github.com/HDFGroup/hdf5_plugins/blob/master/docs/RegisteredFilterPlugins.md"
+          }
+        ]
+      },
+      {
+        "path": "points/frame0_visible_view_count",
+        "shape": [
+          8000
+        ],
+        "dtype": "uint16",
+        "array_bytes": 16000,
+        "stored_bytes": 16000,
+        "filters": []
+      },
+      {
+        "path": "points/geom_id",
+        "shape": [
+          8000
+        ],
+        "dtype": "int32",
+        "array_bytes": 32000,
+        "stored_bytes": 1844,
+        "filters": [
+          {
+            "id": 32015,
+            "options": [
+              5
+            ],
+            "name": "HDF5 zstd filter; see https://github.com/HDFGroup/hdf5_plugins/blob/master/docs/RegisteredFilterPlugins.md"
+          }
+        ]
+      },
+      {
+        "path": "points/owner_id",
+        "shape": [
+          8000
+        ],
+        "dtype": "int32",
+        "array_bytes": 32000,
+        "stored_bytes": 1842,
+        "filters": [
+          {
+            "id": 32015,
+            "options": [
+              5
+            ],
+            "name": "HDF5 zstd filter; see https://github.com/HDFGroup/hdf5_plugins/blob/master/docs/RegisteredFilterPlugins.md"
+          }
+        ]
+      },
+      {
+        "path": "points/point_is_dynamic",
+        "shape": [
+          8000
+        ],
+        "dtype": "bool",
+        "array_bytes": 8000,
+        "stored_bytes": 23,
+        "filters": [
+          {
+            "id": 32015,
+            "options": [
+              5
+            ],
+            "name": "HDF5 zstd filter; see https://github.com/HDFGroup/hdf5_plugins/blob/master/docs/RegisteredFilterPlugins.md"
+          }
+        ]
+      },
+      {
+        "path": "points/point_valid",
+        "shape": [
+          142,
+          8000
+        ],
+        "dtype": "bool",
+        "array_bytes": 1136000,
+        "stored_bytes": 102,
+        "filters": [
+          {
+            "id": 32015,
+            "options": [
+              5
+            ],
+            "name": "HDF5 zstd filter; see https://github.com/HDFGroup/hdf5_plugins/blob/master/docs/RegisteredFilterPlugins.md"
+          }
+        ]
+      },
+      {
+        "path": "points/point_world",
+        "shape": [
+          142,
+          8000,
+          3
+        ],
+        "dtype": "int16",
+        "array_bytes": 6816000,
+        "stored_bytes": 1954474,
+        "filters": [
+          {
+            "id": 32015,
+            "options": [
+              5
+            ],
+            "name": "HDF5 zstd filter; see https://github.com/HDFGroup/hdf5_plugins/blob/master/docs/RegisteredFilterPlugins.md"
+          }
+        ]
+      },
+      {
+        "path": "points/reference_visible_view_count",
+        "shape": [
+          8000
+        ],
+        "dtype": "uint16",
+        "array_bytes": 16000,
+        "stored_bytes": 16000,
+        "filters": []
+      },
+      {
+        "path": "robot/T_episode_from_robot_base",
+        "shape": [
+          4,
+          4
+        ],
+        "dtype": "float32",
+        "array_bytes": 64,
+        "stored_bytes": 64,
+        "filters": []
+      },
+      {
+        "path": "robot/joint_names",
+        "shape": [
+          16
+        ],
+        "dtype": "object",
+        "array_bytes": 128,
+        "stored_bytes": 256,
+        "filters": []
+      },
+      {
+        "path": "robot/joint_pos",
+        "shape": [
+          142,
+          16
+        ],
+        "dtype": "float32",
+        "array_bytes": 9088,
+        "stored_bytes": 7717,
+        "filters": [
+          {
+            "id": 32000,
+            "options": [
+              4,
+              261,
+              3072
+            ],
+            "name": "lzf"
+          }
+        ]
+      },
+      {
+        "path": "timestamps_s",
+        "shape": [
+          142
+        ],
+        "dtype": "float64",
+        "array_bytes": 1136,
+        "stored_bytes": 1152,
+        "filters": []
+      }
+    ]
+  },
+  {
+    "group_id": "robocasa-pandaomron",
+    "source_h5": "/local_nvme/zhangrong/wm3d/datasets_node45/robocasa365_v6/episodes/58bf28d8af8857adb7ba/episode.v6.h5",
+    "file_bytes": 223327759,
+    "raw_array_baseline_bytes": 4261785600,
+    "rgb_raw_bytes": 1793064960,
+    "jpeg_bytes": 141557760,
+    "nodes": [
+      {
+        "path": "action_valid",
+        "shape": [
+          570,
+          12
+        ],
+        "dtype": "bool",
+        "array_bytes": 6840,
+        "stored_bytes": 219,
+        "filters": [
+          {
+            "id": 32015,
+            "options": [
+              5
+            ],
+            "name": "HDF5 zstd filter; see https://github.com/HDFGroup/hdf5_plugins/blob/master/docs/RegisteredFilterPlugins.md"
+          }
+        ]
+      },
+      {
+        "path": "actions",
+        "shape": [
+          570,
+          12
+        ],
+        "dtype": "float32",
+        "array_bytes": 27360,
+        "stored_bytes": 10305,
+        "filters": [
+          {
+            "id": 32000,
+            "options": [
+              4,
+              261,
+              2304
+            ],
+            "name": "lzf"
+          }
+        ]
+      },
+      {
+        "path": "cameras/agentview_center/K",
+        "shape": [
+          570,
+          3,
+          3
+        ],
+        "dtype": "float32",
+        "array_bytes": 20520,
+        "stored_bytes": 20736,
+        "filters": []
+      },
+      {
+        "path": "cameras/agentview_center/T_wc",
+        "shape": [
+          570,
+          4,
+          4
+        ],
+        "dtype": "float32",
+        "array_bytes": 36480,
+        "stored_bytes": 19439,
+        "filters": [
+          {
+            "id": 32000,
+            "options": [
+              4,
+              261,
+              3072
+            ],
+            "name": "lzf"
+          }
+        ]
+      },
+      {
+        "path": "cameras/agentview_center/camera_valid",
+        "shape": [
+          570
+        ],
+        "dtype": "bool",
+        "array_bytes": 570,
+        "stored_bytes": 198,
+        "filters": [
+          {
+            "id": 32015,
+            "options": [
+              5
+            ],
+            "name": "HDF5 zstd filter; see https://github.com/HDFGroup/hdf5_plugins/blob/master/docs/RegisteredFilterPlugins.md"
+          }
+        ]
+      },
+      {
+        "path": "cameras/agentview_center/depth_m",
+        "shape": [
+          570,
+          512,
+          512
+        ],
+        "dtype": "int16",
+        "array_bytes": 298844160,
+        "stored_bytes": 17026953,
+        "filters": [
+          {
+            "id": 32015,
+            "options": [
+              5
+            ],
+            "name": "HDF5 zstd filter; see https://github.com/HDFGroup/hdf5_plugins/blob/master/docs/RegisteredFilterPlugins.md"
+          }
+        ]
+      },
+      {
+        "path": "cameras/agentview_center/point_visible",
+        "shape": [
+          570,
+          8000
+        ],
+        "dtype": "bool",
+        "array_bytes": 4560000,
+        "stored_bytes": 737617,
+        "filters": [
+          {
+            "id": 32015,
+            "options": [
+              5
+            ],
+            "name": "HDF5 zstd filter; see https://github.com/HDFGroup/hdf5_plugins/blob/master/docs/RegisteredFilterPlugins.md"
+          }
+        ]
+      },
+      {
+        "path": "cameras/agentview_center/rgb_jpeg_bytes",
+        "shape": [
+          32560598
+        ],
+        "dtype": "uint8",
+        "array_bytes": 32560598,
+        "stored_bytes": 33554432,
+        "filters": []
+      },
+      {
+        "path": "cameras/agentview_center/rgb_jpeg_offsets",
+        "shape": [
+          571
+        ],
+        "dtype": "int64",
+        "array_bytes": 4568,
+        "stored_bytes": 2141,
+        "filters": [
+          {
+            "id": 32015,
+            "options": [
+              5
+            ],
+            "name": "HDF5 zstd filter; see https://github.com/HDFGroup/hdf5_plugins/blob/master/docs/RegisteredFilterPlugins.md"
+          }
+        ]
+      },
+      {
+        "path": "cameras/agentview_center/timestamps_s",
+        "shape": [
+          570
+        ],
+        "dtype": "float64",
+        "array_bytes": 4560,
+        "stored_bytes": 4608,
+        "filters": []
+      },
+      {
+        "path": "cameras/eye_in_hand/K",
+        "shape": [
+          570,
+          3,
+          3
+        ],
+        "dtype": "float32",
+        "array_bytes": 20520,
+        "stored_bytes": 20736,
+        "filters": []
+      },
+      {
+        "path": "cameras/eye_in_hand/T_wc",
+        "shape": [
+          570,
+          4,
+          4
+        ],
+        "dtype": "float32",
+        "array_bytes": 36480,
+        "stored_bytes": 29263,
+        "filters": [
+          {
+            "id": 32000,
+            "options": [
+              4,
+              261,
+              3072
+            ],
+            "name": "lzf"
+          }
+        ]
+      },
+      {
+        "path": "cameras/eye_in_hand/camera_valid",
+        "shape": [
+          570
+        ],
+        "dtype": "bool",
+        "array_bytes": 570,
+        "stored_bytes": 198,
+        "filters": [
+          {
+            "id": 32015,
+            "options": [
+              5
+            ],
+            "name": "HDF5 zstd filter; see https://github.com/HDFGroup/hdf5_plugins/blob/master/docs/RegisteredFilterPlugins.md"
+          }
+        ]
+      },
+      {
+        "path": "cameras/eye_in_hand/depth_m",
+        "shape": [
+          570,
+          512,
+          512
+        ],
+        "dtype": "int16",
+        "array_bytes": 298844160,
+        "stored_bytes": 21839906,
+        "filters": [
+          {
+            "id": 32015,
+            "options": [
+              5
+            ],
+            "name": "HDF5 zstd filter; see https://github.com/HDFGroup/hdf5_plugins/blob/master/docs/RegisteredFilterPlugins.md"
+          }
+        ]
+      },
+      {
+        "path": "cameras/eye_in_hand/point_visible",
+        "shape": [
+          570,
+          8000
+        ],
+        "dtype": "bool",
+        "array_bytes": 4560000,
+        "stored_bytes": 203866,
+        "filters": [
+          {
+            "id": 32015,
+            "options": [
+              5
+            ],
+            "name": "HDF5 zstd filter; see https://github.com/HDFGroup/hdf5_plugins/blob/master/docs/RegisteredFilterPlugins.md"
+          }
+        ]
+      },
+      {
+        "path": "cameras/eye_in_hand/rgb_jpeg_bytes",
+        "shape": [
+          28421637
+        ],
+        "dtype": "uint8",
+        "array_bytes": 28421637,
+        "stored_bytes": 29360128,
+        "filters": []
+      },
+      {
+        "path": "cameras/eye_in_hand/rgb_jpeg_offsets",
+        "shape": [
+          571
+        ],
+        "dtype": "int64",
+        "array_bytes": 4568,
+        "stored_bytes": 2088,
+        "filters": [
+          {
+            "id": 32015,
+            "options": [
+              5
+            ],
+            "name": "HDF5 zstd filter; see https://github.com/HDFGroup/hdf5_plugins/blob/master/docs/RegisteredFilterPlugins.md"
+          }
+        ]
+      },
+      {
+        "path": "cameras/eye_in_hand/timestamps_s",
+        "shape": [
+          570
+        ],
+        "dtype": "float64",
+        "array_bytes": 4560,
+        "stored_bytes": 4608,
+        "filters": []
+      },
+      {
+        "path": "cameras/left/K",
+        "shape": [
+          570,
+          3,
+          3
+        ],
+        "dtype": "float32",
+        "array_bytes": 20520,
+        "stored_bytes": 20736,
+        "filters": []
+      },
+      {
+        "path": "cameras/left/T_wc",
+        "shape": [
+          570,
+          4,
+          4
+        ],
+        "dtype": "float32",
+        "array_bytes": 36480,
+        "stored_bytes": 21155,
+        "filters": [
+          {
+            "id": 32000,
+            "options": [
+              4,
+              261,
+              3072
+            ],
+            "name": "lzf"
+          }
+        ]
+      },
+      {
+        "path": "cameras/left/camera_valid",
+        "shape": [
+          570
+        ],
+        "dtype": "bool",
+        "array_bytes": 570,
+        "stored_bytes": 198,
+        "filters": [
+          {
+            "id": 32015,
+            "options": [
+              5
+            ],
+            "name": "HDF5 zstd filter; see https://github.com/HDFGroup/hdf5_plugins/blob/master/docs/RegisteredFilterPlugins.md"
+          }
+        ]
+      },
+      {
+        "path": "cameras/left/depth_m",
+        "shape": [
+          570,
+          512,
+          512
+        ],
+        "dtype": "int16",
+        "array_bytes": 298844160,
+        "stored_bytes": 15429899,
+        "filters": [
+          {
+            "id": 32015,
+            "options": [
+              5
+            ],
+            "name": "HDF5 zstd filter; see https://github.com/HDFGroup/hdf5_plugins/blob/master/docs/RegisteredFilterPlugins.md"
+          }
+        ]
+      },
+      {
+        "path": "cameras/left/point_visible",
+        "shape": [
+          570,
+          8000
+        ],
+        "dtype": "bool",
+        "array_bytes": 4560000,
+        "stored_bytes": 673320,
+        "filters": [
+          {
+            "id": 32015,
+            "options": [
+              5
+            ],
+            "name": "HDF5 zstd filter; see https://github.com/HDFGroup/hdf5_plugins/blob/master/docs/RegisteredFilterPlugins.md"
+          }
+        ]
+      },
+      {
+        "path": "cameras/left/rgb_jpeg_bytes",
+        "shape": [
+          38383196
+        ],
+        "dtype": "uint8",
+        "array_bytes": 38383196,
+        "stored_bytes": 38797312,
+        "filters": []
+      },
+      {
+        "path": "cameras/left/rgb_jpeg_offsets",
+        "shape": [
+          571
+        ],
+        "dtype": "int64",
+        "array_bytes": 4568,
+        "stored_bytes": 2137,
+        "filters": [
+          {
+            "id": 32015,
+            "options": [
+              5
+            ],
+            "name": "HDF5 zstd filter; see https://github.com/HDFGroup/hdf5_plugins/blob/master/docs/RegisteredFilterPlugins.md"
+          }
+        ]
+      },
+      {
+        "path": "cameras/left/timestamps_s",
+        "shape": [
+          570
+        ],
+        "dtype": "float64",
+        "array_bytes": 4560,
+        "stored_bytes": 4608,
+        "filters": []
+      },
+      {
+        "path": "cameras/right/K",
+        "shape": [
+          570,
+          3,
+          3
+        ],
+        "dtype": "float32",
+        "array_bytes": 20520,
+        "stored_bytes": 20736,
+        "filters": []
+      },
+      {
+        "path": "cameras/right/T_wc",
+        "shape": [
+          570,
+          4,
+          4
+        ],
+        "dtype": "float32",
+        "array_bytes": 36480,
+        "stored_bytes": 21251,
+        "filters": [
+          {
+            "id": 32000,
+            "options": [
+              4,
+              261,
+              3072
+            ],
+            "name": "lzf"
+          }
+        ]
+      },
+      {
+        "path": "cameras/right/camera_valid",
+        "shape": [
+          570
+        ],
+        "dtype": "bool",
+        "array_bytes": 570,
+        "stored_bytes": 198,
+        "filters": [
+          {
+            "id": 32015,
+            "options": [
+              5
+            ],
+            "name": "HDF5 zstd filter; see https://github.com/HDFGroup/hdf5_plugins/blob/master/docs/RegisteredFilterPlugins.md"
+          }
+        ]
+      },
+      {
+        "path": "cameras/right/depth_m",
+        "shape": [
+          570,
+          512,
+          512
+        ],
+        "dtype": "int16",
+        "array_bytes": 298844160,
+        "stored_bytes": 16144944,
+        "filters": [
+          {
+            "id": 32015,
+            "options": [
+              5
+            ],
+            "name": "HDF5 zstd filter; see https://github.com/HDFGroup/hdf5_plugins/blob/master/docs/RegisteredFilterPlugins.md"
+          }
+        ]
+      },
+      {
+        "path": "cameras/right/point_visible",
+        "shape": [
+          570,
+          8000
+        ],
+        "dtype": "bool",
+        "array_bytes": 4560000,
+        "stored_bytes": 658189,
+        "filters": [
+          {
+            "id": 32015,
+            "options": [
+              5
+            ],
+            "name": "HDF5 zstd filter; see https://github.com/HDFGroup/hdf5_plugins/blob/master/docs/RegisteredFilterPlugins.md"
+          }
+        ]
+      },
+      {
+        "path": "cameras/right/rgb_jpeg_bytes",
+        "shape": [
+          38936581
+        ],
+        "dtype": "uint8",
+        "array_bytes": 38936581,
+        "stored_bytes": 39845888,
+        "filters": []
+      },
+      {
+        "path": "cameras/right/rgb_jpeg_offsets",
+        "shape": [
+          571
+        ],
+        "dtype": "int64",
+        "array_bytes": 4568,
+        "stored_bytes": 2140,
+        "filters": [
+          {
+            "id": 32015,
+            "options": [
+              5
+            ],
+            "name": "HDF5 zstd filter; see https://github.com/HDFGroup/hdf5_plugins/blob/master/docs/RegisteredFilterPlugins.md"
+          }
+        ]
+      },
+      {
+        "path": "cameras/right/timestamps_s",
+        "shape": [
+          570
+        ],
+        "dtype": "float64",
+        "array_bytes": 4560,
+        "stored_bytes": 4608,
+        "filters": []
+      },
+      {
+        "path": "points/class_id",
+        "shape": [
+          8000
+        ],
+        "dtype": "uint8",
+        "array_bytes": 8000,
+        "stored_bytes": 26,
+        "filters": [
+          {
+            "id": 32015,
+            "options": [
+              5
+            ],
+            "name": "HDF5 zstd filter; see https://github.com/HDFGroup/hdf5_plugins/blob/master/docs/RegisteredFilterPlugins.md"
+          }
+        ]
+      },
+      {
+        "path": "points/frame0_visible_view_count",
+        "shape": [
+          8000
+        ],
+        "dtype": "uint16",
+        "array_bytes": 16000,
+        "stored_bytes": 16000,
+        "filters": []
+      },
+      {
+        "path": "points/geom_id",
+        "shape": [
+          8000
+        ],
+        "dtype": "int32",
+        "array_bytes": 32000,
+        "stored_bytes": 3883,
+        "filters": [
+          {
+            "id": 32015,
+            "options": [
+              5
+            ],
+            "name": "HDF5 zstd filter; see https://github.com/HDFGroup/hdf5_plugins/blob/master/docs/RegisteredFilterPlugins.md"
+          }
+        ]
+      },
+      {
+        "path": "points/owner_id",
+        "shape": [
+          8000
+        ],
+        "dtype": "int32",
+        "array_bytes": 32000,
+        "stored_bytes": 3484,
+        "filters": [
+          {
+            "id": 32015,
+            "options": [
+              5
+            ],
+            "name": "HDF5 zstd filter; see https://github.com/HDFGroup/hdf5_plugins/blob/master/docs/RegisteredFilterPlugins.md"
+          }
+        ]
+      },
+      {
+        "path": "points/point_is_dynamic",
+        "shape": [
+          8000
+        ],
+        "dtype": "bool",
+        "array_bytes": 8000,
+        "stored_bytes": 23,
+        "filters": [
+          {
+            "id": 32015,
+            "options": [
+              5
+            ],
+            "name": "HDF5 zstd filter; see https://github.com/HDFGroup/hdf5_plugins/blob/master/docs/RegisteredFilterPlugins.md"
+          }
+        ]
+      },
+      {
+        "path": "points/point_valid",
+        "shape": [
+          570,
+          8000
+        ],
+        "dtype": "bool",
+        "array_bytes": 4560000,
+        "stored_bytes": 372,
+        "filters": [
+          {
+            "id": 32015,
+            "options": [
+              5
+            ],
+            "name": "HDF5 zstd filter; see https://github.com/HDFGroup/hdf5_plugins/blob/master/docs/RegisteredFilterPlugins.md"
+          }
+        ]
+      },
+      {
+        "path": "points/point_world",
+        "shape": [
+          570,
+          8000,
+          3
+        ],
+        "dtype": "int16",
+        "array_bytes": 27360000,
+        "stored_bytes": 8578227,
+        "filters": [
+          {
+            "id": 32015,
+            "options": [
+              5
+            ],
+            "name": "HDF5 zstd filter; see https://github.com/HDFGroup/hdf5_plugins/blob/master/docs/RegisteredFilterPlugins.md"
+          }
+        ]
+      },
+      {
+        "path": "points/reference_visible_view_count",
+        "shape": [
+          8000
+        ],
+        "dtype": "uint16",
+        "array_bytes": 16000,
+        "stored_bytes": 16000,
+        "filters": []
+      },
+      {
+        "path": "robot/T_episode_from_robot_base",
+        "shape": [
+          4,
+          4
+        ],
+        "dtype": "float32",
+        "array_bytes": 64,
+        "stored_bytes": 64,
+        "filters": []
+      },
+      {
+        "path": "robot/joint_names",
+        "shape": [
+          13
+        ],
+        "dtype": "object",
+        "array_bytes": 104,
+        "stored_bytes": 208,
+        "filters": []
+      },
+      {
+        "path": "robot/joint_pos",
+        "shape": [
+          570,
+          13
+        ],
+        "dtype": "float32",
+        "array_bytes": 29640,
+        "stored_bytes": 28447,
+        "filters": [
+          {
+            "id": 32000,
+            "options": [
+              4,
+              261,
+              2496
+            ],
+            "name": "lzf"
+          }
+        ]
+      },
+      {
+        "path": "timestamps_s",
+        "shape": [
+          570
+        ],
+        "dtype": "float64",
+        "array_bytes": 4560,
+        "stored_bytes": 4608,
+        "filters": []
+      }
+    ]
+  }
+]

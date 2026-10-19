@@ -1,4 +1,25 @@
 (() => {
+  const overviewTabs = [...document.querySelectorAll('.overview-tabs [role="tab"]')];
+  const overviewPanels = [...document.querySelectorAll('.overview-panel')];
+  function selectOverview(index, focus = false) {
+    overviewTabs.forEach((tab, i) => {
+      tab.setAttribute('aria-selected', String(i === index));
+      tab.tabIndex = i === index ? 0 : -1;
+      overviewPanels[i].hidden = i !== index;
+    });
+    if (focus) overviewTabs[index].focus();
+  }
+  overviewTabs.forEach((tab, index) => {
+    tab.addEventListener('click', () => selectOverview(index));
+    tab.addEventListener('keydown', event => {
+      let next;
+      if (event.key === 'ArrowRight') next = (index + 1) % overviewTabs.length;
+      if (event.key === 'ArrowLeft') next = (index - 1 + overviewTabs.length) % overviewTabs.length;
+      if (event.key === 'Home') next = 0;
+      if (event.key === 'End') next = overviewTabs.length - 1;
+      if (next !== undefined) { event.preventDefault(); selectOverview(next, true); }
+    });
+  });
   let family = 'all';
   const groups = [...document.querySelectorAll('.gallery-group')];
   const bodyFilter = document.querySelector('#body-filter');
@@ -62,38 +83,14 @@
       else move();
     }));
   });
-  const sections = [...document.querySelectorAll('.article-body > section')];
-  const sectionButtons = [...document.querySelectorAll('[data-section]')];
-  function showSection(id) {
-    sections.forEach(section => {
-      section.hidden = section.id !== id;
-      if (section.hidden) section.querySelectorAll('video').forEach(video => video.pause());
-    });
-    sectionButtons.forEach(button => button.setAttribute('aria-expanded', String(button.dataset.section === id)));
-  }
-  sectionButtons.forEach(button => button.addEventListener('click', () => {
-    const id = button.getAttribute('aria-expanded') === 'true' ? '' : button.dataset.section;
-    showSection(id);
-    history.replaceState(null, '', location.pathname + location.search + (id ? '#' + id : ''));
-  }));
   function revealHash() {
-    let id;
-    try { id = decodeURIComponent(location.hash.slice(1)); } catch { return; }
-    const target = document.getElementById(id);
-    const section = target && target.closest('.content-panel');
-    if (!section) return;
-    showSection(section.id);
-    if (target.classList.contains('gallery-group')) {
+    const target = document.getElementById(decodeURIComponent(location.hash.slice(1)));
+    if (target && target.classList.contains('gallery-group')) {
       family = 'all'; bodyFilter.value = 'all';
       document.querySelectorAll('[data-family-filter]').forEach(b => b.setAttribute('aria-pressed', String(b.dataset.familyFilter === 'all')));
-      filter();
+      filter(); target.scrollIntoView();
     }
-    target.scrollIntoView();
   }
-  // Repeated links to the current fragment must also reopen a collapsed panel.
-  document.querySelectorAll('a[href^="#"]').forEach(link => link.addEventListener('click', () => {
-    if (link.getAttribute('href') === location.hash) revealHash();
-  }));
   window.addEventListener('hashchange', revealHash); revealHash();
   // Load preview covers only when they approach the viewport.
   const covers = [...document.querySelectorAll('video[data-poster]')];
@@ -103,5 +100,17 @@
       entries.forEach(entry => { if (entry.isIntersecting) { loadCover(entry.target); coverObserver.unobserve(entry.target); } });
     }, { rootMargin: '600px 0px' });
     covers.forEach(video => coverObserver.observe(video));
+    const tocLinks = [...document.querySelectorAll('aside a[href^="#"]')];
+    const tocObserver = new IntersectionObserver(entries => {
+      const visible = entries.filter(entry => entry.isIntersecting).sort((a,b) => a.boundingClientRect.top - b.boundingClientRect.top);
+      if (!visible.length) return;
+      const id = visible[0].target.id;
+      tocLinks.forEach(link => {
+        const active = link.getAttribute('href') === '#' + id;
+        link.classList.toggle('is-active', active);
+        if (active) link.setAttribute('aria-current','location'); else link.removeAttribute('aria-current');
+      });
+    }, { rootMargin: '-8% 0px -65% 0px' });
+    document.querySelectorAll('.article-body > section').forEach(section => tocObserver.observe(section));
   } else covers.forEach(loadCover);
 })();

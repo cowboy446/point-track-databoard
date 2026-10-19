@@ -1,5 +1,5 @@
 {
-  "title": "QuARC 最终成品数据集",
+  "title": "QuARC dataset catalogue",
   "captured_utc": "2026-10-18T14:30:46.620782+00:00",
   "scope": "Final datasets_node42/43/45 roots; excludes migration reports, Lift and GenieSim production directories.",
   "total": {
@@ -2057,7 +2057,7 @@
       "id": "intern-franka",
       "dataset_key": "interndata_v6",
       "embodiment": "franka",
-      "label": "Franka · 单臂",
+      "label": "Franka · single-arm",
       "summary": {
         "episodes": 11353,
         "frames": 1890988,
@@ -2383,7 +2383,7 @@
       "id": "intern-split-aloha",
       "dataset_key": "interndata_v6",
       "embodiment": "split_aloha",
-      "label": "Split Aloha · 双臂",
+      "label": "Split Aloha · dual-arm",
       "summary": {
         "episodes": 18106,
         "frames": 5452450,
@@ -2889,7 +2889,7 @@
       "id": "libero-franka",
       "dataset_key": "libero_v6",
       "embodiment": "franka",
-      "label": "Franka Panda · 单臂",
+      "label": "Franka Panda · single-arm",
       "summary": {
         "episodes": 6500,
         "frames": 1007618,
@@ -3241,7 +3241,7 @@
       "id": "robotwin-aloha-agilex",
       "dataset_key": "robotwin_v6",
       "embodiment": "aloha-agilex",
-      "label": "Aloha AgileX · 双臂",
+      "label": "Aloha AgileX · dual-arm",
       "summary": {
         "episodes": 2500,
         "frames": 750081,
@@ -3429,7 +3429,7 @@
       "id": "robotwin-arx-x5",
       "dataset_key": "robotwin_v6",
       "embodiment": "arx-x5",
-      "label": "ARX X5 · 双臂",
+      "label": "ARX X5 · dual-arm",
       "summary": {
         "episodes": 2500,
         "frames": 499999,
@@ -3617,7 +3617,7 @@
       "id": "robotwin-franka",
       "dataset_key": "robotwin_v6",
       "embodiment": "franka",
-      "label": "Franka · 双臂",
+      "label": "Franka · dual-arm",
       "summary": {
         "episodes": 2300,
         "frames": 431170,
@@ -3797,7 +3797,7 @@
       "id": "robotwin-piper",
       "dataset_key": "robotwin_v6",
       "embodiment": "piper",
-      "label": "Piper · 双臂",
+      "label": "Piper · dual-arm",
       "summary": {
         "episodes": 1850,
         "frames": 366015,
@@ -3959,7 +3959,7 @@
       "id": "robotwin-ur5",
       "dataset_key": "robotwin_v6",
       "embodiment": "ur5",
-      "label": "UR5 · 双臂",
+      "label": "UR5 · dual-arm",
       "summary": {
         "episodes": 2350,
         "frames": 435263,
@@ -4141,7 +4141,7 @@
       "id": "robocasa-pandaomron",
       "dataset_key": "robocasa365_v6",
       "embodiment": "PandaOmron",
-      "label": "PandaOmron · 移动单臂",
+      "label": "PandaOmron · mobile single-arm",
       "summary": {
         "episodes": 10000,
         "frames": 9187914,

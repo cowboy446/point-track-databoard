@@ -1,25 +1,26 @@
 # QuARC · Point Track Databoard
 
-中文具身点流数据总表，入口为根目录 `index.html`。
+Robot manipulation data catalogue. Open `index.html` or visit:
+https://cowboy446.github.io/point-track-databoard/
 
-- InternData：29,459 条，合并 node42 / node43，含 Franka 与 Split Aloha。
-- LIBERO：6,500 条，Franka Panda。
-- RoboTwin：11,500 条，5 种双臂本体。
-- RoboCasa365：10,000 条，PandaOmron。
-- 合计 57,459 条、237.18 小时、10.18 TB。
-- 9 种数据集 × 本体组合，每组 5 条多视角 RGB-D 与三维点流 MP4。
-- H5-v6 目录树、各字段形状 / 类型 / 属性，以及读取示例。
+- InternData: 29,459 episodes, combining node42 / node43; Franka and Split Aloha.
+- LIBERO: 6,500 episodes, Franka Panda.
+- RoboTwin: 11,500 episodes, five dual-arm embodiments.
+- RoboCasa365: 10,000 episodes, PandaOmron.
+- Total: 57,459 episodes, 237.18 hours, 10.18 TB.
+- Nine dataset–embodiment groups, each with five multi-view RGB-D and 3D point-track previews.
+- H5-v6 structures, field shapes, dtypes, attributes and reading examples.
 
-## 排版与文案
+## Design & editing
 
-排版参考 https://pantheon.inc/research/argus ，使用浅灰纸面、细线分隔、大标题和左侧目录。
-文案编辑使用 https://github.com/renky1025/agent-skills/tree/main/de-ai-writing 。
+Layout and sample controls reference https://pantheon.inc/research/argus .
+Copy editing uses https://github.com/renky1025/agent-skills/tree/main/de-ai-writing .
+Geist, Geist Mono and DM Sans are self-hosted from Google Fonts under the SIL Open Font License; license files are in `assets/fonts/`.
 
 ## GitHub Pages
 
-仓库 Settings → Pages → Source 选择 **GitHub Actions**。
-工作流 `.github/workflows/pages.yml` 将根目录静态内容部署到：
+Settings → Pages → Source: **GitHub Actions**.
+The `.github/workflows/pages.yml` workflow deploys the repository root.
 
-https://cowboy446.github.io/point-track-databoard/
-
-`data/` 保存统计、抽样、视频校验与实际 H5 结构元数据；`assets/` 保存样式、脚本、MP4、封面与联系表。
+`data/` contains statistics, sample selections, video checks and inspected H5 metadata.
+`assets/` contains styles, scripts, fonts, MP4 previews, posters and contact sheets.

@@ -9,7 +9,7 @@
       if (!group.hidden) { count += group.querySelectorAll('video').length; visibleGroups++; }
       else group.querySelectorAll('video').forEach(v => v.pause());
     }
-    document.querySelector('#video-count').textContent = `显示 ${count} / 45 条 · ${visibleGroups} 组`;
+    document.querySelector('#video-count').textContent = `${count} / 45 samples · ${visibleGroups} ${visibleGroups === 1 ? 'group' : 'groups'}`;
   }
   document.querySelectorAll('[data-family-filter]').forEach(button => button.addEventListener('click', () => {
     family = button.dataset.familyFilter; bodyFilter.value = 'all';
@@ -20,6 +20,36 @@
     family = 'all';
     document.querySelectorAll('[data-family-filter]').forEach(b => b.setAttribute('aria-pressed', String(b.dataset.familyFilter === 'all')));
     filter();
+  });
+  groups.forEach(group => {
+    const tabs = [...group.querySelectorAll('[role="tab"]')];
+    const panels = [...group.querySelectorAll('[role="tabpanel"]')];
+    function selectSample(index, focus = false) {
+      tabs.forEach((tab, i) => {
+        const selected = i === index;
+        tab.setAttribute('aria-selected', String(selected));
+        tab.tabIndex = selected ? 0 : -1;
+        panels[i].hidden = !selected;
+        if (!selected) panels[i].querySelector('video').pause();
+      });
+      const video = panels[index].querySelector('video');
+      if (video.dataset.poster) {
+        video.poster = video.dataset.poster;
+        delete video.dataset.poster;
+      }
+      if (focus) tabs[index].focus();
+    }
+    tabs.forEach((tab, index) => {
+      tab.addEventListener('click', () => selectSample(index));
+      tab.addEventListener('keydown', event => {
+        let next;
+        if (event.key === 'ArrowRight') next = (index + 1) % tabs.length;
+        if (event.key === 'ArrowLeft') next = (index - 1 + tabs.length) % tabs.length;
+        if (event.key === 'Home') next = 0;
+        if (event.key === 'End') next = tabs.length - 1;
+        if (next !== undefined) { event.preventDefault(); selectSample(next, true); }
+      });
+    });
   });
   document.querySelectorAll('.video-card').forEach(card => {
     const video = card.querySelector('video');
@@ -43,7 +73,7 @@
   window.addEventListener('hashchange', revealHash); revealHash();
   // Load preview covers only when they approach the viewport.
   const covers = [...document.querySelectorAll('video[data-poster]')];
-  const loadCover = video => { video.poster = video.dataset.poster; delete video.dataset.poster; };
+  const loadCover = video => { if (video.dataset.poster) { video.poster = video.dataset.poster; delete video.dataset.poster; } };
   if ('IntersectionObserver' in window) {
     const coverObserver = new IntersectionObserver(entries => {
       entries.forEach(entry => { if (entry.isIntersecting) { loadCover(entry.target); coverObserver.unobserve(entry.target); } });

@@ -41,4 +41,25 @@
     }
   }
   window.addEventListener('hashchange', revealHash); revealHash();
+  // Load preview covers only when they approach the viewport.
+  const covers = [...document.querySelectorAll('video[data-poster]')];
+  const loadCover = video => { video.poster = video.dataset.poster; delete video.dataset.poster; };
+  if ('IntersectionObserver' in window) {
+    const coverObserver = new IntersectionObserver(entries => {
+      entries.forEach(entry => { if (entry.isIntersecting) { loadCover(entry.target); coverObserver.unobserve(entry.target); } });
+    }, { rootMargin: '600px 0px' });
+    covers.forEach(video => coverObserver.observe(video));
+    const tocLinks = [...document.querySelectorAll('aside a[href^="#"]')];
+    const tocObserver = new IntersectionObserver(entries => {
+      const visible = entries.filter(entry => entry.isIntersecting).sort((a,b) => a.boundingClientRect.top - b.boundingClientRect.top);
+      if (!visible.length) return;
+      const id = visible[0].target.id;
+      tocLinks.forEach(link => {
+        const active = link.getAttribute('href') === '#' + id;
+        link.classList.toggle('is-active', active);
+        if (active) link.setAttribute('aria-current','location'); else link.removeAttribute('aria-current');
+      });
+    }, { rootMargin: '-8% 0px -65% 0px' });
+    document.querySelectorAll('.article-body > section').forEach(section => tocObserver.observe(section));
+  } else covers.forEach(loadCover);
 })();

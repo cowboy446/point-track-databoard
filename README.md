@@ -10,6 +10,11 @@
 - 9 种数据集 × 本体组合，每组 5 条多视角 RGB-D 与三维点流 MP4。
 - H5-v6 目录树、各字段形状 / 类型 / 属性，以及读取示例。
 
+## 排版与文案
+
+排版参考 https://pantheon.inc/research/argus ，使用浅灰纸面、细线分隔、大标题和左侧目录。
+文案编辑使用 https://github.com/renky1025/agent-skills/tree/main/de-ai-writing 。
+
 ## GitHub Pages
 
 仓库 Settings → Pages → Source 选择 **GitHub Actions**。

@@ -110,7 +110,7 @@
       this.range.addEventListener('input',()=>{const frame=Number(this.range.value);v.currentTime=frame/this.fps+1e-7;});
       card.querySelector('[data-reset-view]').addEventListener('click',()=>this.view?.reset());
       card.querySelector('[data-point-size]').addEventListener('input',e=>{if(this.view){this.view.pointSize=Number(e.target.value);this.view.draw();}});
-      card.querySelector('[data-fullscreen]').addEventListener('click',()=>{const panel=card.querySelector('.replay-panel');if(document.fullscreenElement)document.exitFullscreen();else panel.requestFullscreen?.();});
+      card.querySelector('[data-fullscreen]').addEventListener('click',()=>{const panel=card.closest('.replay-shell')||card.querySelector('.replay-panel');if(document.fullscreenElement)document.exitFullscreen();else panel.requestFullscreen?.();});
       card.addEventListener('samplevisibility',()=>this.reconcile());
       card.quarcPlayer=this;this.sync();
     }

@@ -1,0 +1,60 @@
+{
+  "format": "quarc-pointstream-v1",
+  "frames": 472,
+  "points": 8000,
+  "fps": 30.0,
+  "scale": 0.0001,
+  "offset": [
+    0.6867147480457353,
+    -0.000225183486145919,
+    0.8119579801544177
+  ],
+  "bounds": [
+    [
+      0.0969147480457353,
+      -0.772025183486146,
+      0.43305798015441765
+    ],
+    [
+      1.2765147480457353,
+      0.7715748165138541,
+      1.1908579801544177
+    ]
+  ],
+  "xyz_encoding": "int16-le temporal delta modulo 65536; first frame absolute",
+  "valid_encoding": "packed bits, little bit order, frame-major",
+  "color_encoding": "uint8 RGB per frame and stable point ID; native visible-camera RGB, neutral static / amber dynamic otherwise",
+  "layout": [
+    {
+      "name": "xyz",
+      "bytes": 22656000
+    },
+    {
+      "name": "valid",
+      "bytes": 472000
+    },
+    {
+      "name": "dynamic",
+      "bytes": 1000
+    },
+    {
+      "name": "colors",
+      "bytes": 11328000
+    },
+    {
+      "name": "timestamps",
+      "bytes": 3776
+    }
+  ],
+  "data_file": "intern-split-aloha-03-06727d40.points.bin.gz",
+  "data_sha256": "3aa0ebdfcf2ec23957ee859136e350e8afdcd9277d9fe0b3603e604151084974",
+  "data_bytes": 13254404,
+  "source_h5": "/mnt/data/zhangrong/datasets/interndata_v6/episodes/split_aloha/06727d4028cf23c38930/episode.v6.h5",
+  "source_sha256": "2d9f6d5de71ba25041279c0c8bd680b44a18d097a106931d476e7ed13a73c84c",
+  "source_unchanged": true,
+  "episode_key": "06727d4028cf23c38930",
+  "slug": "intern-split-aloha-03-06727d40",
+  "all_native_points": true,
+  "coordinate_roundtrip_exact": true,
+  "elapsed_s": 8.58
+}

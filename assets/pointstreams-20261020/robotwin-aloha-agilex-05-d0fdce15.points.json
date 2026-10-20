@@ -1,0 +1,60 @@
+{
+  "format": "quarc-pointstream-v1",
+  "frames": 132,
+  "points": 8000,
+  "fps": 25.0,
+  "scale": 0.0001,
+  "offset": [
+    0.48402835614979267,
+    0.00436970591545105,
+    0.9639133810997009
+  ],
+  "bounds": [
+    [
+      -0.031771643850207365,
+      -0.5724302940845489,
+      0.7400133810997009
+    ],
+    [
+      0.9998283561497927,
+      0.581169705915451,
+      1.187813381099701
+    ]
+  ],
+  "xyz_encoding": "int16-le temporal delta modulo 65536; first frame absolute",
+  "valid_encoding": "packed bits, little bit order, frame-major",
+  "color_encoding": "uint8 RGB per frame and stable point ID; native visible-camera RGB, neutral static / amber dynamic otherwise",
+  "layout": [
+    {
+      "name": "xyz",
+      "bytes": 6336000
+    },
+    {
+      "name": "valid",
+      "bytes": 132000
+    },
+    {
+      "name": "dynamic",
+      "bytes": 1000
+    },
+    {
+      "name": "colors",
+      "bytes": 3168000
+    },
+    {
+      "name": "timestamps",
+      "bytes": 1056
+    }
+  ],
+  "data_file": "robotwin-aloha-agilex-05-d0fdce15.points.bin.gz",
+  "data_sha256": "fb3ae57cc27c482246c22889ededf24f2a13211cb0f94b8f0804d8742b8d214c",
+  "data_bytes": 1220260,
+  "source_h5": "/mnt/data/zhangrong/datasets/robotwin_v6/episodes/aloha-agilex/d0fdce15f45457a807aa/episode.v6.h5",
+  "source_sha256": "da53f9c32c18731d485194186c42d8c8042bd3f30adc86bfa9a87322c57484d0",
+  "source_unchanged": true,
+  "episode_key": "d0fdce15f45457a807aa",
+  "slug": "robotwin-aloha-agilex-05-d0fdce15",
+  "all_native_points": true,
+  "coordinate_roundtrip_exact": true,
+  "elapsed_s": 1.49
+}

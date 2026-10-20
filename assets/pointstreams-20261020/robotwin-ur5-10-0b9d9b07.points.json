@@ -1,0 +1,60 @@
+{
+  "format": "quarc-pointstream-v1",
+  "frames": 324,
+  "points": 8000,
+  "fps": 25.0,
+  "scale": 0.0001,
+  "offset": [
+    0.45380084961652756,
+    0.4677547290921211,
+    0.026177525520324707
+  ],
+  "bounds": [
+    [
+      -0.18459915038347252,
+      -0.06254527090787887,
+      -0.4826224744796753
+    ],
+    [
+      1.0922008496165276,
+      0.9980547290921211,
+      0.5349775255203247
+    ]
+  ],
+  "xyz_encoding": "int16-le temporal delta modulo 65536; first frame absolute",
+  "valid_encoding": "packed bits, little bit order, frame-major",
+  "color_encoding": "uint8 RGB per frame and stable point ID; native visible-camera RGB, neutral static / amber dynamic otherwise",
+  "layout": [
+    {
+      "name": "xyz",
+      "bytes": 15552000
+    },
+    {
+      "name": "valid",
+      "bytes": 324000
+    },
+    {
+      "name": "dynamic",
+      "bytes": 1000
+    },
+    {
+      "name": "colors",
+      "bytes": 7776000
+    },
+    {
+      "name": "timestamps",
+      "bytes": 2592
+    }
+  ],
+  "data_file": "robotwin-ur5-10-0b9d9b07.points.bin.gz",
+  "data_sha256": "7f3e5b8755633bfd86d317d8f79bc194aa72cb41a5fad64c73d0d036bfbe9964",
+  "data_bytes": 3440287,
+  "source_h5": "/mnt/data/zhangrong/datasets/robotwin_v6/episodes/ur5/0b9d9b07a03c6d9d2c32/episode.v6.h5",
+  "source_sha256": "e5acade68a8f0c56ec8007dd5ae0b7052070b1131b546771eee7875cf6db7ed0",
+  "source_unchanged": true,
+  "episode_key": "0b9d9b07a03c6d9d2c32",
+  "slug": "robotwin-ur5-10-0b9d9b07",
+  "all_native_points": true,
+  "coordinate_roundtrip_exact": true,
+  "elapsed_s": 2.91
+}

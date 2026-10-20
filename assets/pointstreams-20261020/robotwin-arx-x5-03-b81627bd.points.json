@@ -1,0 +1,60 @@
+{
+  "format": "quarc-pointstream-v1",
+  "frames": 109,
+  "points": 8000,
+  "fps": 25.0,
+  "scale": 0.0001,
+  "offset": [
+    0.22196829319000244,
+    -0.2776584029197693,
+    0.19283690676093102
+  ],
+  "bounds": [
+    [
+      -0.25523170680999757,
+      -0.8312584029197693,
+      -0.043963093239068995
+    ],
+    [
+      0.6991682931900025,
+      0.2759415970802307,
+      0.429636906760931
+    ]
+  ],
+  "xyz_encoding": "int16-le temporal delta modulo 65536; first frame absolute",
+  "valid_encoding": "packed bits, little bit order, frame-major",
+  "color_encoding": "uint8 RGB per frame and stable point ID; native visible-camera RGB, neutral static / amber dynamic otherwise",
+  "layout": [
+    {
+      "name": "xyz",
+      "bytes": 5232000
+    },
+    {
+      "name": "valid",
+      "bytes": 109000
+    },
+    {
+      "name": "dynamic",
+      "bytes": 1000
+    },
+    {
+      "name": "colors",
+      "bytes": 2616000
+    },
+    {
+      "name": "timestamps",
+      "bytes": 872
+    }
+  ],
+  "data_file": "robotwin-arx-x5-03-b81627bd.points.bin.gz",
+  "data_sha256": "e1c02d6e1d17cb868b6492fa3b7bf9d3501ab772371c3265f571f7fe4e832f5f",
+  "data_bytes": 1604982,
+  "source_h5": "/mnt/data/zhangrong/datasets/robotwin_v6/episodes/arx-x5/b81627bdcbdaf45b0b9d/episode.v6.h5",
+  "source_sha256": "5493a5b2e3893330c7dea46cd35507a1956343278f3fcdfcdade5885661e3002",
+  "source_unchanged": true,
+  "episode_key": "b81627bdcbdaf45b0b9d",
+  "slug": "robotwin-arx-x5-03-b81627bd",
+  "all_native_points": true,
+  "coordinate_roundtrip_exact": true,
+  "elapsed_s": 1.3
+}

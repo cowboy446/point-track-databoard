@@ -1,0 +1,60 @@
+{
+  "format": "quarc-pointstream-v1",
+  "frames": 178,
+  "points": 8000,
+  "fps": 25.0,
+  "scale": 0.0001,
+  "offset": [
+    0.24520573019981384,
+    -0.2843053489923477,
+    0.21402548253536224
+  ],
+  "bounds": [
+    [
+      -0.3067942698001862,
+      -0.8647053489923477,
+      -0.009974517464637761
+    ],
+    [
+      0.7972057301998139,
+      0.2960946510076523,
+      0.4380254825353622
+    ]
+  ],
+  "xyz_encoding": "int16-le temporal delta modulo 65536; first frame absolute",
+  "valid_encoding": "packed bits, little bit order, frame-major",
+  "color_encoding": "uint8 RGB per frame and stable point ID; native visible-camera RGB, neutral static / amber dynamic otherwise",
+  "layout": [
+    {
+      "name": "xyz",
+      "bytes": 8544000
+    },
+    {
+      "name": "valid",
+      "bytes": 178000
+    },
+    {
+      "name": "dynamic",
+      "bytes": 1000
+    },
+    {
+      "name": "colors",
+      "bytes": 4272000
+    },
+    {
+      "name": "timestamps",
+      "bytes": 1424
+    }
+  ],
+  "data_file": "robotwin-piper-04-711d7a4e.points.bin.gz",
+  "data_sha256": "a011a3d07afb070820e07ef0bd19af141dec13a0053b7d811b8c2f0529618401",
+  "data_bytes": 3110873,
+  "source_h5": "/mnt/data/zhangrong/datasets/robotwin_v6/episodes/piper/711d7a4e532c8abe1d95/episode.v6.h5",
+  "source_sha256": "bd3a83e12cfc5258bd278a2e1a33ad63604a6ed6ffd7b41d23455222798062c0",
+  "source_unchanged": true,
+  "episode_key": "711d7a4e532c8abe1d95",
+  "slug": "robotwin-piper-04-711d7a4e",
+  "all_native_points": true,
+  "coordinate_roundtrip_exact": true,
+  "elapsed_s": 1.97
+}

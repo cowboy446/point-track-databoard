@@ -8,7 +8,7 @@ https://cowboy446.github.io/point-track-databoard/
 - robotwin-random: 11,500 episodes, five dual-arm embodiments.
 - RoboCasa365: 10,000 episodes, PandaOmron.
 - Total: 57,459 episodes, 237.18 hours, 10.18 TB.
-- Nine dataset–embodiment groups, each with ten multi-view RGB-D and 3D point-track previews.
+- Nine dataset–embodiment groups, each with ten synchronized RGB-D and interactive 3D point-stream previews (all 8,000 native points).
 - H5 structures, field shapes, dtypes, attributes and reading examples.
 
 ## Design & editing

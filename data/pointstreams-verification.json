@@ -1,0 +1,819 @@
+{
+  "passed": true,
+  "streams": 90,
+  "frames": 24180,
+  "points_per_frame": 8000,
+  "method": "Production browser worker decoded each downloaded gzip stream; reconstructed int16 coordinates and packed validity match SHA256 from independent reads of all native H5 point arrays.",
+  "results": [
+    {
+      "slug": "intern-franka-02-aec632f5",
+      "passed": true,
+      "frames": 163,
+      "points": 8000,
+      "exact_native_coordinates": true,
+      "exact_native_validity": true,
+      "data_sha256": "34b92751a18a63d68f7d06ba94a713d37cabfb540b0a3b453e7146926b5553bb"
+    },
+    {
+      "slug": "intern-franka-01-57df5d01",
+      "passed": true,
+      "frames": 422,
+      "points": 8000,
+      "exact_native_coordinates": true,
+      "exact_native_validity": true,
+      "data_sha256": "6740acbd1d5052bf76117d375eb16db21618aef230738dc8bcb35349829abd7f"
+    },
+    {
+      "slug": "intern-split-aloha-01-d23cfa22",
+      "passed": true,
+      "frames": 219,
+      "points": 8000,
+      "exact_native_coordinates": true,
+      "exact_native_validity": true,
+      "data_sha256": "8d7736dcf8dd90b6866a1ca48e9fd6d435ce856e1b738b694134f8797ed046eb"
+    },
+    {
+      "slug": "intern-split-aloha-02-5662d955",
+      "passed": true,
+      "frames": 935,
+      "points": 8000,
+      "exact_native_coordinates": true,
+      "exact_native_validity": true,
+      "data_sha256": "f682a002b580bd025df889d96b18616c3474cabc9fa8f048bc7b809938309c36"
+    },
+    {
+      "slug": "libero-franka-02-158c73f1",
+      "passed": true,
+      "frames": 135,
+      "points": 8000,
+      "exact_native_coordinates": true,
+      "exact_native_validity": true,
+      "data_sha256": "5eb091e90ea4bab2b040f3473e85e87ef5e534aa1d8a75c1539e63b79cb66a15"
+    },
+    {
+      "slug": "libero-franka-01-2230a30a",
+      "passed": true,
+      "frames": 157,
+      "points": 8000,
+      "exact_native_coordinates": true,
+      "exact_native_validity": true,
+      "data_sha256": "016c1698ff690458559ac9a7daa44e63f4765322c8d22e2d52346014ab254d2c"
+    },
+    {
+      "slug": "libero-franka-03-589d97b7",
+      "passed": true,
+      "frames": 92,
+      "points": 8000,
+      "exact_native_coordinates": true,
+      "exact_native_validity": true,
+      "data_sha256": "f5978eac985bf9ab27e589b08d45e29205b557a464e7a9ba0451d0b1d5fa83db"
+    },
+    {
+      "slug": "libero-franka-04-27f5c3c6",
+      "passed": true,
+      "frames": 174,
+      "points": 8000,
+      "exact_native_coordinates": true,
+      "exact_native_validity": true,
+      "data_sha256": "816b7b528996d6522b1feef8b302141ee5c70d8f362a9e3b65dfba3d97aa52b5"
+    },
+    {
+      "slug": "libero-franka-05-87f2e404",
+      "passed": true,
+      "frames": 105,
+      "points": 8000,
+      "exact_native_coordinates": true,
+      "exact_native_validity": true,
+      "data_sha256": "57e35e7e416f18a01ff9adb3038a780d997c2f6a370da5bc236d914c00b64072"
+    },
+    {
+      "slug": "robotwin-aloha-agilex-01-c7b333bc",
+      "passed": true,
+      "frames": 199,
+      "points": 8000,
+      "exact_native_coordinates": true,
+      "exact_native_validity": true,
+      "data_sha256": "a5fa399336d5d5daf2710dd19a963b13cf360c1d585827265ec83f4ef51790f5"
+    },
+    {
+      "slug": "robotwin-aloha-agilex-02-a6cb37ba",
+      "passed": true,
+      "frames": 172,
+      "points": 8000,
+      "exact_native_coordinates": true,
+      "exact_native_validity": true,
+      "data_sha256": "22dfc57d0bdd8acbe87109f21cb84633994fcc352dfb75e2dbf14d3c85bad60d"
+    },
+    {
+      "slug": "robotwin-aloha-agilex-03-7734e64d",
+      "passed": true,
+      "frames": 322,
+      "points": 8000,
+      "exact_native_coordinates": true,
+      "exact_native_validity": true,
+      "data_sha256": "5acc01e2367d83eee8ea39f0e751254f49e2e485c266c104af80cb31521a598e"
+    },
+    {
+      "slug": "robotwin-aloha-agilex-05-d0fdce15",
+      "passed": true,
+      "frames": 132,
+      "points": 8000,
+      "exact_native_coordinates": true,
+      "exact_native_validity": true,
+      "data_sha256": "fb3ae57cc27c482246c22889ededf24f2a13211cb0f94b8f0804d8742b8d214c"
+    },
+    {
+      "slug": "robotwin-aloha-agilex-04-ead2b3e6",
+      "passed": true,
+      "frames": 212,
+      "points": 8000,
+      "exact_native_coordinates": true,
+      "exact_native_validity": true,
+      "data_sha256": "48336976c1c82a110c1be412c8509e6d24f7555cf0f522b60e6efe584dd24b97"
+    },
+    {
+      "slug": "robotwin-arx-x5-01-74df0f45",
+      "passed": true,
+      "frames": 92,
+      "points": 8000,
+      "exact_native_coordinates": true,
+      "exact_native_validity": true,
+      "data_sha256": "06c6374a41cff7e462d73cc1114281ff7030934cb8f38fb8c03e65f58db722a3"
+    },
+    {
+      "slug": "robotwin-arx-x5-02-87ec00df",
+      "passed": true,
+      "frames": 98,
+      "points": 8000,
+      "exact_native_coordinates": true,
+      "exact_native_validity": true,
+      "data_sha256": "f69d1645b35afe83d1dfd2b9e0be6ae92266c4015b223f34129b49e1a9be7059"
+    },
+    {
+      "slug": "robotwin-arx-x5-03-b81627bd",
+      "passed": true,
+      "frames": 109,
+      "points": 8000,
+      "exact_native_coordinates": true,
+      "exact_native_validity": true,
+      "data_sha256": "e1c02d6e1d17cb868b6492fa3b7bf9d3501ab772371c3265f571f7fe4e832f5f"
+    },
+    {
+      "slug": "robotwin-arx-x5-04-1850d211",
+      "passed": true,
+      "frames": 202,
+      "points": 8000,
+      "exact_native_coordinates": true,
+      "exact_native_validity": true,
+      "data_sha256": "84c8546c548e9e5d00fa08e39becb3d8eed06b0fceda3d42f11c10d1d9417af1"
+    },
+    {
+      "slug": "robotwin-arx-x5-05-5543c646",
+      "passed": true,
+      "frames": 162,
+      "points": 8000,
+      "exact_native_coordinates": true,
+      "exact_native_validity": true,
+      "data_sha256": "30db769dddbe875d5cd7ebff99d4d1cc7f3df29a5759b69130ff24630f181f89"
+    },
+    {
+      "slug": "robotwin-franka-01-05d4b7f5",
+      "passed": true,
+      "frames": 213,
+      "points": 8000,
+      "exact_native_coordinates": true,
+      "exact_native_validity": true,
+      "data_sha256": "0dde599448ff2e8b5d993d5a1cf3016629b55df082a8b456b0dccf1469ec7810"
+    },
+    {
+      "slug": "robotwin-franka-03-093363b1",
+      "passed": true,
+      "frames": 117,
+      "points": 8000,
+      "exact_native_coordinates": true,
+      "exact_native_validity": true,
+      "data_sha256": "c0861424006bad4cf5a0b4f118f633fd243351eb88b62a2efaa577c8a3d4ead1"
+    },
+    {
+      "slug": "robotwin-franka-02-d533ad1c",
+      "passed": true,
+      "frames": 113,
+      "points": 8000,
+      "exact_native_coordinates": true,
+      "exact_native_validity": true,
+      "data_sha256": "24c01c49783e9006f4d2cac87ae82e0d3eb7812c948877b26208a4231a1366c1"
+    },
+    {
+      "slug": "robotwin-franka-04-5e11b8ac",
+      "passed": true,
+      "frames": 116,
+      "points": 8000,
+      "exact_native_coordinates": true,
+      "exact_native_validity": true,
+      "data_sha256": "ca1d9508a7972a1c7ab5880cf9612410eafb032235e56f3e84361fefe209c5ef"
+    },
+    {
+      "slug": "robotwin-franka-05-b8b5cc38",
+      "passed": true,
+      "frames": 431,
+      "points": 8000,
+      "exact_native_coordinates": true,
+      "exact_native_validity": true,
+      "data_sha256": "f1fbcd4d384f605320888744cb7180330bb16d0f83d53b260968a90bafeb0f7e"
+    },
+    {
+      "slug": "robotwin-piper-02-bc5f2982",
+      "passed": true,
+      "frames": 110,
+      "points": 8000,
+      "exact_native_coordinates": true,
+      "exact_native_validity": true,
+      "data_sha256": "6ce7db2a369941b060ab9ed5518a1a35fe2aeb922a0655072a37e57fabb88fd6"
+    },
+    {
+      "slug": "robotwin-piper-01-066abe4a",
+      "passed": true,
+      "frames": 128,
+      "points": 8000,
+      "exact_native_coordinates": true,
+      "exact_native_validity": true,
+      "data_sha256": "e34b26c57e79b7a83ac3b0fc8c90556b5742de7fb43c934d9bd3109171fa2d77"
+    },
+    {
+      "slug": "robotwin-piper-03-3abbad09",
+      "passed": true,
+      "frames": 135,
+      "points": 8000,
+      "exact_native_coordinates": true,
+      "exact_native_validity": true,
+      "data_sha256": "77ca8f702255a0a5daf99647937baac02d59865f24881c844654846356ebb87c"
+    },
+    {
+      "slug": "robotwin-piper-04-711d7a4e",
+      "passed": true,
+      "frames": 178,
+      "points": 8000,
+      "exact_native_coordinates": true,
+      "exact_native_validity": true,
+      "data_sha256": "a011a3d07afb070820e07ef0bd19af141dec13a0053b7d811b8c2f0529618401"
+    },
+    {
+      "slug": "robotwin-ur5-01-30c615f1",
+      "passed": true,
+      "frames": 142,
+      "points": 8000,
+      "exact_native_coordinates": true,
+      "exact_native_validity": true,
+      "data_sha256": "29806c181585c04b3d4518bdaab1937cea4ff3a8950ce04af1a676ac61cf27f3"
+    },
+    {
+      "slug": "robotwin-piper-05-5a20e4d3",
+      "passed": true,
+      "frames": 291,
+      "points": 8000,
+      "exact_native_coordinates": true,
+      "exact_native_validity": true,
+      "data_sha256": "cd44e6249728b2a4472e2738e4ea687425041ad41fe309ad9f14834610188a6f"
+    },
+    {
+      "slug": "robotwin-ur5-02-cea5d99f",
+      "passed": true,
+      "frames": 123,
+      "points": 8000,
+      "exact_native_coordinates": true,
+      "exact_native_validity": true,
+      "data_sha256": "68798976440d245bc09d868519f0a2c1eddcbac7550b84fd554b604a1ecd6d16"
+    },
+    {
+      "slug": "robotwin-ur5-03-69f46a3a",
+      "passed": true,
+      "frames": 143,
+      "points": 8000,
+      "exact_native_coordinates": true,
+      "exact_native_validity": true,
+      "data_sha256": "77f3ec99c559cc3f175db7ff00184248541b19f9a6848d45ef38dacbad96890c"
+    },
+    {
+      "slug": "robotwin-ur5-04-6fa6d81d",
+      "passed": true,
+      "frames": 130,
+      "points": 8000,
+      "exact_native_coordinates": true,
+      "exact_native_validity": true,
+      "data_sha256": "65dcacdfa0334edc62069dd31694df6ee7f638d1acd86544ca0e87c0c6f83ab3"
+    },
+    {
+      "slug": "robotwin-ur5-05-a9bbb981",
+      "passed": true,
+      "frames": 261,
+      "points": 8000,
+      "exact_native_coordinates": true,
+      "exact_native_validity": true,
+      "data_sha256": "bf68b5676d7e6312b3f40ee7582a99881f272d4a239124824a177a8878c5e553"
+    },
+    {
+      "slug": "intern-franka-03-ff715068",
+      "passed": true,
+      "frames": 129,
+      "points": 8000,
+      "exact_native_coordinates": true,
+      "exact_native_validity": true,
+      "data_sha256": "64a6e5b0b86f416cdbdc76ee4a7b908da2234ef76f469dd1099f571c0a683973"
+    },
+    {
+      "slug": "intern-franka-04-9f7e50b7",
+      "passed": true,
+      "frames": 191,
+      "points": 8000,
+      "exact_native_coordinates": true,
+      "exact_native_validity": true,
+      "data_sha256": "ef417cf7e0216f0c45fe32367f7d458e1b24a06033c9758fb1dab44ee0902508"
+    },
+    {
+      "slug": "intern-franka-05-380d7f12",
+      "passed": true,
+      "frames": 138,
+      "points": 8000,
+      "exact_native_coordinates": true,
+      "exact_native_validity": true,
+      "data_sha256": "156613fc46a939750c4e8217bbdb8d9cbd4b07a961b24a4f8c8b5c363999dad0"
+    },
+    {
+      "slug": "intern-split-aloha-03-06727d40",
+      "passed": true,
+      "frames": 472,
+      "points": 8000,
+      "exact_native_coordinates": true,
+      "exact_native_validity": true,
+      "data_sha256": "3aa0ebdfcf2ec23957ee859136e350e8afdcd9277d9fe0b3603e604151084974"
+    },
+    {
+      "slug": "intern-split-aloha-05-20593b1e",
+      "passed": true,
+      "frames": 201,
+      "points": 8000,
+      "exact_native_coordinates": true,
+      "exact_native_validity": true,
+      "data_sha256": "3d63cefc98e214c16f93b6d5b49942c83166446a732d81fc3c62ddf54043db63"
+    },
+    {
+      "slug": "intern-split-aloha-04-b834c60e",
+      "passed": true,
+      "frames": 217,
+      "points": 8000,
+      "exact_native_coordinates": true,
+      "exact_native_validity": true,
+      "data_sha256": "0a8b118542df60c993ca4e32259a356fa0206ea882179bacf7a9b85a9d676653"
+    },
+    {
+      "slug": "robocasa-pandaomron-02-1badeab7",
+      "passed": true,
+      "frames": 211,
+      "points": 8000,
+      "exact_native_coordinates": true,
+      "exact_native_validity": true,
+      "data_sha256": "2a0659eb39ffd4d50442915152f474f3ef4a60e0a3313f9bd74955aae8dc9b95"
+    },
+    {
+      "slug": "robocasa-pandaomron-01-58bf28d8",
+      "passed": true,
+      "frames": 570,
+      "points": 8000,
+      "exact_native_coordinates": true,
+      "exact_native_validity": true,
+      "data_sha256": "79a131b1794639fc6b1f498e4de5053f44ab39e754760acb340e2ca30c0a8e04"
+    },
+    {
+      "slug": "robocasa-pandaomron-03-2176c486",
+      "passed": true,
+      "frames": 91,
+      "points": 8000,
+      "exact_native_coordinates": true,
+      "exact_native_validity": true,
+      "data_sha256": "4db99f23fad6401a395fcca0b5da4951592d17606952fd4464fe268147deb652"
+    },
+    {
+      "slug": "robocasa-pandaomron-04-1c4d648a",
+      "passed": true,
+      "frames": 169,
+      "points": 8000,
+      "exact_native_coordinates": true,
+      "exact_native_validity": true,
+      "data_sha256": "3ff05a70e8dc20e53c28729524879c872563bcefe39c8ff4e507f424f78190ad"
+    },
+    {
+      "slug": "robotwin-arx-x5-08-e9990d1f",
+      "passed": true,
+      "frames": 101,
+      "points": 8000,
+      "exact_native_coordinates": true,
+      "exact_native_validity": true,
+      "data_sha256": "2fc4089bf7f968811bd7d79f70e13ef7fa65330b96713ceb8fe3057b535a7735"
+    },
+    {
+      "slug": "robocasa-pandaomron-05-ce54a29b",
+      "passed": true,
+      "frames": 2391,
+      "points": 8000,
+      "exact_native_coordinates": true,
+      "exact_native_validity": true,
+      "data_sha256": "192cf7015f9ba2584490323daaf1f38c6d0c94b44d2a3692ff802aad95d8055c"
+    },
+    {
+      "slug": "robotwin-arx-x5-07-c22bf80d",
+      "passed": true,
+      "frames": 117,
+      "points": 8000,
+      "exact_native_coordinates": true,
+      "exact_native_validity": true,
+      "data_sha256": "3fee13f2a5770887704d7f0f8dc6f118d5f2457ec852d5aae038bc1c7a86eb87"
+    },
+    {
+      "slug": "libero-franka-10-d9025b38",
+      "passed": true,
+      "frames": 110,
+      "points": 8000,
+      "exact_native_coordinates": true,
+      "exact_native_validity": true,
+      "data_sha256": "e3e7d100d1001f84be067b4e394525a57d0a1800c6ca3312a3c5e544b11cf1ec"
+    },
+    {
+      "slug": "libero-franka-06-6007dede",
+      "passed": true,
+      "frames": 133,
+      "points": 8000,
+      "exact_native_coordinates": true,
+      "exact_native_validity": true,
+      "data_sha256": "a95a19bb778135ed8222654ef4bd9058ccefc1a647fe534c640b74bee28b8a78"
+    },
+    {
+      "slug": "libero-franka-07-4f09bb23",
+      "passed": true,
+      "frames": 125,
+      "points": 8000,
+      "exact_native_coordinates": true,
+      "exact_native_validity": true,
+      "data_sha256": "e30f47eca622916424f74cef92d84c6a62eb2acf390e4142b9b56ed144dada3b"
+    },
+    {
+      "slug": "intern-franka-10-23ed6623",
+      "passed": true,
+      "frames": 135,
+      "points": 8000,
+      "exact_native_coordinates": true,
+      "exact_native_validity": true,
+      "data_sha256": "a470a2dd74cdd65cd9e452a72b9376b573f57faae91362c2ce63dfaed87710ee"
+    },
+    {
+      "slug": "robotwin-aloha-agilex-09-25876dc7",
+      "passed": true,
+      "frames": 170,
+      "points": 8000,
+      "exact_native_coordinates": true,
+      "exact_native_validity": true,
+      "data_sha256": "6e3bea117e8a128a785213a43a6c34915a29dc9aef7e693321c2bcd8586a8c76"
+    },
+    {
+      "slug": "intern-franka-09-43236ace",
+      "passed": true,
+      "frames": 144,
+      "points": 8000,
+      "exact_native_coordinates": true,
+      "exact_native_validity": true,
+      "data_sha256": "085cc8054ceb15b468bb0c75a5e2fd5f16ac62e138d81aa39c4b867aca822583"
+    },
+    {
+      "slug": "robotwin-aloha-agilex-08-d7938b8c",
+      "passed": true,
+      "frames": 185,
+      "points": 8000,
+      "exact_native_coordinates": true,
+      "exact_native_validity": true,
+      "data_sha256": "8b53a4e5bbdd420cf0413371dff3d9f5ee4a0c09815187fe690ca416fd222a0a"
+    },
+    {
+      "slug": "robotwin-franka-06-fe2d70f4",
+      "passed": true,
+      "frames": 97,
+      "points": 8000,
+      "exact_native_coordinates": true,
+      "exact_native_validity": true,
+      "data_sha256": "d15f7316b3530d3721e7d06c29d38b7ca9dc8f7ead81e9fd4ed9ad3986401ed4"
+    },
+    {
+      "slug": "intern-franka-07-35190771",
+      "passed": true,
+      "frames": 145,
+      "points": 8000,
+      "exact_native_coordinates": true,
+      "exact_native_validity": true,
+      "data_sha256": "2b3586964aceaf7bb04c78356b9b028b5084d96fad1da0d3329525d83d630ab2"
+    },
+    {
+      "slug": "robotwin-arx-x5-10-8719348d",
+      "passed": true,
+      "frames": 124,
+      "points": 8000,
+      "exact_native_coordinates": true,
+      "exact_native_validity": true,
+      "data_sha256": "ebac4845cf41bb9b9f508034fbc17b4b0964fd2bead5bd4a8edded83d6de9532"
+    },
+    {
+      "slug": "libero-franka-09-583b8293",
+      "passed": true,
+      "frames": 244,
+      "points": 8000,
+      "exact_native_coordinates": true,
+      "exact_native_validity": true,
+      "data_sha256": "f8343c74e6ad8b5c576c3c5a77e0b1605ecd03dfbb59816dbddc0eb6ef0a5f53"
+    },
+    {
+      "slug": "intern-split-aloha-10-eb001329",
+      "passed": true,
+      "frames": 169,
+      "points": 8000,
+      "exact_native_coordinates": true,
+      "exact_native_validity": true,
+      "data_sha256": "1f9d1c577674ebd9fef24bcbff5a588199cbb523c2b2194518f525e01383ccd7"
+    },
+    {
+      "slug": "libero-franka-08-e0c9290f",
+      "passed": true,
+      "frames": 250,
+      "points": 8000,
+      "exact_native_coordinates": true,
+      "exact_native_validity": true,
+      "data_sha256": "0531b2ed68d641661b17b7e73a110e9c88d06db8ebd1f6ed6e0e8427f584663f"
+    },
+    {
+      "slug": "intern-franka-08-89717d29",
+      "passed": true,
+      "frames": 205,
+      "points": 8000,
+      "exact_native_coordinates": true,
+      "exact_native_validity": true,
+      "data_sha256": "f0a21ef150a55c7d78e4716c1aedadb4b0665490d9c3674186a2aa7188c78a18"
+    },
+    {
+      "slug": "robotwin-arx-x5-06-f093b34d",
+      "passed": true,
+      "frames": 274,
+      "points": 8000,
+      "exact_native_coordinates": true,
+      "exact_native_validity": true,
+      "data_sha256": "c3caa9e3204cc1ca884a526bff27cf435f0d4a07f345381eaa66182e50e0f93b"
+    },
+    {
+      "slug": "intern-split-aloha-07-a511af9f",
+      "passed": true,
+      "frames": 190,
+      "points": 8000,
+      "exact_native_coordinates": true,
+      "exact_native_validity": true,
+      "data_sha256": "3ccdc7bda330748127b27ce88371cb0871265ba89fce9f7e177fb1847742b2d8"
+    },
+    {
+      "slug": "intern-split-aloha-08-bd734415",
+      "passed": true,
+      "frames": 184,
+      "points": 8000,
+      "exact_native_coordinates": true,
+      "exact_native_validity": true,
+      "data_sha256": "7351a8dad71b1770d3164a69d71805834b1f80febf91b136a9d2503addb0563f"
+    },
+    {
+      "slug": "robotwin-piper-09-cd86f1e8",
+      "passed": true,
+      "frames": 97,
+      "points": 8000,
+      "exact_native_coordinates": true,
+      "exact_native_validity": true,
+      "data_sha256": "ab733d2096fe3322931940f2134afaea7774ec6c795e9ecbb95820caa0135e2f"
+    },
+    {
+      "slug": "robotwin-franka-07-4d3d308b",
+      "passed": true,
+      "frames": 186,
+      "points": 8000,
+      "exact_native_coordinates": true,
+      "exact_native_validity": true,
+      "data_sha256": "c3c010c0794756005f7413a0cda0d5e55adddeb8d7f5ef1b5e3f35d4a5828f22"
+    },
+    {
+      "slug": "intern-split-aloha-06-c371c2f9",
+      "passed": true,
+      "frames": 224,
+      "points": 8000,
+      "exact_native_coordinates": true,
+      "exact_native_validity": true,
+      "data_sha256": "424d1c4437dd7d0435fe1a9723f92cb8505a7f26e9004f033f37ad6913278837"
+    },
+    {
+      "slug": "robotwin-aloha-agilex-10-7cc4a71d",
+      "passed": true,
+      "frames": 325,
+      "points": 8000,
+      "exact_native_coordinates": true,
+      "exact_native_validity": true,
+      "data_sha256": "802080f9b5be6fdb25042c5cd1bef85f47dea2d4627d1f75e2d65f7bd94a4f3d"
+    },
+    {
+      "slug": "robotwin-ur5-06-5fa52cbb",
+      "passed": true,
+      "frames": 126,
+      "points": 8000,
+      "exact_native_coordinates": true,
+      "exact_native_validity": true,
+      "data_sha256": "0508a6136d14851e0ab34c7f5fc8f67daf485f43513b6df4511b8b1ca0666e4f"
+    },
+    {
+      "slug": "robotwin-piper-10-7fd840f7",
+      "passed": true,
+      "frames": 135,
+      "points": 8000,
+      "exact_native_coordinates": true,
+      "exact_native_validity": true,
+      "data_sha256": "5332a5bf1fcbc0572ae10393c4706e1e6699380a752a16c92178091406affb94"
+    },
+    {
+      "slug": "robotwin-ur5-07-47053213",
+      "passed": true,
+      "frames": 116,
+      "points": 8000,
+      "exact_native_coordinates": true,
+      "exact_native_validity": true,
+      "data_sha256": "561aaadc9fd9d75074486943d95cc2a81ab349bda46f12f4a2cab41ff59bd091"
+    },
+    {
+      "slug": "robotwin-ur5-08-51df15f4",
+      "passed": true,
+      "frames": 116,
+      "points": 8000,
+      "exact_native_coordinates": true,
+      "exact_native_validity": true,
+      "data_sha256": "c779151ecfcbb9158ca0781c0ad2b5b6ef6538a98638f1e4dd1a7237ce889b8d"
+    },
+    {
+      "slug": "robotwin-piper-06-64dbd94f",
+      "passed": true,
+      "frames": 225,
+      "points": 8000,
+      "exact_native_coordinates": true,
+      "exact_native_validity": true,
+      "data_sha256": "94f4e510fb33e478bf83da3a49a6ef5f64b822e98045070a6182f0669ab12ce2"
+    },
+    {
+      "slug": "robotwin-arx-x5-09-7c7bd027",
+      "passed": true,
+      "frames": 372,
+      "points": 8000,
+      "exact_native_coordinates": true,
+      "exact_native_validity": true,
+      "data_sha256": "9ab9e949f82e40c1f1f885dda43bd8ab8f3bdd48c2d6e59c5707a3a03ba77ac3"
+    },
+    {
+      "slug": "robocasa-pandaomron-06-b21c2eb6",
+      "passed": true,
+      "frames": 170,
+      "points": 8000,
+      "exact_native_coordinates": true,
+      "exact_native_validity": true,
+      "data_sha256": "6562c717f066af778171df7c536249e596611ff02684a4bb970106f9ce9cf2f7"
+    },
+    {
+      "slug": "robotwin-franka-08-b9c49fef",
+      "passed": true,
+      "frames": 297,
+      "points": 8000,
+      "exact_native_coordinates": true,
+      "exact_native_validity": true,
+      "data_sha256": "ec412721b48884824db1035b637ab18920a4c4477ea9fc1cf110ec832e87b7ac"
+    },
+    {
+      "slug": "robotwin-piper-07-32d9be00",
+      "passed": true,
+      "frames": 272,
+      "points": 8000,
+      "exact_native_coordinates": true,
+      "exact_native_validity": true,
+      "data_sha256": "6201a963d7da178e3df2c573c0a4024dce417e81412ef65928e7aea889e493d8"
+    },
+    {
+      "slug": "intern-franka-06-2219042c",
+      "passed": true,
+      "frames": 353,
+      "points": 8000,
+      "exact_native_coordinates": true,
+      "exact_native_validity": true,
+      "data_sha256": "9760f150fa52e106e80415cec93b364dac1317488b6fb578130638d99c3a04e6"
+    },
+    {
+      "slug": "robotwin-piper-08-c0d85233",
+      "passed": true,
+      "frames": 283,
+      "points": 8000,
+      "exact_native_coordinates": true,
+      "exact_native_validity": true,
+      "data_sha256": "67d3481373d74b0e9267b4c43a3efa31f35093a7fd7a78df510ea2d30ca950ba"
+    },
+    {
+      "slug": "robotwin-franka-09-c5701011",
+      "passed": true,
+      "frames": 361,
+      "points": 8000,
+      "exact_native_coordinates": true,
+      "exact_native_validity": true,
+      "data_sha256": "450a4391627ae95681957a32e7707d32cbffa6afbb3694860fe59dd35b5ed0c7"
+    },
+    {
+      "slug": "robocasa-pandaomron-08-991eb6dd",
+      "passed": true,
+      "frames": 262,
+      "points": 8000,
+      "exact_native_coordinates": true,
+      "exact_native_validity": true,
+      "data_sha256": "f292291f4249b86bbdb2ab0af982d1b9c81104dcd2264d7cf656a2570617389c"
+    },
+    {
+      "slug": "robotwin-ur5-10-0b9d9b07",
+      "passed": true,
+      "frames": 324,
+      "points": 8000,
+      "exact_native_coordinates": true,
+      "exact_native_validity": true,
+      "data_sha256": "7f3e5b8755633bfd86d317d8f79bc194aa72cb41a5fad64c73d0d036bfbe9964"
+    },
+    {
+      "slug": "robotwin-ur5-09-fad57b25",
+      "passed": true,
+      "frames": 360,
+      "points": 8000,
+      "exact_native_coordinates": true,
+      "exact_native_validity": true,
+      "data_sha256": "66ab12458ae6a311ffc65271d3665552fea8dda8a304f2561cdf0c9a2581a765"
+    },
+    {
+      "slug": "robotwin-aloha-agilex-06-eaf01fd1",
+      "passed": true,
+      "frames": 593,
+      "points": 8000,
+      "exact_native_coordinates": true,
+      "exact_native_validity": true,
+      "data_sha256": "10a5d2f2fe86dbce0f1e55540c9f03182ceb6c7468eaa72b8f54269498ef6cff"
+    },
+    {
+      "slug": "robotwin-franka-10-ae854b3b",
+      "passed": true,
+      "frames": 516,
+      "points": 8000,
+      "exact_native_coordinates": true,
+      "exact_native_validity": true,
+      "data_sha256": "c7ebd9c54615f0d1e5fb3f5416a841e081b76ccbf160130df4f17db81c8ab723"
+    },
+    {
+      "slug": "robotwin-aloha-agilex-07-6ff01294",
+      "passed": true,
+      "frames": 701,
+      "points": 8000,
+      "exact_native_coordinates": true,
+      "exact_native_validity": true,
+      "data_sha256": "ebd8621066e2a34edc60e892318e95eb02844d069d9901d5e8856563a4d482e4"
+    },
+    {
+      "slug": "robocasa-pandaomron-09-1fb66e84",
+      "passed": true,
+      "frames": 433,
+      "points": 8000,
+      "exact_native_coordinates": true,
+      "exact_native_validity": true,
+      "data_sha256": "40cd6090ccc2d65933b9ddf2a5bc37f5d1f082ceb877026059216b38b7cd2ae5"
+    },
+    {
+      "slug": "robocasa-pandaomron-10-14e506f2",
+      "passed": true,
+      "frames": 742,
+      "points": 8000,
+      "exact_native_coordinates": true,
+      "exact_native_validity": true,
+      "data_sha256": "c8df3ff3f371cbbb04244e91c705d0ed78b6c1d5137f19b5d6303a5d6896eeb2"
+    },
+    {
+      "slug": "robocasa-pandaomron-07-95fc12de",
+      "passed": true,
+      "frames": 918,
+      "points": 8000,
+      "exact_native_coordinates": true,
+      "exact_native_validity": true,
+      "data_sha256": "45ae4ee07e571dba3fc28b175f05902ae01b1b6751d349d72d16349fae19bc15"
+    },
+    {
+      "slug": "intern-split-aloha-09-ce29ce2f",
+      "passed": true,
+      "frames": 1058,
+      "points": 8000,
+      "exact_native_coordinates": true,
+      "exact_native_validity": true,
+      "data_sha256": "e2851eb52390dda06ded235cee770329bf1c6a5c9b5add8168aa46a83299bca9"
+    }
+  ]
+}

@@ -1,0 +1,60 @@
+{
+  "format": "quarc-pointstream-v1",
+  "frames": 205,
+  "points": 8000,
+  "fps": 30.0,
+  "scale": 0.0001,
+  "offset": [
+    0.4141743343943132,
+    -0.0012964750589196106,
+    0.3334428102003647
+  ],
+  "bounds": [
+    [
+      -0.0412256656056868,
+      -0.7897964750589197,
+      -0.018957189799635288
+    ],
+    [
+      0.8695743343943132,
+      0.7872035249410805,
+      0.6858428102003646
+    ]
+  ],
+  "xyz_encoding": "int16-le temporal delta modulo 65536; first frame absolute",
+  "valid_encoding": "packed bits, little bit order, frame-major",
+  "color_encoding": "uint8 RGB per frame and stable point ID; native visible-camera RGB, neutral static / amber dynamic otherwise",
+  "layout": [
+    {
+      "name": "xyz",
+      "bytes": 9840000
+    },
+    {
+      "name": "valid",
+      "bytes": 205000
+    },
+    {
+      "name": "dynamic",
+      "bytes": 1000
+    },
+    {
+      "name": "colors",
+      "bytes": 4920000
+    },
+    {
+      "name": "timestamps",
+      "bytes": 1640
+    }
+  ],
+  "data_file": "intern-franka-08-89717d29.points.bin.gz",
+  "data_sha256": "f0a21ef150a55c7d78e4716c1aedadb4b0665490d9c3674186a2aa7188c78a18",
+  "data_bytes": 4724076,
+  "source_h5": "/mnt/data/zhangrong/datasets/interndata_v6/episodes/franka/89717d2985dbf8491bac/episode.v6.h5",
+  "source_sha256": "8b28062d78296d9c95124a1df4effd0e1fe5d556f3607ecef35624e7a04453c2",
+  "source_unchanged": true,
+  "episode_key": "89717d2985dbf8491bac",
+  "slug": "intern-franka-08-89717d29",
+  "all_native_points": true,
+  "coordinate_roundtrip_exact": true,
+  "elapsed_s": 3.0
+}

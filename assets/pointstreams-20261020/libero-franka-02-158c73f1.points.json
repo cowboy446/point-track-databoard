@@ -1,0 +1,60 @@
+{
+  "format": "quarc-pointstream-v1",
+  "frames": 135,
+  "points": 8000,
+  "fps": 20.0,
+  "scale": 0.0001,
+  "offset": [
+    0.35742269083857536,
+    0.03492429852485657,
+    0.36457393458113074
+  ],
+  "bounds": [
+    [
+      -0.07647730916142464,
+      -0.27407570147514343,
+      -0.001226065418869271
+    ],
+    [
+      0.7913226908385753,
+      0.34392429852485656,
+      0.7303739345811308
+    ]
+  ],
+  "xyz_encoding": "int16-le temporal delta modulo 65536; first frame absolute",
+  "valid_encoding": "packed bits, little bit order, frame-major",
+  "color_encoding": "uint8 RGB per frame and stable point ID; native visible-camera RGB, neutral static / amber dynamic otherwise",
+  "layout": [
+    {
+      "name": "xyz",
+      "bytes": 6480000
+    },
+    {
+      "name": "valid",
+      "bytes": 135000
+    },
+    {
+      "name": "dynamic",
+      "bytes": 1000
+    },
+    {
+      "name": "colors",
+      "bytes": 3240000
+    },
+    {
+      "name": "timestamps",
+      "bytes": 1080
+    }
+  ],
+  "data_file": "libero-franka-02-158c73f1.points.bin.gz",
+  "data_sha256": "5eb091e90ea4bab2b040f3473e85e87ef5e534aa1d8a75c1539e63b79cb66a15",
+  "data_bytes": 2448603,
+  "source_h5": "/mnt/data/zhangrong/datasets/libero_v6/episodes/158c73f154cfccfb5fe2/episode.v6.h5",
+  "source_sha256": "7a19f7a26b96b3e7c53a2c6a716ab079b8087a0c077b6b16279ea4e9433bc8b4",
+  "source_unchanged": true,
+  "episode_key": "158c73f154cfccfb5fe2",
+  "slug": "libero-franka-02-158c73f1",
+  "all_native_points": true,
+  "coordinate_roundtrip_exact": true,
+  "elapsed_s": 1.51
+}

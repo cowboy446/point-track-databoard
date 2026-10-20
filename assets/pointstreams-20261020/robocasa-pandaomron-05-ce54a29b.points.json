@@ -1,0 +1,60 @@
+{
+  "format": "quarc-pointstream-v1",
+  "frames": 2391,
+  "points": 8000,
+  "fps": 20.0,
+  "scale": 0.0001,
+  "offset": [
+    -1.111052393913269,
+    -1.089863806962967,
+    1.072728157043457
+  ],
+  "bounds": [
+    [
+      -2.999952393913269,
+      -2.999963806962967,
+      0.422928157043457
+    ],
+    [
+      0.777847606086731,
+      0.8202361930370332,
+      1.722528157043457
+    ]
+  ],
+  "xyz_encoding": "int16-le temporal delta modulo 65536; first frame absolute",
+  "valid_encoding": "packed bits, little bit order, frame-major",
+  "color_encoding": "uint8 RGB per frame and stable point ID; native visible-camera RGB, neutral static / amber dynamic otherwise",
+  "layout": [
+    {
+      "name": "xyz",
+      "bytes": 114768000
+    },
+    {
+      "name": "valid",
+      "bytes": 2391000
+    },
+    {
+      "name": "dynamic",
+      "bytes": 1000
+    },
+    {
+      "name": "colors",
+      "bytes": 57384000
+    },
+    {
+      "name": "timestamps",
+      "bytes": 19128
+    }
+  ],
+  "data_file": "robocasa-pandaomron-05-ce54a29b.points.bin.gz",
+  "data_sha256": "192cf7015f9ba2584490323daaf1f38c6d0c94b44d2a3692ff802aad95d8055c",
+  "data_bytes": 21959749,
+  "source_h5": "/mnt/data/zhangrong/datasets/robocasa365_v6/episodes/ce54a29b2f6cb46ba74d/episode.v6.h5",
+  "source_sha256": "185d6039c69ae4aeda790346cd30ba5cf38e7b6df6f12f93285d06ad3a9c7ac2",
+  "source_unchanged": true,
+  "episode_key": "ce54a29b2f6cb46ba74d",
+  "slug": "robocasa-pandaomron-05-ce54a29b",
+  "all_native_points": true,
+  "coordinate_roundtrip_exact": true,
+  "elapsed_s": 17.16
+}

@@ -1,0 +1,60 @@
+{
+  "format": "quarc-pointstream-v1",
+  "frames": 431,
+  "points": 8000,
+  "fps": 25.0,
+  "scale": 0.0001,
+  "offset": [
+    0.4815750028938055,
+    -0.41039562970399857,
+    -0.011219143867492676
+  ],
+  "bounds": [
+    [
+      -0.034924997106194566,
+      -1.0172956297039986,
+      -0.4993191438674927
+    ],
+    [
+      0.9980750028938056,
+      0.19650437029600143,
+      0.47688085613250736
+    ]
+  ],
+  "xyz_encoding": "int16-le temporal delta modulo 65536; first frame absolute",
+  "valid_encoding": "packed bits, little bit order, frame-major",
+  "color_encoding": "uint8 RGB per frame and stable point ID; native visible-camera RGB, neutral static / amber dynamic otherwise",
+  "layout": [
+    {
+      "name": "xyz",
+      "bytes": 20688000
+    },
+    {
+      "name": "valid",
+      "bytes": 431000
+    },
+    {
+      "name": "dynamic",
+      "bytes": 1000
+    },
+    {
+      "name": "colors",
+      "bytes": 10344000
+    },
+    {
+      "name": "timestamps",
+      "bytes": 3448
+    }
+  ],
+  "data_file": "robotwin-franka-05-b8b5cc38.points.bin.gz",
+  "data_sha256": "f1fbcd4d384f605320888744cb7180330bb16d0f83d53b260968a90bafeb0f7e",
+  "data_bytes": 4591314,
+  "source_h5": "/mnt/data/zhangrong/datasets/robotwin_v6/episodes/franka/b8b5cc380c8a3a321506/episode.v6.h5",
+  "source_sha256": "b7d77d2fe091a45743915bb76484fc5a551ba2c96428ede64b015ef02176e890",
+  "source_unchanged": true,
+  "episode_key": "b8b5cc380c8a3a321506",
+  "slug": "robotwin-franka-05-b8b5cc38",
+  "all_native_points": true,
+  "coordinate_roundtrip_exact": true,
+  "elapsed_s": 4.02
+}

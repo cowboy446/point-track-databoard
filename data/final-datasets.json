@@ -1219,7 +1219,7 @@
     },
     {
       "key": "robotwin_v6",
-      "name": "RoboTwin 2.0",
+      "name": "robotwin-random",
       "anchor": "robotwin",
       "project_url": "https://robotwin-platform.github.io/",
       "engine": "SAPIEN · RoboTwin",

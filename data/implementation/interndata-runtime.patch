@@ -1,0 +1,821 @@
+diff --git a/upstream/deps/world_toolkit/world_recorder/__init__.py b/deployed/deps/world_toolkit/world_recorder/__init__.py
+index 86fbd52..6cd829b 100644
+--- a/upstream/deps/world_toolkit/world_recorder/__init__.py
++++ b/deployed/deps/world_toolkit/world_recorder/__init__.py
+@@ -5,8 +5,9 @@ from omni.isaac.core.articulations.articulation import Articulation
+ from omni.isaac.core.robots.robot import Robot
+ from omni.isaac.core.utils.numpy.transformations import get_local_from_world
+ from omni.isaac.core.utils.prims import get_prim_at_path, get_prim_parent
++from omni.isaac.core.utils.transformations import pose_from_tf_matrix, tf_matrix_from_pose
+ from omni.isaac.core.utils.xforms import get_world_pose
+-from pxr import Gf, Usd, UsdGeom
++from pxr import Gf, Usd, UsdGeom, UsdPhysics
+ 
+ from workflows.utils.utils import get_link
+ 
+@@ -16,12 +17,23 @@ class WorldRecorder:
+     WorldRecorder handles recording and replaying simulation states.
+ 
+     Two modes are supported:
+-    - step_replay=False: Records prim poses for fast geometric replay
++    - step_replay=False: Records prim poses for fast geometric replay.
+     - step_replay=True: Records robot joint positions and object world poses
+-      for physics-accurate replay via set_joint_positions / set_world_pose
++      for physics-accurate replay via set_joint_positions / set_world_pose.
++
++    ``record_joint_states`` can be enabled alongside prim-pose recording.  This
++    keeps the legacy plan payload intact while giving a render-only consumer a
++    coherent articulation state to replay.
+     """
+ 
+-    def __init__(self, world, robots: list, objs: list, step_replay: bool = False):
++    def __init__(
++        self,
++        world,
++        robots: list,
++        objs: list,
++        step_replay: bool = False,
++        record_joint_states: bool = False,
++    ):
+         self.world = world
+         self.stage = world.stage
+         self.xform_prims = []
+@@ -40,25 +52,56 @@ class WorldRecorder:
+         self.robots = robots
+         self.objs = objs
+         self.step_replay = step_replay
++        self.record_joint_states = record_joint_states or step_replay
++        # The active replay path is intentionally distinct from the recording
++        # format.  A standalone renderer can select joint-state replay from a
++        # backward-compatible prim-pose payload without changing plan callers.
++        self._replay_joint_states = step_replay
++        self._replay_with_physics = step_replay
++        self._replay_state_sync_only = False
++        self._has_joint_state_data = self.record_joint_states
++        self._locked_replay_object_paths = set()
++        self._has_robot_root_state_data = self.record_joint_states
++        self.robot_root_state_data = {}
+ 
+         self._initialize_xform_prims()
+ 
+-        if self.step_replay:
+-            print("use joint_position to replay, WorldRecorder will record joint positions and object poses")
++        if self.record_joint_states:
+             self.robot_joint_data = {name: [] for name in robots}
++            self.robot_root_state_data = {name: [] for name in robots}
+             self.object_state_data = {name: [] for name in objs}
++
++        if self.step_replay:
++            print("use joint_position to replay, WorldRecorder will record joint positions and object poses")
++        elif self.record_joint_states:
++            print("use prim poses to replay, while recording joint states for standalone rendering")
+         else:
+             print("use prim poses to replay, WorldRecorder will record prim poses for replay")
+ 
+     def _initialize_xform_prims(self):
+         self.robots_prim = []
+-        robots_prim_paths = [robot.prim_path for robot in self.robots.values()]
+-        for robot_prim_path in robots_prim_paths:
+-            robot_prim_path = get_prim_at_path(robot_prim_path)
++        self._robot_base_link_paths = {}
++        for robot_name, robot in self.robots.items():
++            robot_prim_path = get_prim_at_path(robot.prim_path)
+             link_dict = get_link(robot_prim_path)
+             robots_paths = list(link_dict.values())
+             print(robots_paths)
+             self.robots_prim.extend(robots_paths)
++            if robots_paths:
++                # The shallowest ``base_link`` is the articulation's world
++                # anchor for the robots currently supported by SimBox.  It is
++                # also present in legacy prim-pose plans, allowing old plans
++                # to recover a missing robot-root pose.
++                base_link_candidates = [
++                    prim for prim in robots_paths if prim.GetName() == "base_link"
++                ]
++                if not base_link_candidates:
++                    base_link_candidates = robots_paths
++                base_link = min(
++                    base_link_candidates,
++                    key=lambda prim: len(str(prim.GetPath()).split("/")),
++                )
++                self._robot_base_link_paths[robot_name] = str(base_link.GetPath())
+ 
+         self.objects_prim = []
+         record_objects = self.objs
+@@ -72,54 +115,230 @@ class WorldRecorder:
+                 self.objects_prim.append(object_prim_path)
+         self.xform_prims.extend(self.robots_prim)
+         self.xform_prims.extend(self.objects_prim)
++        # Render-only replay needs the planned camera-mount link transform
++        # before the next Kit update.  Keep a lookup in addition to the
++        # ordered list so a camera can retrieve its link pose cheaply.
++        self._xform_prim_indices = {
++            str(prim.GetPath()): index for index, prim in enumerate(self.xform_prims)
++        }
+         print(f"Found {len(self.xform_prims)} xformable prims")
+ 
+-    def record(self):
+-        """Record current frame state."""
+-        if self.step_replay:
+-            for robot_name, robot in self.robots.items():
+-                joint_positions = robot.get_joint_positions()
+-                self.robot_joint_data[robot_name].append(joint_positions)
+-
+-            for obj_name, obj in self.objs.items():
+-                translation, orientation = obj.get_world_pose()
+-                state = {
++    def enable_joint_state_capture(self):
++        """Add joint/object state capture without changing prim-pose planning."""
++        if self.record_joint_states:
++            return
++        self.record_joint_states = True
++        self._has_joint_state_data = True
++        self._has_robot_root_state_data = True
++        self.robot_joint_data = {name: [] for name in self.robots}
++        self.robot_root_state_data = {name: [] for name in self.robots}
++        self.object_state_data = {name: [] for name in self.objs}
++
++    def _record_joint_states(self):
++        for robot_name, robot in self.robots.items():
++            self.robot_joint_data[robot_name].append(robot.get_joint_positions())
++            translation, orientation = robot.get_world_pose()
++            self.robot_root_state_data[robot_name].append(
++                {
+                     "translation": translation,
+                     "orientation": orientation,
+                 }
+-                if isinstance(obj, Articulation):
+-                    state["joint_positions"] = obj.get_joint_positions()
+-                self.object_state_data[obj_name].append(state)
++            )
+ 
+-            frame_visibilities = []
+-            for prim in self.xform_prims:
+-                visibility = prim.GetAttribute("visibility").Get()
+-                frame_visibilities.append(visibility)
+-            self.prim_visibilities.append(frame_visibilities)
++        for obj_name, obj in self.objs.items():
++            translation, orientation = obj.get_world_pose()
++            state = {
++                "translation": translation,
++                "orientation": orientation,
++            }
++            if isinstance(obj, Articulation):
++                state["joint_positions"] = obj.get_joint_positions()
++            self.object_state_data[obj_name].append(state)
+ 
+-            self.num_steps += 1
++    def _record_visibilities(self):
++        frame_visibilities = []
++        for prim in self.xform_prims:
++            visibility = prim.GetAttribute("visibility").Get()
++            frame_visibilities.append(visibility)
++        self.prim_visibilities.append(frame_visibilities)
++
++    def record(self):
++        """Record current frame state."""
++        if self.record_joint_states:
++            self._record_joint_states()
++
++        if self.step_replay:
++            self._record_visibilities()
+         else:
+             frame_poses = []
+-            frame_visibilities = []
+             for prim in self.xform_prims:
+                 world_pose = get_world_pose(prim.GetPath().pathString)
+                 frame_poses.append([world_pose[0].tolist(), world_pose[1].tolist()])
++            self.prim_poses.append(frame_poses)
++            self._record_visibilities()
++
++        self.num_steps += 1
++
++    @property
++    def uses_joint_state_replay(self) -> bool:
++        """Whether the current replay will apply articulation/object state."""
++        return self._replay_joint_states
++
++    @property
++    def uses_render_state_sync(self) -> bool:
++        """Whether standalone replay restores state around a kinematic tick."""
++        return self._replay_state_sync_only
++
++    def get_recorded_prim_pose(self, prim_path: str, step_idx: int):
++        """Return a recorded world pose for ``prim_path`` at ``step_idx``.
++
++        Joint positions are applied directly to PhysX during standalone
++        rendering.  Its link transforms do not become readable through the
++        USD API until a Kit frame is processed, whereas a mounted camera must
++        be positioned *before* that frame is rendered.  The legacy prim-pose
++        payload already contains the exact planned link transforms, so use it
++        for camera mounting only.  Returning ``None`` preserves the normal
++        USD-based camera path for cameras whose reference is not recorded.
++        """
++        if not self.prim_poses or step_idx < 0 or step_idx >= len(self.prim_poses):
++            return None
+ 
+-                visibility = prim.GetAttribute("visibility").Get()
+-                frame_visibilities.append(visibility)
++        prim_index = self._xform_prim_indices.get(str(prim_path))
++        if prim_index is None:
++            return None
+ 
+-            self.prim_poses.append(frame_poses)
+-            self.prim_visibilities.append(frame_visibilities)
+-            self.num_steps += 1
++        translation, orientation = self.prim_poses[step_idx][prim_index]
++        return np.asarray(translation, dtype=np.float64), np.asarray(orientation, dtype=np.float64)
++
++    def enable_render_joint_state_replay(self) -> bool:
++        """Use supplemental joint-state data for render-only replay, if present.
++
++        ``set_joint_positions`` changes the PhysX articulation state, not the
++        USD link transforms directly.  The render-only path uses one
++        controlled forward-kinematics tick, restores the recorded object
++        state, and then renders without advancing the simulation further.
++        """
++        if not self._has_joint_state_data:
++            return False
++        self._replay_joint_states = True
++        self._replay_with_physics = False
++        self._replay_state_sync_only = True
++        self.replay_counter = 0
++        self._lock_replay_object_roots()
++        return True
++
++    def _lock_replay_object_roots(self):
++        """Make replayed object roots kinematic before the FK update tick.
++
++        Render-only replay teleports a robot to its recorded configuration so
++        that Isaac Sim can rebuild the robot-link transforms.  That requires
++        one PhysX tick on Isaac Sim 4.1 for the Lift2 asset, but the tick must
++        not be allowed to turn an RGB replay into a new physical simulation.
++
++        The saved state is authoritative in this mode.  Locking the physical
++        root of every recorded object prevents gravity and robot contacts from
++        translating an object during that otherwise-necessary tick.  Articulated
++        objects retain their recorded joint positions; only their base/root is
++        made kinematic.
++        """
++        changed = False
++        for obj in self.objs.values():
++            # ArticulatedObject exposes the actual physical base separately
++            # from its articulation-root Xform.  A regular rigid object uses
++            # its prim path directly.
++            candidate_paths = [
++                getattr(obj, "object_base_path", None),
++                getattr(obj, "prim_path", None),
++            ]
++            for prim_path in candidate_paths:
++                if not prim_path or str(prim_path) in self._locked_replay_object_paths:
++                    continue
++                prim = get_prim_at_path(str(prim_path))
++                if not prim or not prim.IsValid() or not prim.HasAPI(UsdPhysics.RigidBodyAPI):
++                    continue
++
++                rigid_body = UsdPhysics.RigidBodyAPI(prim)
++                kinematic_attr = rigid_body.GetKinematicEnabledAttr()
++                if not kinematic_attr:
++                    kinematic_attr = rigid_body.CreateKinematicEnabledAttr()
++                kinematic_attr.Set(True)
++                self._locked_replay_object_paths.add(str(prim_path))
++                changed = True
++                break
++
++        if changed:
++            # Deliver the USD property edits to PhysX before replay starts.
++            # render() does not advance physics.
++            self.world.render()
++
++    def _render_replay_frame(self):
++        if self._replay_with_physics:
++            self.world.step(render=True)
++        elif self._replay_state_sync_only:
++            self._advance_replay_kinematics()
++        else:
++            self.world.render()
++
++    def _advance_replay_kinematics(self):
++        """Build articulated robot link transforms, then restore render state.
++
++        The Lift2 USD contains duplicate link names across its two arms.  In
++        Isaac Sim 4.1, teleporting its articulation and only calling Fabric's
++        update leaves those robot link transforms stale for rendering.  A
++        single physics tick computes the forward kinematics correctly.
++
++        That tick is *not* the state being rendered: immediately afterwards we
++        restore every recorded robot/object root and joint state and clear
++        velocities, then publish the restored state without another
++        integration.  Thus passive robot joints and dynamic objects cannot
++        acquire drift between the plan frame and the RGB capture.
++        """
++        self.world.step(render=False)
++        # The FK tick can move passive/mimic finger DOFs by slightly more than
++        # 1e-3 even with drives, gravity and contacts disabled.  Reapply the
++        # authoritative plan vector after FK, just as object state is restored
++        # below; update_transformations then publishes the exact articulation
++        # state without integrating it a second time.
++        self._restore_recorded_robot_root_states()
++        self._restore_recorded_robot_joint_states()
++        self._restore_recorded_object_states()
++        self._publish_restored_object_transforms()
++
++    def _publish_restored_object_transforms(self):
++        """Publish restored object transforms without another physics tick.
++
++        The preceding kinematic tick has already updated robot links.  This
++        call places the recorded object root/joint state into PhysX's fast
++        cache, without integrating it.  The one normal ``world.render`` in
++        the capture path then performs Fabric's update and consumes that cache.
++        Writing the same transforms to USD or updating Fabric here as well is
++        redundant and adds a per-frame synchronization pass.
++        """
++        physics_context = self.world.get_physics_context()
++        physx = getattr(physics_context, "_physx_interface", None)
++        if physx is not None:
++            physx.update_transformations(
++                updateToFastCache=True,
++                updateToUsd=False,
++                updateVelocitiesToUsd=False,
++                outputVelocitiesLocalSpace=False,
++            )
++
++    def _warmup_replay_frame(self):
++        """Render state after a replay sync without advancing physics again."""
++        if self._replay_state_sync_only:
++            self.world.render()
++        else:
++            self._render_replay_frame()
+ 
+     def warmup(self):
+         """Internal warmup logic for different modes."""
+-        if self.step_replay:
++        if self.uses_joint_state_replay:
+             print("Warming up simulation (joint_position mode)...")
+             if self.num_steps > 0:
+                 self._replay_from_joint_positions(increment_counter=False)
+                 for _ in range(10):
+-                    self.world.step(render=True)
++                    self._warmup_replay_frame()
+                     self.world.get_observations()
+             print("Warmup completed. Starting replay...")
+         else:
+@@ -142,15 +361,16 @@ class WorldRecorder:
+         Returns:
+             bool: True if replay is complete, False otherwise
+         """
+-        if self.step_replay:
++        if self.uses_joint_state_replay:
+             return self._replay_from_joint_positions()
+         else:
+             return self._replay_from_prim_poses()
+ 
+     def _replay_from_joint_positions(self, increment_counter: bool = True):
+         """
+-        Replay from recorded joint position / world pose data.
+-        Uses world.step(render=True) for proper physics and joint constraints.
++        Replay from recorded joint position / world pose data.  Standalone
++        rendering uses one unrendered kinematic tick, restores recorded object
++        state, then lets camera capture issue the single render frame.
+         """
+         if self.num_steps == 0:
+             print("No steps to replay")
+@@ -161,7 +381,7 @@ class WorldRecorder:
+ 
+         if self.replay_counter < self.num_steps:
+             self._apply_recorded_states()
+-            self.world.step(render=True)
++            self._render_replay_frame()
+             if increment_counter:
+                 self.replay_counter += 1
+             return False
+@@ -210,14 +430,9 @@ class WorldRecorder:
+             print("Replay complete")
+             return True
+ 
+-    def _apply_recorded_states(self):
+-        """Apply recorded robot joint positions, object world poses, and visibilities for the current step."""
++    def _restore_recorded_object_states(self):
++        """Restore dynamic object state after a kinematic-only replay tick."""
+         step = self.replay_counter
+-
+-        for robot_name, robot in self.robots.items():
+-            joint_positions = self.robot_joint_data[robot_name][step]
+-            robot.set_joint_positions(positions=joint_positions)
+-
+         for obj_name, obj in self.objs.items():
+             state = self.object_state_data[obj_name][step]
+             obj.set_world_pose(state["translation"], state["orientation"])
+@@ -225,6 +440,78 @@ class WorldRecorder:
+             if "joint_positions" in state and state["joint_positions"] is not None:
+                 obj.set_joint_positions(state["joint_positions"])
+ 
++            if self._replay_state_sync_only:
++                if hasattr(obj, "set_linear_velocity"):
++                    obj.set_linear_velocity(np.zeros(3))
++                if hasattr(obj, "set_angular_velocity"):
++                    obj.set_angular_velocity(np.zeros(3))
++                if isinstance(obj, Articulation):
++                    joint_positions = state.get("joint_positions")
++                    if joint_positions is not None:
++                        obj.set_joint_velocities(np.zeros_like(joint_positions))
++
++    def _restore_recorded_robot_root_states(self):
++        """Restore each robot's world anchor before applying joint positions.
++
++        A render worker rebuilds the randomized scene before it loads a plan.
++        Robot placement is sampled during that rebuild, whereas joint vectors
++        alone contain no global translation.  New plans therefore store the
++        robot root pose explicitly.  For older plans, derive that root pose
++        from their recorded shallowest ``base_link`` and the current fixed
++        root-to-base transform.
++        """
++        step = self.replay_counter
++        for robot_name, robot in self.robots.items():
++            root_state = None
++            if self._has_robot_root_state_data:
++                robot_states = self.robot_root_state_data.get(robot_name)
++                if robot_states and step < len(robot_states):
++                    root_state = robot_states[step]
++
++            if root_state is not None:
++                robot.set_world_pose(
++                    position=root_state["translation"],
++                    orientation=root_state["orientation"],
++                )
++                continue
++
++            # Compatibility path for plan files created before root-pose
++            # capture was added.  The robot's physical root is fixed relative
++            # to its shallowest base link, so transform the recorded base-link
++            # pose back into the root frame.
++            base_link_path = self._robot_base_link_paths.get(robot_name)
++            recorded_base_pose = self.get_recorded_prim_pose(base_link_path, step) if base_link_path else None
++            if recorded_base_pose is None:
++                continue
++
++            root_translation, root_orientation = robot.get_world_pose()
++            base_translation, base_orientation = get_world_pose(base_link_path)
++            root_to_world = tf_matrix_from_pose(root_translation, root_orientation)
++            base_to_world = tf_matrix_from_pose(base_translation, base_orientation)
++            base_from_root = np.linalg.inv(root_to_world) @ base_to_world
++            recorded_base_to_world = tf_matrix_from_pose(*recorded_base_pose)
++            recorded_root_to_world = recorded_base_to_world @ np.linalg.inv(base_from_root)
++            translation, orientation = pose_from_tf_matrix(recorded_root_to_world)
++            robot.set_world_pose(position=translation, orientation=orientation)
++
++    def _restore_recorded_robot_joint_states(self):
++        """Restore authoritative robot DOFs without advancing simulation."""
++        step = self.replay_counter
++        for robot_name, robot in self.robots.items():
++            joint_positions = self.robot_joint_data[robot_name][step]
++            robot.set_joint_positions(positions=joint_positions)
++            if self._replay_state_sync_only:
++                robot.set_joint_velocities(velocities=np.zeros_like(joint_positions))
++
++    def _apply_recorded_states(self):
++        """Apply recorded robot joint positions, object world poses, and visibilities for the current step."""
++        step = self.replay_counter
++
++        self._restore_recorded_robot_root_states()
++        self._restore_recorded_robot_joint_states()
++
++        self._restore_recorded_object_states()
++
+         frame_visibilities = self.prim_visibilities[step]
+         for prim, frame_visibility in zip(self.xform_prims, frame_visibilities):
+             if frame_visibility == UsdGeom.Tokens.invisible:
+@@ -239,6 +526,7 @@ class WorldRecorder:
+                 "mode": "joint_position",
+                 "num_steps": self.num_steps,
+                 "robot_joint_data": self.robot_joint_data,
++                "robot_root_state_data": self.robot_root_state_data,
+                 "object_state_data": self.object_state_data,
+                 "prim_visibilities": self.prim_visibilities,
+             }
+@@ -249,6 +537,13 @@ class WorldRecorder:
+                 "prim_poses": self.prim_poses,
+                 "prim_visibilities": self.prim_visibilities,
+             }
++            # Keep the legacy schema and mode, but attach the coherent state
++            # needed by the standalone renderer.  Older consumers can ignore
++            # these additional fields safely.
++            if self.record_joint_states:
++                record_data["robot_joint_data"] = self.robot_joint_data
++                record_data["robot_root_state_data"] = self.robot_root_state_data
++                record_data["object_state_data"] = self.object_state_data
+ 
+         return pickle.dumps(record_data)
+ 
+@@ -256,14 +551,38 @@ class WorldRecorder:
+         """Deserialize recorder data based on mode."""
+         record_data = pickle.loads(data)
+         mode = record_data.get("mode", "prim_pose")
++        self.replay_counter = 0
++        # A render worker can reuse the same recorder instance after task
++        # randomization.  Do not let a deleted/recreated object path suppress
++        # reapplying the replay-only kinematic lock.
++        self._locked_replay_object_paths = set()
+ 
+         if mode == "prim_pose" and not self.step_replay:
++            self._replay_joint_states = False
++            self._replay_with_physics = False
++            self._replay_state_sync_only = False
+             self.num_steps = record_data["num_steps"]
+             self.prim_poses = record_data["prim_poses"]
+             self.prim_visibilities = record_data["prim_visibilities"]
++            self._has_joint_state_data = (
++                "robot_joint_data" in record_data and "object_state_data" in record_data
++            )
++            self._has_robot_root_state_data = "robot_root_state_data" in record_data
++            if self._has_joint_state_data:
++                self.record_joint_states = True
++                self.robot_joint_data = record_data["robot_joint_data"]
++                self.robot_root_state_data = record_data.get("robot_root_state_data", {})
++                self.object_state_data = record_data["object_state_data"]
+         elif mode == "joint_position" and self.step_replay:
++            self._replay_joint_states = True
++            self._replay_with_physics = True
++            self._replay_state_sync_only = False
++            self._has_joint_state_data = True
++            self._has_robot_root_state_data = "robot_root_state_data" in record_data
++            self.record_joint_states = True
+             self.num_steps = record_data["num_steps"]
+             self.robot_joint_data = record_data["robot_joint_data"]
++            self.robot_root_state_data = record_data.get("robot_root_state_data", {})
+             self.object_state_data = record_data["object_state_data"]
+             self.prim_visibilities = record_data["prim_visibilities"]
+         else:
+@@ -277,7 +596,14 @@ class WorldRecorder:
+         self.replay_counter = 0
+         self.prim_poses = []
+         self.prim_visibilities = []
+-        if self.step_replay:
++        if self.record_joint_states:
+             self.robot_joint_data = {name: [] for name in self.robots}
++            self.robot_root_state_data = {name: [] for name in self.robots}
+             self.object_state_data = {name: [] for name in self.objs}
++        self._replay_joint_states = self.step_replay
++        self._replay_with_physics = self.step_replay
++        self._replay_state_sync_only = False
++        self._has_joint_state_data = self.record_joint_states
++        self._has_robot_root_state_data = self.record_joint_states
++        self._locked_replay_object_paths = set()
+         print("WorldRecorder reset")
+diff --git a/upstream/workflows/simbox/core/cameras/custom_camera.py b/deployed/workflows/simbox/core/cameras/custom_camera.py
+index a007694..420e717 100644
+--- a/upstream/workflows/simbox/core/cameras/custom_camera.py
++++ b/deployed/workflows/simbox/core/cameras/custom_camera.py
+@@ -7,8 +7,10 @@ from omni.isaac.core.utils.prims import get_prim_at_path
+ from omni.isaac.core.utils.transformations import (
+     get_relative_transform,
+     pose_from_tf_matrix,
++    tf_matrix_from_pose,
+ )
+ from omni.isaac.sensor import Camera
++from pxr import Usd, UsdGeom
+ 
+ 
+ @register_camera
+@@ -82,7 +84,7 @@ class CustomCamera(Camera):
+         self.set_lens_aperture(f_number * 100.0)
+         self.set_horizontal_aperture(horizontal_aperture / 10.0)
+         self.set_vertical_aperture(vertical_aperture / 10.0)
+-        self.set_clipping_range(0.05, 1.0e5)
++        self.set_clipping_range(0.01, 1.0e5)
+         self.set_projection_type("pinhole")
+ 
+         fx = width * self.get_focal_length() / self.get_horizontal_aperture()
+@@ -149,16 +151,42 @@ class CustomCamera(Camera):
+             self._custom_annotators["IndirectDiffuse"] = None
+         self._current_frame.pop("IndirectDiffuse", None)
+ 
+-    def get_observations(self):
++    def update_pose(self, reference_pose=None) -> None:
++        """Update the USD camera mount pose before a render is requested.
++
++        Args:
++            reference_pose: Optional ``(translation, orientation)`` world
++                pose for ``reference_path``.  Render-only replay supplies the
++                recorded link pose here because that pose reaches USD only
++                after the render frame; ordinary rendering continues to query
++                ``reference_path`` directly.
++        """
+         if self.reference_path:
+-            camera_mount2env_pose = get_relative_transform(
+-                get_prim_at_path(self.reference_path), get_prim_at_path(self.root_prim_path)
+-            )
++            if reference_pose is None:
++                camera_mount2env_pose = get_relative_transform(
++                    get_prim_at_path(self.reference_path), get_prim_at_path(self.root_prim_path)
++                )
++            else:
++                translation, orientation = reference_pose
++                reference2world_pose = tf_matrix_from_pose(translation, orientation)
++                root2world_pose = np.transpose(
++                    UsdGeom.Xformable(get_prim_at_path(self.root_prim_path)).ComputeLocalToWorldTransform(
++                        Usd.TimeCode.Default()
++                    )
++                )
++                camera_mount2env_pose = np.linalg.inv(root2world_pose) @ reference2world_pose
+             camera_mount2env_pose = pose_from_tf_matrix(camera_mount2env_pose)
+             self.parent_camera_xform.set_local_pose(
+                 translation=camera_mount2env_pose[0],
+                 orientation=camera_mount2env_pose[1],
+             )
++
++    def get_observations(self, reference_pose=None, update_pose: bool = True):
++        # The normal public call still updates its mount.  The replay capture
++        # path updates every camera *before* it renders, then reads the image
++        # without moving the mount again after the render has completed.
++        if update_pose:
++            self.update_pose(reference_pose=reference_pose)
+         camera2env_pose = get_relative_transform(
+             get_prim_at_path(self.prim_path), get_prim_at_path(self.root_prim_path)
+         )
+diff --git a/upstream/workflows/simbox/solver/planner_utils.py b/deployed/workflows/simbox/solver/planner_utils.py
+index 6161dee..510c6a8 100644
+--- a/upstream/workflows/simbox/solver/planner_utils.py
++++ b/deployed/workflows/simbox/solver/planner_utils.py
+@@ -617,10 +617,19 @@ def solve_ik_traj_with_standoff(
+ def build_plant(time_step=0.004, discrete_contact_solver="sap", robot_name=None, init_qpos=None):
+ 
+     global robot_plant
+-    multibody_plant_config = MultibodyPlantConfig(
+-        time_step=time_step,
+-        discrete_contact_solver=discrete_contact_solver,
+-    )
++    multibody_plant_config = MultibodyPlantConfig()
++    multibody_plant_config.time_step = time_step
++    # Drake renamed this setting from ``discrete_contact_solver`` to
++    # ``discrete_contact_approximation``. Assign after construction so both
++    # pydrake APIs are supported without passing an unknown constructor kwarg.
++    if hasattr(multibody_plant_config, "discrete_contact_solver"):
++        multibody_plant_config.discrete_contact_solver = discrete_contact_solver
++    elif hasattr(multibody_plant_config, "discrete_contact_approximation"):
++        multibody_plant_config.discrete_contact_approximation = discrete_contact_solver
++    else:
++        raise RuntimeError(
++            "Unsupported pydrake MultibodyPlantConfig: no discrete contact configuration field"
++        )
+     builder = DiagramBuilder()
+     robot_plant, _ = AddMultibodyPlant(multibody_plant_config, builder)
+     if "split_aloha" in robot_name:
+@@ -646,10 +655,23 @@ def build_plant(time_step=0.004, discrete_contact_solver="sap", robot_name=None,
+     return robot_plant, fk_plant_context
+ 
+ 
++def _add_single_model_from_file(parser, model_path):
++    """Load one URDF/SDF across old and new pydrake Parser APIs."""
++    if hasattr(parser, "AddModelFromFile"):
++        return parser.AddModelFromFile(model_path)
++
++    model_instances = parser.AddModels(model_path)
++    if len(model_instances) != 1:
++        raise RuntimeError(
++            f"Expected exactly one model in {model_path}, got {len(model_instances)}"
++        )
++    return model_instances[0]
++
++
+ def AddR5a(plant, init_qpos):
+     franka_combined_path = "workflows/simbox/panda_drake/r5a/R5a.urdf"
+     parser = Parser(plant)
+-    franka = parser.AddModelFromFile(franka_combined_path)
++    franka = _add_single_model_from_file(parser, franka_combined_path)
+     plant.WeldFrames(plant.world_frame(), plant.GetFrameByName("base_link"))
+ 
+     # Set default positions:
+@@ -668,7 +690,7 @@ def AddR5a(plant, init_qpos):
+ def AddPiper(plant, init_qpos):
+     franka_combined_path = "workflows/simbox/panda_drake/piper100/piper100.urdf"
+     parser = Parser(plant)
+-    franka = parser.AddModelFromFile(franka_combined_path)
++    franka = _add_single_model_from_file(parser, franka_combined_path)
+     plant.WeldFrames(plant.world_frame(), plant.GetFrameByName("arm_base"))
+ 
+     # Set default positions:
+@@ -687,7 +709,7 @@ def AddPiper(plant, init_qpos):
+ def AddFranka(plant, init_qpos):
+     franka_combined_path = "workflows/simbox/panda_drake/panda_arm_hand.urdf"
+     parser = Parser(plant)
+-    franka = parser.AddModelFromFile(franka_combined_path)
++    franka = _add_single_model_from_file(parser, franka_combined_path)
+     plant.WeldFrames(plant.world_frame(), plant.GetFrameByName("panda_link0"))
+     # Set default positions:
+     if init_qpos is None:
+diff --git a/upstream/workflows/simbox_dual_workflow.py b/deployed/workflows/simbox_dual_workflow.py
+index e683107..e0b9543 100644
+--- a/upstream/workflows/simbox_dual_workflow.py
++++ b/deployed/workflows/simbox_dual_workflow.py
+@@ -253,6 +253,9 @@ class SimBoxDualWorkFlow(NimbusWorkFlow):
+             step_replay=self.step_replay,
+         )
+         self.world_recorder.reset()
++        # The first image after a reset needs extra render passes for every
++        # render product / annotator to leave its previous scene buffer.
++        self._camera_capture_needs_sync = True
+ 
+     def _reset_controllers(self, controllers):
+         """Reset all controllers."""
+@@ -443,6 +446,12 @@ class SimBoxDualWorkFlow(NimbusWorkFlow):
+     def generate_seq(self) -> list:
+         end = False
+ 
++        # A plan-only run still returns and serializes the legacy prim-pose
++        # sequence.  Capture a supplemental, coherent joint/object state solely
++        # so de_render can replay it without writing every articulation link.
++        # plan_with_render does not enter this method and is unchanged.
++        self.world_recorder.enable_joint_state_capture()
++
+         # while True:
+         #     obs = self.world.get_observations()
+         #     # self._init_static_objects(self.task)
+@@ -529,10 +538,39 @@ class SimBoxDualWorkFlow(NimbusWorkFlow):
+         return self.recover_seq_from_mem(data)
+ 
+     def _record_rgb_depth(self, step_idx: int):
++        # All SimBox render modes capture RGB through this method.  A camera's
++        # mount pose is authored from its reference prim, while get_rgba()
++        # returns the latest completed render buffer.  Update every mount first
++        # and then render once so every captured image belongs to the same USD /
++        # Fabric state without advancing physics.
++        camera_reference_poses = {}
++        if self.task.cameras:
++            for key, camera in self.task.cameras.items():
++                reference_pose = None
++                if self.world_recorder.uses_render_state_sync and camera.reference_path:
++                    reference_pose = self.world_recorder.get_recorded_prim_pose(
++                        camera.reference_path, step_idx
++                    )
++                camera_reference_poses[key] = reference_pose
++                camera.update_pose(reference_pose=reference_pose)
++            render_passes = 1
++            if self._camera_capture_needs_sync:
++                # The 1280x720 head camera has been observed to require three
++                # app updates after a reset; hand cameras settle no later.
++                render_passes = 3
++                self._camera_capture_needs_sync = False
++            for _ in range(render_passes):
++                self.world.render()
++
+         for key, value in self.task.cameras.items():
+             for robot_name, _ in self.task.robots.items():
+                 if robot_name in key:
+-                    camera_obs = value.get_observations()
++                    # The mount was already authored before the render above.
++                    # Updating it again here can make the next render product
++                    # observe a different pose than the RGB buffer just read.
++                    camera_obs = value.get_observations(
++                        reference_pose=camera_reference_poses.get(key), update_pose=False
++                    )
+                     rgb_img = camera_obs["color_image"]
+                     # Special processing if enabled
+                     camera2env_pose = camera_obs["camera2env_pose"]
+@@ -619,11 +657,24 @@ class SimBoxDualWorkFlow(NimbusWorkFlow):
+         Returns:
+             int: Number of steps replayed
+         """
+-        if not self.step_replay:
++        if not self.world_recorder.uses_joint_state_replay:
+             self.world_recorder.prim_poses = sequence
+ 
+         # warmup before replay formally
+         self.world_recorder.warmup()
++        if self.world_recorder.uses_render_state_sync:
++            # Prime replay cameras at the *recorded frame-0* pose.  The old
++            # code queried the unsynchronised USD robot links here, filling
++            # render products with an unrelated camera pose; the first saved
++            # RGB frame then exposed that stale buffer as a jump.
++            for camera in self.task.cameras.values():
++                reference_pose = None
++                if camera.reference_path:
++                    reference_pose = self.world_recorder.get_recorded_prim_pose(camera.reference_path, 0)
++                camera.update_pose(reference_pose=reference_pose)
++            for _ in range(3):
++                self.world.render()
++            self._camera_capture_needs_sync = False
+ 
+         # Get total steps from WorldRecorder
+         total_steps = self.world_recorder.get_total_steps()
+@@ -777,8 +828,9 @@ class SimBoxDualWorkFlow(NimbusWorkFlow):
+         Recover sequence from memory based on WorldRecorder mode.
+ 
+         Returns:
+-            - step_replay=False: Returns prim_poses list
+-            - step_replay=True: Returns placeholder list (replay data is in WorldRecorder)
++            - Legacy payload: Returns its prim_poses list.
++            - New plan payload: Returns placeholders because the recorder holds
++              supplemental joint/object states for standalone replay.
+         """
+         try:
+             _, wr_ser, logger_ser = data
+@@ -787,7 +839,7 @@ class SimBoxDualWorkFlow(NimbusWorkFlow):
+             if wr_ser:
+                 self.world_recorder.loads(wr_ser)
+ 
+-            if self.step_replay:
++            if self.world_recorder.enable_render_joint_state_replay():
+                 return [None] * self.world_recorder.num_steps
+             else:
+                 return self.world_recorder.prim_poses

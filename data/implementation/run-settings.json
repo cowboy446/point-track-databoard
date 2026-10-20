@@ -1,0 +1,1494 @@
+{
+  "audited_date": "2026-10-20",
+  "runs": [
+    {
+      "node": "node42",
+      "run": "/local_nvme/zhangrong/quarc-runtime/runs/quarc_v6_node42_lift2_fixture_safe_p50r1_20261010",
+      "profile": {
+        "gpus": [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7
+        ],
+        "plan_gpus": [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7
+        ],
+        "render_gpus": [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7
+        ],
+        "plan_workers": 8,
+        "render_workers": 8,
+        "stage_timeout_s": 3600,
+        "max_attempts": 2,
+        "queue_limit": 128,
+        "staged_capture": true,
+        "postprocess_workers": 4,
+        "capture_queue_limit": 64,
+        "keep_raw_capture": false,
+        "production_optimizations": true,
+        "accuracy_checks": true,
+        "raw_spool_root": "/dev/shm/quarc/quarc_v6_node42_lift2_fixture_safe_p50r1_20261010",
+        "raw_spool_backend": "tmpfs",
+        "post_budget_gib": 128,
+        "post_pending_per_worker": 1,
+        "gpu_processes_per_device": 2,
+        "gpu_stage_processes_per_device": {
+          "plan": 2,
+          "render": 2
+        },
+        "min_spool_free_gib": 8,
+        "min_output_free_gib": 200,
+        "isaac_threads": {
+          "carb": 4,
+          "tbb": 4,
+          "physics": 2
+        },
+        "memory_admission": {
+          "budget_mib": 23040,
+          "headroom_mib": 1536,
+          "stage_peak_mib": {
+            "plan": 6144,
+            "render": 7168
+          },
+          "launch_gap_s": 0
+        },
+        "node_id": "node42",
+        "resident_plan_candidates": 20,
+        "resident_idle_timeout_s": 30,
+        "oom_cooldown_s": 300,
+        "resident_render_groups": true,
+        "worker_watchdog": {
+          "session_initializing_s": 600,
+          "planning_s": 1200,
+          "replay_render_s": 7200,
+          "no_progress_s": 3600.0
+        }
+      },
+      "background": {
+        "enabled": true,
+        "fixtures": [
+          {
+            "name": "floor",
+            "target_class": "PlaneObject",
+            "size": [
+              5.0,
+              5.0
+            ],
+            "translation": [
+              0,
+              0,
+              0
+            ],
+            "texture": {
+              "texture_lib": "floor_textures",
+              "apply_randomization": true,
+              "texture_id": 1,
+              "texture_scale": [
+                1.0,
+                1.0
+              ]
+            }
+          },
+          {
+            "name": "background0",
+            "target_class": "PlaneObject",
+            "size": [
+              3.0,
+              5.0
+            ],
+            "translation": [
+              -2,
+              0,
+              1
+            ],
+            "euler": [
+              0.0,
+              90.0,
+              0.0
+            ],
+            "texture": {
+              "texture_lib": "background_textures",
+              "apply_randomization": true,
+              "texture_id": 1,
+              "texture_scale": [
+                1.0,
+                1.0
+              ]
+            }
+          },
+          {
+            "name": "background1",
+            "target_class": "PlaneObject",
+            "size": [
+              3.0,
+              5.0
+            ],
+            "translation": [
+              2,
+              0,
+              1
+            ],
+            "euler": [
+              0.0,
+              90.0,
+              0.0
+            ],
+            "texture": {
+              "texture_lib": "background_textures",
+              "apply_randomization": true,
+              "texture_id": 1,
+              "texture_scale": [
+                1.0,
+                1.0
+              ]
+            }
+          },
+          {
+            "name": "background2",
+            "target_class": "PlaneObject",
+            "size": [
+              5.0,
+              3.0
+            ],
+            "translation": [
+              0,
+              -2,
+              1
+            ],
+            "euler": [
+              90.0,
+              0.0,
+              0.0
+            ],
+            "texture": {
+              "texture_lib": "background_textures",
+              "apply_randomization": true,
+              "texture_id": 1,
+              "texture_scale": [
+                1.0,
+                1.0
+              ]
+            }
+          },
+          {
+            "name": "background3",
+            "target_class": "PlaneObject",
+            "size": [
+              5.0,
+              3.0
+            ],
+            "translation": [
+              0,
+              2,
+              1
+            ],
+            "euler": [
+              90.0,
+              0.0,
+              0.0
+            ],
+            "texture": {
+              "texture_lib": "background_textures",
+              "apply_randomization": true,
+              "texture_id": 1,
+              "texture_scale": [
+                1.0,
+                1.0
+              ]
+            }
+          },
+          {
+            "name": "background_ceiling",
+            "target_class": "PlaneObject",
+            "size": [
+              5.0,
+              5.0
+            ],
+            "translation": [
+              0.0,
+              0.0,
+              2.5
+            ],
+            "euler": [
+              180.0,
+              0.0,
+              0.0
+            ],
+            "texture": {
+              "texture_lib": "background_textures",
+              "apply_randomization": false,
+              "texture_id": 1,
+              "texture_scale": [
+                1.0,
+                1.0
+              ]
+            }
+          }
+        ],
+        "interior_light": {
+          "intensity": 2000.0,
+          "width": 3.0,
+          "height": 3.0,
+          "translation": [
+            0.0,
+            0.0,
+            2.3
+          ],
+          "normalize": false
+        }
+      },
+      "camera_perturbation": {
+        "seed": 20260905,
+        "groups": [
+          {
+            "match": "*",
+            "translation_m": 0.0,
+            "rotation_deg": 0.0
+          },
+          {
+            "match": "agent_view*",
+            "translation_m": 0.05,
+            "rotation_deg": 5.0
+          }
+        ]
+      },
+      "tasks_count": 9,
+      "config_sha256": "4cbe33ce6756e6e5df88b7d002f1341e70d8603f5aa0f4ba44af2c9aa1068856",
+      "digest_encoding": "SHA256 of parsed source_config.json serialized with json.dumps(sort_keys=True)",
+      "batch_status.json": {
+        "state": "exhausted",
+        "started_at": 1791615545.0202096,
+        "updated_at": 1791895289.917572,
+        "max_h5": 4000,
+        "successful_h5": 3597,
+        "orphan_h5": 7,
+        "successful_plans": 3597,
+        "excluded_fluid_tasks": 0,
+        "excluded_published_h5": 0,
+        "nonfluid_accounted_h5": 3597,
+        "target_plans_per_task": 50,
+        "renders_per_plan": 1,
+        "candidate_window_per_worker": 20,
+        "workers_per_gpu": 2,
+        "worker_vram_mib": 9216,
+        "task_counts": {
+          "complete": 67,
+          "failed": 13
+        }
+      }
+    },
+    {
+      "node": "node42",
+      "run": "/local_nvme/zhangrong/quarc-runtime/runs/quarc_v6_node42_plan20_render5_nocompare_r4_20260920",
+      "profile": {
+        "gpus": [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7
+        ],
+        "plan_gpus": [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7
+        ],
+        "render_gpus": [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7
+        ],
+        "plan_workers": 8,
+        "render_workers": 8,
+        "stage_timeout_s": 3600,
+        "max_attempts": 2,
+        "queue_limit": 128,
+        "staged_capture": true,
+        "postprocess_workers": 16,
+        "capture_queue_limit": 64,
+        "keep_raw_capture": false,
+        "production_optimizations": true,
+        "accuracy_checks": false,
+        "raw_spool_root": "/dev/shm/quarc/node42_plan20_render5_cap10000_20260920",
+        "raw_spool_backend": "tmpfs",
+        "post_budget_gib": 180,
+        "post_pending_per_worker": 2,
+        "gpu_processes_per_device": 1,
+        "gpu_stage_processes_per_device": {
+          "plan": 1,
+          "render": 1
+        },
+        "min_spool_free_gib": 8,
+        "min_output_free_gib": 200,
+        "isaac_threads": {
+          "carb": 4,
+          "tbb": 4,
+          "physics": 2
+        },
+        "memory_admission": {
+          "budget_mib": 23040,
+          "headroom_mib": 1536,
+          "stage_peak_mib": {
+            "plan": 6144,
+            "render": 7168
+          },
+          "launch_gap_s": 15
+        },
+        "node_id": "node42",
+        "resident_plan_candidates": 20,
+        "resident_idle_timeout_s": 30,
+        "oom_cooldown_s": 300,
+        "resident_render_groups": true
+      },
+      "background": {
+        "enabled": true,
+        "fixtures": [
+          {
+            "name": "floor",
+            "target_class": "PlaneObject",
+            "size": [
+              5.0,
+              5.0
+            ],
+            "translation": [
+              0,
+              0,
+              0
+            ],
+            "texture": {
+              "texture_lib": "floor_textures",
+              "apply_randomization": true,
+              "texture_id": 1,
+              "texture_scale": [
+                1.0,
+                1.0
+              ]
+            }
+          },
+          {
+            "name": "background0",
+            "target_class": "PlaneObject",
+            "size": [
+              3.0,
+              5.0
+            ],
+            "translation": [
+              -2,
+              0,
+              1
+            ],
+            "euler": [
+              0.0,
+              90.0,
+              0.0
+            ],
+            "texture": {
+              "texture_lib": "background_textures",
+              "apply_randomization": true,
+              "texture_id": 1,
+              "texture_scale": [
+                1.0,
+                1.0
+              ]
+            }
+          },
+          {
+            "name": "background1",
+            "target_class": "PlaneObject",
+            "size": [
+              3.0,
+              5.0
+            ],
+            "translation": [
+              2,
+              0,
+              1
+            ],
+            "euler": [
+              0.0,
+              90.0,
+              0.0
+            ],
+            "texture": {
+              "texture_lib": "background_textures",
+              "apply_randomization": true,
+              "texture_id": 1,
+              "texture_scale": [
+                1.0,
+                1.0
+              ]
+            }
+          },
+          {
+            "name": "background2",
+            "target_class": "PlaneObject",
+            "size": [
+              5.0,
+              3.0
+            ],
+            "translation": [
+              0,
+              -2,
+              1
+            ],
+            "euler": [
+              90.0,
+              0.0,
+              0.0
+            ],
+            "texture": {
+              "texture_lib": "background_textures",
+              "apply_randomization": true,
+              "texture_id": 1,
+              "texture_scale": [
+                1.0,
+                1.0
+              ]
+            }
+          },
+          {
+            "name": "background3",
+            "target_class": "PlaneObject",
+            "size": [
+              5.0,
+              3.0
+            ],
+            "translation": [
+              0,
+              2,
+              1
+            ],
+            "euler": [
+              90.0,
+              0.0,
+              0.0
+            ],
+            "texture": {
+              "texture_lib": "background_textures",
+              "apply_randomization": true,
+              "texture_id": 1,
+              "texture_scale": [
+                1.0,
+                1.0
+              ]
+            }
+          }
+        ]
+      },
+      "camera_perturbation": {
+        "seed": 20260905,
+        "groups": [
+          {
+            "match": "*",
+            "translation_m": 0.0,
+            "rotation_deg": 0.0
+          },
+          {
+            "match": "agent_view*",
+            "translation_m": 0.05,
+            "rotation_deg": 5.0
+          }
+        ]
+      },
+      "tasks_count": 8,
+      "config_sha256": "d93c57120342e207a38e33356c053d949fb8777b055397a490331ead4403c5c0",
+      "digest_encoding": "SHA256 of parsed source_config.json serialized with json.dumps(sort_keys=True)",
+      "batch_status.json": {
+        "state": "exhausted",
+        "started_at": 1789902264.436599,
+        "updated_at": 1791456372.4922485,
+        "max_h5": 10000,
+        "successful_h5": 9440,
+        "orphan_h5": 70,
+        "successful_plans": 1975,
+        "excluded_fluid_tasks": 8,
+        "excluded_published_h5": 0,
+        "nonfluid_accounted_h5": 9440,
+        "target_plans_per_task": 20,
+        "renders_per_plan": 5,
+        "candidate_window_per_worker": 20,
+        "workers_per_gpu": 2,
+        "worker_vram_mib": 7168,
+        "task_counts": {
+          "complete": 83,
+          "failed": 38,
+          "excluded": 8,
+          "pending": 276
+        }
+      }
+    },
+    {
+      "node": "node42",
+      "run": "/local_nvme/zhangrong/quarc-geniesim-runtime/runs/pi05_g2_fixed_agents_repair_20261010_001",
+      "result.json": {
+        "started_at": 1791602632.834931,
+        "total_jobs": 28,
+        "successful_h5": 28,
+        "frames": 52878,
+        "finished_at": 1791605185.450148,
+        "elapsed_s": 2552.6152172088623,
+        "fps": 20.7152255629891
+      },
+      "progress.json": {
+        "started_at": 1791602632.834931,
+        "total_jobs": 28,
+        "successful_h5": 28,
+        "frames": 52878,
+        "updated_at": 1791605181.2078695
+      },
+      "manifest": {
+        "gpus": [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7
+        ],
+        "workers_per_gpu": 2,
+        "started_at": 1791602632.834931,
+        "contract": "genie-pi05-shared-model-waves-v1",
+        "moving_agent_views": false,
+        "config": {
+          "seed": 20280009,
+          "episodes_per_task": 1,
+          "camera_config": "configs/cameras_rule_based.yaml",
+          "policy_observation": "native",
+          "policy_startup_timeout_s": 1200,
+          "rollout_timeout_s": 2400,
+          "postprocess_timeout_s": 2400,
+          "models": {
+            "instruction": {
+              "checkpoint": "instruction_and_robust_pi05",
+              "config": "pi05_genie_sim_instruction_and_robust_20260526"
+            },
+            "spatial": {
+              "checkpoint": "spatial_pi05",
+              "config": "pi05_genie_sim_spatial_20260528"
+            },
+            "manipulation": {
+              "checkpoint": "manipulation_pi05",
+              "config": "pi05_genie_sim_manip_20260613"
+            }
+          },
+          "policy_port_base": 19520,
+          "workers_per_gpu": 2,
+          "shared_policy_port_base": 19920,
+          "shared_policy": true,
+          "min_raw_free_gib": 100,
+          "technical_retries": 2,
+          "export_preview": false,
+          "repair_of": "pi05_g2_689_fixed_agents_001",
+          "repair_scope": "only 28 missing instances; preserve original instance and seed; fixed certified loop cameras"
+        },
+        "task_instances": 28
+      }
+    },
+    {
+      "node": "node42",
+      "run": "/local_nvme/zhangrong/quarc-geniesim-runtime/runs/pi05_g2_689_fixed_agents_001",
+      "manifest": {
+        "gpus": [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7
+        ],
+        "workers_per_gpu": 2,
+        "started_at": 1791552040.107109,
+        "contract": "genie-pi05-shared-model-waves-v1",
+        "moving_agent_views": false,
+        "config": {
+          "seed": 20280009,
+          "episodes_per_task": 1,
+          "camera_config": "configs/cameras_rule_based.yaml",
+          "policy_observation": "native",
+          "policy_startup_timeout_s": 1200,
+          "rollout_timeout_s": 2400,
+          "postprocess_timeout_s": 2400,
+          "models": {
+            "instruction": {
+              "checkpoint": "instruction_and_robust_pi05",
+              "config": "pi05_genie_sim_instruction_and_robust_20260526"
+            },
+            "spatial": {
+              "checkpoint": "spatial_pi05",
+              "config": "pi05_genie_sim_spatial_20260528"
+            },
+            "manipulation": {
+              "checkpoint": "manipulation_pi05",
+              "config": "pi05_genie_sim_manip_20260613"
+            }
+          },
+          "policy_port_base": 19520,
+          "workers_per_gpu": 2,
+          "shared_policy_port_base": 19920,
+          "shared_policy": true,
+          "min_raw_free_gib": 100,
+          "technical_retries": 2,
+          "export_preview": false
+        },
+        "task_instances": 689
+      }
+    },
+    {
+      "node": "node43",
+      "run": "/local_nvme/zhangrong/quarc-runtime/runs/quarc_v6_node43_zero_h5_p20r5_cap20000_20261007",
+      "profile": {
+        "gpus": [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7
+        ],
+        "plan_gpus": [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7
+        ],
+        "render_gpus": [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7
+        ],
+        "plan_workers": 8,
+        "render_workers": 8,
+        "stage_timeout_s": 3600,
+        "max_attempts": 2,
+        "queue_limit": 128,
+        "staged_capture": true,
+        "postprocess_workers": 16,
+        "capture_queue_limit": 64,
+        "keep_raw_capture": false,
+        "production_optimizations": true,
+        "accuracy_checks": false,
+        "raw_spool_root": "/dev/shm/quarc/node43_plan20_render5_zero_h5_20261007",
+        "raw_spool_backend": "tmpfs",
+        "post_budget_gib": 180,
+        "post_pending_per_worker": 2,
+        "gpu_processes_per_device": 1,
+        "gpu_stage_processes_per_device": {
+          "plan": 1,
+          "render": 1
+        },
+        "min_spool_free_gib": 8,
+        "min_output_free_gib": 200,
+        "isaac_threads": {
+          "carb": 4,
+          "tbb": 4,
+          "physics": 2
+        },
+        "memory_admission": {
+          "budget_mib": 23040,
+          "headroom_mib": 1536,
+          "stage_peak_mib": {
+            "plan": 6144,
+            "render": 7168
+          },
+          "launch_gap_s": 0
+        },
+        "node_id": "node43",
+        "resident_plan_candidates": 20,
+        "resident_idle_timeout_s": 30,
+        "oom_cooldown_s": 300,
+        "resident_render_groups": true,
+        "worker_watchdog": {
+          "no_progress_s": 3600.0
+        }
+      },
+      "background": {
+        "enabled": true,
+        "fixtures": [
+          {
+            "name": "floor",
+            "target_class": "PlaneObject",
+            "size": [
+              5.0,
+              5.0
+            ],
+            "translation": [
+              0,
+              0,
+              0
+            ],
+            "texture": {
+              "texture_lib": "floor_textures",
+              "apply_randomization": true,
+              "texture_id": 1,
+              "texture_scale": [
+                1.0,
+                1.0
+              ]
+            }
+          },
+          {
+            "name": "background0",
+            "target_class": "PlaneObject",
+            "size": [
+              3.0,
+              5.0
+            ],
+            "translation": [
+              -2,
+              0,
+              1
+            ],
+            "euler": [
+              0.0,
+              90.0,
+              0.0
+            ],
+            "texture": {
+              "texture_lib": "background_textures",
+              "apply_randomization": true,
+              "texture_id": 1,
+              "texture_scale": [
+                1.0,
+                1.0
+              ]
+            }
+          },
+          {
+            "name": "background1",
+            "target_class": "PlaneObject",
+            "size": [
+              3.0,
+              5.0
+            ],
+            "translation": [
+              2,
+              0,
+              1
+            ],
+            "euler": [
+              0.0,
+              90.0,
+              0.0
+            ],
+            "texture": {
+              "texture_lib": "background_textures",
+              "apply_randomization": true,
+              "texture_id": 1,
+              "texture_scale": [
+                1.0,
+                1.0
+              ]
+            }
+          },
+          {
+            "name": "background2",
+            "target_class": "PlaneObject",
+            "size": [
+              5.0,
+              3.0
+            ],
+            "translation": [
+              0,
+              -2,
+              1
+            ],
+            "euler": [
+              90.0,
+              0.0,
+              0.0
+            ],
+            "texture": {
+              "texture_lib": "background_textures",
+              "apply_randomization": true,
+              "texture_id": 1,
+              "texture_scale": [
+                1.0,
+                1.0
+              ]
+            }
+          },
+          {
+            "name": "background3",
+            "target_class": "PlaneObject",
+            "size": [
+              5.0,
+              3.0
+            ],
+            "translation": [
+              0,
+              2,
+              1
+            ],
+            "euler": [
+              90.0,
+              0.0,
+              0.0
+            ],
+            "texture": {
+              "texture_lib": "background_textures",
+              "apply_randomization": true,
+              "texture_id": 1,
+              "texture_scale": [
+                1.0,
+                1.0
+              ]
+            }
+          }
+        ]
+      },
+      "camera_perturbation": {
+        "seed": 20260905,
+        "groups": [
+          {
+            "match": "*",
+            "translation_m": 0.0,
+            "rotation_deg": 0.0
+          },
+          {
+            "match": "agent_view*",
+            "translation_m": 0.05,
+            "rotation_deg": 5.0
+          }
+        ]
+      },
+      "tasks_count": 8,
+      "config_sha256": "f61fbe3870865a5f849acd5cceb4b7e7f5f0beacc8fcbccdb68d8dbce39dfca7",
+      "digest_encoding": "SHA256 of parsed source_config.json serialized with json.dumps(sort_keys=True)",
+      "batch_status.json": {
+        "state": "exhausted",
+        "started_at": 1791323908.358428,
+        "updated_at": 1791713949.5619006,
+        "max_h5": 20000,
+        "successful_h5": 19900,
+        "orphan_h5": 49,
+        "successful_plans": 3980,
+        "excluded_fluid_tasks": 3,
+        "excluded_published_h5": 0,
+        "nonfluid_accounted_h5": 19900,
+        "target_plans_per_task": 20,
+        "renders_per_plan": 5,
+        "candidate_window_per_worker": 20,
+        "workers_per_gpu": 2,
+        "worker_vram_mib": 7168,
+        "task_counts": {
+          "failed": 23,
+          "excluded": 3,
+          "complete": 196,
+          "pending": 70
+        }
+      }
+    },
+    {
+      "node": "node44",
+      "run": "/local_nvme/zhangrong/quarc-runtime/runs/quarc_v6_node44_lift2_fixture_safe_p50r1_20261009",
+      "profile": {
+        "gpus": [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7
+        ],
+        "plan_gpus": [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7
+        ],
+        "render_gpus": [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7
+        ],
+        "plan_workers": 8,
+        "render_workers": 8,
+        "stage_timeout_s": 3600,
+        "max_attempts": 2,
+        "queue_limit": 128,
+        "staged_capture": true,
+        "postprocess_workers": 4,
+        "capture_queue_limit": 64,
+        "keep_raw_capture": false,
+        "production_optimizations": true,
+        "accuracy_checks": true,
+        "raw_spool_root": "/dev/shm/quarc/quarc_v6_node44_lift2_fixture_safe_p50r1_20261009",
+        "raw_spool_backend": "tmpfs",
+        "post_budget_gib": 128,
+        "post_pending_per_worker": 1,
+        "gpu_processes_per_device": 2,
+        "gpu_stage_processes_per_device": {
+          "plan": 2,
+          "render": 2
+        },
+        "min_spool_free_gib": 8,
+        "min_output_free_gib": 200,
+        "isaac_threads": {
+          "carb": 4,
+          "tbb": 4,
+          "physics": 2
+        },
+        "memory_admission": {
+          "budget_mib": 23040,
+          "headroom_mib": 1536,
+          "stage_peak_mib": {
+            "plan": 6144,
+            "render": 7168
+          },
+          "launch_gap_s": 0
+        },
+        "node_id": "node44",
+        "resident_plan_candidates": 20,
+        "resident_idle_timeout_s": 30,
+        "oom_cooldown_s": 300,
+        "resident_render_groups": true,
+        "worker_watchdog": {
+          "session_initializing_s": 600,
+          "planning_s": 1200,
+          "replay_render_s": 7200,
+          "no_progress_s": 3600.0
+        }
+      },
+      "background": {
+        "enabled": true,
+        "fixtures": [
+          {
+            "name": "floor",
+            "target_class": "PlaneObject",
+            "size": [
+              5.0,
+              5.0
+            ],
+            "translation": [
+              0,
+              0,
+              0
+            ],
+            "texture": {
+              "texture_lib": "floor_textures",
+              "apply_randomization": true,
+              "texture_id": 1,
+              "texture_scale": [
+                1.0,
+                1.0
+              ]
+            }
+          },
+          {
+            "name": "background0",
+            "target_class": "PlaneObject",
+            "size": [
+              3.0,
+              5.0
+            ],
+            "translation": [
+              -2,
+              0,
+              1
+            ],
+            "euler": [
+              0.0,
+              90.0,
+              0.0
+            ],
+            "texture": {
+              "texture_lib": "background_textures",
+              "apply_randomization": true,
+              "texture_id": 1,
+              "texture_scale": [
+                1.0,
+                1.0
+              ]
+            }
+          },
+          {
+            "name": "background1",
+            "target_class": "PlaneObject",
+            "size": [
+              3.0,
+              5.0
+            ],
+            "translation": [
+              2,
+              0,
+              1
+            ],
+            "euler": [
+              0.0,
+              90.0,
+              0.0
+            ],
+            "texture": {
+              "texture_lib": "background_textures",
+              "apply_randomization": true,
+              "texture_id": 1,
+              "texture_scale": [
+                1.0,
+                1.0
+              ]
+            }
+          },
+          {
+            "name": "background2",
+            "target_class": "PlaneObject",
+            "size": [
+              5.0,
+              3.0
+            ],
+            "translation": [
+              0,
+              -2,
+              1
+            ],
+            "euler": [
+              90.0,
+              0.0,
+              0.0
+            ],
+            "texture": {
+              "texture_lib": "background_textures",
+              "apply_randomization": true,
+              "texture_id": 1,
+              "texture_scale": [
+                1.0,
+                1.0
+              ]
+            }
+          },
+          {
+            "name": "background3",
+            "target_class": "PlaneObject",
+            "size": [
+              5.0,
+              3.0
+            ],
+            "translation": [
+              0,
+              2,
+              1
+            ],
+            "euler": [
+              90.0,
+              0.0,
+              0.0
+            ],
+            "texture": {
+              "texture_lib": "background_textures",
+              "apply_randomization": true,
+              "texture_id": 1,
+              "texture_scale": [
+                1.0,
+                1.0
+              ]
+            }
+          },
+          {
+            "name": "background_ceiling",
+            "target_class": "PlaneObject",
+            "size": [
+              5.0,
+              5.0
+            ],
+            "translation": [
+              0.0,
+              0.0,
+              2.5
+            ],
+            "euler": [
+              180.0,
+              0.0,
+              0.0
+            ],
+            "texture": {
+              "texture_lib": "background_textures",
+              "apply_randomization": false,
+              "texture_id": 1,
+              "texture_scale": [
+                1.0,
+                1.0
+              ]
+            }
+          }
+        ],
+        "interior_light": {
+          "intensity": 2000.0,
+          "width": 3.0,
+          "height": 3.0,
+          "translation": [
+            0.0,
+            0.0,
+            2.3
+          ],
+          "normalize": false
+        }
+      },
+      "camera_perturbation": {
+        "seed": 20260905,
+        "groups": [
+          {
+            "match": "*",
+            "translation_m": 0.0,
+            "rotation_deg": 0.0
+          },
+          {
+            "match": "agent_view*",
+            "translation_m": 0.05,
+            "rotation_deg": 5.0
+          }
+        ]
+      },
+      "tasks_count": 9,
+      "config_sha256": "e6d2e5814fe71b14379408002aef5023d7a89862dc88f7acaa829282af83d29d",
+      "digest_encoding": "SHA256 of parsed source_config.json serialized with json.dumps(sort_keys=True)",
+      "batch_status.json": {
+        "state": "exhausted",
+        "started_at": 1791554727.8316696,
+        "updated_at": 1791994194.9866083,
+        "max_h5": 6250,
+        "successful_h5": 5953,
+        "orphan_h5": 4,
+        "successful_plans": 5953,
+        "excluded_fluid_tasks": 0,
+        "excluded_published_h5": 0,
+        "nonfluid_accounted_h5": 5953,
+        "target_plans_per_task": 50,
+        "renders_per_plan": 1,
+        "candidate_window_per_worker": 20,
+        "workers_per_gpu": 2,
+        "worker_vram_mib": 9216,
+        "task_counts": {
+          "complete": 116,
+          "failed": 9,
+          "delegated": 80
+        }
+      }
+    },
+    {
+      "node": "node45",
+      "run": "/local_nvme/zhangrong/robocasa-quarc-v6/runs/production_20261008_r8",
+      "status.json": {
+        "updated": 1791454726.7335985,
+        "started": 1791454526.5778077,
+        "target_episodes": 10000,
+        "target_frames": 9187914,
+        "counts": {
+          "done": 605,
+          "pending": 9395
+        },
+        "completed_frames": 468709,
+        "completed_data_hours": 6.509847222222142,
+        "completed_bytes": 213326396409,
+        "mem_available_bytes": 514096775168,
+        "disk_free_bytes": 6530690977792,
+        "waiting_reason": "stopped",
+        "output_root": "/local_nvme/zhangrong/robocasa-quarc-v6/outputs/production_20261008_r6",
+        "mp4": false,
+        "max_h5": 10000,
+        "selection_manifest": "/local_nvme/zhangrong/robocasa-quarc-v6/config/production_20261008_r3/selection.json",
+        "memory_policy": "resident-only",
+        "workers_per_gpu": 8,
+        "worker_capacity": 64
+      }
+    },
+    {
+      "node": "node45",
+      "run": "/local_nvme/zhangrong/robocasa-quarc-v6/runs/production_20261008_r7",
+      "status.json": {
+        "updated": 1791525079.4227133,
+        "started": 1791454727.1250215,
+        "target_episodes": 10000,
+        "target_frames": 9187914,
+        "counts": {
+          "done": 10000
+        },
+        "completed_frames": 9187914,
+        "completed_data_hours": 127.60991666666443,
+        "completed_bytes": 4188528568140,
+        "mem_available_bytes": 514654408704,
+        "disk_free_bytes": 2555258290176,
+        "waiting_reason": null,
+        "output_root": "/local_nvme/zhangrong/robocasa-quarc-v6/outputs/production_20261008_r6",
+        "mp4": false,
+        "max_h5": 10000,
+        "selection_manifest": "/local_nvme/zhangrong/robocasa-quarc-v6/config/production_20261008_r3/selection.json",
+        "workers_per_gpu": 8,
+        "worker_capacity": 64
+      }
+    },
+    {
+      "node": "gateway",
+      "run": "/opt/libero-quarc-v6/runs/production_depthfixed_20261007",
+      "status.json": {
+        "updated": 1791412716.2824085,
+        "started": 1791375755.970624,
+        "target_episodes": 6500,
+        "target_frames": 1007618,
+        "counts": {
+          "uploaded": 6500
+        },
+        "uploaded_frames": 1007618,
+        "uploaded_data_hours": 13.994694444444445,
+        "local_spool_bytes": 0,
+        "destination": "node42:/local_nvme/zhangrong/libero-h5-v6-depthfixed-20261007"
+      }
+    },
+    {
+      "node": "gateway",
+      "run": "/opt/robotwin-quarc-v6/runs/production_r4_20261008",
+      "status.json": {
+        "updated": 1791469211.1580734,
+        "started": 1791467134.9114926,
+        "target_episodes": 11500,
+        "counts": {
+          "uploaded": 11500
+        },
+        "uploaded_frames": 2482528,
+        "uploaded_data_hours": 27.45586666666672,
+        "local_spool_bytes": 852192746,
+        "gpus": [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7
+        ],
+        "workers_per_gpu": 2,
+        "cpu_threads_per_worker": 4,
+        "destination": "node42:/local_nvme/zhangrong/robotwin-h5-v6"
+      }
+    }
+  ],
+  "evidence_files": [
+    {
+      "file": "node42-configs.json",
+      "sha256": "1d98be5b78ea7db592ec5144089ae782a4ea66dd4ed6e08b6a77c4e46bab73cd"
+    },
+    {
+      "file": "node43-configs.json",
+      "sha256": "873212994d526376963a1a1d7d50ec8247a929e554a22cc008dada2b054d5f4a"
+    },
+    {
+      "file": "node44-configs.json",
+      "sha256": "40f5cd150cbdf9071f45d3f38b418aa15873ea4ac25813734a5c81d0a07ba457"
+    },
+    {
+      "file": "node45-configs.json",
+      "sha256": "29d65a54852e0435457cd6f5931f37aea486bfd423744e60825dc9519a66cc1d"
+    },
+    {
+      "file": "gateway-configs.json",
+      "sha256": "cd34ea6bfa26eb31ff0730288a386bae0dee3a5dc50abc32b1bc5110d4be580d"
+    }
+  ],
+  "genie_original_result": {
+    "/local_nvme/zhangrong/quarc-geniesim-runtime/runs/pi05_g2_689_fixed_agents_001/progress.json": {
+      "started_at": 1791552040.107109,
+      "total_jobs": 689,
+      "successful_h5": 661,
+      "frames": 554566,
+      "updated_at": 1791573789.0619483
+    },
+    "/local_nvme/zhangrong/quarc-geniesim-runtime/runs/pi05_g2_689_fixed_agents_001/result.json": {
+      "started_at": 1791552040.107109,
+      "total_jobs": 689,
+      "successful_h5": 661,
+      "frames": 554566,
+      "finished_at": 1791573793.535082,
+      "elapsed_s": 21753.427973270416,
+      "fps": 25.49326941397119
+    },
+    "genie_runtime_paths": [
+      "/local_nvme/zhangrong/quarc-geniesim-runtime/compat-libs",
+      "/local_nvme/zhangrong/quarc-geniesim-runtime/venv",
+      "/local_nvme/zhangrong/quarc-geniesim-runtime/cuda-12.8",
+      "/local_nvme/zhangrong/quarc-geniesim-runtime/logs",
+      "/local_nvme/zhangrong/quarc-geniesim-runtime/downloader-venv",
+      "/local_nvme/zhangrong/quarc-geniesim-runtime/runs",
+      "/local_nvme/zhangrong/quarc-geniesim-runtime/site-packages-overlay",
+      "/local_nvme/zhangrong/quarc-geniesim-runtime/setup-logs",
+      "/local_nvme/zhangrong/quarc-geniesim-runtime/venv-provisional-31215",
+      "/local_nvme/zhangrong/quarc-geniesim-runtime/vla",
+      "/local_nvme/zhangrong/quarc-geniesim-runtime/python",
+      "/local_nvme/zhangrong/quarc-geniesim-runtime/genie-baseline-5b73a40.tar.gz",
+      "/local_nvme/zhangrong/quarc-geniesim-runtime/downloads"
+    ]
+  },
+  "libero_launch": {
+    "time": 1791375756.0039232,
+    "event": "start",
+    "episodes": 6500,
+    "gpus": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7
+    ],
+    "settings": {
+      "cameras": [
+        "agentview",
+        "sideview",
+        "birdview",
+        "robot0_eye_in_hand"
+      ],
+      "depth_quality_gate_version": "libero-depth-integrity-v2",
+      "destination_host": "node42",
+      "destination_root": "/local_nvme/zhangrong/libero-h5-v6-depthfixed-20261007",
+      "fps": 20,
+      "full_accuracy_validation": true,
+      "manifest_sha256": "2f22e27c004365757ef4b37acf936b31be6450648b02e7ee1815c7365b32c36e",
+      "points": 8000,
+      "resolution": 512,
+      "seed": 42,
+      "spool": "/opt/libero-quarc-v6/spool_depthfixed_20261007"
+    }
+  },
+  "supporting_evidence": [
+    {
+      "label": "Auto collect: audited runs and adapter repairs",
+      "evidence_path": "sources/node42/local_nvme/zhangrong/quarc-deploy/GenieSim-data-pipe/agent/20261004_资产与RPC修复及目录重试.md",
+      "sha256": "fda4a5a25d455b820f17262d7f2722790855b348dedefdfa93e7808142bd8b35"
+    },
+    {
+      "label": "Agent-assisted tasks: final six-instance acceptance",
+      "evidence_path": "sources/node42/local_nvme/zhangrong/quarc-deploy/GenieSim-data-pipe/agent/20261007_six_scene_latest_report.md",
+      "sha256": "5bb07706460d74e0382a579eb93c90a8cdd1d2cf2597bdcf68de83d09cacdaa6"
+    },
+    {
+      "label": "VLA: model/source lineage and camera correction",
+      "evidence_path": "sources/node42/local_nvme/zhangrong/quarc-deploy/GenieSim-data-pipe/agent/20261008_pi05_VLA接入与验收.md",
+      "sha256": "2ef7169b8cca6e9369944a06e311ad628da7314b395d37bbb21adc2d53bc3866"
+    },
+    {
+      "label": "SIM1: six-episode data acceptance and separate task outcomes",
+      "evidence_path": "sources/node44/local_nvme/zhangrong/sim1-h5-v6-20261015/delivery/acceptance.json",
+      "sha256": "79d46252b9f0a4a46e8946604f5f30b197cd0d1f9b0bea4671bd36d2ea373109"
+    },
+    {
+      "label": "SIM1: six-view experimental export",
+      "evidence_path": "sources/node44/local_nvme/zhangrong/sim1-h5-v6-20261015/photoreal/textured_sixview/export/export_summary.json",
+      "sha256": "cf994cc82350d18d6fe2894b8b83dfc4d5c1901bfdaa34a447a9f654805162ac"
+    },
+    {
+      "label": "SIM1: downloaded checkpoint and unexecuted DataGen",
+      "evidence_path": "sources/node44/local_nvme/zhangrong/sim1-h5-v6-20261015/research/datagen_findings.json",
+      "sha256": "d597e8d1381684c0da7948707823831dc9ffc73d8218ba9fbc81d662cc6b06c0"
+    },
+    {
+      "label": "RoboCasa: deployed release source hashes and runtime versions",
+      "evidence_path": "sources/node45/local_nvme/zhangrong/robocasa-quarc-v6/releases/production_20261008_r7/build.json",
+      "sha256": "c21b3de48a7fadc597d990f330480b0ee44b9d9d42135ffa339bcc7585c53635"
+    }
+  ],
+  "sim1_acceptance": {
+    "passed": true,
+    "acceptance_scope": "three distinct source task goals, two complete RGBD persistent-point MP4 and H5 episodes each",
+    "frames_total": 5075,
+    "cameras": [
+      "front",
+      "side"
+    ],
+    "camera_resolution_wh": [
+      640,
+      480
+    ],
+    "fps": 60,
+    "depth_scale_m": 0.001,
+    "point_scale_m": 0.0001,
+    "max_point_reference_axis_error_m": 5.016276912750417e-05,
+    "all_observation_datasets_unchanged_by_promotion": true,
+    "idempotent_resume_verified": true,
+    "task_success_counts": {
+      "fold_mat": 2
+    },
+    "task_unsuccessful_counts": {
+      "fold_shirt": 2,
+      "fold_shorts": 2
+    }
+  },
+  "sim1_six_view": {
+    "frames": 661,
+    "points": 5263,
+    "dynamic": 3663,
+    "static": 1600,
+    "source_complete": true,
+    "candidate_count": 1720150,
+    "requested_points": 8000,
+    "reference_zero_view_dynamic": 0,
+    "cameras": [
+      "head",
+      "left_wrist",
+      "right_wrist",
+      "agent_view",
+      "agent_view_left",
+      "agent_view_right"
+    ],
+    "point_binding_sha256": "863d4d45f6ae5f646f2d1342d89363449914c3d7f8b1a1a2967095a12a94c7a8",
+    "h5_sha256": "8c4cd6f8251c350dc1a44a2376fb5fb79cf62f6f7ab3f260202e2235e38df2e1",
+    "production_eligible": false
+  }
+}

@@ -1,0 +1,337 @@
+diff --git a/upstream/envs/_base_task.py b/deployed/envs/_base_task.py
+index 982e6ec..f17f40b 100644
+--- a/upstream/envs/_base_task.py
++++ b/deployed/envs/_base_task.py
+@@ -80,7 +80,16 @@ class Base_Task(gym.Env):
+         self.random_table_height = random_setting.get("random_table_height", 0)
+         self.random_light = random_setting.get("random_light", False)
+         self.crazy_random_light_rate = random_setting.get("crazy_random_light_rate", 0)
+-        self.crazy_random_light = (0 if not self.random_light else np.random.rand() < self.crazy_random_light_rate)
++        # Appearance randomization must not advance the task RNG.  Official
++        # joint-path replay depends on the task RNG reproducing exactly the
++        # same object identities and initial poses as the clean episode.
++        self.appearance_seed = int(random_setting.get("appearance_seed", kwags.get("seed", 0)))
++        self.appearance_rng = np.random.default_rng(self.appearance_seed)
++        self.crazy_random_light = (
++            False
++            if not self.random_light
++            else self.appearance_rng.random() < self.crazy_random_light_rate
++        )
+         self.random_embodiment = random_setting.get("random_embodiment", False)  # TODO
+ 
+         self.file_path = []
+@@ -154,6 +163,15 @@ class Base_Task(gym.Env):
+             "wall_texture": self.wall_texture,
+             "table_texture": self.table_texture,
+         }
++        self.info["appearance_randomization"] = {
++            "appearance_seed": self.appearance_seed,
++            "random_background": bool(self.random_background),
++            "random_light": bool(self.random_light),
++            "crazy_random_light": bool(self.crazy_random_light),
++            "ambient_light": self.ambient_light_color,
++            "direction_light_colors": self.direction_light_colors,
++            "point_light_colors": self.point_light_colors,
++        }
+         self.info["info"] = {}
+ 
+         self.stage_success_tag = False
+@@ -211,10 +229,9 @@ class Base_Task(gym.Env):
+         # give renderer to sapien sim
+         self.engine.set_renderer(self.renderer)
+ 
+-        sapien.render.set_camera_shader_dir("rt")
+-        sapien.render.set_ray_tracing_samples_per_pixel(32)
+-        sapien.render.set_ray_tracing_path_depth(8)
+-        sapien.render.set_ray_tracing_denoiser("oidn")
++        # Headless export uses the raster shader; RT shader compilation can hang on
++        # machines without a display/RTX context and is unnecessary for geometry labels.
++        sapien.render.set_camera_shader_dir("default")
+ 
+         # declare sapien scene
+         scene_config = sapien.SceneConfig()
+@@ -230,28 +247,35 @@ class Base_Task(gym.Env):
+             kwargs.get("restitution", 0),
+         )
+         # give some white ambient light of moderate intensity
+-        self.scene.set_ambient_light(kwargs.get("ambient_light", [0.5, 0.5, 0.5]))
++        self.ambient_light_color = list(kwargs.get("ambient_light", [0.5, 0.5, 0.5]))
++        self.scene.set_ambient_light(self.ambient_light_color)
+         # default enable shadow unless specified otherwise
+         shadow = kwargs.get("shadow", True)
+         # default spotlight angle and intensity
+         direction_lights = kwargs.get("direction_lights", [[[0, 0.5, -1], [0.5, 0.5, 0.5]]])
+         self.direction_light_lst = []
++        self.direction_light_colors = []
+         for direction_light in direction_lights:
+-            if self.random_light:
+-                direction_light[1] = [
+-                    np.random.rand(),
+-                    np.random.rand(),
+-                    np.random.rand(),
+-                ]
++            color = (
++                self.appearance_rng.random(3).tolist()
++                if self.random_light
++                else list(direction_light[1])
++            )
++            self.direction_light_colors.append(color)
+             self.direction_light_lst.append(
+-                self.scene.add_directional_light(direction_light[0], direction_light[1], shadow=shadow))
++                self.scene.add_directional_light(direction_light[0], color, shadow=shadow))
+         # default point lights position and intensity
+         point_lights = kwargs.get("point_lights", [[[1, 0, 1.8], [1, 1, 1]], [[-1, 0, 1.8], [1, 1, 1]]])
+         self.point_light_lst = []
++        self.point_light_colors = []
+         for point_light in point_lights:
+-            if self.random_light:
+-                point_light[1] = [np.random.rand(), np.random.rand(), np.random.rand()]
+-            self.point_light_lst.append(self.scene.add_point_light(point_light[0], point_light[1], shadow=shadow))
++            color = (
++                self.appearance_rng.random(3).tolist()
++                if self.random_light
++                else list(point_light[1])
++            )
++            self.point_light_colors.append(color)
++            self.point_light_lst.append(self.scene.add_point_light(point_light[0], color, shadow=shadow))
+ 
+         # initialize viewer with camera position and orientation
+         if self.render_freq:
+@@ -280,15 +304,16 @@ class Base_Task(gym.Env):
+                 [name for name in os.listdir(directory_path) if os.path.isfile(os.path.join(directory_path, name))])
+ 
+             # wall_texture, table_texture = random.randint(0, file_count - 1), random.randint(0, file_count - 1)
+-            wall_texture, table_texture = np.random.randint(0, file_count), np.random.randint(0, file_count)
++            wall_texture = int(self.appearance_rng.integers(0, file_count))
++            table_texture = int(self.appearance_rng.integers(0, file_count))
+ 
+             self.wall_texture, self.table_texture = (
+                 f"{texture_type}/{wall_texture}",
+                 f"{texture_type}/{table_texture}",
+             )
+-            if np.random.rand() <= self.clean_background_rate:
++            if self.appearance_rng.random() <= self.clean_background_rate:
+                 self.wall_texture = None
+-            if np.random.rand() <= self.clean_background_rate:
++            if self.appearance_rng.random() <= self.clean_background_rate:
+                 self.table_texture = None
+         else:
+             self.wall_texture, self.table_texture = None, None
+@@ -423,11 +448,15 @@ class Base_Task(gym.Env):
+         """
+         if self.crazy_random_light:
+             for renderColor in self.point_light_lst:
+-                renderColor.set_color([np.random.rand(), np.random.rand(), np.random.rand()])
++                renderColor.set_color(self.appearance_rng.random(3).tolist())
+             for renderColor in self.direction_light_lst:
+-                renderColor.set_color([np.random.rand(), np.random.rand(), np.random.rand()])
++                renderColor.set_color(self.appearance_rng.random(3).tolist())
+             now_ambient_light = self.scene.ambient_light
+-            now_ambient_light = np.clip(np.array(now_ambient_light) + np.random.rand(3) * 0.2 - 0.1, 0, 1)
++            now_ambient_light = np.clip(
++                np.array(now_ambient_light) + self.appearance_rng.random(3) * 0.2 - 0.1,
++                0,
++                1,
++            )
+             self.scene.set_ambient_light(now_ambient_light)
+         self.cameras.update_wrist_camera(self.robot.left_camera.get_pose(), self.robot.right_camera.get_pose())
+         self.scene.update_render()
+@@ -459,11 +488,17 @@ class Base_Task(gym.Env):
+             mesh_segmentation = self.cameras.get_segmentation(level="mesh")
+             for camera_name in mesh_segmentation.keys():
+                 pkl_dic["observation"][camera_name].update(mesh_segmentation[camera_name])
++            mesh_ids = self.cameras.get_segmentation_id(level="mesh")
++            for camera_name in mesh_ids.keys():
++                pkl_dic["observation"][camera_name].update(mesh_ids[camera_name])
+         # actor_segmentation
+         if self.data_type.get("actor_segmentation", False):
+             actor_segmentation = self.cameras.get_segmentation(level="actor")
+             for camera_name in actor_segmentation.keys():
+                 pkl_dic["observation"][camera_name].update(actor_segmentation[camera_name])
++            actor_ids = self.cameras.get_segmentation_id(level="actor")
++            for camera_name in actor_ids.keys():
++                pkl_dic["observation"][camera_name].update(actor_ids[camera_name])
+         # depth
+         if self.data_type.get("depth", False):
+             depth = self.cameras.get_depth()
+@@ -496,6 +531,23 @@ class Base_Task(gym.Env):
+         if self.data_type.get("pointcloud", False):
+             pkl_dic["pointcloud"] = self.cameras.get_pcd(self.data_type.get("conbine", False))
+ 
++        if self.data_type.get("rigid_pose", False):
++            visual_ids, entity_ids, entity_poses = [], [], []
++            for entity in self.scene.entities:
++                entity_pose = entity.get_pose().to_transformation_matrix().astype(np.float32)
++                for component in entity.components:
++                    if isinstance(component, sapien.render.RenderBodyComponent):
++                        for shape in component.render_shapes:
++                            visual_ids.append(int(shape.per_scene_id))
++                            entity_ids.append(int(entity.per_scene_id))
++                            entity_poses.append(entity_pose)
++            order = np.argsort(np.asarray(visual_ids, dtype=np.int32))
++            pkl_dic["simulation"] = {
++                "visual_id": np.asarray(visual_ids, dtype=np.int32)[order],
++                "entity_id": np.asarray(entity_ids, dtype=np.int32)[order],
++                "visual_entity_pose": np.asarray(entity_poses, dtype=np.float32)[order],
++            }
++
+         self.now_obs = deepcopy(pkl_dic)
+         return pkl_dic
+ 
+diff --git a/upstream/envs/camera/camera.py b/deployed/envs/camera/camera.py
+index 46d960d..286024f 100644
+--- a/upstream/envs/camera/camera.py
++++ b/deployed/envs/camera/camera.py
+@@ -11,6 +11,7 @@ import yaml
+ import trimesh
+ import math
+ from .._GLOBAL_CONFIGS import CONFIGS_PATH
++from .projection import projection_config, observer_projection_config
+ import os
+ from sapien.sensor import StereoDepthSensor, StereoDepthSensorConfig
+ 
+@@ -57,6 +58,11 @@ class Camera:
+ 
+         self.collect_head_camera = kwags["camera"].get("collect_head_camera", True)
+         self.collect_wrist_camera = kwags["camera"].get("collect_wrist_camera", True)
++        # Promote the built-in third-person observer to a normal observation
++        # camera when requested.  The legacy `third_view` path only saves RGB;
++        # a normal camera also gets calibration, depth and segmentation.
++        self.collect_observer_camera = kwags["camera"].get("collect_observer_camera", False)
++        self.camera_options = dict(kwags["camera"])
+ 
+         # embodiment = kwags.get('embodiment')
+         # embodiment_config_path = os.path.join(CONFIGS_PATH, '_embodiment_config.yml')
+@@ -78,7 +84,10 @@ class Camera:
+         Add cameras and set camera parameters
+             - Including four cameras: left, right, front, head.
+         """
+-        near, far = 0.1, 100
++        near = float(self.camera_options.get("near", 0.1))
++        far = float(self.camera_options.get("far", 100))
++        if not 0 < near < far:
++            raise ValueError("camera planes must satisfy 0 < near < far")
+         camera_config_path = os.path.join(CONFIGS_PATH, "_camera_config.yml")
+ 
+         assert os.path.isfile(camera_config_path), "task config file is missing"
+@@ -93,7 +102,7 @@ class Camera:
+             if camera_info["type"] not in camera_args.keys():
+                 raise ValueError(f"Camera type {camera_info['type']} not supported")
+ 
+-            camera_config = camera_args[camera_info["type"]]
++            camera_config = projection_config(camera_args[camera_info["type"]], self.camera_options)
+             cam_pos = np.array(camera_info["position"])
+             vector = np.random.randn(3)
+             random_dir = vector / np.linalg.norm(vector)
+@@ -131,7 +140,7 @@ class Camera:
+ 
+         # ================================= wrist camera =================================
+         if self.collect_wrist_camera:
+-            wrist_camera_config = camera_args[self.wrist_camera_type]
++            wrist_camera_config = projection_config(camera_args[self.wrist_camera_type], self.camera_options)
+             self.left_camera = scene.add_camera(
+                 name="left_camera",
+                 width=wrist_camera_config["w"],
+@@ -217,11 +226,12 @@ class Camera:
+                 self.static_camera_config.append(camera_config)
+ 
+         # observer camera
++        observer_config = observer_projection_config(self.camera_options)
+         self.observer_camera = scene.add_camera(
+             name="observer_camera",
+-            width=320,
+-            height=240,
+-            fovy=np.deg2rad(93),
++            width=observer_config["w"],
++            height=observer_config["h"],
++            fovy=np.deg2rad(observer_config["fovy"]),
+             near=near,
+             far=far,
+         )
+@@ -234,6 +244,11 @@ class Camera:
+         observer_mat44[:3, :3] = np.stack([observer_cam_forward, observer_cam_left, observer_up], axis=1)
+         observer_mat44[:3, 3] = observer_cam_pos
+         self.observer_camera.entity.set_pose(sapien.Pose(observer_mat44))
++        if self.collect_observer_camera:
++            self.static_camera_list.append(self.observer_camera)
++            self.static_camera_name.append("robotview")
++            self.static_camera_config.append(observer_config)
++            self.static_camera_num += 1
+ 
+         # world pcd camera
+         self.world_camera1 = scene.add_camera(
+@@ -408,6 +423,22 @@ class Camera:
+                 res[camera_name][f"{level}_segmentation"] = _get_segmentation(camera, level=level)
+         return res
+ 
++    def get_segmentation_id(self, level="mesh") -> dict:
++        """Return raw SAPIEN render-shape/entity IDs without palette conversion."""
++        channel = 0 if level == "mesh" else 1
++
++        def read(camera):
++            return camera.get_picture("Segmentation")[..., channel].astype(np.int32)
++
++        res = {}
++        if self.collect_wrist_camera:
++            res["left_camera"] = {f"{level}_id": read(self.left_camera)}
++            res["right_camera"] = {f"{level}_id": read(self.right_camera)}
++        for camera, camera_name in zip(self.static_camera_list, self.static_camera_name):
++            if camera_name != "head_camera" or self.collect_head_camera:
++                res[camera_name] = {f"{level}_id": read(camera)}
++        return res
++
+     # Get Camera Depth
+     def get_depth(self) -> dict:
+ 
+diff --git a/upstream/envs/robot/planner.py b/deployed/envs/robot/planner.py
+index 21ae432..320dacd 100644
+--- a/upstream/envs/robot/planner.py
++++ b/deployed/envs/robot/planner.py
+@@ -274,6 +274,21 @@ except Exception as e:
+     print('[planner.py]: Something wrong happened when importing CuroboPlanner! Please check if Curobo is installed correctly. If the problem still exists, you can install Curobo from https://github.com/NVlabs/curobo manually.')
+     print('Exception traceback:')
+     traceback.print_exc()
++    class CuroboPlanner:
++        """No-op planner used only for replay; recorded joint paths need no planning."""
++        def __init__(self, *args, **kwargs):
++            pass
++        def plan_grippers(self, now_val, target_val):
++            now_val = float(now_val); target_val = float(target_val)
++            n = max(1, int(abs(target_val - now_val) / 0.02))
++            return {"per_step": 1, "result": np.linspace(now_val, target_val, n + 1)[1:], "num_step": n}
++        def plan_batch(self, curr_joint_pos, target_pose_list, **kwargs):
++            n = len(target_pose_list)
++            q = np.asarray(curr_joint_pos, dtype=float)
++            return {"status": ["Success"] * n, "position": [np.tile(q, (1, 1)) for _ in range(n)]}
++        def plan_path(self, curr_joint_pos, target_gripper_pose, **kwargs):
++            q = np.asarray(curr_joint_pos, dtype=float)
++            return {"status": "Success", "position": np.tile(q, (2, 1))}
+ 
+ 
+ # ********************** MplibPlanner **********************
+diff --git a/upstream/script/test_render.py b/deployed/script/test_render.py
+index 97350aa..40a6d6d 100644
+--- a/upstream/script/test_render.py
++++ b/deployed/script/test_render.py
+@@ -49,7 +49,8 @@ class Sapien_TEST(gym.Env):
+         try:
+             self.setup_scene()
+             print("\033[32m" + "Render Well" + "\033[0m")
+-        except:
++        except Exception as e:
++            import traceback; traceback.print_exc()
+             print("\033[31m" + "Render Error" + "\033[0m")
+             exit()
+ 
+@@ -67,10 +68,7 @@ class Sapien_TEST(gym.Env):
+         # give renderer to sapien sim
+         self.engine.set_renderer(self.renderer)
+ 
+-        sapien.render.set_camera_shader_dir("rt")
+-        sapien.render.set_ray_tracing_samples_per_pixel(32)
+-        sapien.render.set_ray_tracing_path_depth(8)
+-        sapien.render.set_ray_tracing_denoiser("oidn")
++        sapien.render.set_camera_shader_dir("default")
+ 
+         # declare sapien scene
+         scene_config = sapien.SceneConfig()

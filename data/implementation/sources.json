@@ -1,0 +1,128 @@
+[
+  {
+    "id": "S1",
+    "source": "node42/local_nvme/zhangrong/quarc-deploy/InternDataEngine-Dev/deps/world_toolkit/world_recorder/__init__.py",
+    "sha256": "fcac42fe2423f47fbad56081bde75b3aa7e559201f1e1c59995261b900d2edc3",
+    "start_line": 296,
+    "end_line": 307,
+    "excerpt": "        self.world.step(render=False)\n        # The FK tick can move passive/mimic finger DOFs by slightly more than\n        # 1e-3 even with drives, gravity and contacts disabled.  Reapply the\n        # authoritative plan vector after FK, just as object state is restored\n        # below; update_transformations then publishes the exact articulation\n        # state without integrating it a second time.\n        self._restore_recorded_robot_root_states()\n        self._restore_recorded_robot_joint_states()\n        self._restore_recorded_object_states()\n        self._publish_restored_object_transforms()\n\n    def _publish_restored_object_transforms(self):",
+    "label": "Core replay · restore after the FK tick"
+  },
+  {
+    "id": "S2",
+    "source": "node42/local_nvme/zhangrong/quarc-deploy/Quarc-data-pipe/src/quarc_data_pipe/engine/interndata/staged.py",
+    "sha256": "e42d4ed7b3f47b28ff496aad0291faeaffd65b539ea611582a39c36ae019ad2a",
+    "start_line": 193,
+    "end_line": 210,
+    "excerpt": "            reference_s = 0.0\n            for t in range(T):\n                if wr.replay():\n                    raise ValueError(\"early replay completion\")\n                if accuracy_checks and not np.allclose(session.base_pose(), base, atol=1e-4):\n                    raise ValueError(\"robot base moved\")\n                rig.update(t)\n                poses[t], vis[t] = registry.snapshot()\n                q = np.asarray(robot.get_joint_positions()).reshape(-1)\n                if accuracy_checks:\n                    expected_q = np.asarray(wr.robot_joint_data[name][t]).reshape(-1)\n                    delta = np.abs(q - expected_q)\n                    if delta.max() > 1e-3:\n                        j = int(delta.argmax())\n                        raise ValueError(\n                            f\"joint drift at frame {t}, {robot.dof_names[j]}: \"\n                            f\"recorded={expected_q[j]}, replayed={q[j]}, error={delta[j]}\"\n                        )",
+    "label": "Staged capture · one state cache before RGB-D"
+  },
+  {
+    "id": "S3",
+    "source": "node42/local_nvme/zhangrong/quarc-deploy/Quarc-data-pipe/src/quarc_data_pipe/engine/interndata/appearance.py",
+    "sha256": "8f7a8a85490829ed79f9a09e04b7881aa47b388d9d2a81874589e9d13a532c71",
+    "start_line": 16,
+    "end_line": 19,
+    "excerpt": "def appearance_factors(seed, path):\n    token = int(hashlib.sha256(f\"{seed}/{path}\".encode()).hexdigest()[:16], 16)\n    rng = np.random.default_rng(token)\n    return rng.uniform(0.55, 1.0, 3), float(rng.uniform(0.65, 1.35)), float(rng.uniform(-0.6, 0.6))",
+    "label": "Deterministic appearance factors"
+  },
+  {
+    "id": "S4",
+    "source": "node42/local_nvme/zhangrong/quarc-deploy/Quarc-data-pipe/src/quarc_data_pipe/engine/interndata/asset_paths.py",
+    "sha256": "3d864ba635088f59a4cae8310db0a431e814c9bb94e43132e8e02ca48c7519ae",
+    "start_line": 5,
+    "end_line": 24,
+    "excerpt": "def anchored_asset_value(value):\n    from pxr import Sdf\n    if isinstance(value, Sdf.AssetPath):\n        if not value.path:\n            return value\n        if value.resolvedPath:\n            return Sdf.AssetPath(value.resolvedPath)\n        # MDL builtins are resolved by the renderer's module search path.\n        if value.path.endswith('.mdl') and '/' not in value.path:\n            return value\n        if value.path.startswith(('http:', 'https:', 'omniverse:')):\n            return value\n        if Path(value.path).is_absolute() and Path(value.path).is_file():\n            return value\n        raise ValueError('Unresolved USD asset before cross-layer copy: '+value.path)\n    if isinstance(value, Sdf.AssetPathArray):\n        return Sdf.AssetPathArray([anchored_asset_value(v) for v in value])\n    return value",
+    "label": "Material repair · preserve asset resolution"
+  },
+  {
+    "id": "S5",
+    "source": "node42/local_nvme/zhangrong/quarc-runtime/production/lift2_fixture_20261009/project/src/quarc_data_pipe/engine/interndata/background.py",
+    "sha256": "1e84f5feac9e89a99f4c031b8033291c00a71f8cc5e1f22a44e6d5c0ce2119d8",
+    "start_line": 7,
+    "end_line": 23,
+    "excerpt": "def ensure_interior_light(session):\n    \"\"\"An opaque RGBD ceiling needs lighting below it; resets are idempotent.\"\"\"\n    spec = getattr(session, \"cfg\", {}).get(\"background\", {}).get(\"interior_light\")\n    if not spec:\n        return\n    from pxr import Gf, UsdGeom, UsdLux\n\n    stage = session.wf.world.stage\n    light = UsdLux.RectLight.Define(stage, session.wf.task.root_prim_path + \"/quality_ceiling_light\")\n    light.CreateIntensityAttr(float(spec[\"intensity\"]))\n    light.CreateWidthAttr(float(spec[\"width\"]))\n    light.CreateHeightAttr(float(spec[\"height\"]))\n    # Preserve legacy snapshots by default. Interior production lighting can\n    # use luminance independent of the area of the ceiling panel.\n    light.CreateNormalizeAttr(bool(spec.get(\"normalize\", True)))\n    UsdGeom.XformCommonAPI(light).SetTranslate(Gf.Vec3d(*spec[\"translation\"]))\n    print(\"[quarc] restored interior light below RGBD ceiling\", flush=True)",
+    "label": "Lift2 release · configured interior light"
+  },
+  {
+    "id": "S6",
+    "source": "gateway/opt/libero-quarc-v6/libero-d4rt-data/libero_d4rt_data/export_v6.py",
+    "sha256": "c2cc5d4068a2682f65b66ac6b2596e9e3ba637f70a3282ebda8d74684943b308",
+    "start_line": 365,
+    "end_line": 375,
+    "excerpt": "        for frame_index, state in enumerate(states):\n            env.sim.set_state_from_flattened(state)\n            env.sim.forward()\n            world_from_base = np.asarray(replay.world_from_robot_base(env), dtype=np.float64)\n            base_poses.append(world_from_base)\n            episode_from_world = _episode_from_world(replay, env, world_from_base0)\n            captured = _capture_exact_rgbd_geom(env, cameras, resolution, replay)\n            observations = {}\n            for name in cameras:\n                rgb, depth, intrinsic, current_base_from_camera, geom_ids = captured[name]\n                episode_from_current_base = episode_from_world @ world_from_base",
+    "label": "Core replay · recorded MuJoCo states"
+  },
+  {
+    "id": "S7",
+    "source": "@libero-production-start.jsonl",
+    "sha256": "ac5570f958690db1f7ee528bfc0a9decb3da5e3f39d44b0c009cd44e9ef4b892",
+    "start_line": 1,
+    "end_line": 1,
+    "excerpt": "{\"time\": 1791375756.0039232, \"event\": \"start\", \"episodes\": 6500, \"gpus\": [0, 1, 2, 3, 4, 5, 6, 7], \"settings\": {\"cameras\": [\"agentview\", \"sideview\", \"birdview\", \"robot0_eye_in_hand\"], \"depth_quality_gate_version\": \"libero-depth-integrity-v2\", \"destination_host\": \"node42\", \"destination_root\": \"/local_nvme/zhangrong/libero-h5-v6-depthfixed-20261007\", \"fps\": 20, \"full_accuracy_validation\": true, \"manifest_sha256\": \"2f22e27c004365757ef4b37acf936b31be6450648b02e7ee1815c7365b32c36e\", \"points\": 8000, \"resolution\": 512, \"seed\": 42, \"spool\": \"/opt/libero-quarc-v6/spool_depthfixed_20261007\"}}",
+    "label": "Production launch record"
+  },
+  {
+    "id": "S8",
+    "source": "gateway/opt/robotwin-quarc-v6/robotwin-d4rt-data/robotwin_d4rt_data/replay_v6.py",
+    "sha256": "b9cdf16f70dabb30bcbeb3bc5d4c83f2c3dc9259d9d36be1eba567a2eae6e7c4",
+    "start_line": 519,
+    "end_line": 534,
+    "excerpt": "    def step():\n        nonlocal steps\n        original_step()\n        steps += 1\n        if steps % 10 == 0:\n            capture()\n\n    try:\n        capture()\n        env.scene.step = step\n        result = env.play_once()\n        task_success = bool(env.check_success())\n    finally:\n        env.scene.step = original_step\n    if not task_success:\n        writer.h5.close()",
+    "label": "Core replay · capture around real physics steps"
+  },
+  {
+    "id": "S9",
+    "source": "gateway/opt/robotwin-quarc-v6/robotwin-d4rt-data/configs/randomized_v6_render.yaml",
+    "sha256": "58ed0c64abf3f88c7b62cf4c3da334a90ab0306de6ef63c058e7d3b00a743ca2",
+    "start_line": 1,
+    "end_line": 17,
+    "excerpt": "# Appearance-only augmentation of official clean joint-path episodes.\n# No new collision objects, table-height changes, task-pose RNG or replanning.\ndomain_randomization:\n  random_background: true\n  random_light: true\n  clean_background_rate: 0.0\n  cluttered_table: false\n  random_table_height: 0.0\n  random_head_camera_dis: 0.0\n  crazy_random_light_rate: 0.0\ncamera_jitter:\n  cameras: [head_camera, robotview]\n  max_translation_m: 0.02\n  max_rotation_deg: 2.0\nrear_background:\n  enabled: true\n  world_y_m: -1.8",
+    "label": "Production augmentation limits"
+  },
+  {
+    "id": "S10",
+    "source": "node45/local_nvme/zhangrong/robocasa-quarc-v6/releases/production_20261008_r7/code/robocasa-d4rt-data/robocasa_d4rt_data/export_v6.py",
+    "sha256": "9a9d36b931a20842c2180bfd5805b595438c279d77b1ccba0d5c71811a20a33e",
+    "start_line": 148,
+    "end_line": 158,
+    "excerpt": "def restore_state(model, data, state, mujoco):\n    if len(state) != 1 + model.nq + model.nv + model.na:\n        raise ValueError(\"recorded state width differs from compiled MJCF\")\n    data.time = float(state[0])\n    data.qpos[:] = state[1:1 + model.nq]\n    data.qvel[:] = state[1 + model.nq:1 + model.nq + model.nv]\n    if model.na:\n        data.act[:] = state[-model.na:]\n    mujoco.mj_forward(model, data)\n    actual = np.concatenate(([data.time], data.qpos, data.qvel, data.act))\n    error = float(np.max(np.abs(actual - state)))",
+    "label": "Core replay · restore the complete state vector"
+  },
+  {
+    "id": "S11",
+    "source": "node45/local_nvme/zhangrong/robocasa-quarc-v6/production.sh",
+    "sha256": "ac6b3657a7430366a8b7d1e324c21c186b057b06e93c69053dd2ce25d3b5fce7",
+    "start_line": 1,
+    "end_line": 26,
+    "excerpt": "#!/usr/bin/env bash\nset -euo pipefail\nrobocasa_root=\"${ROBOCASA_DEPLOY_ROOT:-/local_nvme/zhangrong/robocasa-quarc-v6}\"\nsource \"$robocasa_root/activate.sh\"\nrelease=\"$robocasa_root/releases/production_20261008_r7\"\nconfig=\"$robocasa_root/config/production_20261008_r3\"\nexport PYTHONPATH=\"$release/code/robocasa-d4rt-data:$release/code/libero-d4rt-data\"\ncd \"$release/code\"\nexec \"$robocasa_root/env/bin/python\" -u \"$release/code/robocasa-d4rt-data/scripts/replay_all_v6.py\" \\\n  --manifest \"$config/jobs.json\" --assets-manifest \"$config/assets.json\" \\\n  --selection-manifest \"$config/selection.json\" \\\n  --build-manifest \"$release/build.json\" --source-root \"$robocasa_root/source\" \\\n  --stack \"$robocasa_root/assets/robocasa_stack\" \\\n  --run-dir \"$robocasa_root/runs/production_20261008_r7\" \\\n  --resume-ledger \"$robocasa_root/runs/production_20261008_r6/production.sqlite\" \\\n  --spool \"$robocasa_root/spool/production_20261008_r6\" \\\n  --output-root \"$robocasa_root/outputs/production_20261008_r6\" \\\n  --gpus 0 1 2 3 4 5 6 7 --workers-per-gpu 8 --stagger-seconds 1 --max-attempts 2 \\\n  --memory-floor-gib 32 --disk-floor-gib 256 --idle-timeout 900 --episode-timeout 14400",
+    "label": "Frozen production launcher"
+  },
+  {
+    "id": "S12",
+    "source": "node42/local_nvme/zhangrong/quarc-deploy/GenieSim-data-pipe/scripts/render_plan.py",
+    "sha256": "46ca01c1f9e529858a356bb6d3e61fb73e16d7a3fab83b45e425b69780c05e95",
+    "start_line": 488,
+    "end_line": 500,
+    "excerpt": "            a = time.perf_counter()\n            if particle_replay is not None:\n                particle_replay.restore(t, camera_T_wc=expected_camera[t])\n            else:\n                restorer.restore(world_from_episode @ state_poses[t],\n                    world_from_episode @ expected_camera[t] @ usd_from_cv, geom_visible=state_visible[t])\n            profile['stage_restore_s'] += time.perf_counter() - a\n            if t == 0:\n                checkpoint('first_frame_restored_starting_render')\n            a = time.perf_counter()\n            for _ in range(args.warmup if t == 0 else 1):\n                rep.orchestrator.step(rt_subframes=args.subframes, delta_time=0., pause_timeline=True)\n            profile['render_s'] += time.perf_counter() - a",
+    "label": "Core replay · restore the tape with physics paused"
+  },
+  {
+    "id": "S13",
+    "source": "node42/local_nvme/zhangrong/quarc-deploy/GenieSim-data-pipe/scripts/vla_rollout.py",
+    "sha256": "3e959c7821c3ae76d3a6140144005645152572b8391654731936e3c74cb5c48c",
+    "start_line": 356,
+    "end_line": 365,
+    "excerpt": "        self.profile['render_s'] += time.perf_counter() - a\n        source_time = float(self.world.current_time)\n        def read_aligned():\n            a = time.perf_counter()\n            state = self.reader.capture(source_step=step, source_time=source_time)\n            self.profile['physical_read_s'] += time.perf_counter() - a\n            a = time.perf_counter()\n            try:\n                return state, self.read_pixels(state)\n            finally:",
+    "label": "Synchronized live capture · state and pixels share one clock"
+  },
+  {
+    "id": "S14",
+    "source": "node44/local_nvme/zhangrong/sim1-h5-v6-20261015/pipeline/capture.py",
+    "sha256": "b113ff3fc1fdf372ffb307ff8ae5aa4db5e2931a272554b5429ce177afd32700",
+    "start_line": 151,
+    "end_line": 164,
+    "excerpt": "        expected_steps = len(task.recorder.joint_q_seq)\n        for step in range(expected_steps):\n            task.step()\n            if (step+1) % args.stride:\n                continue\n            arrays = {'particle_q': task.state_0.particle_q.numpy(),\n                      'body_q': task.state_0.body_q.numpy(),\n                      'joint_q': task.state_0.joint_q.numpy(),\n                      'actions': task.q_target_frame_wp.numpy(),\n                      'simulation_step': np.array(step+1, dtype=np.int32),\n                      'source_frame': np.array(step-int(1.5*args.fps)+1 if step >= int(1.5*args.fps) else -1, dtype=np.int32),\n                      'timestamps_s': np.array(task.sim_time, dtype=np.float64)}\n            for name, value in arrays.items():\n                if not np.isfinite(value).all():",
+    "label": "Core capture · read physical state after task.step()"
+  }
+]

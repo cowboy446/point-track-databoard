@@ -30,7 +30,7 @@
       if (!group.hidden) { count += group.querySelectorAll('video').length; visibleGroups++; }
       else group.querySelectorAll('video').forEach(v => v.pause());
     }
-    document.querySelector('#video-count').textContent = `${count} / 45 samples · ${visibleGroups} ${visibleGroups === 1 ? 'group' : 'groups'}`;
+    document.querySelector('#video-count').textContent = `${count} / ${document.querySelectorAll(".gallery-group video").length} samples · ${visibleGroups} ${visibleGroups === 1 ? 'group' : 'groups'}`;
   }
   document.querySelectorAll('[data-family-filter]').forEach(button => button.addEventListener('click', () => {
     family = button.dataset.familyFilter; bodyFilter.value = 'all';

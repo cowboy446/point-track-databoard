@@ -68,11 +68,11 @@
   "split": "train",
   "task_success": true,
   "uri": "episodes/arx-x5/74df0f45086b494284b9/episode.v6.h5",
-  "node": "node42",
+  "node": "B300",
   "dataset_key": "robotwin_v6",
   "group_id": "robotwin-arx-x5",
-  "source_h5": "/local_nvme/zhangrong/wm3d/datasets_node42/robotwin_v6/episodes/arx-x5/74df0f45086b494284b9/episode.v6.h5",
-  "manifest_path": "/local_nvme/zhangrong/wm3d/datasets_node42/robotwin_v6/manifest.jsonl",
+  "source_h5": "/mnt/data/zhangrong/datasets/robotwin_v6/episodes/arx-x5/74df0f45086b494284b9/episode.v6.h5",
+  "manifest_path": "/mnt/data/zhangrong/datasets/robotwin_v6/manifest.jsonl",
   "manifest_sha256": "5396a9aedf0024821811a1bdbee918d16c8367c50360aef00abfdb7263ce4d77",
   "rank": 1,
   "slug": "robotwin-arx-x5-01-74df0f45",
@@ -118,5 +118,12 @@
   },
   "mp4_sha256": "e3cb21360f4fbb0d836f00cb7e9ecb61a03b03bda193b9c4cef95ede1e303e2b",
   "mp4_bytes": 642068,
-  "poster_sha256": "e945ec4d1cf243039f71973ec9136cb1ea646b3d0f439bb8de889c2e53053dd5"
+  "poster_sha256": "e945ec4d1cf243039f71973ec9136cb1ea646b3d0f439bb8de889c2e53053dd5",
+  "asset_dir": "assets/final-20261018",
+  "historical_source": {
+    "node": "node42",
+    "source_h5": "/local_nvme/zhangrong/wm3d/datasets_node42/robotwin_v6/episodes/arx-x5/74df0f45086b494284b9/episode.v6.h5",
+    "manifest_path": "/local_nvme/zhangrong/wm3d/datasets_node42/robotwin_v6/manifest.jsonl",
+    "manifest_sha256": "5396a9aedf0024821811a1bdbee918d16c8367c50360aef00abfdb7263ce4d77"
+  }
 }

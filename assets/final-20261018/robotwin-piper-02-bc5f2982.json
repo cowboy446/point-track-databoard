@@ -68,11 +68,11 @@
   "split": "train",
   "task_success": true,
   "uri": "episodes/piper/bc5f2982ee1314f0c4f3/episode.v6.h5",
-  "node": "node42",
+  "node": "B300",
   "dataset_key": "robotwin_v6",
   "group_id": "robotwin-piper",
-  "source_h5": "/local_nvme/zhangrong/wm3d/datasets_node42/robotwin_v6/episodes/piper/bc5f2982ee1314f0c4f3/episode.v6.h5",
-  "manifest_path": "/local_nvme/zhangrong/wm3d/datasets_node42/robotwin_v6/manifest.jsonl",
+  "source_h5": "/mnt/data/zhangrong/datasets/robotwin_v6/episodes/piper/bc5f2982ee1314f0c4f3/episode.v6.h5",
+  "manifest_path": "/mnt/data/zhangrong/datasets/robotwin_v6/manifest.jsonl",
   "manifest_sha256": "5396a9aedf0024821811a1bdbee918d16c8367c50360aef00abfdb7263ce4d77",
   "rank": 2,
   "slug": "robotwin-piper-02-bc5f2982",
@@ -118,5 +118,12 @@
   },
   "mp4_sha256": "d875c9a5ba21d948006d26944b7a996d5ba103afa64c0d7244302efc4fddf172",
   "mp4_bytes": 703613,
-  "poster_sha256": "76b4d5f20316d3999c9af910b2c5d4ec5ec839a4d6dac35b86e4b41a8f4b2f55"
+  "poster_sha256": "76b4d5f20316d3999c9af910b2c5d4ec5ec839a4d6dac35b86e4b41a8f4b2f55",
+  "asset_dir": "assets/final-20261018",
+  "historical_source": {
+    "node": "node42",
+    "source_h5": "/local_nvme/zhangrong/wm3d/datasets_node42/robotwin_v6/episodes/piper/bc5f2982ee1314f0c4f3/episode.v6.h5",
+    "manifest_path": "/local_nvme/zhangrong/wm3d/datasets_node42/robotwin_v6/manifest.jsonl",
+    "manifest_sha256": "5396a9aedf0024821811a1bdbee918d16c8367c50360aef00abfdb7263ce4d77"
+  }
 }

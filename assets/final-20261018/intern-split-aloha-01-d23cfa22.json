@@ -87,12 +87,12 @@
   "split": "train",
   "uri": "episodes/split_aloha/d23cfa22f4e9588b2add/episode.v6.h5",
   "validation_mode": "structure_only",
-  "node": "node42",
+  "node": "B300",
   "dataset_key": "interndata_v6",
   "group_id": "intern-split-aloha",
-  "source_h5": "/local_nvme/zhangrong/wm3d/datasets_node42/interndata_v6/episodes/split_aloha/d23cfa22f4e9588b2add/episode.v6.h5",
-  "manifest_path": "/local_nvme/zhangrong/wm3d/datasets_node42/interndata_v6/manifest.jsonl",
-  "manifest_sha256": "e5b443a70211999a5f257d6a1e7dd2e30583eeb8f62a3017a75e4337b22a0e6b",
+  "source_h5": "/mnt/data/zhangrong/datasets/interndata_v6/episodes/split_aloha/d23cfa22f4e9588b2add/episode.v6.h5",
+  "manifest_path": "/mnt/data/zhangrong/datasets/interndata_v6/manifest.jsonl",
+  "manifest_sha256": "e526e397d47eecd68f7149e13f29282d326efac5211f64700306d8ce388bceeb",
   "rank": 1,
   "slug": "intern-split-aloha-01-d23cfa22",
   "source_sha256": "fed46680181882b8496774644fd5e7cc49816b6a34d063fd987a783688f5799a",
@@ -149,5 +149,12 @@
   },
   "mp4_sha256": "63494ce708b54d58b9eeeb07b6354d14a11f26c499293b0753e028c5860f43f3",
   "mp4_bytes": 1583330,
-  "poster_sha256": "47895d20c35e57d5e7d0e7390a29d51cb50cf69569385481d87e8ac99faafd6d"
+  "poster_sha256": "47895d20c35e57d5e7d0e7390a29d51cb50cf69569385481d87e8ac99faafd6d",
+  "asset_dir": "assets/final-20261018",
+  "historical_source": {
+    "node": "node42",
+    "source_h5": "/local_nvme/zhangrong/wm3d/datasets_node42/interndata_v6/episodes/split_aloha/d23cfa22f4e9588b2add/episode.v6.h5",
+    "manifest_path": "/local_nvme/zhangrong/wm3d/datasets_node42/interndata_v6/manifest.jsonl",
+    "manifest_sha256": "e5b443a70211999a5f257d6a1e7dd2e30583eeb8f62a3017a75e4337b22a0e6b"
+  }
 }

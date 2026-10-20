@@ -68,11 +68,11 @@
   "split": "train",
   "task_success": true,
   "uri": "episodes/aloha-agilex/d0fdce15f45457a807aa/episode.v6.h5",
-  "node": "node42",
+  "node": "B300",
   "dataset_key": "robotwin_v6",
   "group_id": "robotwin-aloha-agilex",
-  "source_h5": "/local_nvme/zhangrong/wm3d/datasets_node42/robotwin_v6/episodes/aloha-agilex/d0fdce15f45457a807aa/episode.v6.h5",
-  "manifest_path": "/local_nvme/zhangrong/wm3d/datasets_node42/robotwin_v6/manifest.jsonl",
+  "source_h5": "/mnt/data/zhangrong/datasets/robotwin_v6/episodes/aloha-agilex/d0fdce15f45457a807aa/episode.v6.h5",
+  "manifest_path": "/mnt/data/zhangrong/datasets/robotwin_v6/manifest.jsonl",
   "manifest_sha256": "5396a9aedf0024821811a1bdbee918d16c8367c50360aef00abfdb7263ce4d77",
   "rank": 5,
   "slug": "robotwin-aloha-agilex-05-d0fdce15",
@@ -118,5 +118,12 @@
   },
   "mp4_sha256": "ff15a2579a3fcd882b434b8e8b55c63492453667dcea37de27416b6c654df7cf",
   "mp4_bytes": 599476,
-  "poster_sha256": "001797c4084a5d6888a2a786d255bae6fcb33d37caae76e28add5f3a91a63bff"
+  "poster_sha256": "001797c4084a5d6888a2a786d255bae6fcb33d37caae76e28add5f3a91a63bff",
+  "asset_dir": "assets/final-20261018",
+  "historical_source": {
+    "node": "node42",
+    "source_h5": "/local_nvme/zhangrong/wm3d/datasets_node42/robotwin_v6/episodes/aloha-agilex/d0fdce15f45457a807aa/episode.v6.h5",
+    "manifest_path": "/local_nvme/zhangrong/wm3d/datasets_node42/robotwin_v6/manifest.jsonl",
+    "manifest_sha256": "5396a9aedf0024821811a1bdbee918d16c8367c50360aef00abfdb7263ce4d77"
+  }
 }

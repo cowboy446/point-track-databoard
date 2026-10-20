@@ -1,0 +1,123 @@
+{
+  "action_dim": 12,
+  "byte_size": 200976049,
+  "camera_names": [
+    "left",
+    "right",
+    "agentview_center",
+    "eye_in_hand"
+  ],
+  "content_digest": "298bb0c380d382648cd3ba6a7d573694f3f0ce73cb3dd64ceae2e4c011815e1d",
+  "content_digest_provenance": {
+    "column": "hashes_json[.h5]",
+    "key": "pretrain/composite/OrganizeVegetables/20250719/episode_000081.h5",
+    "path": "/local_nvme/zhangrong/robocasa-quarc-v6/runs/production_20261008_r7/production.sqlite",
+    "table": "episodes"
+  },
+  "data_contract": "simulator-replay-v6",
+  "data_quality": "production",
+  "dataset_family": "RoboCasa365",
+  "dataset_id": "robocasa365-v6",
+  "dynamic_point_count": 6400,
+  "embodiment": "PandaOmron",
+  "episode_id": "episode_000081",
+  "episode_json_uri": "episodes/1fb66e84d3d9ba043cc5/episode.json",
+  "episode_key": "1fb66e84d3d9ba043cc5",
+  "fps": 20.0,
+  "has_actions": true,
+  "has_replay_bundle": false,
+  "has_robot_state": true,
+  "image_shapes": [
+    [
+      512,
+      512
+    ],
+    [
+      512,
+      512
+    ],
+    [
+      512,
+      512
+    ],
+    [
+      512,
+      512
+    ]
+  ],
+  "joint_dim": 13,
+  "language": "Place the apple and the tangerine on separate cutting boards.",
+  "manifest_schema_version": 2,
+  "num_frames": 433,
+  "phase1a_eligible": true,
+  "phase1b_eligible": false,
+  "point_count": 8000,
+  "robot_model": "PandaOmron",
+  "sample_id": "1fb66e84d3d9ba043cc5",
+  "scene_id": "OrganizeVegetables",
+  "schema_version": 6,
+  "sidecar_uris": {
+    ".bindings.npz": "episodes/1fb66e84d3d9ba043cc5/episode.v6.h5.bindings.npz",
+    ".report.json": "episodes/1fb66e84d3d9ba043cc5/episode.v6.h5.report.json",
+    ".robot.xml": "episodes/1fb66e84d3d9ba043cc5/episode.v6.h5.robot.xml",
+    ".source.json": "episodes/1fb66e84d3d9ba043cc5/episode.v6.h5.source.json"
+  },
+  "source_node": "node45",
+  "source_partition": "pretrain",
+  "source_relative_uri": "pretrain/composite/OrganizeVegetables/20250719/episode_000081.h5",
+  "source_uri": "/local_nvme/zhangrong/robocasa-quarc-v6/outputs/production_20261008_r6/pretrain/composite/OrganizeVegetables/20250719/episode_000081.h5",
+  "split": "train",
+  "uri": "episodes/1fb66e84d3d9ba043cc5/episode.v6.h5",
+  "node": "B300",
+  "dataset_key": "robocasa365_v6",
+  "group_id": "robocasa-pandaomron",
+  "source_h5": "/mnt/data/zhangrong/datasets/robocasa365_v6/episodes/1fb66e84d3d9ba043cc5/episode.v6.h5",
+  "manifest_path": "/mnt/data/zhangrong/datasets/robocasa365_v6/manifest.jsonl",
+  "manifest_sha256": "a92cffda88920e20731829c81ddb3aa4e336a4823589961a52bec4e516b37083",
+  "rank": 9,
+  "slug": "robocasa-pandaomron-09-1fb66e84",
+  "asset_dir": "assets/b300-20261020",
+  "source_sha256": "298bb0c380d382648cd3ba6a7d573694f3f0ce73cb3dd64ceae2e4c011815e1d",
+  "frames": 433,
+  "duration_s": 21.65,
+  "width": 1920,
+  "height": 816,
+  "render_elapsed_s": 28.5,
+  "camera_metrics": {
+    "left": {
+      "invalid_camera_frames": 0,
+      "min_rgb_mean": 130.31776555379233,
+      "min_valid_depth_fraction": 1.0,
+      "mean_rgb": 131.9916264223447
+    },
+    "right": {
+      "invalid_camera_frames": 0,
+      "min_rgb_mean": 131.39007695515951,
+      "min_valid_depth_fraction": 1.0,
+      "mean_rgb": 135.37645087708322
+    },
+    "agentview_center": {
+      "invalid_camera_frames": 0,
+      "min_rgb_mean": 136.41056696573892,
+      "min_valid_depth_fraction": 1.0,
+      "mean_rgb": 138.86781395316768
+    },
+    "eye_in_hand": {
+      "invalid_camera_frames": 0,
+      "min_rgb_mean": 119.94503911336263,
+      "min_valid_depth_fraction": 1.0,
+      "mean_rgb": 130.47204628607415
+    }
+  },
+  "source_unchanged": true,
+  "display": {
+    "rgb": "decoded source JPEG; resized with aspect ratio preserved; 96 point-ID annotations; no brightness/color enhancement",
+    "depth": "decoded stored integer * scale_m_per_unit + offset_m; invalid_stored_value masked; fixed display range 0.1..3.0 m; invalid black",
+    "points": "all native persistent points decoded with scale_m_per_unit and offset_m_xyz; native validity and visibility; visible-point colors sampled from current calibrated RGB; other points neutral/static or amber/dynamic",
+    "trajectories": "up to 96 stable point IDs, previous 12 frames, current camera pose for historical world positions; no camera-motion trails for static points",
+    "three_d": "fixed orthographic view fitted to exact episode-wide valid XYZ bounds; axes in episode frame"
+  },
+  "mp4_sha256": "b4ae3fa4de627c0eb81184e318346098c1f69558b3975d7534c692d21378dc4c",
+  "mp4_bytes": 5566763,
+  "poster_sha256": "7562298a10eddd09a410962e2c5d37d109fac7c3eacf42bc12016342331c1efd"
+}

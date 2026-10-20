@@ -68,11 +68,11 @@
   "source_uri": "/local_nvme/zhangrong/robocasa-quarc-v6/outputs/production_20261008_r6/pretrain/composite/ButterOnPan/20250724/episode_000048.h5",
   "split": "train",
   "uri": "episodes/58bf28d8af8857adb7ba/episode.v6.h5",
-  "node": "node45",
+  "node": "B300",
   "dataset_key": "robocasa365_v6",
   "group_id": "robocasa-pandaomron",
-  "source_h5": "/local_nvme/zhangrong/wm3d/datasets_node45/robocasa365_v6/episodes/58bf28d8af8857adb7ba/episode.v6.h5",
-  "manifest_path": "/local_nvme/zhangrong/wm3d/datasets_node45/robocasa365_v6/manifest.jsonl",
+  "source_h5": "/mnt/data/zhangrong/datasets/robocasa365_v6/episodes/58bf28d8af8857adb7ba/episode.v6.h5",
+  "manifest_path": "/mnt/data/zhangrong/datasets/robocasa365_v6/manifest.jsonl",
   "manifest_sha256": "a92cffda88920e20731829c81ddb3aa4e336a4823589961a52bec4e516b37083",
   "rank": 1,
   "slug": "robocasa-pandaomron-01-58bf28d8",
@@ -118,5 +118,12 @@
   },
   "mp4_sha256": "f7c984bcc913827fc7f6358a4d7b42c03adbd2329d053997c3191d96cfd247b6",
   "mp4_bytes": 7129131,
-  "poster_sha256": "519e0fdba5d31d2aea11ee5ba6a499c35ee86537efbc61838714404dd722bef5"
+  "poster_sha256": "519e0fdba5d31d2aea11ee5ba6a499c35ee86537efbc61838714404dd722bef5",
+  "asset_dir": "assets/final-20261018",
+  "historical_source": {
+    "node": "node45",
+    "source_h5": "/local_nvme/zhangrong/wm3d/datasets_node45/robocasa365_v6/episodes/58bf28d8af8857adb7ba/episode.v6.h5",
+    "manifest_path": "/local_nvme/zhangrong/wm3d/datasets_node45/robocasa365_v6/manifest.jsonl",
+    "manifest_sha256": "a92cffda88920e20731829c81ddb3aa4e336a4823589961a52bec4e516b37083"
+  }
 }

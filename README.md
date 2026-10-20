@@ -3,12 +3,12 @@
 Robot manipulation data catalogue. Open `index.html` or visit:
 https://cowboy446.github.io/point-track-databoard/
 
-- InternData: 29,459 episodes, combining node42 / node43; Franka and Split Aloha.
+- InternData: 29,459 episodes, merged on B300; Franka and Split Aloha.
 - LIBERO: 6,500 episodes, Franka Panda.
-- RoboTwin: 11,500 episodes, five dual-arm embodiments.
+- robotwin-random: 11,500 episodes, five dual-arm embodiments.
 - RoboCasa365: 10,000 episodes, PandaOmron.
 - Total: 57,459 episodes, 237.18 hours, 10.18 TB.
-- Nine dataset–embodiment groups, each with five multi-view RGB-D and 3D point-track previews.
+- Nine dataset–embodiment groups, each with ten multi-view RGB-D and 3D point-track previews.
 - H5 structures, field shapes, dtypes, attributes and reading examples.
 
 ## Design & editing

@@ -1,0 +1,120 @@
+{
+  "action_dim": 7,
+  "byte_size": 88357990,
+  "camera_names": [
+    "agentview",
+    "sideview",
+    "birdview",
+    "robot0_eye_in_hand"
+  ],
+  "content_digest": "fddc06d556ef073c3b8eac1a5046a53378ccc1a6fd86944019ddc49d2a75fe41",
+  "content_digest_provenance": {
+    "key": "sha256[empty-string]",
+    "path": "/local_nvme/zhangrong/libero-h5-v6-depthfixed-20261007/libero_10/KITCHEN_SCENE3_turn_on_the_stove_and_put_the_moka_pot_on_it_demo/demo_21.v6.h5.receipt.json"
+  },
+  "data_contract": "simulator-replay-v6",
+  "data_quality": "production",
+  "dataset_family": "LIBERO",
+  "dataset_id": "libero-d4rt-v6",
+  "dynamic_point_count": 6400,
+  "embodiment": "franka",
+  "episode_id": "demo_21",
+  "episode_json_uri": "episodes/583b8293734554446ef9/episode.json",
+  "episode_key": "583b8293734554446ef9",
+  "fps": 20.0,
+  "has_actions": true,
+  "has_replay_bundle": false,
+  "has_robot_state": true,
+  "image_shapes": [
+    [
+      512,
+      512
+    ],
+    [
+      512,
+      512
+    ],
+    [
+      512,
+      512
+    ],
+    [
+      512,
+      512
+    ]
+  ],
+  "joint_dim": 9,
+  "language": "turn on the stove and put the moka pot on it",
+  "manifest_schema_version": 2,
+  "num_frames": 244,
+  "phase1a_eligible": true,
+  "phase1b_eligible": false,
+  "point_count": 8000,
+  "robot_model": "robosuite-panda",
+  "sample_id": "583b8293734554446ef9",
+  "scene_id": "KITCHEN_SCENE3_turn_on_the_stove_and_put_the_moka_pot_on_it",
+  "schema_version": 6,
+  "sidecar_uris": {
+    ".bindings.npz": "episodes/583b8293734554446ef9/episode.v6.h5.bindings.npz",
+    ".json": "episodes/583b8293734554446ef9/episode.v6.h5.json",
+    ".receipt.json": "episodes/583b8293734554446ef9/episode.v6.h5.receipt.json"
+  },
+  "source_node": "node42",
+  "source_partition": "libero_10",
+  "source_relative_uri": "libero_10/KITCHEN_SCENE3_turn_on_the_stove_and_put_the_moka_pot_on_it_demo/demo_21.v6.h5",
+  "source_uri": "/local_nvme/zhangrong/libero-h5-v6-depthfixed-20261007/libero_10/KITCHEN_SCENE3_turn_on_the_stove_and_put_the_moka_pot_on_it_demo/demo_21.v6.h5",
+  "split": "train",
+  "uri": "episodes/583b8293734554446ef9/episode.v6.h5",
+  "node": "B300",
+  "dataset_key": "libero_v6",
+  "group_id": "libero-franka",
+  "source_h5": "/mnt/data/zhangrong/datasets/libero_v6/episodes/583b8293734554446ef9/episode.v6.h5",
+  "manifest_path": "/mnt/data/zhangrong/datasets/libero_v6/manifest.jsonl",
+  "manifest_sha256": "7c7cb9dd3b1ad510bbb8a7fd1f49c5ddb731c5bf086dde91ea1110d0c7cab55d",
+  "rank": 9,
+  "slug": "libero-franka-09-583b8293",
+  "asset_dir": "assets/b300-20261020",
+  "source_sha256": "fddc06d556ef073c3b8eac1a5046a53378ccc1a6fd86944019ddc49d2a75fe41",
+  "frames": 244,
+  "duration_s": 12.2,
+  "width": 1920,
+  "height": 816,
+  "render_elapsed_s": 17.2,
+  "camera_metrics": {
+    "agentview": {
+      "invalid_camera_frames": 0,
+      "min_rgb_mean": 125.19828923543294,
+      "min_valid_depth_fraction": 1.0,
+      "mean_rgb": 128.5988563422948
+    },
+    "sideview": {
+      "invalid_camera_frames": 0,
+      "min_rgb_mean": 144.92323430379233,
+      "min_valid_depth_fraction": 1.0,
+      "mean_rgb": 147.09559247272267
+    },
+    "birdview": {
+      "invalid_camera_frames": 0,
+      "min_rgb_mean": 169.03826395670572,
+      "min_valid_depth_fraction": 1.0,
+      "mean_rgb": 169.9114899974052
+    },
+    "robot0_eye_in_hand": {
+      "invalid_camera_frames": 0,
+      "min_rgb_mean": 103.07003657023112,
+      "min_valid_depth_fraction": 1.0,
+      "mean_rgb": 140.24182558841383
+    }
+  },
+  "source_unchanged": true,
+  "display": {
+    "rgb": "decoded source JPEG; resized with aspect ratio preserved; 96 point-ID annotations; no brightness/color enhancement",
+    "depth": "decoded stored integer * scale_m_per_unit + offset_m; invalid_stored_value masked; fixed display range 0.1..3.0 m; invalid black",
+    "points": "all native persistent points decoded with scale_m_per_unit and offset_m_xyz; native validity and visibility; visible-point colors sampled from current calibrated RGB; other points neutral/static or amber/dynamic",
+    "trajectories": "up to 96 stable point IDs, previous 12 frames, current camera pose for historical world positions; no camera-motion trails for static points",
+    "three_d": "fixed orthographic view fitted to exact episode-wide valid XYZ bounds; axes in episode frame"
+  },
+  "mp4_sha256": "ec9fe7b674c11488b01a1c26d403f213a46288efa3be1185e2da7300670116d9",
+  "mp4_bytes": 2802862,
+  "poster_sha256": "a828e5aefeccbab4d2cbb96a771dfb1d0d9a3ef08401f5f77f2f995bcd1c51d2"
+}

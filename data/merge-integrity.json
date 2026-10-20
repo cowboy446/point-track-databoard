@@ -1,0 +1,97 @@
+{
+  "started": "2026-10-20T14:22:13+0800",
+  "status": "complete",
+  "sources": [
+    {
+      "node": "node42",
+      "dataset": "interndata_v6",
+      "files": 38043,
+      "bytes": 2231474123107,
+      "episodes": 9510,
+      "manifest_sha256": "e5b443a70211999a5f257d6a1e7dd2e30583eeb8f62a3017a75e4337b22a0e6b"
+    },
+    {
+      "node": "node42",
+      "dataset": "libero_v6",
+      "files": 32503,
+      "bytes": 347878032080,
+      "episodes": 6500,
+      "manifest_sha256": "7c7cb9dd3b1ad510bbb8a7fd1f49c5ddb731c5bf086dde91ea1110d0c7cab55d"
+    },
+    {
+      "node": "node42",
+      "dataset": "robotwin_v6",
+      "files": 92003,
+      "bytes": 793675075400,
+      "episodes": 11500,
+      "manifest_sha256": "5396a9aedf0024821811a1bdbee918d16c8367c50360aef00abfdb7263ce4d77"
+    },
+    {
+      "node": "node43",
+      "dataset": "interndata_v6",
+      "files": 79799,
+      "bytes": 2615331288615,
+      "episodes": 19949,
+      "manifest_sha256": "7dc897f4fc71d0dd656f7f8a1dbd4d502e4e6734dd500519bb6733f0d82a7de5"
+    },
+    {
+      "node": "node45",
+      "dataset": "robocasa365_v6",
+      "files": 70003,
+      "bytes": 4190514917271,
+      "episodes": 10000,
+      "manifest_sha256": "a92cffda88920e20731829c81ddb3aa4e336a4823589961a52bec4e516b37083"
+    }
+  ],
+  "finished": "2026-10-20T14:33:33+0800",
+  "datasets": {
+    "interndata_v6": {
+      "episodes": 29459,
+      "embodiments": {
+        "franka": 11353,
+        "split_aloha": 18106
+      },
+      "payload_files": 117836,
+      "payload_bytes": 4846719216754,
+      "references_checked": 147295,
+      "manifest_sha256": "e526e397d47eecd68f7149e13f29282d326efac5211f64700306d8ce388bceeb"
+    },
+    "libero_v6": {
+      "episodes": 6500,
+      "embodiments": {
+        "franka": 6500
+      },
+      "payload_files": 32500,
+      "payload_bytes": 347865514696,
+      "references_checked": 32500,
+      "manifest_sha256": "7c7cb9dd3b1ad510bbb8a7fd1f49c5ddb731c5bf086dde91ea1110d0c7cab55d"
+    },
+    "robocasa365_v6": {
+      "episodes": 10000,
+      "embodiments": {
+        "PandaOmron": 10000
+      },
+      "payload_files": 70000,
+      "payload_bytes": 4190495035790,
+      "references_checked": 60000,
+      "manifest_sha256": "a92cffda88920e20731829c81ddb3aa4e336a4823589961a52bec4e516b37083"
+    },
+    "robotwin_v6": {
+      "episodes": 11500,
+      "embodiments": {
+        "piper": 1850,
+        "franka": 2300,
+        "aloha-agilex": 2500,
+        "ur5": 2350,
+        "arx-x5": 2500
+      },
+      "payload_files": 92000,
+      "payload_bytes": 793653252869,
+      "references_checked": 80500,
+      "manifest_sha256": "5396a9aedf0024821811a1bdbee918d16c8367c50360aef00abfdb7263ce4d77"
+    }
+  },
+  "verified_payload_files": 312336,
+  "errors": [],
+  "verification": "All episode files retain exact filesystem device, inode, byte size and nanosecond mtime after rename. Full relative file set and all manifest references checked. Payload bytes were not rewritten; no full content rehash performed."
+}

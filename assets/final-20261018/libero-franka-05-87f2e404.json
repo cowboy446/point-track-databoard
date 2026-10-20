@@ -65,11 +65,11 @@
   "source_uri": "/local_nvme/zhangrong/libero-h5-v6-depthfixed-20261007/libero_90/LIVING_ROOM_SCENE2_pick_up_the_milk_and_put_it_in_the_basket_demo/demo_1.v6.h5",
   "split": "train",
   "uri": "episodes/87f2e4043f3c8f5292de/episode.v6.h5",
-  "node": "node42",
+  "node": "B300",
   "dataset_key": "libero_v6",
   "group_id": "libero-franka",
-  "source_h5": "/local_nvme/zhangrong/wm3d/datasets_node42/libero_v6/episodes/87f2e4043f3c8f5292de/episode.v6.h5",
-  "manifest_path": "/local_nvme/zhangrong/wm3d/datasets_node42/libero_v6/manifest.jsonl",
+  "source_h5": "/mnt/data/zhangrong/datasets/libero_v6/episodes/87f2e4043f3c8f5292de/episode.v6.h5",
+  "manifest_path": "/mnt/data/zhangrong/datasets/libero_v6/manifest.jsonl",
   "manifest_sha256": "7c7cb9dd3b1ad510bbb8a7fd1f49c5ddb731c5bf086dde91ea1110d0c7cab55d",
   "rank": 5,
   "slug": "libero-franka-05-87f2e404",
@@ -115,5 +115,12 @@
   },
   "mp4_sha256": "a0ca0b905b6912fa9f6031a5860a1fc4f1460cfce5835ce84b6d614925b012de",
   "mp4_bytes": 1226166,
-  "poster_sha256": "aa4b4e62b0a10ec47adc4414eba5d9ca173603d96195a922f4ce08247cdd7381"
+  "poster_sha256": "aa4b4e62b0a10ec47adc4414eba5d9ca173603d96195a922f4ce08247cdd7381",
+  "asset_dir": "assets/final-20261018",
+  "historical_source": {
+    "node": "node42",
+    "source_h5": "/local_nvme/zhangrong/wm3d/datasets_node42/libero_v6/episodes/87f2e4043f3c8f5292de/episode.v6.h5",
+    "manifest_path": "/local_nvme/zhangrong/wm3d/datasets_node42/libero_v6/manifest.jsonl",
+    "manifest_sha256": "7c7cb9dd3b1ad510bbb8a7fd1f49c5ddb731c5bf086dde91ea1110d0c7cab55d"
+  }
 }

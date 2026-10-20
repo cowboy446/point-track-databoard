@@ -1,0 +1,154 @@
+{
+  "action_dim": 14,
+  "byte_size": 456736125,
+  "camera_names": [
+    "split_aloha_hand_left",
+    "split_aloha_hand_right",
+    "split_aloha_head",
+    "agent_view",
+    "agent_view_left",
+    "agent_view_right"
+  ],
+  "catalog_sample_id": "InternData:node42:ce29ce2fb7c599a4f444",
+  "content_digest": "6a1123ed7805e2d59dc993030f601374b0db055cac2bc739cfa35fc7b3a830dc",
+  "content_digest_provenance": {
+    "key": "manifest.content_digest",
+    "path": "/local_nvme/zhangrong/quarc-datasets/quarc_v6_node42_plan20_render5_nocompare_r4_20260920/task_batches/0107_long_horizon__split_aloha__clean_the_dirt_with_w/round_003/episodes/ce29ce2fb7c599a4f444/episode.json"
+  },
+  "data_contract": "simulator-replay-v6",
+  "data_quality": "production",
+  "dataset_family": "InternData",
+  "dataset_id": "round_003",
+  "dynamic_point_count": 6400,
+  "embodiment": "split_aloha",
+  "episode_id": "000065_r001",
+  "episode_json_uri": "episodes/split_aloha/ce29ce2fb7c599a4f444/episode.json",
+  "episode_key": "ce29ce2fb7c599a4f444",
+  "fps": 30.0,
+  "has_actions": true,
+  "has_replay_bundle": true,
+  "has_robot_state": true,
+  "image_shapes": [
+    [
+      480,
+      640
+    ],
+    [
+      480,
+      640
+    ],
+    [
+      480,
+      640
+    ],
+    [
+      480,
+      640
+    ],
+    [
+      480,
+      640
+    ],
+    [
+      480,
+      640
+    ]
+  ],
+  "joint_dim": 28,
+  "language": "['Use the white cleaning cloth to clean the dirt with right split_aloha arm.']",
+  "manifest_schema_version": 2,
+  "num_frames": 1058,
+  "phase1a_eligible": true,
+  "phase1b_eligible": false,
+  "plan_id": "round_003/long_horizon__split_aloha__clean_the_dirt_with_white_cloth__right__right_light__0/000065",
+  "plan_key": "328ae05aec22d8f5d534",
+  "plan_seed": 78008173,
+  "planning_success": true,
+  "point_count": 8000,
+  "render_index": 1,
+  "render_seed": 1652500990,
+  "replay_bundle_byte_size": 7049996,
+  "replay_bundle_content_digest": "3ccd369b38b2dd65dec4cb9aa2cbfc3ac677c692de2e649adc4e2ba20beca517",
+  "replay_bundle_uri": "episodes/split_aloha/ce29ce2fb7c599a4f444/replay.bundle.h5",
+  "robot_model": "split_aloha",
+  "sample_id": "round_003/long_horizon__split_aloha__clean_the_dirt_with_white_cloth__right__right_light__0/000065/render_001",
+  "scene_id": "long_horizon__split_aloha__clean_the_dirt_with_white_cloth__right__right_light__0",
+  "schema_version": 6,
+  "sidecar_uris": {
+    "replay_bundle": "episodes/split_aloha/ce29ce2fb7c599a4f444/replay.bundle.h5",
+    "source_metadata": "episodes/split_aloha/ce29ce2fb7c599a4f444/episode.source.json"
+  },
+  "source_batch": "quarc_v6_node42_plan20_render5_nocompare_r4_20260920",
+  "source_episode_json_uri": "episodes/split_aloha/ce29ce2fb7c599a4f444/episode.source.json",
+  "source_node": "node42",
+  "source_plan_sha256": "853b9f9d165fcef3fdd463e98e305d83327980c900774450437f2a6ee6cb6b3c",
+  "source_relative_uri": "task_batches/0107_long_horizon__split_aloha__clean_the_dirt_with_w/round_003/episodes/ce29ce2fb7c599a4f444/episode.v6.h5",
+  "source_uri": "/local_nvme/zhangrong/quarc-datasets/quarc_v6_node42_plan20_render5_nocompare_r4_20260920/task_batches/0107_long_horizon__split_aloha__clean_the_dirt_with_w/round_003/episodes/ce29ce2fb7c599a4f444/episode.v6.h5",
+  "split": "train",
+  "uri": "episodes/split_aloha/ce29ce2fb7c599a4f444/episode.v6.h5",
+  "validation_mode": "structure_only",
+  "node": "B300",
+  "dataset_key": "interndata_v6",
+  "group_id": "intern-split-aloha",
+  "source_h5": "/mnt/data/zhangrong/datasets/interndata_v6/episodes/split_aloha/ce29ce2fb7c599a4f444/episode.v6.h5",
+  "manifest_path": "/mnt/data/zhangrong/datasets/interndata_v6/manifest.jsonl",
+  "manifest_sha256": "e526e397d47eecd68f7149e13f29282d326efac5211f64700306d8ce388bceeb",
+  "rank": 9,
+  "slug": "intern-split-aloha-09-ce29ce2f",
+  "asset_dir": "assets/b300-20261020",
+  "source_sha256": "6a1123ed7805e2d59dc993030f601374b0db055cac2bc739cfa35fc7b3a830dc",
+  "frames": 1058,
+  "duration_s": 35.266666666666666,
+  "width": 1920,
+  "height": 928,
+  "render_elapsed_s": 100.5,
+  "camera_metrics": {
+    "split_aloha_hand_left": {
+      "invalid_camera_frames": 0,
+      "min_rgb_mean": 171.79883463541665,
+      "min_valid_depth_fraction": 1.0,
+      "mean_rgb": 173.07608855335812
+    },
+    "split_aloha_hand_right": {
+      "invalid_camera_frames": 0,
+      "min_rgb_mean": 171.9683908420139,
+      "min_valid_depth_fraction": 1.0,
+      "mean_rgb": 233.8864026225044
+    },
+    "split_aloha_head": {
+      "invalid_camera_frames": 0,
+      "min_rgb_mean": 218.980048828125,
+      "min_valid_depth_fraction": 1.0,
+      "mean_rgb": 227.10400245299536
+    },
+    "agent_view": {
+      "invalid_camera_frames": 0,
+      "min_rgb_mean": 211.2576486545139,
+      "min_valid_depth_fraction": 1.0,
+      "mean_rgb": 212.8167503226492
+    },
+    "agent_view_left": {
+      "invalid_camera_frames": 0,
+      "min_rgb_mean": 215.11979058159721,
+      "min_valid_depth_fraction": 1.0,
+      "mean_rgb": 217.37639198923378
+    },
+    "agent_view_right": {
+      "invalid_camera_frames": 0,
+      "min_rgb_mean": 202.94814453125,
+      "min_valid_depth_fraction": 1.0,
+      "mean_rgb": 203.9568048161083
+    }
+  },
+  "source_unchanged": true,
+  "display": {
+    "rgb": "decoded source JPEG; resized with aspect ratio preserved; 96 point-ID annotations; no brightness/color enhancement",
+    "depth": "decoded stored integer * scale_m_per_unit + offset_m; invalid_stored_value masked; fixed display range 0.1..3.0 m; invalid black",
+    "points": "all native persistent points decoded with scale_m_per_unit and offset_m_xyz; native validity and visibility; visible-point colors sampled from current calibrated RGB; other points neutral/static or amber/dynamic",
+    "trajectories": "up to 96 stable point IDs, previous 12 frames, current camera pose for historical world positions; no camera-motion trails for static points",
+    "three_d": "fixed orthographic view fitted to exact episode-wide valid XYZ bounds; axes in episode frame"
+  },
+  "mp4_sha256": "3f7517878c8cc256c10f433fd3d5e1bafaf6eb1ceea9d30737c7d339e7cf6662",
+  "mp4_bytes": 7264893,
+  "poster_sha256": "058115eb195a4262f8028a97c3f3df25c9d85d0658ca42bd379d04614d5c29db"
+}

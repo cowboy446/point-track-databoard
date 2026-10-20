@@ -65,11 +65,11 @@
   "source_uri": "/local_nvme/zhangrong/libero-h5-v6-depthfixed-20261007/libero_spatial/pick_up_the_black_bowl_on_the_stove_and_place_it_on_the_plate_demo/demo_34.v6.h5",
   "split": "train",
   "uri": "episodes/2230a30ae54c8a0d716c/episode.v6.h5",
-  "node": "node42",
+  "node": "B300",
   "dataset_key": "libero_v6",
   "group_id": "libero-franka",
-  "source_h5": "/local_nvme/zhangrong/wm3d/datasets_node42/libero_v6/episodes/2230a30ae54c8a0d716c/episode.v6.h5",
-  "manifest_path": "/local_nvme/zhangrong/wm3d/datasets_node42/libero_v6/manifest.jsonl",
+  "source_h5": "/mnt/data/zhangrong/datasets/libero_v6/episodes/2230a30ae54c8a0d716c/episode.v6.h5",
+  "manifest_path": "/mnt/data/zhangrong/datasets/libero_v6/manifest.jsonl",
   "manifest_sha256": "7c7cb9dd3b1ad510bbb8a7fd1f49c5ddb731c5bf086dde91ea1110d0c7cab55d",
   "rank": 1,
   "slug": "libero-franka-01-2230a30a",
@@ -115,5 +115,12 @@
   },
   "mp4_sha256": "69d43e54380828890f90d44658f0794add18f4943db374caa3534df69ae87f80",
   "mp4_bytes": 2333084,
-  "poster_sha256": "9655c528abc28ef72d71ef801f95bb77111f3f36e0c0d4771fc6454736b17e99"
+  "poster_sha256": "9655c528abc28ef72d71ef801f95bb77111f3f36e0c0d4771fc6454736b17e99",
+  "asset_dir": "assets/final-20261018",
+  "historical_source": {
+    "node": "node42",
+    "source_h5": "/local_nvme/zhangrong/wm3d/datasets_node42/libero_v6/episodes/2230a30ae54c8a0d716c/episode.v6.h5",
+    "manifest_path": "/local_nvme/zhangrong/wm3d/datasets_node42/libero_v6/manifest.jsonl",
+    "manifest_sha256": "7c7cb9dd3b1ad510bbb8a7fd1f49c5ddb731c5bf086dde91ea1110d0c7cab55d"
+  }
 }

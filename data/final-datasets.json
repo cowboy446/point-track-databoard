@@ -1,7 +1,95 @@
 {
+  "current_storage": {
+    "server": "B300",
+    "root": "/mnt/data/zhangrong/datasets",
+    "checked_at": "2026-10-20T06:40:04.131348+00:00",
+    "datasets": {
+      "interndata_v6": {
+        "root": "/mnt/data/zhangrong/datasets/interndata_v6",
+        "manifest": "/mnt/data/zhangrong/datasets/interndata_v6/manifest.jsonl",
+        "manifest_sha256": "e526e397d47eecd68f7149e13f29282d326efac5211f64700306d8ce388bceeb",
+        "episodes": 29459,
+        "payload_files": 117836,
+        "payload_bytes": 4846719216754,
+        "stored_bytes": 4846805397166
+      },
+      "libero_v6": {
+        "root": "/mnt/data/zhangrong/datasets/libero_v6",
+        "manifest": "/mnt/data/zhangrong/datasets/libero_v6/manifest.jsonl",
+        "manifest_sha256": "7c7cb9dd3b1ad510bbb8a7fd1f49c5ddb731c5bf086dde91ea1110d0c7cab55d",
+        "episodes": 6500,
+        "payload_files": 32500,
+        "payload_bytes": 347865514696,
+        "stored_bytes": 347878032080
+      },
+      "robocasa365_v6": {
+        "root": "/mnt/data/zhangrong/datasets/robocasa365_v6",
+        "manifest": "/mnt/data/zhangrong/datasets/robocasa365_v6/manifest.jsonl",
+        "manifest_sha256": "a92cffda88920e20731829c81ddb3aa4e336a4823589961a52bec4e516b37083",
+        "episodes": 10000,
+        "payload_files": 70000,
+        "payload_bytes": 4190495035790,
+        "stored_bytes": 4190514917271
+      },
+      "robotwin_v6": {
+        "root": "/mnt/data/zhangrong/datasets/robotwin_v6",
+        "manifest": "/mnt/data/zhangrong/datasets/robotwin_v6/manifest.jsonl",
+        "manifest_sha256": "5396a9aedf0024821811a1bdbee918d16c8367c50360aef00abfdb7263ce4d77",
+        "episodes": 11500,
+        "payload_files": 92000,
+        "payload_bytes": 793653252869,
+        "stored_bytes": 793675075400
+      }
+    },
+    "groups": {
+      "interndata_v6/franka": {
+        "files": 45412,
+        "stored_bytes": 1181852515244
+      },
+      "interndata_v6/split_aloha": {
+        "files": 72424,
+        "stored_bytes": 3664866701510
+      },
+      "libero_v6/franka": {
+        "files": 32500,
+        "stored_bytes": 347865514696
+      },
+      "robocasa365_v6/PandaOmron": {
+        "files": 70000,
+        "stored_bytes": 4190495035790
+      },
+      "robotwin_v6/piper": {
+        "files": 14800,
+        "stored_bytes": 116680143394
+      },
+      "robotwin_v6/franka": {
+        "files": 18400,
+        "stored_bytes": 132387900983
+      },
+      "robotwin_v6/aloha-agilex": {
+        "files": 20000,
+        "stored_bytes": 249787869641
+      },
+      "robotwin_v6/ur5": {
+        "files": 18800,
+        "stored_bytes": 138363022297
+      },
+      "robotwin_v6/arx-x5": {
+        "files": 20000,
+        "stored_bytes": 156434316554
+      }
+    },
+    "integrity": {
+      "status": "complete",
+      "verified_payload_files": 312336,
+      "errors": [],
+      "method": "All episode files retain exact filesystem device, inode, byte size and nanosecond mtime after rename. Full relative file set and all manifest references checked. Payload bytes were not rewritten; no full content rehash performed.",
+      "report_path": "/mnt/data/zhangrong/artifacts/merge-audit-20261020/report.json"
+    }
+  },
   "title": "QuARC dataset catalogue",
   "captured_utc": "2026-10-18T14:30:46.620782+00:00",
-  "scope": "Final datasets_node42/43/45 roots; excludes migration reports, Lift and GenieSim production directories.",
+  "scope": "Merged B300 datasets root; historical source locations are retained as provenance.",
   "total": {
     "episodes": 57459,
     "frames": 20021498,
@@ -9,8 +97,9 @@
     "h5_bytes": 10108698615443,
     "replay_bundles": 29459,
     "allocated_bytes": 10177643356160,
-    "logical_bytes": 10178873464011,
-    "file_count": 312361
+    "logical_bytes": 10178873421917,
+    "file_count": 312348,
+    "stored_bytes": 10178873421917
   },
   "nodes": [
     {
@@ -847,7 +936,16 @@
             }
           }
         }
-      ]
+      ],
+      "current": {
+        "root": "/mnt/data/zhangrong/datasets/interndata_v6",
+        "manifest": "/mnt/data/zhangrong/datasets/interndata_v6/manifest.jsonl",
+        "manifest_sha256": "e526e397d47eecd68f7149e13f29282d326efac5211f64700306d8ce388bceeb",
+        "episodes": 29459,
+        "payload_files": 117836,
+        "payload_bytes": 4846719216754,
+        "stored_bytes": 4846805397166
+      }
     },
     {
       "key": "libero_v6",
@@ -1215,7 +1313,16 @@
             }
           }
         }
-      ]
+      ],
+      "current": {
+        "root": "/mnt/data/zhangrong/datasets/libero_v6",
+        "manifest": "/mnt/data/zhangrong/datasets/libero_v6/manifest.jsonl",
+        "manifest_sha256": "7c7cb9dd3b1ad510bbb8a7fd1f49c5ddb731c5bf086dde91ea1110d0c7cab55d",
+        "episodes": 6500,
+        "payload_files": 32500,
+        "payload_bytes": 347865514696,
+        "stored_bytes": 347878032080
+      }
     },
     {
       "key": "robotwin_v6",
@@ -1623,7 +1730,16 @@
             }
           }
         }
-      ]
+      ],
+      "current": {
+        "root": "/mnt/data/zhangrong/datasets/robotwin_v6",
+        "manifest": "/mnt/data/zhangrong/datasets/robotwin_v6/manifest.jsonl",
+        "manifest_sha256": "5396a9aedf0024821811a1bdbee918d16c8367c50360aef00abfdb7263ce4d77",
+        "episodes": 11500,
+        "payload_files": 92000,
+        "payload_bytes": 793653252869,
+        "stored_bytes": 793675075400
+      }
     },
     {
       "key": "robocasa365_v6",
@@ -2049,7 +2165,16 @@
             }
           }
         }
-      ]
+      ],
+      "current": {
+        "root": "/mnt/data/zhangrong/datasets/robocasa365_v6",
+        "manifest": "/mnt/data/zhangrong/datasets/robocasa365_v6/manifest.jsonl",
+        "manifest_sha256": "a92cffda88920e20731829c81ddb3aa4e336a4823589961a52bec4e516b37083",
+        "episodes": 10000,
+        "payload_files": 70000,
+        "payload_bytes": 4190495035790,
+        "stored_bytes": 4190514917271
+      }
     }
   ],
   "groups": [
@@ -2377,7 +2502,11 @@
           "episodes": 8012,
           "root": "/local_nvme/zhangrong/wm3d/datasets_node43/interndata_v6"
         }
-      ]
+      ],
+      "current": {
+        "files": 45412,
+        "stored_bytes": 1181852515244
+      }
     },
     {
       "id": "intern-split-aloha",
@@ -2883,7 +3012,11 @@
           "episodes": 11937,
           "root": "/local_nvme/zhangrong/wm3d/datasets_node43/interndata_v6"
         }
-      ]
+      ],
+      "current": {
+        "files": 72424,
+        "stored_bytes": 3664866701510
+      }
     },
     {
       "id": "libero-franka",
@@ -3235,7 +3368,11 @@
           "episodes": 6500,
           "root": "/local_nvme/zhangrong/wm3d/datasets_node42/libero_v6"
         }
-      ]
+      ],
+      "current": {
+        "files": 32500,
+        "stored_bytes": 347865514696
+      }
     },
     {
       "id": "robotwin-aloha-agilex",
@@ -3423,7 +3560,11 @@
           "episodes": 2500,
           "root": "/local_nvme/zhangrong/wm3d/datasets_node42/robotwin_v6"
         }
-      ]
+      ],
+      "current": {
+        "files": 20000,
+        "stored_bytes": 249787869641
+      }
     },
     {
       "id": "robotwin-arx-x5",
@@ -3611,7 +3752,11 @@
           "episodes": 2500,
           "root": "/local_nvme/zhangrong/wm3d/datasets_node42/robotwin_v6"
         }
-      ]
+      ],
+      "current": {
+        "files": 20000,
+        "stored_bytes": 156434316554
+      }
     },
     {
       "id": "robotwin-franka",
@@ -3791,7 +3936,11 @@
           "episodes": 2300,
           "root": "/local_nvme/zhangrong/wm3d/datasets_node42/robotwin_v6"
         }
-      ]
+      ],
+      "current": {
+        "files": 18400,
+        "stored_bytes": 132387900983
+      }
     },
     {
       "id": "robotwin-piper",
@@ -3953,7 +4102,11 @@
           "episodes": 1850,
           "root": "/local_nvme/zhangrong/wm3d/datasets_node42/robotwin_v6"
         }
-      ]
+      ],
+      "current": {
+        "files": 14800,
+        "stored_bytes": 116680143394
+      }
     },
     {
       "id": "robotwin-ur5",
@@ -4135,7 +4288,11 @@
           "episodes": 2350,
           "root": "/local_nvme/zhangrong/wm3d/datasets_node42/robotwin_v6"
         }
-      ]
+      ],
+      "current": {
+        "files": 18800,
+        "stored_bytes": 138363022297
+      }
     },
     {
       "id": "robocasa-pandaomron",
@@ -4545,7 +4702,11 @@
           "episodes": 10000,
           "root": "/local_nvme/zhangrong/wm3d/datasets_node45/robocasa365_v6"
         }
-      ]
+      ],
+      "current": {
+        "files": 70000,
+        "stored_bytes": 4190495035790
+      }
     }
   ]
 }

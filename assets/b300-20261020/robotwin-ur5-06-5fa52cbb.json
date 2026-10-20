@@ -1,0 +1,123 @@
+{
+  "action_dim": 16,
+  "byte_size": 31426004,
+  "camera_names": [
+    "head_camera",
+    "left_camera",
+    "right_camera",
+    "robotview"
+  ],
+  "content_digest": "d64a7393a2c560828305965359e5b85cdc0d5169ba5f286412b2f000fb1221fe",
+  "content_digest_provenance": {
+    "key": "sha256[empty-string]",
+    "path": "/local_nvme/zhangrong/robotwin-h5-v6/turn_switch/ur5/episode032.v6.h5.receipt.json"
+  },
+  "data_contract": "simulator-replay-v6",
+  "data_quality": "production",
+  "dataset_family": "RoboTwin",
+  "dataset_id": "robotwin-randomized-quarc-v6",
+  "dynamic_point_count": 5492,
+  "embodiment": "ur5",
+  "episode_id": "32",
+  "episode_json_uri": "episodes/ur5/5fa52cbb4424a71b002c/episode.json",
+  "episode_key": "5fa52cbb4424a71b002c",
+  "fps": 25.0,
+  "has_actions": true,
+  "has_replay_bundle": false,
+  "has_robot_state": true,
+  "image_shapes": [
+    [
+      480,
+      640
+    ],
+    [
+      480,
+      640
+    ],
+    [
+      480,
+      640
+    ],
+    [
+      480,
+      640
+    ]
+  ],
+  "joint_dim": 16,
+  "language": "turn switch",
+  "manifest_schema_version": 2,
+  "num_frames": 126,
+  "phase1a_eligible": true,
+  "phase1b_eligible": false,
+  "point_count": 8000,
+  "robot_model": "ur5",
+  "sample_id": "5fa52cbb4424a71b002c",
+  "scene_id": "turn_switch",
+  "schema_version": 6,
+  "sidecar_uris": {
+    ".bindings.npz": "episodes/ur5/5fa52cbb4424a71b002c/episode.v6.h5.bindings.npz",
+    ".geometry.npz": "episodes/ur5/5fa52cbb4424a71b002c/episode.v6.h5.geometry.npz",
+    ".receipt.json": "episodes/ur5/5fa52cbb4424a71b002c/episode.v6.h5.receipt.json",
+    ".report.json": "episodes/ur5/5fa52cbb4424a71b002c/episode.v6.h5.report.json",
+    ".robot.urdf": "episodes/ur5/5fa52cbb4424a71b002c/episode.v6.h5.robot.urdf"
+  },
+  "source_node": "node42",
+  "source_partition": "production",
+  "source_relative_uri": "turn_switch/ur5/episode032.v6.h5",
+  "source_uri": "/local_nvme/zhangrong/robotwin-h5-v6/turn_switch/ur5/episode032.v6.h5",
+  "split": "train",
+  "task_success": true,
+  "uri": "episodes/ur5/5fa52cbb4424a71b002c/episode.v6.h5",
+  "node": "B300",
+  "dataset_key": "robotwin_v6",
+  "group_id": "robotwin-ur5",
+  "source_h5": "/mnt/data/zhangrong/datasets/robotwin_v6/episodes/ur5/5fa52cbb4424a71b002c/episode.v6.h5",
+  "manifest_path": "/mnt/data/zhangrong/datasets/robotwin_v6/manifest.jsonl",
+  "manifest_sha256": "5396a9aedf0024821811a1bdbee918d16c8367c50360aef00abfdb7263ce4d77",
+  "rank": 6,
+  "slug": "robotwin-ur5-06-5fa52cbb",
+  "asset_dir": "assets/b300-20261020",
+  "source_sha256": "d64a7393a2c560828305965359e5b85cdc0d5169ba5f286412b2f000fb1221fe",
+  "frames": 126,
+  "duration_s": 5.04,
+  "width": 1920,
+  "height": 656,
+  "render_elapsed_s": 8.5,
+  "camera_metrics": {
+    "head_camera": {
+      "invalid_camera_frames": 0,
+      "min_rgb_mean": 98.56316731770833,
+      "min_valid_depth_fraction": 1.0,
+      "mean_rgb": 101.1253816602596
+    },
+    "left_camera": {
+      "invalid_camera_frames": 0,
+      "min_rgb_mean": 93.837861328125,
+      "min_valid_depth_fraction": 1.0,
+      "mean_rgb": 95.11447832272377
+    },
+    "right_camera": {
+      "invalid_camera_frames": 0,
+      "min_rgb_mean": 94.6640744357639,
+      "min_valid_depth_fraction": 0.0,
+      "mean_rgb": 141.7448149784364
+    },
+    "robotview": {
+      "invalid_camera_frames": 0,
+      "min_rgb_mean": 109.58609809027777,
+      "min_valid_depth_fraction": 1.0,
+      "mean_rgb": 110.65505277226633
+    }
+  },
+  "source_unchanged": true,
+  "display": {
+    "rgb": "decoded source JPEG; resized with aspect ratio preserved; 96 point-ID annotations; no brightness/color enhancement",
+    "depth": "decoded stored integer * scale_m_per_unit + offset_m; invalid_stored_value masked; fixed display range 0.1..3.0 m; invalid black",
+    "points": "all native persistent points decoded with scale_m_per_unit and offset_m_xyz; native validity and visibility; visible-point colors sampled from current calibrated RGB; other points neutral/static or amber/dynamic",
+    "trajectories": "up to 96 stable point IDs, previous 12 frames, current camera pose for historical world positions; no camera-motion trails for static points",
+    "three_d": "fixed orthographic view fitted to exact episode-wide valid XYZ bounds; axes in episode frame"
+  },
+  "mp4_sha256": "f1d1939d94377a49dfb045e2932aba727e2fed213cad6bee36ef01572eb9c6e0",
+  "mp4_bytes": 468549,
+  "poster_sha256": "09ab03b8bc3c2b79fbd8777e268c3791a714b96d8f87749fbd9324a1c74dccd5"
+}

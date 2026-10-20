@@ -1,0 +1,123 @@
+{
+  "action_dim": 12,
+  "byte_size": 84487147,
+  "camera_names": [
+    "left",
+    "right",
+    "agentview_center",
+    "eye_in_hand"
+  ],
+  "content_digest": "53612e54f6fd22a449ee08539cf90590c65d4c6e94952e53d4b281e6e0a153e3",
+  "content_digest_provenance": {
+    "column": "hashes_json[.h5]",
+    "key": "pretrain/atomic/PickPlaceFridgeDrawerToShelf/20250821/episode_000008.h5",
+    "path": "/local_nvme/zhangrong/robocasa-quarc-v6/runs/production_20261008_r7/production.sqlite",
+    "table": "episodes"
+  },
+  "data_contract": "simulator-replay-v6",
+  "data_quality": "production",
+  "dataset_family": "RoboCasa365",
+  "dataset_id": "robocasa365-v6",
+  "dynamic_point_count": 6400,
+  "embodiment": "PandaOmron",
+  "episode_id": "episode_000008",
+  "episode_json_uri": "episodes/991eb6ddefa71d9518b9/episode.json",
+  "episode_key": "991eb6ddefa71d9518b9",
+  "fps": 20.0,
+  "has_actions": true,
+  "has_replay_bundle": false,
+  "has_robot_state": true,
+  "image_shapes": [
+    [
+      512,
+      512
+    ],
+    [
+      512,
+      512
+    ],
+    [
+      512,
+      512
+    ],
+    [
+      512,
+      512
+    ]
+  ],
+  "joint_dim": 13,
+  "language": "Pick the lime from the fridge drawer and place it on a fridge shelf.",
+  "manifest_schema_version": 2,
+  "num_frames": 262,
+  "phase1a_eligible": true,
+  "phase1b_eligible": false,
+  "point_count": 8000,
+  "robot_model": "PandaOmron",
+  "sample_id": "991eb6ddefa71d9518b9",
+  "scene_id": "PickPlaceFridgeDrawerToShelf",
+  "schema_version": 6,
+  "sidecar_uris": {
+    ".bindings.npz": "episodes/991eb6ddefa71d9518b9/episode.v6.h5.bindings.npz",
+    ".report.json": "episodes/991eb6ddefa71d9518b9/episode.v6.h5.report.json",
+    ".robot.xml": "episodes/991eb6ddefa71d9518b9/episode.v6.h5.robot.xml",
+    ".source.json": "episodes/991eb6ddefa71d9518b9/episode.v6.h5.source.json"
+  },
+  "source_node": "node45",
+  "source_partition": "pretrain",
+  "source_relative_uri": "pretrain/atomic/PickPlaceFridgeDrawerToShelf/20250821/episode_000008.h5",
+  "source_uri": "/local_nvme/zhangrong/robocasa-quarc-v6/outputs/production_20261008_r6/pretrain/atomic/PickPlaceFridgeDrawerToShelf/20250821/episode_000008.h5",
+  "split": "train",
+  "uri": "episodes/991eb6ddefa71d9518b9/episode.v6.h5",
+  "node": "B300",
+  "dataset_key": "robocasa365_v6",
+  "group_id": "robocasa-pandaomron",
+  "source_h5": "/mnt/data/zhangrong/datasets/robocasa365_v6/episodes/991eb6ddefa71d9518b9/episode.v6.h5",
+  "manifest_path": "/mnt/data/zhangrong/datasets/robocasa365_v6/manifest.jsonl",
+  "manifest_sha256": "a92cffda88920e20731829c81ddb3aa4e336a4823589961a52bec4e516b37083",
+  "rank": 8,
+  "slug": "robocasa-pandaomron-08-991eb6dd",
+  "asset_dir": "assets/b300-20261020",
+  "source_sha256": "53612e54f6fd22a449ee08539cf90590c65d4c6e94952e53d4b281e6e0a153e3",
+  "frames": 262,
+  "duration_s": 13.1,
+  "width": 1920,
+  "height": 816,
+  "render_elapsed_s": 17.1,
+  "camera_metrics": {
+    "left": {
+      "invalid_camera_frames": 0,
+      "min_rgb_mean": 139.7057762145996,
+      "min_valid_depth_fraction": 1.0,
+      "mean_rgb": 141.11041284032137
+    },
+    "right": {
+      "invalid_camera_frames": 0,
+      "min_rgb_mean": 115.8866818745931,
+      "min_valid_depth_fraction": 1.0,
+      "mean_rgb": 117.73659630404175
+    },
+    "agentview_center": {
+      "invalid_camera_frames": 0,
+      "min_rgb_mean": 128.68792851765951,
+      "min_valid_depth_fraction": 1.0,
+      "mean_rgb": 130.89127479436743
+    },
+    "eye_in_hand": {
+      "invalid_camera_frames": 0,
+      "min_rgb_mean": 112.35141118367513,
+      "min_valid_depth_fraction": 1.0,
+      "mean_rgb": 133.0966058832998
+    }
+  },
+  "source_unchanged": true,
+  "display": {
+    "rgb": "decoded source JPEG; resized with aspect ratio preserved; 96 point-ID annotations; no brightness/color enhancement",
+    "depth": "decoded stored integer * scale_m_per_unit + offset_m; invalid_stored_value masked; fixed display range 0.1..3.0 m; invalid black",
+    "points": "all native persistent points decoded with scale_m_per_unit and offset_m_xyz; native validity and visibility; visible-point colors sampled from current calibrated RGB; other points neutral/static or amber/dynamic",
+    "trajectories": "up to 96 stable point IDs, previous 12 frames, current camera pose for historical world positions; no camera-motion trails for static points",
+    "three_d": "fixed orthographic view fitted to exact episode-wide valid XYZ bounds; axes in episode frame"
+  },
+  "mp4_sha256": "2848e84061efb0ebdb5e21a3ab4a895d8f4d3aa5e47e16bab2c2fbf2f651d613",
+  "mp4_bytes": 2585107,
+  "poster_sha256": "463340a3554f4fae91160911153732eebfbdf0c38e4f780d2cdaf0d2f4f18fa7"
+}

@@ -82,12 +82,12 @@
   "split": "train",
   "uri": "episodes/franka/57df5d01aba5caaf503a/episode.v6.h5",
   "validation_mode": "structure_only",
-  "node": "node42",
+  "node": "B300",
   "dataset_key": "interndata_v6",
   "group_id": "intern-franka",
-  "source_h5": "/local_nvme/zhangrong/wm3d/datasets_node42/interndata_v6/episodes/franka/57df5d01aba5caaf503a/episode.v6.h5",
-  "manifest_path": "/local_nvme/zhangrong/wm3d/datasets_node42/interndata_v6/manifest.jsonl",
-  "manifest_sha256": "e5b443a70211999a5f257d6a1e7dd2e30583eeb8f62a3017a75e4337b22a0e6b",
+  "source_h5": "/mnt/data/zhangrong/datasets/interndata_v6/episodes/franka/57df5d01aba5caaf503a/episode.v6.h5",
+  "manifest_path": "/mnt/data/zhangrong/datasets/interndata_v6/manifest.jsonl",
+  "manifest_sha256": "e526e397d47eecd68f7149e13f29282d326efac5211f64700306d8ce388bceeb",
   "rank": 1,
   "slug": "intern-franka-01-57df5d01",
   "source_sha256": "3282b4c70dd81861ceddc20bf63f2bf3ed13e3302f900ffea0ec5e3f00c0b8b8",
@@ -138,5 +138,12 @@
   },
   "mp4_sha256": "ad71bf5a645872ef228f2a9b0dabb6461e1f43ccc51d80a4be32b3b04b263a67",
   "mp4_bytes": 3076983,
-  "poster_sha256": "6363052cf4cdf0e1c0c256fd91cafed19582407694c91245afaa6554e827e36e"
+  "poster_sha256": "6363052cf4cdf0e1c0c256fd91cafed19582407694c91245afaa6554e827e36e",
+  "asset_dir": "assets/final-20261018",
+  "historical_source": {
+    "node": "node42",
+    "source_h5": "/local_nvme/zhangrong/wm3d/datasets_node42/interndata_v6/episodes/franka/57df5d01aba5caaf503a/episode.v6.h5",
+    "manifest_path": "/local_nvme/zhangrong/wm3d/datasets_node42/interndata_v6/manifest.jsonl",
+    "manifest_sha256": "e5b443a70211999a5f257d6a1e7dd2e30583eeb8f62a3017a75e4337b22a0e6b"
+  }
 }

@@ -65,11 +65,11 @@
   "source_uri": "/local_nvme/zhangrong/libero-h5-v6-depthfixed-20261007/libero_object/pick_up_the_cream_cheese_and_place_it_in_the_basket_demo/demo_37.v6.h5",
   "split": "train",
   "uri": "episodes/158c73f154cfccfb5fe2/episode.v6.h5",
-  "node": "node42",
+  "node": "B300",
   "dataset_key": "libero_v6",
   "group_id": "libero-franka",
-  "source_h5": "/local_nvme/zhangrong/wm3d/datasets_node42/libero_v6/episodes/158c73f154cfccfb5fe2/episode.v6.h5",
-  "manifest_path": "/local_nvme/zhangrong/wm3d/datasets_node42/libero_v6/manifest.jsonl",
+  "source_h5": "/mnt/data/zhangrong/datasets/libero_v6/episodes/158c73f154cfccfb5fe2/episode.v6.h5",
+  "manifest_path": "/mnt/data/zhangrong/datasets/libero_v6/manifest.jsonl",
   "manifest_sha256": "7c7cb9dd3b1ad510bbb8a7fd1f49c5ddb731c5bf086dde91ea1110d0c7cab55d",
   "rank": 2,
   "slug": "libero-franka-02-158c73f1",
@@ -115,5 +115,12 @@
   },
   "mp4_sha256": "e3529c024bbbfd112fc09fa51a41217373ffdddb17cd64f742a71b4302999e36",
   "mp4_bytes": 2027246,
-  "poster_sha256": "68d33821bceeab8ea65cb9b797ace614e218b7bf8791ba30863fab908a2ab72d"
+  "poster_sha256": "68d33821bceeab8ea65cb9b797ace614e218b7bf8791ba30863fab908a2ab72d",
+  "asset_dir": "assets/final-20261018",
+  "historical_source": {
+    "node": "node42",
+    "source_h5": "/local_nvme/zhangrong/wm3d/datasets_node42/libero_v6/episodes/158c73f154cfccfb5fe2/episode.v6.h5",
+    "manifest_path": "/local_nvme/zhangrong/wm3d/datasets_node42/libero_v6/manifest.jsonl",
+    "manifest_sha256": "7c7cb9dd3b1ad510bbb8a7fd1f49c5ddb731c5bf086dde91ea1110d0c7cab55d"
+  }
 }

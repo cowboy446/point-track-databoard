@@ -1,0 +1,123 @@
+{
+  "action_dim": 38,
+  "byte_size": 111312418,
+  "camera_names": [
+    "head_camera",
+    "left_camera",
+    "right_camera",
+    "robotview"
+  ],
+  "content_digest": "e1b7d083d5d377c0c6977d444edad497aa149a5c1e99a4e99f30750b11fa5f54",
+  "content_digest_provenance": {
+    "key": "sha256[empty-string]",
+    "path": "/local_nvme/zhangrong/robotwin-h5-v6/place_burger_fries/aloha-agilex/episode031.v6.h5.receipt.json"
+  },
+  "data_contract": "simulator-replay-v6",
+  "data_quality": "production",
+  "dataset_family": "RoboTwin",
+  "dataset_id": "robotwin-randomized-quarc-v6",
+  "dynamic_point_count": 6400,
+  "embodiment": "aloha-agilex",
+  "episode_id": "31",
+  "episode_json_uri": "episodes/aloha-agilex/7cc4a71d8d8ee9aa61c5/episode.json",
+  "episode_key": "7cc4a71d8d8ee9aa61c5",
+  "fps": 25.0,
+  "has_actions": true,
+  "has_replay_bundle": false,
+  "has_robot_state": true,
+  "image_shapes": [
+    [
+      480,
+      640
+    ],
+    [
+      480,
+      640
+    ],
+    [
+      480,
+      640
+    ],
+    [
+      480,
+      640
+    ]
+  ],
+  "joint_dim": 38,
+  "language": "place burger fries",
+  "manifest_schema_version": 2,
+  "num_frames": 325,
+  "phase1a_eligible": true,
+  "phase1b_eligible": false,
+  "point_count": 8000,
+  "robot_model": "aloha-agilex",
+  "sample_id": "7cc4a71d8d8ee9aa61c5",
+  "scene_id": "place_burger_fries",
+  "schema_version": 6,
+  "sidecar_uris": {
+    ".bindings.npz": "episodes/aloha-agilex/7cc4a71d8d8ee9aa61c5/episode.v6.h5.bindings.npz",
+    ".geometry.npz": "episodes/aloha-agilex/7cc4a71d8d8ee9aa61c5/episode.v6.h5.geometry.npz",
+    ".receipt.json": "episodes/aloha-agilex/7cc4a71d8d8ee9aa61c5/episode.v6.h5.receipt.json",
+    ".report.json": "episodes/aloha-agilex/7cc4a71d8d8ee9aa61c5/episode.v6.h5.report.json",
+    ".robot.urdf": "episodes/aloha-agilex/7cc4a71d8d8ee9aa61c5/episode.v6.h5.robot.urdf"
+  },
+  "source_node": "node42",
+  "source_partition": "production",
+  "source_relative_uri": "place_burger_fries/aloha-agilex/episode031.v6.h5",
+  "source_uri": "/local_nvme/zhangrong/robotwin-h5-v6/place_burger_fries/aloha-agilex/episode031.v6.h5",
+  "split": "train",
+  "task_success": true,
+  "uri": "episodes/aloha-agilex/7cc4a71d8d8ee9aa61c5/episode.v6.h5",
+  "node": "B300",
+  "dataset_key": "robotwin_v6",
+  "group_id": "robotwin-aloha-agilex",
+  "source_h5": "/mnt/data/zhangrong/datasets/robotwin_v6/episodes/aloha-agilex/7cc4a71d8d8ee9aa61c5/episode.v6.h5",
+  "manifest_path": "/mnt/data/zhangrong/datasets/robotwin_v6/manifest.jsonl",
+  "manifest_sha256": "5396a9aedf0024821811a1bdbee918d16c8367c50360aef00abfdb7263ce4d77",
+  "rank": 10,
+  "slug": "robotwin-aloha-agilex-10-7cc4a71d",
+  "asset_dir": "assets/b300-20261020",
+  "source_sha256": "e1b7d083d5d377c0c6977d444edad497aa149a5c1e99a4e99f30750b11fa5f54",
+  "frames": 325,
+  "duration_s": 13.0,
+  "width": 1920,
+  "height": 656,
+  "render_elapsed_s": 22.7,
+  "camera_metrics": {
+    "head_camera": {
+      "invalid_camera_frames": 0,
+      "min_rgb_mean": 80.45630425347223,
+      "min_valid_depth_fraction": 1.0,
+      "mean_rgb": 91.95306288394762
+    },
+    "left_camera": {
+      "invalid_camera_frames": 0,
+      "min_rgb_mean": 85.06130642361111,
+      "min_valid_depth_fraction": 1.0,
+      "mean_rgb": 96.48179290531526
+    },
+    "right_camera": {
+      "invalid_camera_frames": 0,
+      "min_rgb_mean": 97.0799587673611,
+      "min_valid_depth_fraction": 1.0,
+      "mean_rgb": 103.22320535523505
+    },
+    "robotview": {
+      "invalid_camera_frames": 0,
+      "min_rgb_mean": 98.23351236979167,
+      "min_valid_depth_fraction": 1.0,
+      "mean_rgb": 100.85920933493588
+    }
+  },
+  "source_unchanged": true,
+  "display": {
+    "rgb": "decoded source JPEG; resized with aspect ratio preserved; 96 point-ID annotations; no brightness/color enhancement",
+    "depth": "decoded stored integer * scale_m_per_unit + offset_m; invalid_stored_value masked; fixed display range 0.1..3.0 m; invalid black",
+    "points": "all native persistent points decoded with scale_m_per_unit and offset_m_xyz; native validity and visibility; visible-point colors sampled from current calibrated RGB; other points neutral/static or amber/dynamic",
+    "trajectories": "up to 96 stable point IDs, previous 12 frames, current camera pose for historical world positions; no camera-motion trails for static points",
+    "three_d": "fixed orthographic view fitted to exact episode-wide valid XYZ bounds; axes in episode frame"
+  },
+  "mp4_sha256": "ba2ccb5c72f0f63bc125c88628c1707e53e78ac07ee55c67ea6067e1edac8bec",
+  "mp4_bytes": 2314547,
+  "poster_sha256": "07a2764c009a1b4a72b47032f90dc479897ec50d099a7d3fc6c1e70c6fbc0e82"
+}

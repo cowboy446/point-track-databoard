@@ -1,0 +1,123 @@
+{
+  "action_dim": 12,
+  "byte_size": 72056094,
+  "camera_names": [
+    "left",
+    "right",
+    "agentview_center",
+    "eye_in_hand"
+  ],
+  "content_digest": "2b498017da4ceda40765f2f67944e99e6db29999d462fa4f57b8c14c29672024",
+  "content_digest_provenance": {
+    "column": "hashes_json[.h5]",
+    "key": "pretrain/atomic/AdjustWaterTemperature/20250820/episode_000042.h5",
+    "path": "/local_nvme/zhangrong/robocasa-quarc-v6/runs/production_20261008_r7/production.sqlite",
+    "table": "episodes"
+  },
+  "data_contract": "simulator-replay-v6",
+  "data_quality": "production",
+  "dataset_family": "RoboCasa365",
+  "dataset_id": "robocasa365-v6",
+  "dynamic_point_count": 5296,
+  "embodiment": "PandaOmron",
+  "episode_id": "episode_000042",
+  "episode_json_uri": "episodes/b21c2eb6cc0a26a3fa00/episode.json",
+  "episode_key": "b21c2eb6cc0a26a3fa00",
+  "fps": 20.0,
+  "has_actions": true,
+  "has_replay_bundle": false,
+  "has_robot_state": true,
+  "image_shapes": [
+    [
+      512,
+      512
+    ],
+    [
+      512,
+      512
+    ],
+    [
+      512,
+      512
+    ],
+    [
+      512,
+      512
+    ]
+  ],
+  "joint_dim": 13,
+  "language": "The water running in the sink is hot. Adjust the faucet handle to run the water cold. Make sure to keep the water on.",
+  "manifest_schema_version": 2,
+  "num_frames": 170,
+  "phase1a_eligible": true,
+  "phase1b_eligible": false,
+  "point_count": 8000,
+  "robot_model": "PandaOmron",
+  "sample_id": "b21c2eb6cc0a26a3fa00",
+  "scene_id": "AdjustWaterTemperature",
+  "schema_version": 6,
+  "sidecar_uris": {
+    ".bindings.npz": "episodes/b21c2eb6cc0a26a3fa00/episode.v6.h5.bindings.npz",
+    ".report.json": "episodes/b21c2eb6cc0a26a3fa00/episode.v6.h5.report.json",
+    ".robot.xml": "episodes/b21c2eb6cc0a26a3fa00/episode.v6.h5.robot.xml",
+    ".source.json": "episodes/b21c2eb6cc0a26a3fa00/episode.v6.h5.source.json"
+  },
+  "source_node": "node45",
+  "source_partition": "pretrain",
+  "source_relative_uri": "pretrain/atomic/AdjustWaterTemperature/20250820/episode_000042.h5",
+  "source_uri": "/local_nvme/zhangrong/robocasa-quarc-v6/outputs/production_20261008_r6/pretrain/atomic/AdjustWaterTemperature/20250820/episode_000042.h5",
+  "split": "train",
+  "uri": "episodes/b21c2eb6cc0a26a3fa00/episode.v6.h5",
+  "node": "B300",
+  "dataset_key": "robocasa365_v6",
+  "group_id": "robocasa-pandaomron",
+  "source_h5": "/mnt/data/zhangrong/datasets/robocasa365_v6/episodes/b21c2eb6cc0a26a3fa00/episode.v6.h5",
+  "manifest_path": "/mnt/data/zhangrong/datasets/robocasa365_v6/manifest.jsonl",
+  "manifest_sha256": "a92cffda88920e20731829c81ddb3aa4e336a4823589961a52bec4e516b37083",
+  "rank": 6,
+  "slug": "robocasa-pandaomron-06-b21c2eb6",
+  "asset_dir": "assets/b300-20261020",
+  "source_sha256": "2b498017da4ceda40765f2f67944e99e6db29999d462fa4f57b8c14c29672024",
+  "frames": 170,
+  "duration_s": 8.5,
+  "width": 1920,
+  "height": 816,
+  "render_elapsed_s": 11.8,
+  "camera_metrics": {
+    "left": {
+      "invalid_camera_frames": 0,
+      "min_rgb_mean": 144.18231582641602,
+      "min_valid_depth_fraction": 1.0,
+      "mean_rgb": 147.4504934497908
+    },
+    "right": {
+      "invalid_camera_frames": 0,
+      "min_rgb_mean": 144.9002482096354,
+      "min_valid_depth_fraction": 1.0,
+      "mean_rgb": 146.3242547876695
+    },
+    "agentview_center": {
+      "invalid_camera_frames": 0,
+      "min_rgb_mean": 142.16595967610678,
+      "min_valid_depth_fraction": 1.0,
+      "mean_rgb": 143.53016023822863
+    },
+    "eye_in_hand": {
+      "invalid_camera_frames": 0,
+      "min_rgb_mean": 114.42521413167317,
+      "min_valid_depth_fraction": 0.8009567260742188,
+      "mean_rgb": 147.94835044262453
+    }
+  },
+  "source_unchanged": true,
+  "display": {
+    "rgb": "decoded source JPEG; resized with aspect ratio preserved; 96 point-ID annotations; no brightness/color enhancement",
+    "depth": "decoded stored integer * scale_m_per_unit + offset_m; invalid_stored_value masked; fixed display range 0.1..3.0 m; invalid black",
+    "points": "all native persistent points decoded with scale_m_per_unit and offset_m_xyz; native validity and visibility; visible-point colors sampled from current calibrated RGB; other points neutral/static or amber/dynamic",
+    "trajectories": "up to 96 stable point IDs, previous 12 frames, current camera pose for historical world positions; no camera-motion trails for static points",
+    "three_d": "fixed orthographic view fitted to exact episode-wide valid XYZ bounds; axes in episode frame"
+  },
+  "mp4_sha256": "db3efd228d671239811d4ff7531518995d9afc5ab8c437dbeb8cc7a71959e9a9",
+  "mp4_bytes": 1809436,
+  "poster_sha256": "9c6b8614911d76d433cb337014bef397d9f63029e168aecc00b1c4f7fd25a5f4"
+}

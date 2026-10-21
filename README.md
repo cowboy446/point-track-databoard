@@ -24,3 +24,7 @@ The `.github/workflows/pages.yml` workflow deploys the repository root.
 
 `data/` contains statistics, sample selections, video checks and inspected H5 metadata.
 `assets/` contains styles, scripts, fonts, MP4 previews, posters and contact sheets.
+
+## D4D presentation
+
+Open [D4D presentation](d4d.html) for the 16-slide paper discussion. Use arrow keys to navigate, N for speaker notes, and F for fullscreen. Figures, LaTeX rendering, and fonts are embedded for offline use.

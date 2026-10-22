@@ -1,0 +1,56 @@
+/* Local refinement of the original catalogue layout. */
+body,button,input,select,table,code,pre{font-variant-numeric:lining-nums tabular-nums;font-feature-settings:"lnum" 1,"tnum" 1}
+.formula,.equation,#scale-readout{font-family:var(--mono);font-variant-numeric:lining-nums tabular-nums;background:transparent;box-shadow:none;border:0;padding-left:0;padding-right:0;color:var(--ink)}
+.stats strong,.model-stats strong{font-family:var(--body);font-variant-numeric:lining-nums tabular-nums}
+.callout{background:transparent;box-shadow:none}
+.page-nav{display:flex;align-items:center;gap:28px}
+.evaluation-page .split-switch{display:flex;gap:7px;margin-bottom:0;align-items:center}
+.evaluation-page .split-switch button{min-height:36px;background:transparent;color:var(--ink);border:1px solid var(--line)}
+.evaluation-page .split-switch button[aria-pressed=true]{background:var(--paper-deep);border-color:#727d83;color:var(--ink)}
+.evaluation-page button:hover{background:var(--paper-deep)}
+.evaluation-page .timeline input{accent-color:#69777f}
+.experiment-page .section-top{flex-wrap:wrap}
+.experiment-page .model-choice{display:flex;align-items:center;margin-bottom:12px}
+.experiment-page .model-choice label{flex-direction:row;align-items:center;gap:14px;font:14px var(--body);color:var(--ink);width:100%}
+.experiment-page .model-choice select{width:130px;margin-left:auto}
+.experiment-page .compare-clouds{grid-template-columns:minmax(0,1fr) minmax(0,1fr);margin-top:22px}
+.evaluation-page .score,.evaluation-page #scale-readout{font:13px/1.8 var(--mono);color:var(--ink)}
+.evaluation-page .cloud-legend{font-size:12px;color:var(--ink)}
+.evaluation-page .muted,.evaluation-page .matrix-caption,.evaluation-page details p{font-size:13px!important;color:var(--ink)}
+.evaluation-page .compact-details{border:0;margin:12px 0;padding:0}
+.evaluation-page .pair-controls .details{margin:0;border:0;padding:0}
+.evaluation-page .pair-controls .details p{max-width:560px}
+.evaluation-page .archive-list small{display:none}
+@media(max-width:520px){.experiment-page .compare-clouds{grid-template-columns:1fr}.page-nav{gap:18px}}
+/* Reuse the Data catalogue's dark replay panel and integrated controls. */
+.evaluation-page .eval-player{margin-top:24px;background:#080b0e;border:1px solid #242b31;border-radius:8px;overflow:hidden;color:#e5ebee}
+.evaluation-page .eval-player .replay-heading h3{font:500 18px/1.35 var(--heading);color:#f0f4f6;margin:0}
+.evaluation-page .eval-player button,.evaluation-page .eval-player select{background:#151b21;color:#c9d3db;border:1px solid #303b45;border-radius:4px;font:10px/1.4 var(--mono);padding:6px 9px;min-height:28px}
+.evaluation-page .eval-player button:hover,.evaluation-page .eval-player select:hover{border-color:#627584;background:#202b34}
+.evaluation-page .eval-player button[aria-pressed=true]{background:#e5ebee;color:#171c20;border-color:#e5ebee}
+.evaluation-page .eval-player label{display:flex;flex-direction:row;align-items:center;gap:8px;color:#c2cbd2;font:11px var(--mono)}
+.evaluation-page .eval-player .replay-heading{align-items:center;flex-wrap:wrap}
+.evaluation-page .eval-player .eval-views{grid-template-columns:minmax(0,1fr) minmax(0,1fr)}
+.eval-video-stage,.eval-point-stage{position:relative;aspect-ratio:4/3;background:#07090c;min-width:0;overflow:hidden}
+#video-panel .eval-video-stage,#video-panel .eval-point-stage{aspect-ratio:var(--video-aspect,4/3)}
+.evaluation-page .eval-player .eval-point-stage canvas,.evaluation-page .eval-video-stage video,.evaluation-page .eval-video-stage canvas{position:absolute;inset:0;width:100%;height:100%;display:block;border:0;border-radius:0;max-height:none;object-fit:contain;aspect-ratio:auto;touch-action:none}
+.eval-video-stage canvas{pointer-events:none}
+.evaluation-page .eval-player .pane-label{min-height:44px;align-items:center;font-size:11px;color:#c2cbd2}
+.evaluation-page .eval-player .pane-label label{justify-content:space-between;width:100%}
+.evaluation-page .eval-player .pane-score{font:12px/1.6 var(--mono);color:#c2cbd2;padding:8px 12px;margin:0;border-bottom:1px solid #242b31}
+.evaluation-page .eval-player .point-toolbar{flex-wrap:wrap;padding:10px 12px}
+.layer-key{display:flex;gap:14px;font:11px/1.5 var(--mono);color:#c2cbd2;margin-right:auto}
+.visually-hidden{position:absolute;width:1px;height:1px;overflow:hidden;clip-path:inset(50%);white-space:nowrap}
+.evaluation-page .eval-player .player-error:empty{display:none}.evaluation-page .eval-player .player-error{color:#f3b3a2;padding:8px 16px;margin:0}
+.evaluation-page .eval-player .replay-controls output{font:12px/1.5 var(--mono);color:#c2cbd2}
+.evaluation-page .legacy-player .replay-grid{gap:0;margin:0;align-items:stretch}
+.evaluation-page .legacy-player .cloud-pane{border-left:1px solid #242b31}
+.evaluation-page .legacy-player h3{color:#c2cbd2;margin:0;padding:12px;font:12px var(--mono)}
+.evaluation-page .legacy-player .cloud-toolbar{padding:10px;margin:0;border-bottom:1px solid #242b31}
+.evaluation-page .legacy-player .score,.evaluation-page .legacy-player .cloud-legend{color:#c2cbd2;padding:8px 12px;margin:0;font:12px/1.6 var(--mono)}
+.evaluation-page .legacy-player canvas{border-radius:0}
+.evaluation-page .legacy-player .timeline{padding:12px 16px;margin:0;border-top:1px solid #242b31;color:#c2cbd2}
+.evaluation-page .legacy-player input[type=range]{accent-color:#a9bdc9}
+.evaluation-page .legacy-player .video-pane{align-self:center}
+@media(max-width:700px){.evaluation-page .eval-player .pane-label{padding:8px;font-size:10px}.evaluation-page .eval-player .pane-score{font-size:10px;padding:8px}.evaluation-page .eval-player .point-toolbar{gap:7px}.evaluation-page .legacy-player .replay-grid{grid-template-columns:1fr 1fr}}
+@media(max-width:480px){.evaluation-page .eval-player .eval-views,.evaluation-page .legacy-player .replay-grid{grid-template-columns:1fr}.evaluation-page .eval-player .point-cell{border-left:0;border-top:1px solid #242b31}}

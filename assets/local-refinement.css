@@ -54,3 +54,7 @@ body,button,input,select,table,code,pre{font-variant-numeric:lining-nums tabular
 .evaluation-page .legacy-player .video-pane{align-self:center}
 @media(max-width:700px){.evaluation-page .eval-player .pane-label{padding:8px;font-size:10px}.evaluation-page .eval-player .pane-score{font-size:10px;padding:8px}.evaluation-page .eval-player .point-toolbar{gap:7px}.evaluation-page .legacy-player .replay-grid{grid-template-columns:1fr 1fr}}
 @media(max-width:480px){.evaluation-page .eval-player .eval-views,.evaluation-page .legacy-player .replay-grid{grid-template-columns:1fr}.evaluation-page .eval-player .point-cell{border-left:0;border-top:1px solid #242b31}}
+.evaluation-page .math-formula{background:transparent;border:0;box-shadow:none;padding:12px 0;color:var(--ink);font-size:14px;max-width:100%;overflow-x:auto}
+.evaluation-page .math-formula .katex-display{margin:0;text-align:left}
+.evaluation-page .math-formula .katex-display>.katex{text-align:left;white-space:nowrap}
+@media(max-width:700px){.evaluation-page .math-formula{font-size:13px}}

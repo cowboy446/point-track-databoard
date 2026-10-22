@@ -58,3 +58,5 @@ body,button,input,select,table,code,pre{font-variant-numeric:lining-nums tabular
 .evaluation-page .math-formula .katex-display{margin:0;text-align:left}
 .evaluation-page .math-formula .katex-display>.katex{text-align:left;white-space:nowrap}
 @media(max-width:700px){.evaluation-page .math-formula{font-size:13px}}
+
+.experiment-page .eval-fold{margin:0}.experiment-page .eval-fold>summary{font:500 clamp(24px,2.7vw,32px)/1.35 var(--heading);letter-spacing:-.025em;color:var(--ink);padding:6px 0;cursor:pointer}.experiment-page .eval-fold>summary::marker{font-size:.55em}.experiment-page .eval-fold[open]>summary{margin-bottom:24px}.experiment-page .fold-content{padding-bottom:10px}.experiment-page .eval-fold>.fold-content>.section-top{margin-top:0}

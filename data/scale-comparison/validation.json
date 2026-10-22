@@ -1,0 +1,47 @@
+{
+  "status": "passed",
+  "clips": [
+    {
+      "index": 0,
+      "query_sha256": "79a4667cd48d390586de70ab2ec7437d38c62d602d40290090cb282e86bb7cee",
+      "predictions_sha256": "723dffb92955abf330efec0e8c046230469c31f33d7c8cf350c67cc77029d990",
+      "checkpoint_sha256": "6164c829a89c3ce1f8a776397b714b9c44d5af806a9f24a3ed432d62464c8967",
+      "max_pixel_coordinate_change_px": 2.2737367544323206e-13,
+      "baseline_metrics_reproduced": true
+    },
+    {
+      "index": 2,
+      "query_sha256": "d87de5c04d5296ef0b1b5ba1bd8629e5677a0eded8c0d0cb4e003d5b3ca258ce",
+      "predictions_sha256": "f06ff8a804306e9b8bd90859400cecd9b23aa4e996666f09a2204406ba591477",
+      "checkpoint_sha256": "6164c829a89c3ce1f8a776397b714b9c44d5af806a9f24a3ed432d62464c8967",
+      "max_pixel_coordinate_change_px": 2.2737367544323206e-13,
+      "baseline_metrics_reproduced": true
+    },
+    {
+      "index": 32,
+      "query_sha256": "002298fe8004d3e94dd1419bb2d592096bc53bca8d2b787c90e3b124fe827278",
+      "predictions_sha256": "abc2a7ed4d179311008ad1ea6d028f1fdd4d52b8a66db4e3d7d0b5d43aa49523",
+      "checkpoint_sha256": "6164c829a89c3ce1f8a776397b714b9c44d5af806a9f24a3ed432d62464c8967",
+      "max_pixel_coordinate_change_px": 3.410605131648481e-13,
+      "baseline_metrics_reproduced": true
+    },
+    {
+      "index": 34,
+      "query_sha256": "19922e98e4bbb6517df1d3d556ad4bad38db3aabb4f662dbe969bcba3e7d9039",
+      "predictions_sha256": "5169c33954b894f6f9ecf2fc93ff56bbebbe8537ba1a848fae3853908b6fdd6e",
+      "checkpoint_sha256": "6164c829a89c3ce1f8a776397b714b9c44d5af806a9f24a3ed432d62464c8967",
+      "max_pixel_coordinate_change_px": 2.2737367544323206e-13,
+      "baseline_metrics_reproduced": true
+    }
+  ],
+  "checks": [
+    "Frozen query digest match",
+    "Original full-forward predictions reused",
+    "Original loss and XYZ reproduced for all 36 pairs",
+    "Target-view/time scales shared across three sources",
+    "Positive finite scales",
+    "Pixel invariance below 1e-7 px",
+    "Pointstream quantization and delta roundtrip checked"
+  ],
+  "source_sha256": "52e0cdde3211c97c4ae66dd0f2bd39674141ebd9bc3447edb8ea1d6884c9fd5b"
+}

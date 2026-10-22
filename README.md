@@ -36,3 +36,7 @@ Open [D4D presentation](d4d.html) for the 16-slide paper discussion. Use arrow k
 ### Model evaluation
 
 `evaluation.html` reports A0 / R00 at step 2,048 on twenty frozen development clips. All three source views query all three target cameras. The page includes nine-pair loss matrices, labelled videos, synchronized 3D point streams, metrics, the frozen protocol and evaluator source. Original 64-clip campaign scores are shown separately because their calibration and aggregation differ.
+
+## Scale comparison
+
+`scale-comparison.html` compares clip-wide and target-view/time scale alignment on four frozen A0 clips. The original predictions and query IDs are reused. CPU rescoring, per-pair metrics, 192 scale values, validation records and paired 3D streams are in `data/scale-comparison/`.

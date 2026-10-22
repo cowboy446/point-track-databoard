@@ -44,3 +44,5 @@ Open [D4D presentation](d4d.html) for the 16-slide paper discussion. Use arrow k
 ## Train and validation comparison
 
 `experiment-evaluation.html` compares the A0–A6 step-2048 checkpoints on fixed, task-disjoint training and validation cohorts (20 episodes each). A7 has no checkpoint. Metrics use the shared per-clip scale; 3D replays display 512 matched IDs per source. `archive.html` contains presentations and supplementary diagnostics.
+
+The canonical Model Evaluation page is `evaluation.html`. It combines training/validation result tabs, a model-selectable video/3D replay, and an arbitrary left/right checkpoint comparison. `experiment-evaluation.html` redirects to it; the original A0 report is archived as `baseline-evaluation.html`. All navigation uses Model → Architecture / Evaluation. The video overlay uses 24 fixed point IDs drawn from the same 512-point display subset; full metrics are unchanged. RGB videos and per-model image projections are under `data/experiments/video/`, with file hashes in its manifest. No inference was rerun for this layout update.

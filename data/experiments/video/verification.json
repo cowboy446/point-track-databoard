@@ -1,0 +1,19 @@
+{
+  "videos": 120,
+  "overlay_sets": 280,
+  "view_pairs": 2520,
+  "frames": 16,
+  "same_track_ids_across_models": true,
+  "all_video_frames_decoded": true,
+  "all_file_sha256_verified": true,
+  "site_bytes": 890184247,
+  "ui_checks": [
+    "Video and point cloud both seek to frame 16",
+    "Independent replay/comparison timelines and layer masks",
+    "A3 versus A5 comparison without A0",
+    "Training LIBERO clip 164, source V3 to target V1, A6",
+    "663px and desktop layouts",
+    "Legacy URL redirects to canonical Evaluation",
+    "Architecture numerals use lining tabular figures"
+  ]
+}

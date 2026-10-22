@@ -40,3 +40,7 @@ Open [D4D presentation](d4d.html) for the 16-slide paper discussion. Use arrow k
 ## Scale comparison
 
 `scale-comparison.html` compares clip-wide and target-view/time scale alignment on four frozen A0 clips. The original predictions and query IDs are reused. CPU rescoring, per-pair metrics, 192 scale values, validation records and paired 3D streams are in `data/scale-comparison/`.
+
+## Train and validation comparison
+
+`experiment-evaluation.html` compares the A0–A6 step-2048 checkpoints on fixed, task-disjoint training and validation cohorts (20 episodes each). A7 has no checkpoint. Metrics use the shared per-clip scale; 3D replays display 512 matched IDs per source. `archive.html` contains presentations and supplementary diagnostics.

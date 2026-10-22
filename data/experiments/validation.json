@@ -1,0 +1,118 @@
+{
+  "status": "passed",
+  "runs": [
+    {
+      "split": "dev",
+      "run": "A0",
+      "clips": 20,
+      "queries": 5849472,
+      "checkpoint_sha256": "6164c829a89c3ce1f8a776397b714b9c44d5af806a9f24a3ed432d62464c8967"
+    },
+    {
+      "split": "dev",
+      "run": "A1",
+      "clips": 20,
+      "queries": 5849472,
+      "checkpoint_sha256": "9156cd094d1af20645e84834f617034bd536216b867dadfdee9535aa0a571c5e"
+    },
+    {
+      "split": "dev",
+      "run": "A2",
+      "clips": 20,
+      "queries": 5849472,
+      "checkpoint_sha256": "32e797406e139b3fa9971cc8fd21f72ce9f891958ca390617b9aab15aed96605"
+    },
+    {
+      "split": "dev",
+      "run": "A3",
+      "clips": 20,
+      "queries": 5849472,
+      "checkpoint_sha256": "5e2eb40cc8f633607c152f0634d813f63a700fb6bb2fd5321ca6f8d4069f5579"
+    },
+    {
+      "split": "dev",
+      "run": "A4",
+      "clips": 20,
+      "queries": 5849472,
+      "checkpoint_sha256": "093c4ed96245ae67ee7d370ba31574b44cd7a4e3c00c9d56e6ca94a4775818ff"
+    },
+    {
+      "split": "dev",
+      "run": "A5",
+      "clips": 20,
+      "queries": 5849472,
+      "checkpoint_sha256": "03efb8087a22cc48891a5f2260fa835edf8cc587c1fbc2a06c019275b38bb900"
+    },
+    {
+      "split": "dev",
+      "run": "A6",
+      "clips": 20,
+      "queries": 5849472,
+      "checkpoint_sha256": "9a02a48df0d55ad2e2eb3d0700c094339385698b8e589543cd3b1d6e808c5876"
+    },
+    {
+      "split": "train",
+      "run": "A0",
+      "clips": 20,
+      "queries": 5872608,
+      "checkpoint_sha256": "6164c829a89c3ce1f8a776397b714b9c44d5af806a9f24a3ed432d62464c8967"
+    },
+    {
+      "split": "train",
+      "run": "A1",
+      "clips": 20,
+      "queries": 5872608,
+      "checkpoint_sha256": "9156cd094d1af20645e84834f617034bd536216b867dadfdee9535aa0a571c5e"
+    },
+    {
+      "split": "train",
+      "run": "A2",
+      "clips": 20,
+      "queries": 5872608,
+      "checkpoint_sha256": "32e797406e139b3fa9971cc8fd21f72ce9f891958ca390617b9aab15aed96605"
+    },
+    {
+      "split": "train",
+      "run": "A3",
+      "clips": 20,
+      "queries": 5872608,
+      "checkpoint_sha256": "5e2eb40cc8f633607c152f0634d813f63a700fb6bb2fd5321ca6f8d4069f5579"
+    },
+    {
+      "split": "train",
+      "run": "A4",
+      "clips": 20,
+      "queries": 5872608,
+      "checkpoint_sha256": "093c4ed96245ae67ee7d370ba31574b44cd7a4e3c00c9d56e6ca94a4775818ff"
+    },
+    {
+      "split": "train",
+      "run": "A5",
+      "clips": 20,
+      "queries": 5872608,
+      "checkpoint_sha256": "03efb8087a22cc48891a5f2260fa835edf8cc587c1fbc2a06c019275b38bb900"
+    },
+    {
+      "split": "train",
+      "run": "A6",
+      "clips": 20,
+      "queries": 5872608,
+      "checkpoint_sha256": "9a02a48df0d55ad2e2eb3d0700c094339385698b8e589543cd3b1d6e808c5876"
+    }
+  ],
+  "missing": [
+    "A7"
+  ],
+  "pairs": 2520,
+  "point_streams": 2520,
+  "checks": [
+    "Exact frozen query digest equality across all models",
+    "Latest checkpoint SHA, complete rollout, configuration signature and strict model state checked",
+    "Original full forward; no query chunking",
+    "Same per-clip scoring function as A0",
+    "Train/validation episode and task-group disjointness",
+    "Loss component sum checked",
+    "All metric queries retained; 512 matched IDs per source displayed",
+    "Pointstream quantization and modular delta roundtrip checked"
+  ]
+}

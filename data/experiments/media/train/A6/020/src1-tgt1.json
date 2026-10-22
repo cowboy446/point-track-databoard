@@ -1,0 +1,8 @@
+{
+  "frames": 16,
+  "points": 1024,
+  "data_file": "src1-tgt1.bin.gz",
+  "data_sha256": "8e8166e85d415af9bcf439b9edce4a565a54f60054452f3829cb09e5c655fc54",
+  "prediction_points": 512,
+  "quantization_max_axis_error_m": 1.1343964018796666e-05
+}

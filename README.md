@@ -32,3 +32,7 @@ Open [D4D presentation](d4d.html) for the 16-slide paper discussion. Use arrow k
 ## Model architecture
 
 [Model architecture](model.html) compares the archived B300 A0 / R00 baseline with the InternData branch at c182664. It includes an editable SVG, module parameter counts, training differences, and the old multiview evaluation protocol and migration requirements. Evidence excerpts and count reports are in `data/model/`.
+
+### Model evaluation
+
+`evaluation.html` reports A0 / R00 at step 2,048 on twenty frozen development clips. All three source views query all three target cameras. The page includes nine-pair loss matrices, labelled videos, synchronized 3D point streams, metrics, the frozen protocol and evaluator source. Original 64-clip campaign scores are shown separately because their calibration and aggregation differ.

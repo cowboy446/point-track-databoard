@@ -1,0 +1,706 @@
+[
+  {
+    "clip": 0,
+    "points_by_source": [
+      32,
+      32,
+      32
+    ],
+    "main_queries": 4608,
+    "anchors": 96,
+    "calibration": 1024
+  },
+  {
+    "clip": 1,
+    "points_by_source": [
+      32,
+      32,
+      32
+    ],
+    "main_queries": 4608,
+    "anchors": 96,
+    "calibration": 1024
+  },
+  {
+    "clip": 2,
+    "points_by_source": [
+      32,
+      32,
+      32
+    ],
+    "main_queries": 4608,
+    "anchors": 96,
+    "calibration": 1024
+  },
+  {
+    "clip": 3,
+    "points_by_source": [
+      32,
+      32,
+      32
+    ],
+    "main_queries": 4608,
+    "anchors": 96,
+    "calibration": 1024
+  },
+  {
+    "clip": 4,
+    "points_by_source": [
+      32,
+      32,
+      32
+    ],
+    "main_queries": 4608,
+    "anchors": 96,
+    "calibration": 1024
+  },
+  {
+    "clip": 5,
+    "points_by_source": [
+      32,
+      32,
+      32
+    ],
+    "main_queries": 4608,
+    "anchors": 96,
+    "calibration": 1024
+  },
+  {
+    "clip": 6,
+    "points_by_source": [
+      32,
+      32,
+      32
+    ],
+    "main_queries": 4608,
+    "anchors": 96,
+    "calibration": 1024
+  },
+  {
+    "clip": 7,
+    "points_by_source": [
+      32,
+      32,
+      32
+    ],
+    "main_queries": 4608,
+    "anchors": 96,
+    "calibration": 1024
+  },
+  {
+    "clip": 8,
+    "points_by_source": [
+      32,
+      32,
+      32
+    ],
+    "main_queries": 4608,
+    "anchors": 96,
+    "calibration": 1024
+  },
+  {
+    "clip": 9,
+    "points_by_source": [
+      32,
+      32,
+      32
+    ],
+    "main_queries": 4608,
+    "anchors": 96,
+    "calibration": 1024
+  },
+  {
+    "clip": 10,
+    "points_by_source": [
+      32,
+      32,
+      32
+    ],
+    "main_queries": 4608,
+    "anchors": 96,
+    "calibration": 1024
+  },
+  {
+    "clip": 11,
+    "points_by_source": [
+      32,
+      32,
+      32
+    ],
+    "main_queries": 4608,
+    "anchors": 96,
+    "calibration": 1024
+  },
+  {
+    "clip": 12,
+    "points_by_source": [
+      32,
+      32,
+      32
+    ],
+    "main_queries": 4608,
+    "anchors": 96,
+    "calibration": 1024
+  },
+  {
+    "clip": 13,
+    "points_by_source": [
+      32,
+      32,
+      32
+    ],
+    "main_queries": 4608,
+    "anchors": 96,
+    "calibration": 1024
+  },
+  {
+    "clip": 14,
+    "points_by_source": [
+      32,
+      32,
+      32
+    ],
+    "main_queries": 4608,
+    "anchors": 96,
+    "calibration": 1024
+  },
+  {
+    "clip": 15,
+    "points_by_source": [
+      32,
+      32,
+      32
+    ],
+    "main_queries": 4608,
+    "anchors": 96,
+    "calibration": 1024
+  },
+  {
+    "clip": 16,
+    "points_by_source": [
+      32,
+      32,
+      32
+    ],
+    "main_queries": 4608,
+    "anchors": 96,
+    "calibration": 1024
+  },
+  {
+    "clip": 17,
+    "points_by_source": [
+      32,
+      32,
+      32
+    ],
+    "main_queries": 4608,
+    "anchors": 96,
+    "calibration": 1024
+  },
+  {
+    "clip": 18,
+    "points_by_source": [
+      32,
+      32,
+      32
+    ],
+    "main_queries": 4608,
+    "anchors": 96,
+    "calibration": 1024
+  },
+  {
+    "clip": 19,
+    "points_by_source": [
+      32,
+      32,
+      32
+    ],
+    "main_queries": 4608,
+    "anchors": 96,
+    "calibration": 1024
+  },
+  {
+    "clip": 20,
+    "points_by_source": [
+      32,
+      32,
+      32
+    ],
+    "main_queries": 4608,
+    "anchors": 96,
+    "calibration": 1024
+  },
+  {
+    "clip": 21,
+    "points_by_source": [
+      32,
+      32,
+      32
+    ],
+    "main_queries": 4608,
+    "anchors": 96,
+    "calibration": 1024
+  },
+  {
+    "clip": 22,
+    "points_by_source": [
+      32,
+      32,
+      32
+    ],
+    "main_queries": 4608,
+    "anchors": 96,
+    "calibration": 1024
+  },
+  {
+    "clip": 23,
+    "points_by_source": [
+      32,
+      32,
+      32
+    ],
+    "main_queries": 4608,
+    "anchors": 96,
+    "calibration": 1024
+  },
+  {
+    "clip": 24,
+    "points_by_source": [
+      32,
+      32,
+      32
+    ],
+    "main_queries": 4608,
+    "anchors": 96,
+    "calibration": 1024
+  },
+  {
+    "clip": 25,
+    "points_by_source": [
+      32,
+      32,
+      32
+    ],
+    "main_queries": 4608,
+    "anchors": 96,
+    "calibration": 1024
+  },
+  {
+    "clip": 26,
+    "points_by_source": [
+      32,
+      32,
+      32
+    ],
+    "main_queries": 4608,
+    "anchors": 96,
+    "calibration": 1024
+  },
+  {
+    "clip": 27,
+    "points_by_source": [
+      32,
+      32,
+      32
+    ],
+    "main_queries": 4608,
+    "anchors": 96,
+    "calibration": 1024
+  },
+  {
+    "clip": 28,
+    "points_by_source": [
+      32,
+      32,
+      32
+    ],
+    "main_queries": 4608,
+    "anchors": 96,
+    "calibration": 1024
+  },
+  {
+    "clip": 29,
+    "points_by_source": [
+      32,
+      32,
+      32
+    ],
+    "main_queries": 4608,
+    "anchors": 96,
+    "calibration": 1024
+  },
+  {
+    "clip": 30,
+    "points_by_source": [
+      32,
+      32,
+      32
+    ],
+    "main_queries": 4608,
+    "anchors": 96,
+    "calibration": 1024
+  },
+  {
+    "clip": 31,
+    "points_by_source": [
+      32,
+      32,
+      32
+    ],
+    "main_queries": 4608,
+    "anchors": 96,
+    "calibration": 1024
+  },
+  {
+    "clip": 32,
+    "points_by_source": [
+      32,
+      16,
+      32
+    ],
+    "main_queries": 3840,
+    "anchors": 80,
+    "calibration": 1024
+  },
+  {
+    "clip": 33,
+    "points_by_source": [
+      32,
+      16,
+      32
+    ],
+    "main_queries": 3840,
+    "anchors": 80,
+    "calibration": 1024
+  },
+  {
+    "clip": 34,
+    "points_by_source": [
+      32,
+      32,
+      32
+    ],
+    "main_queries": 4608,
+    "anchors": 96,
+    "calibration": 1024
+  },
+  {
+    "clip": 35,
+    "points_by_source": [
+      32,
+      32,
+      32
+    ],
+    "main_queries": 4608,
+    "anchors": 96,
+    "calibration": 1024
+  },
+  {
+    "clip": 36,
+    "points_by_source": [
+      32,
+      32,
+      32
+    ],
+    "main_queries": 4608,
+    "anchors": 96,
+    "calibration": 1024
+  },
+  {
+    "clip": 37,
+    "points_by_source": [
+      32,
+      32,
+      32
+    ],
+    "main_queries": 4608,
+    "anchors": 96,
+    "calibration": 1024
+  },
+  {
+    "clip": 38,
+    "points_by_source": [
+      32,
+      32,
+      32
+    ],
+    "main_queries": 4608,
+    "anchors": 96,
+    "calibration": 1024
+  },
+  {
+    "clip": 39,
+    "points_by_source": [
+      32,
+      32,
+      32
+    ],
+    "main_queries": 4608,
+    "anchors": 96,
+    "calibration": 1024
+  },
+  {
+    "clip": 40,
+    "points_by_source": [
+      32,
+      32,
+      32
+    ],
+    "main_queries": 4608,
+    "anchors": 96,
+    "calibration": 1024
+  },
+  {
+    "clip": 41,
+    "points_by_source": [
+      32,
+      32,
+      32
+    ],
+    "main_queries": 4608,
+    "anchors": 96,
+    "calibration": 1024
+  },
+  {
+    "clip": 42,
+    "points_by_source": [
+      32,
+      32,
+      32
+    ],
+    "main_queries": 4608,
+    "anchors": 96,
+    "calibration": 1024
+  },
+  {
+    "clip": 43,
+    "points_by_source": [
+      32,
+      32,
+      32
+    ],
+    "main_queries": 4608,
+    "anchors": 96,
+    "calibration": 1024
+  },
+  {
+    "clip": 44,
+    "points_by_source": [
+      32,
+      32,
+      32
+    ],
+    "main_queries": 4608,
+    "anchors": 96,
+    "calibration": 1024
+  },
+  {
+    "clip": 45,
+    "points_by_source": [
+      32,
+      32,
+      32
+    ],
+    "main_queries": 4608,
+    "anchors": 96,
+    "calibration": 1024
+  },
+  {
+    "clip": 46,
+    "points_by_source": [
+      32,
+      32,
+      32
+    ],
+    "main_queries": 4608,
+    "anchors": 96,
+    "calibration": 1024
+  },
+  {
+    "clip": 47,
+    "points_by_source": [
+      32,
+      32,
+      32
+    ],
+    "main_queries": 4608,
+    "anchors": 96,
+    "calibration": 1024
+  },
+  {
+    "clip": 48,
+    "points_by_source": [
+      32,
+      32,
+      32
+    ],
+    "main_queries": 4608,
+    "anchors": 96,
+    "calibration": 1024
+  },
+  {
+    "clip": 49,
+    "points_by_source": [
+      32,
+      32,
+      32
+    ],
+    "main_queries": 4608,
+    "anchors": 96,
+    "calibration": 1024
+  },
+  {
+    "clip": 50,
+    "points_by_source": [
+      32,
+      32,
+      32
+    ],
+    "main_queries": 4608,
+    "anchors": 96,
+    "calibration": 1024
+  },
+  {
+    "clip": 51,
+    "points_by_source": [
+      32,
+      32,
+      32
+    ],
+    "main_queries": 4608,
+    "anchors": 96,
+    "calibration": 1024
+  },
+  {
+    "clip": 52,
+    "points_by_source": [
+      32,
+      32,
+      32
+    ],
+    "main_queries": 4608,
+    "anchors": 96,
+    "calibration": 1024
+  },
+  {
+    "clip": 53,
+    "points_by_source": [
+      32,
+      32,
+      32
+    ],
+    "main_queries": 4608,
+    "anchors": 96,
+    "calibration": 1024
+  },
+  {
+    "clip": 54,
+    "points_by_source": [
+      32,
+      32,
+      32
+    ],
+    "main_queries": 4608,
+    "anchors": 96,
+    "calibration": 1024
+  },
+  {
+    "clip": 55,
+    "points_by_source": [
+      32,
+      32,
+      32
+    ],
+    "main_queries": 4608,
+    "anchors": 96,
+    "calibration": 1024
+  },
+  {
+    "clip": 56,
+    "points_by_source": [
+      32,
+      32,
+      32
+    ],
+    "main_queries": 4608,
+    "anchors": 96,
+    "calibration": 1024
+  },
+  {
+    "clip": 57,
+    "points_by_source": [
+      32,
+      32,
+      32
+    ],
+    "main_queries": 4608,
+    "anchors": 96,
+    "calibration": 1024
+  },
+  {
+    "clip": 58,
+    "points_by_source": [
+      32,
+      32,
+      32
+    ],
+    "main_queries": 4608,
+    "anchors": 96,
+    "calibration": 1024
+  },
+  {
+    "clip": 59,
+    "points_by_source": [
+      32,
+      32,
+      32
+    ],
+    "main_queries": 4608,
+    "anchors": 96,
+    "calibration": 1024
+  },
+  {
+    "clip": 60,
+    "points_by_source": [
+      32,
+      32,
+      32
+    ],
+    "main_queries": 4608,
+    "anchors": 96,
+    "calibration": 1024
+  },
+  {
+    "clip": 61,
+    "points_by_source": [
+      32,
+      32,
+      32
+    ],
+    "main_queries": 4608,
+    "anchors": 96,
+    "calibration": 1024
+  },
+  {
+    "clip": 62,
+    "points_by_source": [
+      32,
+      32,
+      32
+    ],
+    "main_queries": 4608,
+    "anchors": 96,
+    "calibration": 1024
+  },
+  {
+    "clip": 63,
+    "points_by_source": [
+      32,
+      32,
+      32
+    ],
+    "main_queries": 4608,
+    "anchors": 96,
+    "calibration": 1024
+  }
+]

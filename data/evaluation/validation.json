@@ -1,0 +1,25 @@
+{
+  "status": "passed",
+  "clips": 20,
+  "pairs": 180,
+  "queries": 5849472,
+  "checkpoint_sha256": "6164c829a89c3ce1f8a776397b714b9c44d5af806a9f24a3ed432d62464c8967",
+  "checks": [
+    "H5 byte size and SHA-256 before reading",
+    "Strict checkpoint state and complete-rollout/signature match",
+    "Unique point IDs within every source; exact query and nine-pair counts",
+    "Finite model outputs",
+    "Weighted loss components sum to total",
+    "Synthetic scale, group-scale and invalid-projection checks"
+  ],
+  "inference": "Original EvidenceExecutionModule forward, all queries at once, one forward per clip; no query chunking.",
+  "raw_prediction_storage": "B300 campaign model-evaluation-20261022/clips/*/predictions.npz",
+  "media_validation": {
+    "videos": 180,
+    "frames_per_video": 16,
+    "fps": 8,
+    "pointstream_checksums": 180,
+    "pointstream_delta_roundtrip": "verified before compression",
+    "all_pair_assets_present": true
+  }
+}

@@ -1,0 +1,59 @@
+{
+  "report": {
+    "frozen": 1042376704,
+    "trainable": 481152005,
+    "modules": {
+      "sge": 983620608,
+      "world_action_transformer": 381118464,
+      "memory_summary_reader": 12602368,
+      "point_decoder": 103085061,
+      "language_processor": 43102208
+    }
+  },
+  "groups": {
+    "sge.scene_registers": {
+      "total": 65536,
+      "trainable": 65536
+    },
+    "sge.aggregator.camera_token": {
+      "total": 2048,
+      "trainable": 0
+    },
+    "sge.aggregator.register_token": {
+      "total": 32768,
+      "trainable": 0
+    },
+    "sge.aggregator.patch_embed": {
+      "total": 303154176,
+      "trainable": 0
+    },
+    "sge.aggregator.frame_blocks": {
+      "total": 302364672,
+      "trainable": 0
+    },
+    "sge.aggregator.inter_frame_blocks": {
+      "total": 302364672,
+      "trainable": 302364672
+    },
+    "sge.view_time_condition": {
+      "total": 75636736,
+      "trainable": 75636736
+    },
+    "world_action_transformer": {
+      "total": 381118464,
+      "trainable": 0
+    },
+    "memory_summary_reader": {
+      "total": 12602368,
+      "trainable": 0
+    },
+    "point_decoder": {
+      "total": 103085061,
+      "trainable": 103085061
+    },
+    "language_processor": {
+      "total": 43102208,
+      "trainable": 0
+    }
+  }
+}

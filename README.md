@@ -28,3 +28,7 @@ The `.github/workflows/pages.yml` workflow deploys the repository root.
 ## D4D presentation
 
 Open [D4D presentation](d4d.html) for the 16-slide paper discussion. Use arrow keys to navigate, N for speaker notes, and F for fullscreen. Figures, LaTeX rendering, and fonts are embedded for offline use.
+
+## Model architecture
+
+[Model architecture](model.html) compares the archived B300 A0 / R00 baseline with the InternData branch at c182664. It includes an editable SVG, module parameter counts, training differences, and the old multiview evaluation protocol and migration requirements. Evidence excerpts and count reports are in `data/model/`.

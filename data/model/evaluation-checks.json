@@ -1,0 +1,12 @@
+{
+  "checks": 5,
+  "passed": 5,
+  "scope": "Four local CPU scoring checks and one old query/metric fixture against B300 c031f56 query helpers; no model inference",
+  "checks_detail": [
+    "shared factor-2 scale correction recovers exact world coordinates",
+    "cross-view perturbation increases error and disagreement",
+    "negative-depth prediction is excluded from pixel EPE but retained in XYZ EPE",
+    "D4RT component reconstruction matches analytical expected value",
+    "old multiview query and metric fixture passes with current B300 helpers; fixture supplies the current recipe.query_sampling field"
+  ]
+}

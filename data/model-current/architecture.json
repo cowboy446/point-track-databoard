@@ -1,0 +1,1181 @@
+{
+  "version": 1,
+  "id": "quarc-gpu45-full-context",
+  "title": "QuARC",
+  "width": 1870,
+  "height": 850,
+  "palette": {
+    "blue": "#d1def4",
+    "purple": "#ded6eb",
+    "gray": "#f0f0ef",
+    "peach": "#fde5cf",
+    "yellow": "#fff3d0",
+    "green": "#dcead4",
+    "coral": "#f4cdcb",
+    "pink": "#e9c9d7",
+    "white": "#ffffff"
+  },
+  "nodes": [
+    {
+      "id": "video",
+      "label": "Multi-view video",
+      "x": 35,
+      "y": 65,
+      "w": 525,
+      "h": 245,
+      "kind": "group",
+      "color": "blue",
+      "parent": null
+    },
+    {
+      "id": "view-0",
+      "label": "V1",
+      "x": 13,
+      "y": 53,
+      "w": 30,
+      "h": 40,
+      "kind": "text",
+      "color": "peach",
+      "parent": "video",
+      "size": 19
+    },
+    {
+      "id": "frame-0-0",
+      "label": "",
+      "x": 55,
+      "y": 47,
+      "w": 105,
+      "h": 56,
+      "kind": "image",
+      "color": "peach",
+      "parent": "video",
+      "image": "data/model-current/view-0-frame-0.jpg"
+    },
+    {
+      "id": "frame-0-1",
+      "label": "",
+      "x": 167,
+      "y": 47,
+      "w": 105,
+      "h": 56,
+      "kind": "image",
+      "color": "peach",
+      "parent": "video",
+      "image": "data/model-current/view-0-frame-1.jpg"
+    },
+    {
+      "id": "frame-0-2",
+      "label": "",
+      "x": 279,
+      "y": 47,
+      "w": 105,
+      "h": 56,
+      "kind": "image",
+      "color": "peach",
+      "parent": "video",
+      "image": "data/model-current/view-0-frame-2.jpg"
+    },
+    {
+      "id": "frame-0-3",
+      "label": "",
+      "x": 391,
+      "y": 47,
+      "w": 105,
+      "h": 56,
+      "kind": "image",
+      "color": "peach",
+      "parent": "video",
+      "image": "data/model-current/view-0-frame-3.jpg"
+    },
+    {
+      "id": "view-1",
+      "label": "V2",
+      "x": 13,
+      "y": 113,
+      "w": 30,
+      "h": 40,
+      "kind": "text",
+      "color": "peach",
+      "parent": "video",
+      "size": 19
+    },
+    {
+      "id": "frame-1-0",
+      "label": "",
+      "x": 55,
+      "y": 107,
+      "w": 105,
+      "h": 56,
+      "kind": "image",
+      "color": "peach",
+      "parent": "video",
+      "image": "data/model-current/view-1-frame-0.jpg"
+    },
+    {
+      "id": "frame-1-1",
+      "label": "",
+      "x": 167,
+      "y": 107,
+      "w": 105,
+      "h": 56,
+      "kind": "image",
+      "color": "peach",
+      "parent": "video",
+      "image": "data/model-current/view-1-frame-1.jpg"
+    },
+    {
+      "id": "frame-1-2",
+      "label": "",
+      "x": 279,
+      "y": 107,
+      "w": 105,
+      "h": 56,
+      "kind": "image",
+      "color": "peach",
+      "parent": "video",
+      "image": "data/model-current/view-1-frame-2.jpg"
+    },
+    {
+      "id": "frame-1-3",
+      "label": "",
+      "x": 391,
+      "y": 107,
+      "w": 105,
+      "h": 56,
+      "kind": "image",
+      "color": "peach",
+      "parent": "video",
+      "image": "data/model-current/view-1-frame-3.jpg"
+    },
+    {
+      "id": "view-2",
+      "label": "V3",
+      "x": 13,
+      "y": 173,
+      "w": 30,
+      "h": 40,
+      "kind": "text",
+      "color": "peach",
+      "parent": "video",
+      "size": 19
+    },
+    {
+      "id": "frame-2-0",
+      "label": "",
+      "x": 55,
+      "y": 167,
+      "w": 105,
+      "h": 56,
+      "kind": "image",
+      "color": "peach",
+      "parent": "video",
+      "image": "data/model-current/view-2-frame-0.jpg"
+    },
+    {
+      "id": "frame-2-1",
+      "label": "",
+      "x": 167,
+      "y": 167,
+      "w": 105,
+      "h": 56,
+      "kind": "image",
+      "color": "peach",
+      "parent": "video",
+      "image": "data/model-current/view-2-frame-1.jpg"
+    },
+    {
+      "id": "frame-2-2",
+      "label": "",
+      "x": 279,
+      "y": 167,
+      "w": 105,
+      "h": 56,
+      "kind": "image",
+      "color": "peach",
+      "parent": "video",
+      "image": "data/model-current/view-2-frame-2.jpg"
+    },
+    {
+      "id": "frame-2-3",
+      "label": "",
+      "x": 391,
+      "y": 167,
+      "w": 105,
+      "h": 56,
+      "kind": "image",
+      "color": "peach",
+      "parent": "video",
+      "image": "data/model-current/view-2-frame-3.jpg"
+    },
+    {
+      "id": "dino",
+      "label": "DINOv3\nImage tokenization",
+      "x": 735,
+      "y": 100,
+      "w": 265,
+      "h": 68,
+      "kind": "box",
+      "color": "peach",
+      "parent": null
+    },
+    {
+      "id": "scene-input",
+      "label": "Scene tokens",
+      "x": 1065,
+      "y": 112,
+      "w": 200,
+      "h": 42,
+      "kind": "box",
+      "color": "green",
+      "parent": null
+    },
+    {
+      "id": "image-special",
+      "label": "Camera + register tokens",
+      "x": 1045,
+      "y": 180,
+      "w": 240,
+      "h": 42,
+      "kind": "box",
+      "color": "blue",
+      "parent": null,
+      "size": 19
+    },
+    {
+      "id": "pack-add",
+      "label": "+",
+      "x": 845,
+      "y": 211,
+      "w": 38,
+      "h": 38,
+      "kind": "sum",
+      "color": "purple",
+      "parent": null,
+      "size": 31
+    },
+    {
+      "id": "encoder",
+      "label": "Encoder",
+      "x": 690,
+      "y": 285,
+      "w": 350,
+      "h": 365,
+      "kind": "group",
+      "color": "gray",
+      "parent": null
+    },
+    {
+      "id": "frame-attn",
+      "label": "Per-Frame Self-Attention",
+      "x": 22,
+      "y": 52,
+      "w": 306,
+      "h": 45,
+      "kind": "box",
+      "color": "yellow",
+      "parent": "encoder"
+    },
+    {
+      "id": "frame-mlp",
+      "label": "MLP",
+      "x": 100,
+      "y": 114,
+      "w": 150,
+      "h": 36,
+      "kind": "box",
+      "color": "peach",
+      "parent": "encoder"
+    },
+    {
+      "id": "condition",
+      "label": "View–Time Conditioning",
+      "x": 35,
+      "y": 170,
+      "w": 280,
+      "h": 43,
+      "kind": "box",
+      "color": "purple",
+      "parent": "encoder"
+    },
+    {
+      "id": "global-attn",
+      "label": "Global / Register Self-Attention",
+      "x": 22,
+      "y": 235,
+      "w": 306,
+      "h": 45,
+      "kind": "box",
+      "color": "yellow",
+      "parent": "encoder",
+      "size": 19
+    },
+    {
+      "id": "global-mlp",
+      "label": "MLP",
+      "x": 100,
+      "y": 296,
+      "w": 150,
+      "h": 36,
+      "kind": "box",
+      "color": "peach",
+      "parent": "encoder"
+    },
+    {
+      "id": "enc-repeat",
+      "label": "N Encoder Blocks",
+      "x": 80,
+      "y": 336,
+      "w": 240,
+      "h": 25,
+      "kind": "text",
+      "color": "peach",
+      "parent": "encoder",
+      "size": 21
+    },
+    {
+      "id": "queries",
+      "label": "Point queries",
+      "x": 35,
+      "y": 395,
+      "w": 555,
+      "h": 365,
+      "kind": "group",
+      "color": "purple",
+      "parent": null
+    },
+    {
+      "id": "uv",
+      "label": "(u, v)",
+      "x": 17,
+      "y": 63,
+      "w": 76,
+      "h": 44,
+      "kind": "box",
+      "color": "white",
+      "parent": "queries",
+      "size": 22
+    },
+    {
+      "id": "uv-embed",
+      "label": "Fourier\n+ FC",
+      "x": 17,
+      "y": 133,
+      "w": 76,
+      "h": 62,
+      "kind": "box",
+      "color": "peach",
+      "parent": "queries",
+      "size": 16
+    },
+    {
+      "id": "tsrc",
+      "label": "t_src",
+      "x": 106,
+      "y": 63,
+      "w": 76,
+      "h": 44,
+      "kind": "box",
+      "color": "white",
+      "parent": "queries",
+      "size": 22
+    },
+    {
+      "id": "tsrc-embed",
+      "label": "Fourier\n+ FC",
+      "x": 106,
+      "y": 133,
+      "w": 76,
+      "h": 62,
+      "kind": "box",
+      "color": "peach",
+      "parent": "queries",
+      "size": 16
+    },
+    {
+      "id": "vsrc",
+      "label": "v_src",
+      "x": 195,
+      "y": 63,
+      "w": 76,
+      "h": 44,
+      "kind": "box",
+      "color": "white",
+      "parent": "queries",
+      "size": 22
+    },
+    {
+      "id": "vsrc-embed",
+      "label": "Embedding",
+      "x": 195,
+      "y": 133,
+      "w": 76,
+      "h": 62,
+      "kind": "box",
+      "color": "pink",
+      "parent": "queries",
+      "size": 16
+    },
+    {
+      "id": "ttgt",
+      "label": "t_tgt",
+      "x": 284,
+      "y": 63,
+      "w": 76,
+      "h": 44,
+      "kind": "box",
+      "color": "white",
+      "parent": "queries",
+      "size": 22
+    },
+    {
+      "id": "ttgt-embed",
+      "label": "Fourier\n+ FC",
+      "x": 284,
+      "y": 133,
+      "w": 76,
+      "h": 62,
+      "kind": "box",
+      "color": "peach",
+      "parent": "queries",
+      "size": 16
+    },
+    {
+      "id": "tcam",
+      "label": "t_cam",
+      "x": 373,
+      "y": 63,
+      "w": 76,
+      "h": 44,
+      "kind": "box",
+      "color": "white",
+      "parent": "queries",
+      "size": 22
+    },
+    {
+      "id": "tcam-embed",
+      "label": "Fourier\n+ FC",
+      "x": 373,
+      "y": 133,
+      "w": 76,
+      "h": 62,
+      "kind": "box",
+      "color": "peach",
+      "parent": "queries",
+      "size": 16
+    },
+    {
+      "id": "vcam",
+      "label": "v_cam",
+      "x": 462,
+      "y": 63,
+      "w": 76,
+      "h": 44,
+      "kind": "box",
+      "color": "white",
+      "parent": "queries",
+      "size": 22
+    },
+    {
+      "id": "vcam-embed",
+      "label": "Embedding",
+      "x": 462,
+      "y": 133,
+      "w": 76,
+      "h": 62,
+      "kind": "box",
+      "color": "pink",
+      "parent": "queries",
+      "size": 16
+    },
+    {
+      "id": "source-feature",
+      "label": "Bilinear sample + FC",
+      "x": 200,
+      "y": 228,
+      "w": 230,
+      "h": 44,
+      "kind": "box",
+      "color": "blue",
+      "parent": "queries",
+      "size": 20
+    },
+    {
+      "id": "query-add",
+      "label": "+",
+      "x": 258,
+      "y": 300,
+      "w": 38,
+      "h": 38,
+      "kind": "sum",
+      "color": "purple",
+      "parent": "queries",
+      "size": 31
+    },
+    {
+      "id": "memory",
+      "label": "Final scene representation",
+      "x": 1065,
+      "y": 630,
+      "w": 264,
+      "h": 106,
+      "kind": "group",
+      "color": "green",
+      "parent": null,
+      "size": 19
+    },
+    {
+      "id": "image-memory",
+      "label": "Image tokens",
+      "x": 12,
+      "y": 49,
+      "w": 128,
+      "h": 42,
+      "kind": "box",
+      "color": "green",
+      "parent": "memory",
+      "size": 18
+    },
+    {
+      "id": "scene-memory",
+      "label": "Scene tokens",
+      "x": 145,
+      "y": 49,
+      "w": 107,
+      "h": 42,
+      "kind": "box",
+      "color": "green",
+      "parent": "memory",
+      "size": 18
+    },
+    {
+      "id": "decoder",
+      "label": "M Decoder Blocks",
+      "x": 1150,
+      "y": 295,
+      "w": 310,
+      "h": 183,
+      "kind": "group",
+      "color": "gray",
+      "parent": null,
+      "size": 23
+    },
+    {
+      "id": "decoder-mlp",
+      "label": "MLP",
+      "x": 92,
+      "y": 55,
+      "w": 126,
+      "h": 38,
+      "kind": "box",
+      "color": "peach",
+      "parent": "decoder"
+    },
+    {
+      "id": "cross-attn",
+      "label": "Cross-Attention",
+      "x": 22,
+      "y": 116,
+      "w": 266,
+      "h": 43,
+      "kind": "box",
+      "color": "yellow",
+      "parent": "decoder"
+    },
+    {
+      "id": "key",
+      "label": "Key",
+      "x": 1155,
+      "y": 520,
+      "w": 82,
+      "h": 38,
+      "kind": "pill",
+      "color": "green",
+      "parent": null
+    },
+    {
+      "id": "value",
+      "label": "Value",
+      "x": 1253,
+      "y": 520,
+      "w": 88,
+      "h": 38,
+      "kind": "pill",
+      "color": "green",
+      "parent": null
+    },
+    {
+      "id": "query",
+      "label": "Query",
+      "x": 1360,
+      "y": 520,
+      "w": 88,
+      "h": 38,
+      "kind": "pill",
+      "color": "green",
+      "parent": null
+    },
+    {
+      "id": "query-norm",
+      "label": "LayerNorm",
+      "x": 1350,
+      "y": 680,
+      "w": 108,
+      "h": 43,
+      "kind": "box",
+      "color": "peach",
+      "parent": null,
+      "size": 19
+    },
+    {
+      "id": "head",
+      "label": "FC",
+      "x": 1490,
+      "y": 350,
+      "w": 68,
+      "h": 40,
+      "kind": "box",
+      "color": "peach",
+      "parent": null
+    },
+    {
+      "id": "output",
+      "label": "Point predictions",
+      "x": 1590,
+      "y": 277,
+      "w": 240,
+      "h": 260,
+      "kind": "group",
+      "color": "coral",
+      "parent": null,
+      "size": 23
+    },
+    {
+      "id": "xyz",
+      "label": "XYZ position",
+      "x": 20,
+      "y": 74,
+      "w": 200,
+      "h": 38,
+      "kind": "text",
+      "color": "peach",
+      "parent": "output",
+      "size": 23
+    },
+    {
+      "id": "vis",
+      "label": "Visibility",
+      "x": 20,
+      "y": 130,
+      "w": 200,
+      "h": 38,
+      "kind": "text",
+      "color": "peach",
+      "parent": "output",
+      "size": 23
+    },
+    {
+      "id": "confidence",
+      "label": "Confidence",
+      "x": 20,
+      "y": 186,
+      "w": 200,
+      "h": 38,
+      "kind": "text",
+      "color": "peach",
+      "parent": "output",
+      "size": 23
+    }
+  ],
+  "edges": [
+    {
+      "id": "video-dino",
+      "source": "video",
+      "target": "dino",
+      "a": "right",
+      "b": "left",
+      "via": [
+        [
+          640,
+          187
+        ],
+        [
+          640,
+          134
+        ]
+      ]
+    },
+    {
+      "id": "dino-pack",
+      "source": "dino",
+      "target": "pack-add",
+      "a": "bottom",
+      "b": "top",
+      "via": []
+    },
+    {
+      "id": "scene-pack",
+      "source": "scene-input",
+      "target": "pack-add",
+      "a": "bottom",
+      "b": "right",
+      "via": [
+        [
+          1165,
+          240
+        ],
+        [
+          910,
+          240
+        ],
+        [
+          910,
+          230
+        ]
+      ]
+    },
+    {
+      "id": "special-pack",
+      "source": "image-special",
+      "target": "pack-add",
+      "a": "bottom",
+      "b": "right",
+      "via": [
+        [
+          1165,
+          252
+        ],
+        [
+          925,
+          252
+        ],
+        [
+          925,
+          230
+        ]
+      ]
+    },
+    {
+      "id": "pack-encoder",
+      "source": "pack-add",
+      "target": "frame-attn",
+      "a": "bottom",
+      "b": "top",
+      "via": []
+    },
+    {
+      "id": "frame-attn-frame-mlp",
+      "source": "frame-attn",
+      "target": "frame-mlp",
+      "a": "bottom",
+      "b": "top",
+      "via": []
+    },
+    {
+      "id": "frame-mlp-condition",
+      "source": "frame-mlp",
+      "target": "condition",
+      "a": "bottom",
+      "b": "top",
+      "via": []
+    },
+    {
+      "id": "condition-global-attn",
+      "source": "condition",
+      "target": "global-attn",
+      "a": "bottom",
+      "b": "top",
+      "via": []
+    },
+    {
+      "id": "global-attn-global-mlp",
+      "source": "global-attn",
+      "target": "global-mlp",
+      "a": "bottom",
+      "b": "top",
+      "via": []
+    },
+    {
+      "id": "uv-encoding",
+      "source": "uv",
+      "target": "uv-embed",
+      "a": "bottom",
+      "b": "top",
+      "via": []
+    },
+    {
+      "id": "tsrc-encoding",
+      "source": "tsrc",
+      "target": "tsrc-embed",
+      "a": "bottom",
+      "b": "top",
+      "via": []
+    },
+    {
+      "id": "vsrc-encoding",
+      "source": "vsrc",
+      "target": "vsrc-embed",
+      "a": "bottom",
+      "b": "top",
+      "via": []
+    },
+    {
+      "id": "ttgt-encoding",
+      "source": "ttgt",
+      "target": "ttgt-embed",
+      "a": "bottom",
+      "b": "top",
+      "via": []
+    },
+    {
+      "id": "tcam-encoding",
+      "source": "tcam",
+      "target": "tcam-embed",
+      "a": "bottom",
+      "b": "top",
+      "via": []
+    },
+    {
+      "id": "vcam-encoding",
+      "source": "vcam",
+      "target": "vcam-embed",
+      "a": "bottom",
+      "b": "top",
+      "via": []
+    },
+    {
+      "id": "uv-sum",
+      "source": "uv-embed",
+      "target": "query-add",
+      "a": "bottom",
+      "b": "left",
+      "via": [
+        [
+          90,
+          610
+        ],
+        [
+          80,
+          610
+        ],
+        [
+          80,
+          714
+        ]
+      ]
+    },
+    {
+      "id": "tsrc-sum",
+      "source": "tsrc-embed",
+      "target": "query-add",
+      "a": "bottom",
+      "b": "left",
+      "via": [
+        [
+          179,
+          610
+        ],
+        [
+          80,
+          610
+        ],
+        [
+          80,
+          714
+        ]
+      ]
+    },
+    {
+      "id": "vsrc-sum",
+      "source": "vsrc-embed",
+      "target": "query-add",
+      "a": "bottom",
+      "b": "left",
+      "via": [
+        [
+          268,
+          610
+        ],
+        [
+          80,
+          610
+        ],
+        [
+          80,
+          714
+        ]
+      ]
+    },
+    {
+      "id": "ttgt-sum",
+      "source": "ttgt-embed",
+      "target": "query-add",
+      "a": "bottom",
+      "b": "left",
+      "via": [
+        [
+          357,
+          610
+        ],
+        [
+          80,
+          610
+        ],
+        [
+          80,
+          714
+        ]
+      ]
+    },
+    {
+      "id": "tcam-sum",
+      "source": "tcam-embed",
+      "target": "query-add",
+      "a": "bottom",
+      "b": "left",
+      "via": [
+        [
+          446,
+          610
+        ],
+        [
+          80,
+          610
+        ],
+        [
+          80,
+          714
+        ]
+      ]
+    },
+    {
+      "id": "vcam-sum",
+      "source": "vcam-embed",
+      "target": "query-add",
+      "a": "bottom",
+      "b": "left",
+      "via": [
+        [
+          535,
+          610
+        ],
+        [
+          80,
+          610
+        ],
+        [
+          80,
+          714
+        ]
+      ]
+    },
+    {
+      "id": "feature-sum",
+      "source": "source-feature",
+      "target": "query-add",
+      "a": "bottom",
+      "b": "top",
+      "via": []
+    },
+    {
+      "id": "dino-source",
+      "source": "dino",
+      "target": "source-feature",
+      "a": "bottom",
+      "b": "right",
+      "via": [
+        [
+          867,
+          188
+        ],
+        [
+          652,
+          188
+        ],
+        [
+          652,
+          645
+        ]
+      ],
+      "label": "Source image features",
+      "labelAt": [
+        636,
+        365
+      ],
+      "labelAngle": 90
+    },
+    {
+      "id": "encoder-memory",
+      "source": "global-mlp",
+      "target": "memory",
+      "a": "right",
+      "b": "left",
+      "via": [
+        [
+          1025,
+          599
+        ],
+        [
+          1025,
+          683
+        ]
+      ]
+    },
+    {
+      "id": "key-cross",
+      "source": "key",
+      "target": "cross-attn",
+      "a": "top",
+      "b": "bottom",
+      "via": [
+        [
+          1196.0,
+          495
+        ]
+      ]
+    },
+    {
+      "id": "value-cross",
+      "source": "value",
+      "target": "cross-attn",
+      "a": "top",
+      "b": "bottom",
+      "via": [
+        [
+          1297.0,
+          495
+        ]
+      ]
+    },
+    {
+      "id": "query-cross",
+      "source": "query",
+      "target": "cross-attn",
+      "a": "top",
+      "b": "bottom",
+      "via": [
+        [
+          1404.0,
+          495
+        ]
+      ]
+    },
+    {
+      "id": "memory-key",
+      "source": "memory",
+      "target": "key",
+      "a": "top",
+      "b": "bottom",
+      "via": [
+        [
+          1197,
+          590
+        ]
+      ]
+    },
+    {
+      "id": "memory-value",
+      "source": "memory",
+      "target": "value",
+      "a": "top",
+      "b": "bottom",
+      "via": [
+        [
+          1297,
+          602
+        ]
+      ]
+    },
+    {
+      "id": "cross-mlp",
+      "source": "cross-attn",
+      "target": "decoder-mlp",
+      "a": "top",
+      "b": "bottom",
+      "via": []
+    },
+    {
+      "id": "query-route",
+      "source": "query-add",
+      "target": "query-norm",
+      "a": "right",
+      "b": "left",
+      "via": [
+        [
+          615,
+          714
+        ],
+        [
+          615,
+          800
+        ],
+        [
+          1404,
+          800
+        ],
+        [
+          1404,
+          746
+        ],
+        [
+          1305,
+          746
+        ],
+        [
+          1305,
+          701
+        ]
+      ]
+    },
+    {
+      "id": "query-norm-q",
+      "source": "query-norm",
+      "target": "query",
+      "a": "top",
+      "b": "bottom",
+      "via": []
+    },
+    {
+      "id": "decoder-head",
+      "source": "decoder-mlp",
+      "target": "head",
+      "a": "right",
+      "b": "left",
+      "via": [
+        [
+          1475,
+          369
+        ]
+      ]
+    },
+    {
+      "id": "head-output",
+      "source": "head",
+      "target": "output",
+      "a": "right",
+      "b": "left",
+      "via": [
+        [
+          1574,
+          370
+        ],
+        [
+          1574,
+          407
+        ]
+      ]
+    }
+  ],
+  "provenance": {
+    "runtime": "main-performance-20261023/runtime-main",
+    "experiment": "direct-multiview-20261024",
+    "route": "R00 / D_ALL",
+    "source_features": "DINO source grid in visual.pack.tokens",
+    "memory": "Final full-Omega image and scene rows, with role/time encoding",
+    "decoder": "Repeated cross-attention + MLP; same final evidence in every block",
+    "outputs": [
+      "XYZ",
+      "confidence",
+      "visibility"
+    ]
+  }
+}

@@ -1,0 +1,60 @@
+{
+  "1": {
+    "curriculum_singleview_updates": 1024,
+    "curriculum_multiview_updates": 1024,
+    "direct_multiview_updates": 2048,
+    "matched_update_comparison": {
+      "InternData": {
+        "multiview_updates": 1024,
+        "curriculum_mean20": 0.029765793681144716,
+        "direct_mean20": 0.03127475958317518,
+        "direct_relative_change": 0.05069463015818476
+      },
+      "LIBERO": {
+        "multiview_updates": 1024,
+        "curriculum_mean20": 0.03354483395814896,
+        "direct_mean20": 0.03697566408663988,
+        "direct_relative_change": 0.10227596096529434
+      },
+      "Equal-weight mean": {
+        "multiview_updates": 1024,
+        "curriculum_mean20": 0.031655313819646834,
+        "direct_mean20": 0.034125211834907535,
+        "direct_relative_change": 0.07802475215796978
+      }
+    },
+    "direct_latest_mean20": {
+      "interndata_v6": 0.027956083230674268,
+      "libero_v6": 0.03109079282730818
+    }
+  },
+  "2": {
+    "curriculum_singleview_updates": 1024,
+    "curriculum_multiview_updates": 1024,
+    "direct_multiview_updates": 250,
+    "matched_update_comparison": {
+      "InternData": {
+        "multiview_updates": 250,
+        "curriculum_mean20": 0.03665897250175476,
+        "direct_mean20": 0.040756636299192905,
+        "direct_relative_change": 0.11177792277844123
+      },
+      "LIBERO": {
+        "multiview_updates": 250,
+        "curriculum_mean20": 0.045228074118494985,
+        "direct_mean20": 0.05320075731724501,
+        "direct_relative_change": 0.1762773090417702
+      },
+      "Equal-weight mean": {
+        "multiview_updates": 250,
+        "curriculum_mean20": 0.04094352331012487,
+        "direct_mean20": 0.04697869680821896,
+        "direct_relative_change": 0.14740239750206485
+      }
+    },
+    "direct_latest_mean20": {
+      "interndata_v6": 0.040756636299192905,
+      "libero_v6": 0.05320075731724501
+    }
+  }
+}

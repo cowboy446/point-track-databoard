@@ -1,7 +1,7 @@
 'use strict';
 (async()=>{
  const $=s=>document.querySelector(s),root='data/experiments/',fmt=(x,n=4)=>x==null?'—':Number(x).toFixed(n),esc=x=>String(x).replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
- let data;try{const r=await fetch(root+'results.json');if(!r.ok)throw Error(`Results: ${r.status}`);data=await r.json();}catch(e){$('#summary-status').textContent=e.message;return;}
+ let data;try{const r=await fetch(root+'results.json.gz');if(!r.ok)throw Error(`Results: ${r.status}`);data=await new Response(r.body.pipeThrough(new DecompressionStream('gzip'))).json();}catch(e){$('#summary-status').textContent=e.message;return;}
  const runs=Object.keys(data.runs).filter(k=>data.runs[k].checkpoint);
  for(const id of ['left-run','run'])$('#'+id).innerHTML=runs.map(k=>`<option value="${k}">${k}</option>`).join('');
  $('#left-run').value='A0';$('#run').value='A1';let split='dev';

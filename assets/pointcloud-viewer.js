@@ -27,7 +27,7 @@
     constructor(canvas,data,status){
       this.canvas=canvas;this.data=data;this.status=status;this.frame=-1;this.pointSize=2.5;
       const gl=this.gl=canvas.getContext('webgl',{alpha:false,antialias:true,preserveDrawingBuffer:false});
-      if(!gl)throw new Error('WebGL is unavailable');
+      if(!gl)return canvasFallback(canvas,data,status);
       const compile=(type,code)=>{const s=gl.createShader(type);gl.shaderSource(s,code);gl.compileShader(s);if(!gl.getShaderParameter(s,gl.COMPILE_STATUS))throw new Error(gl.getShaderInfoLog(s));return s;};
       const p=this.program=gl.createProgram();gl.attachShader(p,compile(gl.VERTEX_SHADER,vertex));gl.attachShader(p,compile(gl.FRAGMENT_SHADER,fragment));gl.linkProgram(p);
       if(!gl.getProgramParameter(p,gl.LINK_STATUS))throw new Error(gl.getProgramInfoLog(p));
@@ -81,7 +81,7 @@
       const gl=this.gl;gl.bindBuffer(gl.ARRAY_BUFFER,this.position);gl.bufferData(gl.ARRAY_BUFFER,this.xyz,gl.DYNAMIC_DRAW);
       gl.bindBuffer(gl.ARRAY_BUFFER,this.color);gl.bufferData(gl.ARRAY_BUFFER,a.colors.subarray(offset,offset+N*3),gl.DYNAMIC_DRAW);
       gl.bindBuffer(gl.ARRAY_BUFFER,this.valid);gl.bufferData(gl.ARRAY_BUFFER,this.mask,gl.DYNAMIC_DRAW);
-      this.status.textContent=`${valid.toLocaleString()} / ${N.toLocaleString()} points · frame ${frame+1}`;this.draw();
+      this.status.textContent=`${valid.toLocaleString()} / ${N.toLocaleString()} points / frame ${frame+1}`;this.draw();
     }
     draw(){
       if(!this.target||!this.gl)return;
@@ -94,6 +94,38 @@
       gl.drawArrays(gl.POINTS,0,this.data.header.points);
     }
     dispose(){this.abort.abort();this.observer.disconnect();for(const b of this.buffers)this.gl.deleteBuffer(b);this.gl.deleteProgram(this.program);this.gl.getExtension('WEBGL_lose_context')?.loseContext();this.data=null;this.gl=null;}
+  }
+  // Keep the same orbit controls and projection when WebGL is unavailable.
+  function canvasFallback(canvas,data,status){
+    const view=Object.create(PointView.prototype);
+    Object.assign(view,{canvas,data,status,frame:-1,pointSize:2.5,ctx:canvas.getContext('2d',{alpha:false}),
+      xyz:new Float32Array(data.header.points*3),mask:new Uint8Array(data.header.points),abort:new AbortController()});
+    if(!view.ctx)throw Error('Point-cloud canvas is unavailable');
+    view.draw=function(){
+      if(!this.target||!this.data)return;
+      const c=this.canvas,dpr=Math.min(devicePixelRatio||1,2),w=Math.max(1,Math.round(c.clientWidth*dpr)),h=Math.max(1,Math.round(c.clientHeight*dpr));
+      if(c.width!==w||c.height!==h){c.width=w;c.height=h;}
+      const ctx=this.ctx;ctx.fillStyle='#07090c';ctx.fillRect(0,0,w,h);
+      const {right,up,forward}=this.basis(),points=[],N=this.data.header.points,colors=this.data.arrays.colors;
+      for(let i=0;i<N;i++){
+        if(!this.mask[i])continue;
+        const p=[0,1,2].map(k=>this.xyz[i*3+k]-this.target[k]),dot=v=>v.reduce((s,x,k)=>s+x*p[k],0),z=this.distance-dot(forward);
+        if(z<=this.radius*.0001)continue;
+        const x=w/2+dot(right)*1.9*h/(2*z),y=h/2-dot(up)*1.9*h/(2*z),j=(this.frame*N+i)*3;
+        if(Number.isFinite(x)&&Number.isFinite(y))points.push({x,y,z,color:`rgb(${colors[j]},${colors[j+1]},${colors[j+2]})`});
+      }
+      points.sort((a,b)=>b.z-a.z);
+      for(const p of points){ctx.fillStyle=p.color;ctx.beginPath();ctx.arc(p.x,p.y,this.pointSize*dpr/2,0,2*Math.PI);ctx.fill();}
+    };
+    view.setFrame=function(frame){
+      frame=Math.max(0,Math.min(this.data.header.frames-1,frame|0));if(frame===this.frame)return;this.frame=frame;
+      const {header:h,arrays:a}=this.data,N=h.points,offset=frame*N*3;let valid=0;
+      for(let n=0;n<N;n++){const bit=frame*N+n;this.mask[n]=(a.valid[bit>>3]>>(bit&7))&1;valid+=this.mask[n];
+        for(let k=0;k<3;k++)this.xyz[n*3+k]=a.xyz[offset+n*3+k]*h.scale+h.offset[k];}
+      this.status.textContent=`${valid.toLocaleString()} / ${N.toLocaleString()} points / frame ${frame+1}`;this.draw();
+    };
+    view.dispose=function(){this.abort.abort();this.observer.disconnect();this.data=null;this.ctx=null;};
+    view.bind();view.reset();view.observer=new ResizeObserver(()=>view.draw());view.observer.observe(canvas);view.setFrame(0);return view;
   }
   const format=t=>`${Math.floor(t/60)}:${String(Math.floor(t%60)).padStart(2,'0')}`;
   class Player{

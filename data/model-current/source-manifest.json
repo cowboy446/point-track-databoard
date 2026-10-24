@@ -1,0 +1,17 @@
+{
+  "experiment": "direct-multiview-20261024",
+  "devices": [
+    4,
+    5
+  ],
+  "runtime": "main-performance-20261023/runtime-main",
+  "files": {
+    "train/engine.py": "e4300872ef3f9585f054b70fd903624513f37f80001f479fd08e529212370b86",
+    "model/quarc/world_action_model.py": "57c349be546012b140bfa448f7321474a946b58531cb9da91117020701a415bc",
+    "model/quarc/point_decoder.py": "66f0a17d9e0a94b401841c69c88c9121827be214f8f034ac7ea0c1678053f37d",
+    "model/vggt_omega/models/aggregator.py": "123fd4b5c461c75e4eda9ba56e39770d9178012da53f2950459eb9067d6e7c93",
+    "model/quarc/sge/streaming_encoder.py": "a361cf62dce37694421ba19f381d84a04b9ac6ff84e24e7a417fd87ec84bc3ad"
+  },
+  "graph": "architecture.json",
+  "builder": "model-diagram-20261024/build_diagram.py"
+}

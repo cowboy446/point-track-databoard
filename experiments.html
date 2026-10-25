@@ -1,0 +1,36 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Experiment overview / QuARC</title>
+  <link rel="icon" href="data:,">
+  <link rel="stylesheet" href="assets/experiment-control/style.css">
+  <script src="assets/experiment-control/public.js" defer></script>
+</head>
+<body>
+  <aside class="sidebar">
+    <a class="brand" href="index.html"><span class="mark">Q</span><span>QUARC<small>EXPERIMENT OVERVIEW</small></span></a>
+    <nav><a href="#overview" class="selected">Overview</a><a href="#groups">Groups</a><a href="#queue">Shared queue</a><a href="archive.html">Archive</a></nav>
+    <div class="side-note">PUBLIC / READ ONLY<p>Live state from the GPU server.<br>Controls use a private connection.</p></div>
+  </aside>
+  <main>
+    <header id="overview"><div><div class="eyebrow">WORKSPACE / COMPUTE</div><h1>Experiment overview</h1><p class="muted">Live GPU activity and the work coming next.</p></div><div class="connection"><span id="connection" role="status">Connecting</span><a href="http://127.0.0.1:8765/" rel="noopener" target="_blank">Private controls ↗</a></div></header>
+    <div id="error" class="notice" role="status" hidden></div>
+    <section class="summary" aria-label="Queue totals">
+      <div><span>RUNNING</span><strong id="running-count">—</strong><small>managed experiments</small></div>
+      <div><span>QUEUED</span><strong id="queued-count">—</strong><small>ready or waiting to retry</small></div>
+      <div><span>COMPLETED</span><strong id="completed-count">—</strong><small>successful experiments</small></div>
+      <div><span>NEEDS ATTENTION</span><strong id="failed-count">—</strong><small>failed or blocked</small></div>
+    </section>
+    <section><div class="section-title"><h2>GPU activity <span id="gpu-count" class="count">—</span></h2><span id="observed" class="muted"></span></div><div id="gpus" class="gpus"></div></section>
+    <section id="groups"><div class="section-title"><h2>Experiment groups</h2><span class="muted">One shared queue</span></div><div id="group-list" class="group-list"></div></section>
+    <section id="queue"><div class="section-title"><h2>Shared queue</h2><div class="filters"><label class="sr-only" for="group-filter">Filter by group</label><select id="group-filter"><option value="">All groups</option></select><label class="sr-only" for="state-filter">Filter by state</label><select id="state-filter"><option value="">All states</option><option value="active">Active &amp; queued</option><option value="completed">Completed</option><option value="failed">Failed</option><option value="stopped">Stopped</option><option value="cancelled">Cancelled</option></select></div></div>
+      <div class="table-wrap"><table><thead><tr><th>EXPERIMENT</th><th>GROUP</th><th>STATE</th><th>PROGRESS / ETA</th><th>LOSS</th><th>ATTEMPT</th><th>TRACKING</th></tr></thead><tbody id="experiments"></tbody></table></div><p id="queue-empty" class="empty" hidden>No experiments match this view.</p>
+    </section>
+    <footer><span id="updated">Waiting for the GPU server.</span><span>Refreshes every 10 seconds. External workloads are not registered queue entries.</span></footer>
+    <p class="muted">Private controls require your local SSH tunnel. This page never sends control commands.</p>
+    <p class="muted" id="transport-note"></p>
+  </main>
+  <dialog id="details"><div class="dialog-heading"><h2 id="detail-title">Experiment</h2><button id="close-details" class="quiet" aria-label="Close details">Close</button></div><div id="detail-body"></div></dialog>
+</body>
+</html>

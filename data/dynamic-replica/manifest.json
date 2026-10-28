@@ -1,0 +1,194 @@
+{
+  "samples": [
+    {
+      "id": "06dcf6-3_obj",
+      "frames": 300,
+      "fps": 30,
+      "width": 640,
+      "height": 360,
+      "bodies": 879,
+      "source_frames": [
+        0,
+        149,
+        299
+      ],
+      "cameras": [
+        "left",
+        "right"
+      ],
+      "point_count": 8000,
+      "dynamic_point_count": 4000,
+      "focus": [
+        -0.7053134782314301,
+        -0.010163006681203846,
+        -2.5086654763221743
+      ],
+      "eye": [
+        1.2464540004730225,
+        1.4378191232681274,
+        -2.501439094543457
+      ],
+      "pose_url": "data/dynamic-replica/06dcf6-3_obj/poses.f32.gz",
+      "sources": [
+        {
+          "camera": "left",
+          "frame": 0,
+          "points": 230400,
+          "dynamic_points": 562,
+          "url": "data/dynamic-replica/06dcf6-3_obj/left-000.bin.gz",
+          "image_prefix": "data/dynamic-replica/06dcf6-3_obj/left-000",
+          "depth_display_max_m": 3.611,
+          "sha256": "3169c178ac24f0853b6493f82a9af2b5af383a926b56735c65474938f7219df7"
+        },
+        {
+          "camera": "left",
+          "frame": 149,
+          "points": 230400,
+          "dynamic_points": 702,
+          "url": "data/dynamic-replica/06dcf6-3_obj/left-149.bin.gz",
+          "image_prefix": "data/dynamic-replica/06dcf6-3_obj/left-149",
+          "depth_display_max_m": 3.529,
+          "sha256": "dc8dc9585265075763116bf2984ad129768e90fcbafd48d4899041e55c06f3db"
+        },
+        {
+          "camera": "left",
+          "frame": 299,
+          "points": 230399,
+          "dynamic_points": 598,
+          "url": "data/dynamic-replica/06dcf6-3_obj/left-299.bin.gz",
+          "image_prefix": "data/dynamic-replica/06dcf6-3_obj/left-299",
+          "depth_display_max_m": 3.5740000000000003,
+          "sha256": "d89e96a6dbfaef2fa7bd9d7d4f9227dde1938c6d76034408d259bd5eaad2c980"
+        },
+        {
+          "camera": "right",
+          "frame": 0,
+          "points": 230400,
+          "dynamic_points": 549,
+          "url": "data/dynamic-replica/06dcf6-3_obj/right-000.bin.gz",
+          "image_prefix": "data/dynamic-replica/06dcf6-3_obj/right-000",
+          "depth_display_max_m": 3.619,
+          "sha256": "c9388bc2d4ebc3e2b6fe9c5db2f312ae8c84211ae213e070c897e595b1394dd9"
+        },
+        {
+          "camera": "right",
+          "frame": 149,
+          "points": 230399,
+          "dynamic_points": 690,
+          "url": "data/dynamic-replica/06dcf6-3_obj/right-149.bin.gz",
+          "image_prefix": "data/dynamic-replica/06dcf6-3_obj/right-149",
+          "depth_display_max_m": 3.529,
+          "sha256": "1e29d2efaf48323a0be72a6c10aee2df85082b3e8d158033a404922d8ef94561"
+        },
+        {
+          "camera": "right",
+          "frame": 299,
+          "points": 230399,
+          "dynamic_points": 600,
+          "url": "data/dynamic-replica/06dcf6-3_obj/right-299.bin.gz",
+          "image_prefix": "data/dynamic-replica/06dcf6-3_obj/right-299",
+          "depth_display_max_m": 3.5740000000000003,
+          "sha256": "800583391817b00162203968bd4b60b0a383727439857f2b50164a6aeb8fad3d"
+        }
+      ],
+      "render_contract": "All valid pixels, no spatial subsampling. Float32 display coordinates/affine matrices derived from original v6/v7. RGB fixed to source pixels. v7 transport is an affine approximation.",
+      "focus_radius": 0.47189997983006754
+    },
+    {
+      "id": "216ba3-3_obj",
+      "frames": 300,
+      "fps": 30,
+      "width": 640,
+      "height": 360,
+      "bodies": 2823,
+      "source_frames": [
+        0,
+        149,
+        299
+      ],
+      "cameras": [
+        "left",
+        "right"
+      ],
+      "point_count": 8000,
+      "dynamic_point_count": 4000,
+      "focus": [
+        -2.1620210094071926,
+        0.1404906409695743,
+        0.4722240316390992
+      ],
+      "eye": [
+        0.2330351173877716,
+        1.4484517574310303,
+        1.0190999507904053
+      ],
+      "pose_url": "data/dynamic-replica/216ba3-3_obj/poses.f32.gz",
+      "sources": [
+        {
+          "camera": "left",
+          "frame": 0,
+          "points": 230391,
+          "dynamic_points": 20440,
+          "url": "data/dynamic-replica/216ba3-3_obj/left-000.bin.gz",
+          "image_prefix": "data/dynamic-replica/216ba3-3_obj/left-000",
+          "depth_display_max_m": 3.8240000000000003,
+          "sha256": "4b62274d7bc54bd7c0e2b803634573a365fc255904ac1fc0c5b8e6e5b838c08f"
+        },
+        {
+          "camera": "left",
+          "frame": 149,
+          "points": 230392,
+          "dynamic_points": 19532,
+          "url": "data/dynamic-replica/216ba3-3_obj/left-149.bin.gz",
+          "image_prefix": "data/dynamic-replica/216ba3-3_obj/left-149",
+          "depth_display_max_m": 3.775,
+          "sha256": "37f937bb29e43fac266dab7bae0350d2ae7f32502ce74c0e99c4bff84c9a7501"
+        },
+        {
+          "camera": "left",
+          "frame": 299,
+          "points": 230393,
+          "dynamic_points": 13612,
+          "url": "data/dynamic-replica/216ba3-3_obj/left-299.bin.gz",
+          "image_prefix": "data/dynamic-replica/216ba3-3_obj/left-299",
+          "depth_display_max_m": 3.73,
+          "sha256": "dd4cf261a83685e5a57637fa49a2d8749f9aff8bc89c3f99ad5cd2c0cd906323"
+        },
+        {
+          "camera": "right",
+          "frame": 0,
+          "points": 230395,
+          "dynamic_points": 20583,
+          "url": "data/dynamic-replica/216ba3-3_obj/right-000.bin.gz",
+          "image_prefix": "data/dynamic-replica/216ba3-3_obj/right-000",
+          "depth_display_max_m": 3.8320000000000003,
+          "sha256": "60faf427b50aeb487567f7dbe89b12a4f2caa6378e1d95d52571ee6ba6c2eaab"
+        },
+        {
+          "camera": "right",
+          "frame": 149,
+          "points": 230393,
+          "dynamic_points": 19562,
+          "url": "data/dynamic-replica/216ba3-3_obj/right-149.bin.gz",
+          "image_prefix": "data/dynamic-replica/216ba3-3_obj/right-149",
+          "depth_display_max_m": 3.777,
+          "sha256": "a543d84a2d2f7a20af9d6025317e4168d8c285831389d306045a0a8b3fc78387"
+        },
+        {
+          "camera": "right",
+          "frame": 299,
+          "points": 230395,
+          "dynamic_points": 13560,
+          "url": "data/dynamic-replica/216ba3-3_obj/right-299.bin.gz",
+          "image_prefix": "data/dynamic-replica/216ba3-3_obj/right-299",
+          "depth_display_max_m": 3.732,
+          "sha256": "7a12eb7970635ec89598649b6e1e6820bc5d273cf33819ab763e21964138b66b"
+        }
+      ],
+      "render_contract": "All valid pixels, no spatial subsampling. Float32 display coordinates/affine matrices derived from original v6/v7. RGB fixed to source pixels. v7 transport is an affine approximation.",
+      "focus_radius": 1.3563932316151828
+    }
+  ],
+  "source_profile": "640x360 full300 v6 + minimalv7",
+  "export_script": "dynamic-data-page-20261028/export_dynamic_replica.py"
+}

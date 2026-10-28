@@ -1,0 +1,196 @@
+{
+  "scope": "ARROW training mixture, Table7, arXiv2610.01314v1",
+  "paper": "https://arxiv.org/html/2610.01314v1#Sx2.SS2",
+  "datasets": [
+    {
+      "name": "Syn4D",
+      "type": "合成",
+      "description": "人物、衣物与物体在多种虚拟环境中运动",
+      "motion": "动态",
+      "views": "8 路同步",
+      "annotations": "深度、相机、掩码、3D 轨迹",
+      "source": "https://huggingface.co/datasets/Syn4D/Syn4D",
+      "done": false
+    },
+    {
+      "name": "Dynamic Replica",
+      "type": "合成",
+      "description": "扫描环境中的人物与动物动画，左右双目视频",
+      "motion": "动态",
+      "views": "双目同步",
+      "annotations": "深度、相机、实例掩码、光流与轨迹",
+      "source": "https://github.com/facebookresearch/dynamic_stereo",
+      "done": true
+    },
+    {
+      "name": "Stereo4D",
+      "type": "真实 / 伪标注",
+      "description": "互联网立体视频，经优化重建真实场景和运动",
+      "motion": "动态",
+      "views": "立体来源；ARROW 单流",
+      "annotations": "优化 3D 轨迹；非渲染 GT",
+      "source": "https://stereo4d.github.io/",
+      "done": false
+    },
+    {
+      "name": "PointOdyssey",
+      "type": "合成",
+      "description": "长视频中的人物、动物和复杂遮挡",
+      "motion": "动态",
+      "views": "单目视频",
+      "annotations": "深度、相机、实例与长程 3D 轨迹",
+      "source": "https://pointodyssey.com/",
+      "done": false
+    },
+    {
+      "name": "Kubric-4D",
+      "type": "合成",
+      "description": "多物体碰撞、滚动与遮挡的同步多机位渲染",
+      "motion": "动态",
+      "views": "16 路同步",
+      "annotations": "深度、相机、实例、光流与 3D 对应",
+      "source": "https://gcd.cs.columbia.edu/#datasets",
+      "done": false
+    },
+    {
+      "name": "CoTracker3-Kubric",
+      "type": "合成",
+      "description": "Kubric 物体运动视频，用于稠密点跟踪",
+      "motion": "动态",
+      "views": "单目视频",
+      "annotations": "轨迹、可见性、掩码与几何",
+      "source": "https://github.com/facebookresearch/co-tracker",
+      "done": false
+    },
+    {
+      "name": "ParallelDomain-4D",
+      "type": "合成",
+      "description": "行人、车辆和道路环境的多机位驾驶场景",
+      "motion": "动态",
+      "views": "多路同步",
+      "annotations": "轨迹与几何；ARROW 无运动掩码",
+      "source": "https://gcd.cs.columbia.edu/#datasets",
+      "done": false
+    },
+    {
+      "name": "Waymo DriveTrack",
+      "type": "真实 / 派生标注",
+      "description": "车载街景视频，结合 LiDAR 与物体跟踪构建点轨迹",
+      "motion": "动态",
+      "views": "多相机；训练按单流抽样",
+      "annotations": "3D 轨迹、相机与几何监督",
+      "source": "https://github.com/arjunvb/drivetrack",
+      "done": false
+    },
+    {
+      "name": "Kubric MOVi-F",
+      "type": "合成",
+      "description": "随机刚体物体运动，包含相机运动和运动模糊",
+      "motion": "动态",
+      "views": "单目视频",
+      "annotations": "深度、实例、运动与点对应",
+      "source": "https://github.com/google-research/kubric",
+      "done": false
+    },
+    {
+      "name": "nuScenes",
+      "type": "真实",
+      "description": "环视车载街景，含行人、车辆与道路交通",
+      "motion": "动态",
+      "views": "6 路环视",
+      "annotations": "相机、LiDAR、检测/跟踪；ARROW 不用点轨迹",
+      "source": "https://www.nuscenes.org/",
+      "done": false
+    },
+    {
+      "name": "MidAir",
+      "type": "合成",
+      "description": "无人机飞越森林、道路等环境，覆盖不同天气",
+      "motion": "静态场景",
+      "views": "原始 3 相机；ARROW 单流",
+      "annotations": "深度、法线、语义、相机/飞行位姿",
+      "source": "https://midair.ulg.ac.be/",
+      "done": false
+    },
+    {
+      "name": "GTA-SfM",
+      "type": "合成",
+      "description": "GTA 城市场景中的相机移动序列，用于几何重建",
+      "motion": "静态场景",
+      "views": "移动相机多视图",
+      "annotations": "深度与相机；ARROW 无点轨迹",
+      "source": "https://github.com/HKUST-Aerial-Robotics/Flow-Motion-Depth",
+      "done": false
+    },
+    {
+      "name": "MVS-Synth",
+      "type": "合成",
+      "description": "GTA-V 城市场景的多视图图像与渲染深度",
+      "motion": "静态场景",
+      "views": "静态多视图",
+      "annotations": "深度与相机；无动态轨迹",
+      "source": "https://openaccess.thecvf.com/content_cvpr_2018/CameraReady/2703.pdf",
+      "done": false
+    },
+    {
+      "name": "WildRGB-D",
+      "type": "真实",
+      "description": "手持相机环绕日常物体拍摄的 RGB-D 视频",
+      "motion": "静态场景",
+      "views": "移动相机多视图",
+      "annotations": "RGB-D、相机与点云",
+      "source": "https://github.com/wildrgbd/wildrgbd",
+      "done": false
+    },
+    {
+      "name": "Aria Synthetic Environments",
+      "type": "合成",
+      "description": "模拟 Aria 眼镜在带家具的公寓中行走",
+      "motion": "静态场景",
+      "views": "单路 RGB 视频",
+      "annotations": "深度、实例、位姿与房间结构",
+      "source": "https://facebookresearch.github.io/projectaria_tools/docs/open_datasets/aria_synthetic_environments_dataset",
+      "done": false
+    },
+    {
+      "name": "Hypersim",
+      "type": "合成",
+      "description": "照片级室内场景，从多个相机位置渲染",
+      "motion": "静态场景",
+      "views": "静态多视图",
+      "annotations": "深度、法线、语义/实例与相机",
+      "source": "https://github.com/apple/ml-hypersim",
+      "done": false
+    },
+    {
+      "name": "ScanNet++",
+      "type": "真实",
+      "description": "室内激光扫描、单反照片和 iPhone RGB-D",
+      "motion": "静态场景",
+      "views": "静态多视图 / 多设备",
+      "annotations": "深度、位姿、网格与语义",
+      "source": "https://scannetpp.mlsg.cit.tum.de/scannetpp/",
+      "done": false
+    },
+    {
+      "name": "BlendedMVS",
+      "type": "真实 + 渲染",
+      "description": "真实重建网格与原图混合生成的多视图场景",
+      "motion": "静态场景",
+      "views": "静态多视图",
+      "annotations": "渲染深度与相机",
+      "source": "https://github.com/YoYo000/BlendedMVS",
+      "done": false
+    },
+    {
+      "name": "Structured3D",
+      "type": "合成",
+      "description": "带家具的住宅全景图和透视图，提供房间布局",
+      "motion": "静态场景",
+      "views": "静态多视图",
+      "annotations": "深度、法线、语义、布局与相机",
+      "source": "https://github.com/bertjiazheng/Structured3D",
+      "done": false
+    }
+  ]
+}

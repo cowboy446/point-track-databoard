@@ -67,12 +67,25 @@ function renderStatus(value) {
     const state = experiment?.state ?? (g.external_process_count ? 'unmanaged' : 'available');
     const p = experiment?.progress;
     const percent = p?.total ? Math.min(100, Math.max(0, 100 * p.completed / p.total)) : 0;
-    return `<article class="gpu"><div class="gpu-top"><div><div class="gpu-id">GPU ${g.index}</div><div class="gpu-model">${esc(g.name)}</div></div>${badge(state)}</div>
-      <div class="gpu-title">${esc(experiment?.name ?? (g.external_process_count ? 'External workload' : 'Ready for work'))}</div>
-      <div class="gpu-subtitle">${esc(experiment ? groupName(experiment.group_id) : (g.external_process_count ? 'Outside the shared queue' : 'Waiting for an eligible experiment'))}</div>
-      <progress aria-label="GPU ${g.index} experiment progress" value="${percent}" max="100"></progress>
-      <div class="progress-label"><span>${esc(p ? progressText(p) : '—')}</span><span>${experiment ? esc(eta(experiment.eta_seconds)) : ''}</span></div>
-      <div class="gpu-stats"><span>UTIL ${number(g.utilization)}%</span><span>VRAM ${(g.memory_used_mib / 1024).toFixed(1)} / ${(g.memory_total_mib / 1024).toFixed(0)} GB</span></div></article>`;
+    const name = experiment?.name ?? (g.external_process_count ? 'External workload' : 'Ready for work');
+    return `<article class="gpu" aria-label="GPU ${g.index}">
+      <div class="gpu-top">
+        <div class="gpu-device"><div class="gpu-id">GPU ${g.index}</div><div class="gpu-model">${esc(g.name)}</div></div>
+        ${badge(state)}
+      </div>
+      <div class="gpu-workload">
+        <h3 class="gpu-title">${experiment ? `<button type="button" class="gpu-name" data-detail="${esc(experiment.id)}">${esc(name)}</button>` : esc(name)}</h3>
+        <p class="gpu-subtitle">${esc(experiment ? groupName(experiment.group_id) : (g.external_process_count ? 'Outside the shared queue' : 'Waiting for an eligible experiment'))}</p>
+      </div>
+      <div class="gpu-telemetry">
+        <div class="progress-label"><span>${esc(p ? progressText(p) : experiment ? 'Waiting for progress' : g.external_process_count ? 'Progress unavailable' : 'No active experiment')}</span><span class="gpu-eta">${experiment ? esc(eta(experiment.eta_seconds)) : ''}</span></div>
+        <progress aria-label="GPU ${g.index} experiment progress" value="${percent}" max="100"></progress>
+        <dl class="gpu-stats">
+          <div><dt>GPU utilization</dt><dd>${number(g.utilization)}<span>%</span></dd></div>
+          <div><dt>VRAM</dt><dd>${g.memory_used_mib == null ? '—' : (g.memory_used_mib / 1024).toFixed(1)}<span> / ${g.memory_total_mib == null ? '—' : (g.memory_total_mib / 1024).toFixed(0)} GB</span></dd></div>
+        </dl>
+      </div>
+    </article>`;
   }).join('');
   byId('group-list').innerHTML = value.groups.map(g => {
     const jobs = value.experiments.filter(e => e.group_id === g.id);
@@ -104,11 +117,13 @@ async function refresh() {
 }
 byId('group-filter').addEventListener('change', renderQueue);
 byId('state-filter').addEventListener('change', renderQueue);
-byId('experiments').addEventListener('click', event => {
+function openDetails(event) {
   const button = event.target.closest('[data-detail]');
   if (!button) return;
   detailId = button.dataset.detail; renderDetails(); byId('details').showModal();
-});
+}
+byId('experiments').addEventListener('click', openDetails);
+byId('gpus').addEventListener('click', openDetails);
 byId('close-details').addEventListener('click', () => { byId('details').close(); detailId = null; });
 (async () => {
   try {

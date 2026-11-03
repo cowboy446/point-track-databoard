@@ -1,0 +1,88 @@
+/* Keep long run identifiers inside their card, independent of their content width. */
+.gpus {
+  grid-template-columns: repeat(auto-fit, minmax(min(100%, 260px), 1fr));
+  gap: 16px;
+}
+
+.gpu {
+  display: flex;
+  flex-direction: column;
+  min-width: 0;
+  min-height: 280px;
+  padding: 20px;
+}
+
+.gpu-top {
+  align-items: flex-start;
+  gap: 12px;
+  margin-bottom: 20px;
+}
+
+.gpu-device { min-width: 0; }
+.gpu-model { overflow-wrap: anywhere; }
+.gpu-top .badge { flex-shrink: 0; }
+.gpu-workload { margin-bottom: 24px; }
+
+.gpu-title {
+  margin: 0;
+  font-size: 14px;
+  line-height: 1.6;
+  white-space: normal;
+  overflow: visible;
+  overflow-wrap: anywhere;
+  text-overflow: clip;
+}
+
+.gpu-name {
+  display: block;
+  width: 100%;
+  padding: 0;
+  border: 0;
+  border-radius: 2px;
+  background: none;
+  color: inherit;
+  font: inherit;
+  text-align: left;
+  overflow-wrap: anywhere;
+}
+
+.gpu-name:hover { color: var(--accent); }
+.gpu-name:focus-visible { outline: 2px solid var(--accent); }
+
+.gpu-subtitle {
+  margin: 6px 0 0;
+  line-height: 1.6;
+  overflow-wrap: anywhere;
+}
+
+.gpu-telemetry { margin-top: auto; }
+.gpu .progress-label {
+  flex-wrap: wrap;
+  align-items: baseline;
+  gap: 4px 12px;
+  margin: 0 0 8px;
+  overflow-wrap: anywhere;
+}
+.gpu-eta { margin-left: auto; }
+.gpu progress { display: block; }
+
+.gpu-stats {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(0, 1.3fr);
+  gap: 12px;
+  margin: 16px 0 0;
+  padding-top: 14px;
+}
+.gpu-stats dt { font-size: 10px; }
+.gpu-stats dd {
+  margin: 4px 0 0;
+  color: var(--text);
+  font-size: 17px;
+  font-weight: 500;
+  overflow-wrap: anywhere;
+}
+.gpu-stats dd span { color: var(--muted); font-size: 11px; }
+
+@media (min-width: 1500px) {
+  .gpus { grid-template-columns: repeat(4, minmax(0, 1fr)); }
+}

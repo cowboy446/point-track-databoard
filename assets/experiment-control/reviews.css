@@ -1,0 +1,15 @@
+.review-notices .notice { display: flex; align-items: center; justify-content: space-between; gap: 16px; }
+.review-notices .notice p { margin: 6px 0 0; }
+.group-list { grid-template-columns: repeat(auto-fit, minmax(min(100%, 320px), 1fr)); }
+.group { min-width: 0; flex-wrap: wrap; }
+.group > div:first-child { min-width: 0; flex: 1 1 180px; overflow-wrap: anywhere; }
+.group-actions { max-width: 100%; flex-wrap: wrap; }
+.filters { min-width: 0; max-width: 100%; }
+.filters select { min-width: 0; flex: 1; }
+#detail-title { min-width: 0; overflow-wrap: anywhere; }
+#review-list small, #review-list p { overflow-wrap: anywhere; }
+#review-details pre { white-space: pre-wrap; overflow-wrap: anywhere; }
+#review-details .muted { overflow-wrap: anywhere; }
+@media (max-width: 700px) {
+  .review-notices .notice { align-items: flex-start; flex-direction: column; }
+}

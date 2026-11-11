@@ -50,6 +50,16 @@ function renderDetails() {
     <p class="muted">Started ${esc(date(a.started))}${a.ended ? ` / Ended ${esc(date(a.ended))}` : ''}</p>
     <p>${trackingLink(a)}</p></div>`).join('');
 }
+// Historical GPU assignments on queued/retried attempts do not own a device.
+function currentGpuExperiment(experiments, index) {
+  const priority = {running: 0, stopping: 1, starting: 2};
+  return experiments.filter(e => {
+    const attempt = latest(e);
+    return Object.hasOwn(priority, e.state) &&
+      attempt && Object.hasOwn(priority, attempt.state) &&
+      attempt.ended == null && attempt.gpus.includes(index);
+  }).sort((a, b) => priority[a.state] - priority[b.state])[0];
+}
 function renderStatus(value) {
   current = value;
   const stale = value.stale || !value.as_of || Date.now() / 1000 - value.as_of > 25;
@@ -63,7 +73,7 @@ function renderStatus(value) {
   byId('gpu-count').textContent = value.inventory.devices.length;
   byId('observed').textContent = `Observed ${date(value.inventory.observed_at)}`;
   byId('gpus').innerHTML = value.inventory.devices.map(g => {
-    const experiment = value.experiments.find(e => active.has(e.state) && latest(e)?.gpus.includes(g.index));
+    const experiment = currentGpuExperiment(value.experiments, g.index);
     const state = experiment?.state ?? (g.external_process_count ? 'unmanaged' : 'available');
     const p = experiment?.progress;
     const percent = p?.total ? Math.min(100, Math.max(0, 100 * p.completed / p.total)) : 0;
